@@ -120,6 +120,7 @@ public class RegisterBlocks {
 		registerItem(TranscraftItems.EnderQuartz);
 		registerItem(TranscraftItems.DarkEndershard);
 		registerItem(TranscraftItems.Transpedia);
+		registerItem(TranscraftItems.TransmaniaTeleporter);
 		
 		registerItem(TranscraftItems.PlasticAxe);
 		registerItem(TranscraftItems.PlasticHoe);

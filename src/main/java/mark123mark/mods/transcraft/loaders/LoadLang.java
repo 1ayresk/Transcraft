@@ -28,6 +28,7 @@ public class LoadLang {
 		LanguageRegistry.addName(TranscraftItems.DarkEndershard, "DarkEnder Shard");
 		LanguageRegistry.addName(Fluids.ItemBucketLiquidTrasnmutter.get(),"Transbucket");
 		LanguageRegistry.addName(TranscraftItems.Transpedia, "Transpedia");
+		LanguageRegistry.addName(TranscraftItems.TransmaniaTeleporter, "TransmaniaTeleporter");
 		
 		
 		LanguageRegistry.addName(TranscraftItems.PlasticAxe, "Plastic Axe");

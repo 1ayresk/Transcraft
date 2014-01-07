@@ -61,6 +61,8 @@ public class Config {
 	public static int DarkEndershardID = 5017;
 	public static int BucketLiquidTrasnmutterID = 5018;
 	public static int TranspeadiaID = 5019;
+	public static int TransmaniaTeleporterID = 5020;
+	
 
 	public static int PlasticAxeID = 5031;
 	public static int PlasticHoeID = 5032;
@@ -172,6 +174,7 @@ public class Config {
 		DarkEndershardID = config.getItem("DarkEndershard", 5017).getInt();
 		BucketLiquidTrasnmutterID = config.getItem("BucketLiquidTrasnmutter",5018).getInt();
 		TranspeadiaID = config.getItem("Transpeadia", 5019).getInt();
+		TransmaniaTeleporterID = config.getItem("TranmaniaTeleporter", 5020).getInt();
 		
 		
 
