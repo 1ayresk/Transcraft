@@ -51,9 +51,9 @@ public class EnderSword extends ItemSword {
 			
 			else 
 			{
-				if(par3EntityPlayer.username.contains("mark123mark") || par3EntityPlayer.username.contains("tattyseal"))
+				if(par3EntityPlayer.username.contains("mark123mark") || par3EntityPlayer.username.contains("tattyseal")|| par3EntityPlayer.username.contains("shifu_"))
 				{
-					par3EntityPlayer.playSound("transcraft:swordHit", 10F, 1F);
+					par3EntityPlayer.playSound("transcraft:bassDrop", 10F, 1F);
 				}
 				else
 				{
