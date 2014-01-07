@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft;
 
 import mark123mark.mods.transcraft.Items.TranscraftItems;
+import mark123mark.mods.transcraft.Listener.ListenerRegisterSound;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
 import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
 import mark123mark.mods.transcraft.command.CommandReloadConfig;
@@ -117,7 +118,8 @@ public class Transcraft {
 
 
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
+	public void preInit(FMLPreInitializationEvent event)
+	{
 
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison "
 				+ Transcraft.VERSION);
@@ -165,6 +167,7 @@ public class Transcraft {
 		 GameRegistry.addBiome(FlatLands);
 
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
+		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());
 		
 		if(Loader.isModLoaded("Waila")) {
 			FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.waila.TranscraftProvider.callbackRegister");
