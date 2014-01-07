@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.WorldGen.ScamaticLoader;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.LongHashMap;
@@ -177,11 +178,11 @@ public class DimTp extends Teleporter {
 		boolean flag;
 
 
-		   worldServerInstance.setBlock(i, j , k,Block.dirt.blockID); 
-		   worldServerInstance.setBlock(i +1, j , k,Block.dirt.blockID); 
-		   worldServerInstance.setBlock(i , j+1 , k,Block.dirt.blockID); 
-		   worldServerInstance.setBlock(i , j , k+1,Block.dirt.blockID); 
-		   worldServerInstance.setBlock(i , j+2 , k+1,Transcraft.DimPortalEscapeBlock.blockID); 
+		ScamaticLoader room = new ScamaticLoader("TransmaniaPortal.schematic");
+
+		room.generate(par1Entity.worldObj, 0, 1 , 0 , false);
+		
+
 
 
 		return true;
