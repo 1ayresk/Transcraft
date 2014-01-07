@@ -51,8 +51,15 @@ public class EnderSword extends ItemSword {
 			
 			else 
 			{
-				par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F,0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-
+				if(par3EntityPlayer.username.contains("mark123mark") || par3EntityPlayer.username.contains("tattyseal"))
+				{
+					par3EntityPlayer.playSound("transcraft:swordHit", 10F, 1F);
+				}
+				else
+				{
+					par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F,0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+				}
+		
 				if (!par2World.isRemote) {
 					par2World.spawnEntityInWorld(new EntityEnderPearl(par2World,par3EntityPlayer));
 				}

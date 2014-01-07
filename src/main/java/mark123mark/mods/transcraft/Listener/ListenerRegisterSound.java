@@ -9,5 +9,6 @@ public class ListenerRegisterSound
 	public void soundLoad(SoundLoadEvent e)
 	{
 		e.manager.soundPoolSounds.addSound("transcraft:swordHit.ogg");
+		e.manager.soundPoolSounds.addSound("transcraft:bassDrop.ogg");
 	}
 }

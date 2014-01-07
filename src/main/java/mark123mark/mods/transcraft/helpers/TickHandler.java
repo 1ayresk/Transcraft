@@ -18,20 +18,7 @@ public class TickHandler implements ITickHandler {
 
 	@Override
 	public void tickStart(EnumSet<TickType> type, Object... tickData) {
-		EntityPlayer player = (EntityPlayer) tickData[0];
-		EntityPlayerMP thePlayer = (EntityPlayerMP) tickData[0];
-		
-		if(player.username.contains("mark123mark"))
-		{
-			if(thePlayer.dimension == 0)
-			{
-				if(player.posY < -5)
-				{
-					player.moveEntity(player.posX, player.posY + 32, player.posZ);
-					player.travelToDimension(-1);
-				}	
-			}
-		}
+
 		
 	}
 
@@ -39,6 +26,13 @@ public class TickHandler implements ITickHandler {
 	public void tickEnd(EnumSet<TickType> type, Object... tickData) {
 		EntityPlayer player = (EntityPlayer) tickData[0];
 
+		
+		if(player.getCurrentEquippedItem() != null)
+		{
+			if (player.getCurrentEquippedItem().itemID == TranscraftItems.EnderSword.itemID) {
+				player.addPotionEffect(new PotionEffect(4, 2, 3, true));
+			}
+		}
 		
 		if(Config.EnderArmorBuffs == true)
 		{
