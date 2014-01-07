@@ -17,12 +17,12 @@ import cpw.mods.fml.client.FMLClientHandler;
 public class RenderTC extends TileEntitySpecialRenderer{
 
 	private TranscrafterModel model;
+	private float rotation = 0.0f;
 	private static final ResourceLocation textures_2 = new ResourceLocation("transcraft:textures/models/TranscrafterModel.png");
 	
     public RenderTC() {
             this.model = new TranscrafterModel();
     }
-    
 
     @Override
     public void renderTileEntityAt(TileEntity te, double x, double y, double z, float scale) {
@@ -32,6 +32,16 @@ public class RenderTC extends TileEntitySpecialRenderer{
             GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
             Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/TranscrafterModel.png"));
             this.model.Bottom.render(0.0625F);
+            if(rotation == 10F)
+            {
+            	rotation = 0.0f;
+            }
+            else
+            {
+            	rotation = rotation + 0.01f;
+            }
+            
+            GL11.glRotatef(180F, rotation, 0.0f, rotation);
             this.model.Floaty_part.render(0.0625F);
             this.model.Middle.render(0.0625F);
             this.model.Top_bit_1.render(0.0625F);
