@@ -28,20 +28,19 @@ public class TransmaniaTeleporter extends Item{
 	@Override
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2world, EntityPlayer par3EntityPlayer)
 	{
-		EntityPlayerMP thePlayer =(EntityPlayerMP) par3EntityPlayer;
-	
 		if(par3EntityPlayer.ridingEntity == null && par3EntityPlayer.riddenByEntity == null)
 		{
-			if(par3EntityPlayer.dimension != Config.DimID)
-			{
-				thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Config.DimID, new DimTp(thePlayer.mcServer.worldServerForDimension(Config.DimID)));
-			}
-		}
-		else
-		{
-			thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Config.DimID, new DimTp(thePlayer.mcServer.worldServerForDimension(0)));
-		}
+			if(par3EntityPlayer.dimension == 0)
+				{
+					par3EntityPlayer.travelToDimension(Config.DimID);
+					return par1ItemStack;
+				}
+			if(par3EntityPlayer.dimension == Config.DimID)
+				{
+					par3EntityPlayer.travelToDimension(0);
+					return par1ItemStack;
+				}
+		}	
 		return par1ItemStack;
-		
 	}
 }

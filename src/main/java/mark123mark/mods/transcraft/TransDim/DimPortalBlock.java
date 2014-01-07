@@ -60,26 +60,17 @@ public class DimPortalBlock extends Block {
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World par1World, int par2, int par3,
-			int par4, Entity par5Entity) {
-		if (par5Entity.ridingEntity == null
-				&& par5Entity.riddenByEntity == null) {
-			if (par5Entity instanceof EntityPlayerMP) {
-				EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
+	public void onEntityCollidedWithBlock(World par1World, int par2, int par3,int par4, Entity par5Entity) {
+		if (par5Entity.ridingEntity == null&& par5Entity.riddenByEntity == null) 
+		{
+			if (par5Entity instanceof EntityPlayerMP) {EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
 				
+			EntityPlayerMP thePlayer2 = (EntityPlayerMP) par5Entity;
+			
 				if (par5Entity.dimension != Config.DimID) {
-					thePlayer.mcServer
-							.getConfigurationManager()
-							.transferPlayerToDimension(
-									thePlayer,
-									Config.DimID,
-									new DimTp(
-											thePlayer.mcServer
-													.worldServerForDimension(Config.DimID)));
+					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer,Config.DimID,new DimTp(thePlayer.mcServer.worldServerForDimension(Config.DimID)));
 				} else {
-					thePlayer.mcServer.getConfigurationManager()
-							.transferPlayerToDimension(
-									thePlayer,
+					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer,
 									0,
 									new DimTp(thePlayer.mcServer
 											.worldServerForDimension(0)));
