@@ -83,12 +83,6 @@ public class Transcrafter extends BlockContainer {
     public boolean renderAsNormalBlock() {
             return false;
     }
-    
-    @Override
-	public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
-	{
-				setBlockBounds(0.0F, 0.0F, 0.4F, 1.0F, 0.5F, 0.7F);
 
-		}
     
 }
