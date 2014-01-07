@@ -74,6 +74,7 @@ public class Transcraft {
 	public static Block ComGoldOre;
 	public static Block ComTransmutterOre;
 	public static Block ComOilOre;
+	public static Block ComTransmaniaOre;
 	public static Block DriedTransmutter;
 	public static Block TransManiaOre;
 

@@ -43,6 +43,9 @@ public class RecipeLoader {
 				"ii", "ii", 'i', Transcraft.TranscraftOre);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.ComOilOre, 1), "ii",
 				"ii", 'i', TranscraftItems.Oil);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.ComTransmaniaOre, 1), "ii",
+				"ii", 'i', Transcraft.TransManiaOre);
+
 
 		GameRegistry.addRecipe(new ItemStack(Block.oreIron, 4), "i", 'i',
 				Transcraft.ComIronOre);
@@ -52,6 +55,9 @@ public class RecipeLoader {
 				'i', Transcraft.ComTransmutterOre);
 		GameRegistry.addRecipe(new ItemStack(TranscraftItems.Oil, 4), "i", 'i',
 				Transcraft.ComOilOre);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.TransManiaOre, 4), "i", 'i',
+				Transcraft.ComTransmaniaOre);
+
 
 		GameRegistry.addRecipe(new ItemStack(TranscraftItems.HotDog, 8), "bbb",
 				"ppp", "bbb", 'b', Item.bread, 'p', Item.porkCooked);

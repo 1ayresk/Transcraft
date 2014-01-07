@@ -148,6 +148,11 @@ public class LoadBlocks {
 				Config.ComOilOreID).setUnlocalizedName("Transcraft:ComOilOre")
 				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
 				.setTextureName("Transcraft:ComOilOre");
+		
+		Transcraft.ComTransmaniaOre = new mark123mark.mods.transcraft.Blocks.ComOres.ComTransmaniaOre(
+				Config.ComTransmaniaOreID).setUnlocalizedName("Transcraft:ComTransmaniaOre")
+				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
+				.setTextureName("Transcraft:ComTransmaniaOre");
 
 		Transcraft.Transcrafter = new mark123mark.mods.transcraft.TileEntitys.Transcrafter.Transcrafter(
 				Config.TranscrafterID)
