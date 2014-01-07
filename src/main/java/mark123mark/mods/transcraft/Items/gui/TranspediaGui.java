@@ -1,13 +1,17 @@
 package mark123mark.mods.transcraft.Items.gui;
 
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.input.Keyboard;
@@ -90,15 +94,16 @@ public class TranspediaGui extends GuiContainer
             {
                 drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, new NukeCreeper(this.mc.theWorld));
             }
+            else if(this.mc.thePlayer.username.contains("tattyseal"))
+            {
+            	EntitySheep toby = new EntitySheep(this.mc.theWorld);
+            	toby.setFleeceColor(5);
+            	drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162) - this.xSize_lo, (float) (l + 60 - 20) - this.ySize_lo, toby);
+            }
             else
             {
                 drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, this.mc.thePlayer);
             }
-        }
-        
-        if(pageNumber == 0)
-        {
-        	drawBigPlayerModel(k + 105, l + 220, 30, (float) (k + 105) - this.xSize_lo, (float) (l + 80) - this.ySize_lo, new NukeCreeper(this.mc.theWorld));
         }
     }
    
@@ -134,6 +139,36 @@ public class TranspediaGui extends GuiContainer
             par5EntityLivingBase.rotationPitch = f4;
             par5EntityLivingBase.prevRotationYawHead = f5;
             par5EntityLivingBase.rotationYawHead = f6;
+            GL11.glPopMatrix();
+            RenderHelper.disableStandardItemLighting();
+            GL11.glDisable(GL12.GL_RESCALE_NORMAL);
+            OpenGlHelper.setActiveTexture(OpenGlHelper.lightmapTexUnit);
+            GL11.glDisable(GL11.GL_TEXTURE_2D);
+            OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
+    }
+    
+    /**
+     * This renders the player model in standard inventory position
+     */
+    public static void drawItemStackModel(int par0, int par1, int par2, float par3, float par4, EntityItem par5EntityLivingBase) {
+            GL11.glEnable(GL11.GL_COLOR_MATERIAL);
+            GL11.glPushMatrix();
+            GL11.glTranslatef((float) par0, (float) par1, 50.0F);
+            GL11.glScalef((float) (-par2), (float) par2, (float) par2);
+            GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
+            float f3 = par5EntityLivingBase.rotationYaw;
+            float f4 = par5EntityLivingBase.rotationPitch;
+            GL11.glRotatef(135.0F, 0.0F, 1.0F, 0.0F);
+            RenderHelper.enableStandardItemLighting();
+            GL11.glRotatef(-135.0F, 0.0F, 1.0F, 0.0F);
+            GL11.glRotatef(-((float) Math.atan((double) (par4 / 40.0F))) * 20.0F, 1.0F, 0.0F, 0.0F);
+            par5EntityLivingBase.rotationYaw = (float) Math.atan((double) (par3 / 40.0F)) * 40.0F;
+            par5EntityLivingBase.rotationPitch = -((float) Math.atan((double) (par4 / 40.0F))) * 20.0F;
+            GL11.glTranslatef(0.0F, par5EntityLivingBase.yOffset, 0.0F);
+            RenderManager.instance.playerViewY = 180.0F;
+            RenderManager.instance.renderEntityWithPosYaw(par5EntityLivingBase, 0.0D, 0.0D, 0.0D, 0.0F, 1.0F);
+            par5EntityLivingBase.rotationYaw = f3;
+            par5EntityLivingBase.rotationPitch = f4;
             GL11.glPopMatrix();
             RenderHelper.disableStandardItemLighting();
             GL11.glDisable(GL12.GL_RESCALE_NORMAL);
