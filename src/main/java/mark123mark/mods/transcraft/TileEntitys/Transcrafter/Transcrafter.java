@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class Transcrafter extends BlockContainer {
@@ -66,4 +67,28 @@ public class Transcrafter extends BlockContainer {
 		return new TileTC();
 	}
 
+    //You don't want the normal render type, or it wont render properly.
+    @Override
+    public int getRenderType() {
+            return 189;
+    }
+    
+    //It's not an opaque cube, so you need this.
+    @Override
+    public boolean isOpaqueCube() {
+            return false;
+    }
+    
+    //It's not a normal block, so you need this too.
+    public boolean renderAsNormalBlock() {
+            return false;
+    }
+    
+    @Override
+	public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
+	{
+				setBlockBounds(0.0F, 0.0F, 0.4F, 1.0F, 0.5F, 0.7F);
+
+		}
+    
 }
