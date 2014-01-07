@@ -68,7 +68,7 @@ public class Transcrafter extends BlockContainer {
 
     @Override
     public int getRenderType() {
-            return 189;
+            return -1;
     }
 
     @Override
