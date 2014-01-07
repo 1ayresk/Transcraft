@@ -45,7 +45,7 @@ public class TranspediaGui extends GuiContainer
     {
     	if(pageNumber != 0)
     	{
-            this.fontRenderer.drawString("Transpedia Page " + pageNumber, 8, 8, 4210752);	
+            this.fontRenderer.drawString("Transpedia Page " + pageNumber, ((width / 2) / 6), (height/2) + (height/7) - 4, 4210752);	
     	}
     	
 
@@ -239,6 +239,10 @@ public class TranspediaGui extends GuiContainer
     	/** Next **/
     	if(par0Button.id == 0)
     	{
+    		if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
+    		{
+    			pageNumber = Integer.MAX_VALUE - 1;
+    		}
     		pageNumber += 1;
     	}
     }
