@@ -14,6 +14,9 @@ public class TranscrafterModel extends ModelBase
    public  ModelRenderer Top_bit_3;
    public  ModelRenderer Top_bit_4;
    public  ModelRenderer Floaty_part;
+   public int fix = 7;
+   
+   
   
   public TranscrafterModel()
   {
@@ -21,7 +24,7 @@ public class TranscrafterModel extends ModelBase
     textureHeight = 128;
     
       Middle = new ModelRenderer(this, 0, 0);
-      Middle.addBox(0F, 0F, 0F, 14, 8, 14);
+      Middle.addBox(0F, 0F, 0F, 14, fix, 14);
       Middle.setRotationPoint(-7F, 16F, -7F);
       Middle.setTextureSize(64, 128);
       Middle.mirror = true;
