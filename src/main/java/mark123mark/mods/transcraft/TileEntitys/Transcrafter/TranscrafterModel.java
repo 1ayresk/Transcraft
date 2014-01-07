@@ -8,18 +8,18 @@ import net.minecraft.entity.Entity;
 public class TranscrafterModel extends ModelBase
 {
   //fields
-    ModelRenderer Middle;
-    ModelRenderer Bottom;
-    ModelRenderer Top_bit_1;
-    ModelRenderer Top_bit_2;
-    ModelRenderer Top_bit_3;
-    ModelRenderer Top_bit_4;
-    ModelRenderer Floaty_part;
+	public  ModelRenderer Middle;
+	public ModelRenderer Bottom;
+    public ModelRenderer Top_bit_1;
+    public ModelRenderer Top_bit_2;
+    public ModelRenderer Top_bit_3;
+    public ModelRenderer Top_bit_4;
+    public ModelRenderer Floaty_part;
   
   public TranscrafterModel()
   {
     textureWidth = 64;
-    textureHeight = 256;
+    textureHeight = 128;
     
       Middle = new ModelRenderer(this, 0, 0);
       Middle.addBox(0F, 0F, 0F, 14, 8, 14);

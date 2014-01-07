@@ -27,12 +27,6 @@ public class TickHandler implements ITickHandler {
 		EntityPlayer player = (EntityPlayer) tickData[0];
 
 		
-		if(player.getCurrentEquippedItem() != null)
-		{
-			if (player.getCurrentEquippedItem().itemID == TranscraftItems.EnderSword.itemID) {
-				player.addPotionEffect(new PotionEffect(4, 2, 3, true));
-			}
-		}
 		
 		if(Config.EnderArmorBuffs == true)
 		{

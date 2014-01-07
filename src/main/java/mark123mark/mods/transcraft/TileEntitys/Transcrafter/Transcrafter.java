@@ -19,7 +19,6 @@ public class Transcrafter extends BlockContainer {
 		super(id, Material.rock);
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setHardness(2F);
-
 	}
 
 	@Override
@@ -67,19 +66,16 @@ public class Transcrafter extends BlockContainer {
 		return new TileTC();
 	}
 
-    //You don't want the normal render type, or it wont render properly.
     @Override
     public int getRenderType() {
             return 189;
     }
-    
-    //It's not an opaque cube, so you need this.
+
     @Override
     public boolean isOpaqueCube() {
             return false;
     }
-    
-    //It's not a normal block, so you need this too.
+
     public boolean renderAsNormalBlock() {
             return false;
     }
