@@ -10,5 +10,6 @@ public class ListenerRegisterSound
 	{
 		e.manager.soundPoolSounds.addSound("transcraft:swordHit.ogg");
 		e.manager.soundPoolSounds.addSound("transcraft:bassDrop.ogg");
+		e.manager.soundPoolSounds.addSound("transcraft:paper.ogg");
 	}
 }
