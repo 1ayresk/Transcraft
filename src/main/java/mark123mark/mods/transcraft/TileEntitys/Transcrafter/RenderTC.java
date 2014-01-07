@@ -38,10 +38,10 @@ public class RenderTC extends TileEntitySpecialRenderer{
             }
             else
             {
-            	rotation = rotation + 0.01f;
+            	rotation = rotation + 0.10f;
             }
             
-            GL11.glRotatef(180F, rotation, 0.0f, rotation);
+            this.model.setRotation(this.model.Floaty_part, -0.7853982F, rotation, -0.7853982F);
             this.model.Floaty_part.render(0.0625F);
             this.model.Middle.render(0.0625F);
             this.model.Top_bit_1.render(0.0625F);

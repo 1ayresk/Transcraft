@@ -77,7 +77,7 @@ public class TranscrafterModel extends ModelBase
     Floaty_part.render(f5);
   }
   
-  private void setRotation(ModelRenderer model, float x, float y, float z)
+  void setRotation(ModelRenderer model, float x, float y, float z)
   {
     model.rotateAngleX = x;
     model.rotateAngleY = y;
