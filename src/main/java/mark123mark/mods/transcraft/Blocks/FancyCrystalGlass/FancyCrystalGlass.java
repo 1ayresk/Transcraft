@@ -5,6 +5,8 @@ import java.util.Random;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.zaetApi.api.IColoredBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
@@ -486,19 +488,8 @@ public class FancyCrystalGlass extends IColoredBlock {
 				.registerIcon("Transcraft:glass/FancyGlass/glass_3_r");
 		icons[15] = par1IconRegister
 				.registerIcon("Transcraft:glass/FancyGlass/glass_4");
+	
 	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World par1World, int par2, int par3,
-			int par4, Random par5Random) {
-		super.randomDisplayTick(par1World, par2, par3, par4, par5Random);
-
-		if (par5Random.nextInt(1) == 0) {
-			// Transcraft.Clproxy.spawnParticle("glass", par2 +
-			// par5Random.nextFloat(), par3 + 1.0F, par4 +
-			// par5Random.nextFloat());
-		}
-	}
-
 }
+
+

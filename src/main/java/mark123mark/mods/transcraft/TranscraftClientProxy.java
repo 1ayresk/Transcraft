@@ -6,6 +6,7 @@ import mark123mark.mods.transcraft.Entitys.mob.EnderBatRender;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
+import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderHandTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import mark123mark.mods.transcraft.helpers.Config;
@@ -47,6 +48,8 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class, new TileECRender());
 		MinecraftForgeClient.registerItemRenderer(Config.ixpGrinderID, new ItemTileIxpRender());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class, new RenderTC());
+		
+		MinecraftForgeClient.registerItemRenderer(Config.TranscrafterID, new RenderHandTC());
 		
 	}
 

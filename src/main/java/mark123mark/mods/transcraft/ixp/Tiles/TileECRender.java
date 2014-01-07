@@ -16,18 +16,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class TileECRender extends TileEntitySpecialRenderer {
-	private static final ResourceLocation field_110633_e = new ResourceLocation(
-			"textures/entity/chest/trapped.png");
-	private static final ResourceLocation field_110630_f = new ResourceLocation(
-			"textures/entity/chest/christmas.png");
-	private static final ResourceLocation field_110631_g = new ResourceLocation(
-			"transcraft", "textures/models/ixp.png");
+	private static final ResourceLocation field_110631_g = new ResourceLocation("transcraft", "textures/models/ixp.png");
 
 	/** The normal small chest model. */
 	private ModelChest chestModel = new ModelChest();
-
-	/** If true, chests will be rendered with the Christmas present textures. */
-	private boolean isChristmas;
 
 	public TileECRender() {
 
@@ -56,13 +48,9 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 		modelchest = this.chestModel;
 
-		if (par1TileEC.func_98041_l() == 1) {
-			this.bindTexture(field_110633_e);
-		} else if (this.isChristmas) {
-			this.bindTexture(field_110630_f);
-		} else {
-			this.bindTexture(field_110631_g);
-		}
+	
+		this.bindTexture(field_110631_g);
+
 
 		GL11.glPushMatrix();
 		GL11.glEnable(GL12.GL_RESCALE_NORMAL);
