@@ -106,7 +106,7 @@ public class RegisterBlocks {
 		 GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
 		 "DimPortalEscapeBlock");
 		GameRegistry.registerBlock(Transcraft.TransManiaOre, "TransManiaOre");
-		 GameRegistry.registerBlock(Transcraft.ixpGrinder, "ixpGrinder");
+		 GameRegistry.registerBlock(Transcraft.ixpGrinder, "ItemGrinder");
 
 		registerItem(TranscraftItems.BasicTransmuter);
 		registerItem(TranscraftItems.QuadTransmuter);

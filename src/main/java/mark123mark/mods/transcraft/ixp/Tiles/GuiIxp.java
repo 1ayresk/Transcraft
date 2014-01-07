@@ -57,17 +57,17 @@ public class GuiIxp extends GuiContainer
      */
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
-        this.fontRenderer.drawString("Ixp Grinder", 8, 8, 4210752);
+        this.fontRenderer.drawString("Item Grinder", 8, 8, 4210752);
         this.fontRenderer.drawString("Inventory", 8, this.ySize - 130, 4210752);
         this.fontRenderer.drawString("IXP: "+te.getIXPValue(), 167, 10, 4210752);
         
         
         
         
-        this.fontRenderer.drawString("1. Put in a Bottle o' Enchanting", 26, this.ySize - 230, 4210752);
+        this.fontRenderer.drawString("1. Put in 1 Transmutter", 26, this.ySize - 230, 4210752);
         this.fontRenderer.drawString("2. Put items in the next 9 slots", 8, this.ySize - 180, 4210752);
-        this.fontRenderer.drawString("3. When your Ixp vaule hits 256", 8, this.ySize - 170, 4210752);
-        this.fontRenderer.drawString("You will get 1 xp bottle", 20, this.ySize - 160, 4210752);
+        this.fontRenderer.drawString("3. When your vaule hits the max", 8, this.ySize - 170, 4210752);
+        this.fontRenderer.drawString("You will get 1 Transmutter", 20, this.ySize - 160, 4210752);
         this.fontRenderer.drawString("4. Put more items in!", 8, this.ySize - 151, 4210752);
     }
 
