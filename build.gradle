@@ -8,8 +8,11 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
-    }
+		files('libs/NEI.jar', 'libs/FMP.jar', 'libs/CCL.jar', 'libs/CCC.jar')
+	}
 }
+
+println 'Make sure to set-up the libraries in lib/setUpLibraries.bat'
 
 apply plugin: 'forge'
 
