@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
@@ -99,7 +100,7 @@ public class GuiIxp extends GuiContainer
         
         if(this.mc.thePlayer.username.contains("shifu_"))
         {
-        	drawRotatedPlayerModel(k + 200, l + 30, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, new EntityPig(this.mc.theWorld));
+        	drawRotatedPlayerModel(k + 200, l + 30, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, new EntityIronGolem(this.mc.theWorld));
         }
         else  if(this.mc.thePlayer.username.contains("mark123mark"))
         {
