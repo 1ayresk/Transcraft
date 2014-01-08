@@ -40,7 +40,7 @@ public class RenderHandTC implements IItemRenderer
 	{
 		switch(helper)
 		{
-		case ENTITY_ROTATION:
+//		case ENTITY_ROTATION:
 		case ENTITY_BOBBING: return true;
 		default: return false;
 		}
@@ -49,8 +49,6 @@ public class RenderHandTC implements IItemRenderer
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) 
 	{
-		boolean isFirstPerson = false;
-		int renderType = 0;
 		switch(type)
 		{
 			case ENTITY:
@@ -66,6 +64,7 @@ public class RenderHandTC implements IItemRenderer
 			    model.Top_bit_3.render(0.0625F);
 			    model.Top_bit_4.render(0.0625F);
 			    model.Floaty_part.render(0.0625F);
+			    GL11.glDisable(GL11.GL_BLEND);
 			    GL11.glPopMatrix();
 			}
 			case INVENTORY:
@@ -76,7 +75,6 @@ public class RenderHandTC implements IItemRenderer
 	            GL11.glRotatef(0F, 1.0F, 1.0F, 1.0F);
 	            GL11.glTranslatef((float) 7.0F, (float)-2.5f, (float) 0.4F);
 	            GL11.glScalef(13F, 13F, 13F);
-	          
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/TranscrafterModel.png"));
 			            
 			    model.Middle.render(0.0625F);
@@ -148,7 +146,4 @@ public class RenderHandTC implements IItemRenderer
 		}
 				
 		}
-	
-
-
 }
