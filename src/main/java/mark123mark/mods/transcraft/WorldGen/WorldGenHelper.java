@@ -20,7 +20,7 @@ public abstract class WorldGenHelper {
 
 	public WorldGenHelper(World worldObj, Random rand) {
 		this.worldObj = worldObj;
-		this.rand = rand;w
+		this.rand = rand;
 	}
 
 	// 0 = xz, 1 = yx, 2 = yz, 3 = xz follow terrain

@@ -42,7 +42,7 @@ public class Core {
 		}
 
 		if(Loader.isModLoaded("Waila")) {
-			FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.TranscraftAddons.waila.TranscraftProvider.callbackRegister");
+			FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.Transcraft.waila.TranscraftProvider.callbackRegister");
 		}
 		
 		
