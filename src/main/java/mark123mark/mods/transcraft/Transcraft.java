@@ -159,6 +159,13 @@ public class Transcraft {
 		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());
 		
 		
+		if(Loader.isModLoaded("Waila")) {
+			
+			FMLLog.info("[Transcraft Addons]	YEY");
+			FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.Transcraft.waila.TranscraftProvider.callbackRegister");
+		}
+		
+		
 	}
 
 	@EventHandler

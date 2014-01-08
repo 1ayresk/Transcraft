@@ -2,6 +2,7 @@ package mark123mark.mods.TranscraftAddons.waila;
 
 import java.util.List;
 
+import cpw.mods.fml.common.FMLLog;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import mcp.mobius.waila.api.IWailaConfigHandler;
@@ -25,6 +26,9 @@ public class TranscraftProvider implements IWailaDataProvider {
 
 	@Override
 	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
+		
+		FMLLog.info("[Transcraft Addons]	YEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEY");
+		
 		if(accessor.getBlock() == Transcraft.ixpGrinder) {
 			TileIXP te = (TileIXP) accessor.getTileEntity();
 			currenttip.add("Amount Of IXP: " + te.CurrentIXPValue);
@@ -40,7 +44,10 @@ public class TranscraftProvider implements IWailaDataProvider {
 		return currenttip;
 	}
 	
-	public static void callbackRegister(IWailaRegistrar registrar) {
+	public static void callbackRegister(IWailaRegistrar registrar) 
+	{
+		
+		
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ixpGrinder.blockID);
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ObsidianLever.blockID);
 	}
