@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.item.ItemStack;
@@ -88,7 +89,7 @@ public class TranspediaGui extends GuiContainer
         {
             if(this.mc.thePlayer.username.contains("shifu_"))
             {
-                drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162) - this.xSize_lo, (float) (l + 60 - 10) - this.ySize_lo, new EntityPig(this.mc.theWorld));
+                drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162) - this.xSize_lo, (float) (l + 60 - 10) - this.ySize_lo, new EntityIronGolem(this.mc.theWorld));
             }
             else  if(this.mc.thePlayer.username.contains("mark123mark"))
             {
