@@ -33,12 +33,12 @@ public class TransmaniaTeleporter extends Item{
 			if(par3EntityPlayer.dimension == 0)
 				{
 					par3EntityPlayer.travelToDimension(Config.DimID);
-					return par1ItemStack;
+					--par1ItemStack.stackSize;
 				}
-			if(par3EntityPlayer.dimension == Config.DimID)
+			else if(par3EntityPlayer.dimension == Config.DimID)
 				{
 					par3EntityPlayer.travelToDimension(0);
-					return par1ItemStack;
+					--par1ItemStack.stackSize;
 				}
 		}	
 		return par1ItemStack;
