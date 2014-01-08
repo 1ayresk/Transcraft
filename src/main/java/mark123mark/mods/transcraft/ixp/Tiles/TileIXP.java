@@ -27,7 +27,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     /** The current angle of the lid (between 0 and 1) */
     public float lidAngle;
     
-    public static double CurrentIXPValue = 0;
+    public double CurrentIXPValue = 0;
 
     /** The angle of the lid last tick */
     public float prevLidAngle;

@@ -26,9 +26,6 @@ public class TranscraftProvider implements IWailaDataProvider {
 
 	@Override
 	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) {
-		
-		FMLLog.info("[Transcraft Addons]	YEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEYYEY");
-		
 		if(accessor.getBlock() == Transcraft.ixpGrinder) {
 			TileIXP te = (TileIXP) accessor.getTileEntity();
 			currenttip.add("Amount Of IXP: " + te.CurrentIXPValue);
@@ -46,7 +43,7 @@ public class TranscraftProvider implements IWailaDataProvider {
 	
 	public static void callbackRegister(IWailaRegistrar registrar) 
 	{
-		
+		FMLLog.info("[Transcraft Addons]	YEY");
 		
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ixpGrinder.blockID);
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ObsidianLever.blockID);
