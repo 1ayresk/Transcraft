@@ -158,20 +158,16 @@ public class Transcraft {
 		
 		
 
-		BiomeDictionary.registerBiomeType(TransmutterBiome, Type.HILLS,
-				Type.FOREST, Type.WATER);
+		BiomeDictionary.registerBiomeType(TransmutterBiome, Type.PLAINS, Type.WATER);
 		GameRegistry.addBiome(TransmutterBiome);
 		BiomeManager.addSpawnBiome(TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TransmutterBiome);
 
-		 GameRegistry.addBiome(FlatLands);
 
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
 		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());
 		
-		if(Loader.isModLoaded("Waila")) {
-			FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.waila.TranscraftProvider.callbackRegister");
-		}
+		
 	}
 
 	@EventHandler
