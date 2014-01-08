@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.Listener.ListenerRegisterSound;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
+import mark123mark.mods.transcraft.addons.Addons;
 import mark123mark.mods.transcraft.command.CommandReloadConfig;
 import mark123mark.mods.transcraft.command.CommandTranscraftVersion;
 import mark123mark.mods.transcraft.fluids.TranscraftFluids;
@@ -40,6 +41,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
@@ -156,16 +158,7 @@ public class Transcraft {
 
 
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
-		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());
-		
-		
-		if(Loader.isModLoaded("Waila")) {
-			
-			FMLLog.info("[Transcraft Addons]	YEY");
-			FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.Transcraft.waila.TranscraftProvider.callbackRegister");
-		}
-		
-		
+		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());		
 	}
 
 	@EventHandler
@@ -198,7 +191,16 @@ public class Transcraft {
 
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
+		
 
+		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
+		NetworkRegistry.instance().registerGuiHandler(instance, new GuiHand());
+
+	}
+	
+	@EventHandler
+	public static void postInit(FMLPostInitializationEvent event) {
+		Addons.loadAddons();
 	}
 
 	public static void oreRegistration() {
@@ -218,11 +220,7 @@ public class Transcraft {
 
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
-
-		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
-		NetworkRegistry.instance().registerGuiHandler(instance,
-				new GuiHand());
-
+		
 	}
 
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
