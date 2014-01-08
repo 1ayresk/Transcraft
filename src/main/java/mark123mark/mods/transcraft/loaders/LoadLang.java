@@ -68,14 +68,11 @@ public class LoadLang {
 
 		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.ClearGlass, 1).getItem(), "Crystal Glass");
 
-		 LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
-		 "Transmania Escape Portal");
-		 LanguageRegistry.addName(Transcraft.DimPortalBlock,
-		 "TransMania Portal");
+
 
 		LanguageRegistry.addName(Transcraft.ixpGrinder, "Item Grinder");
 		
-		LanguageRegistry.addName(Transcraft.TransManiaOre, "TransManiaOre");
+
 	}
 
 }

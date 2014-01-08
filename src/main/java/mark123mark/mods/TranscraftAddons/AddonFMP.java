@@ -23,10 +23,7 @@ public class AddonFMP implements  IPartFactory
 		BlockMicroMaterial.createAndRegister(Transcraft.ComGoldOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.ComTransmutterOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.DriedTransmutter);
-		BlockMicroMaterial.createAndRegister(Transcraft.TransManiaOre);
-		
-		
-		
+
 
 		/*
 		 * 

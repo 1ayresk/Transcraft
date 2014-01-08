@@ -7,9 +7,6 @@ import mark123mark.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
-import mark123mark.mods.transcraft.Blocks.TransDim.EscapePortalBlock;
-import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
-import mark123mark.mods.transcraft.TransDim.DimPortalBlock;
 import mark123mark.mods.transcraft.helpers.Config;
 import mark123mark.mods.transcraft.ixp.Tiles.IXPGrinderMk2;
 import net.minecraft.block.Block;
@@ -22,11 +19,6 @@ public class LoadBlocks {
 				.setUnlocalizedName("Transcraft:TranscraftOre")
 				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
 				.setTextureName("Transcraft:TranscraftOre");
-
-		Transcraft.TransManiaOre = new TransManiaOre(Config.TransManiaOreID)
-				.setUnlocalizedName("Transcraft:TransManiaOre")
-				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:TransManiaOre");
 
 		Transcraft.OilOre = new mark123mark.mods.transcraft.Blocks.OilOre(
 				Config.OilOreID).setUnlocalizedName("Transcraft:OilOre")
@@ -183,27 +175,8 @@ public class LoadBlocks {
 				.setTextureName("Transcraft:EnderQuartzBrick2")
 				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 		
-		
-		
-		
-		
-		
-		 
-		  Transcraft.DimPortalBlock = (new
-		  DimPortalBlock(Config.DimPortalBlockID))
-		  .setUnlocalizedName("Transcraft:DimPortalBlock").setHardness(1.0F)
-		  .setTextureName("Transcraft:Portal")
-		  .setCreativeTab(Transcraft.TranstabBlocks);
-		  
-		  
-		  
-		  
-		  Transcraft.DimPortalEscapeBlock = (new
-		  EscapePortalBlock(Config.DimPortalEscapeBlockID))
-		  .setUnlocalizedName(
-		  "Transcraft:DimPortalEscapeBlock").setHardness(1.0F)
-		  .setTextureName("Transcraft:EscapePortal")
-		  .setCreativeTab(Transcraft.TranstabBlocks).setBlockUnbreakable();
+
+
 		
 		 
 		Transcraft.ixpGrinder = new IXPGrinderMk2(Config.ixpGrinderID, 0).setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)

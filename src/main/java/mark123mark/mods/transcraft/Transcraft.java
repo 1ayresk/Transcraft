@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.Listener.ListenerRegisterSound;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
-import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
 import mark123mark.mods.transcraft.command.CommandReloadConfig;
 import mark123mark.mods.transcraft.command.CommandTranscraftVersion;
 import mark123mark.mods.transcraft.fluids.TranscraftFluids;
@@ -17,7 +16,6 @@ import mark123mark.mods.transcraft.helpers.PlayerEditor;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
 import mark123mark.mods.transcraft.loaders.LoadChestGen;
-import mark123mark.mods.transcraft.loaders.LoadDim;
 import mark123mark.mods.transcraft.loaders.LoadEntity;
 import mark123mark.mods.transcraft.loaders.LoadItems;
 import mark123mark.mods.transcraft.loaders.LoadLang;
@@ -77,7 +75,6 @@ public class Transcraft {
 	public static Block ComOilOre;
 	public static Block ComTransmaniaOre;
 	public static Block DriedTransmutter;
-	public static Block TransManiaOre;
 
 	public static Block Transcrafter;
 
@@ -86,14 +83,8 @@ public class Transcraft {
 	public static Block EnderQuartzBrick;
 	public static Block EnderQuartzBigBrick;
 
-	 public static Block DimPortalBlock;
-	 public static Block DimPortalEscapeBlock;
-
 	 public static Block ixpGrinder;
 
-	public static final BiomeGenBase FlatLands = (new FlatLands(189))
-			.setBiomeName("TransLands").setDisableRain()
-			.setMinMaxHeight(0.3F, 10.5F);
 	
 	public static final BiomeGenBase TransmutterBiome = (new mark123mark.mods.transcraft.biomes.TransmutterBiome(
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
@@ -224,10 +215,6 @@ public class Transcraft {
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
 		NetworkRegistry.instance().registerGuiHandler(instance,
 				new GuiHand());
-
-
-		FMLLog.info("[TRANSCRAFT]	Adding new dims");
-		 LoadDim.load();
 
 	}
 
