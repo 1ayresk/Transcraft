@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 
-public class WorldGenBuker extends FishyWorldGenBase {
+public class WorldGenBuker extends WorldGenHelper {
 
 	public WorldGenBuker(World worldObj, Random rand) {
 		super(worldObj, rand);

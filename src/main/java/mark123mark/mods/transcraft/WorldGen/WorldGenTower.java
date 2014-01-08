@@ -11,7 +11,7 @@ import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLLog;
 
-public class WorldGenTower extends FishyWorldGenBase {
+public class WorldGenTower extends WorldGenHelper {
 
 	public WorldGenTower(World worldObj, Random rand) {
 		super(worldObj, rand);

@@ -2,7 +2,7 @@ package mark123mark.mods.transcraft.WorldGen;
 
 import java.util.Random;
 
-import mark123mark.mods.transcraft.WorldGen.TransManaia.EscapePortal;
+
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -126,9 +126,7 @@ public class TranscraftGenerator implements IWorldGenerator {
 			if (random.nextInt(1750) == 0) {
 				new WorldGenTower(world, random).generate(i + 8, 0, j + 8);
 			}
-			if (random.nextInt(1150) == 0) {
-				new EscapePortal(world, random).generate(i + 8, 0, j + 8);
-			}
+
 			// if(random.nextInt(150) == 0)
 			// {
 			// new OldHouse().generate(world, random, Xcoord1, Ycoord1,

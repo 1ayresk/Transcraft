@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 
-public class WorldGenRuins extends FishyWorldGenBase {
+public class WorldGenRuins extends WorldGenHelper {
 
 	public WorldGenRuins(World worldObj, Random rand) {
 		super(worldObj, rand);

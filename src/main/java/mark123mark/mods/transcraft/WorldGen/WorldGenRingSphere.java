@@ -12,7 +12,7 @@ import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLLog;
 
-public class WorldGenRingSphere extends FishyWorldGenBase {
+public class WorldGenRingSphere extends WorldGenHelper {
 
 	public WorldGenRingSphere(World worldObj, Random rand) {
 		super(worldObj, rand);

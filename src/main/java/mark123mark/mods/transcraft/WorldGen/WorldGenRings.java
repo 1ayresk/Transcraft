@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLLog;
 
-public class WorldGenRings extends FishyWorldGenBase {
+public class WorldGenRings extends WorldGenHelper {
 
 	public WorldGenRings(World worldObj, Random rand) {
 		super(worldObj, rand);

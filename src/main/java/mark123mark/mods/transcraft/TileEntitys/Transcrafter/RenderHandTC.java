@@ -49,10 +49,27 @@ public class RenderHandTC implements IItemRenderer
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) 
 	{
+		int renderType = 0;
+		
 		switch(type)
 		{
 			case ENTITY:
 			{
+				
+				GL11.glPushMatrix();
+//				GL11.glEnable(GL11.GL_BLEND);
+//	            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+			
+	            GL11.glRotatef(0F, 0.0F, 0.0F, 1.0F);
+//				GL11.glTranslatef(0.0F, -0.1F, 0.0F);
+				 GL11.glScalef(1F, 1F, 1F);
+//				 GL11.glDisable(GL11.GL_BLEND);
+					GL11.glPopMatrix();
+            	
+            /*
+             * 	
+         
+				renderType = 2;
 				GL11.glPushMatrix();
 				GL11.glDisable(GL11.GL_CULL_FACE);
 	            GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
@@ -66,6 +83,8 @@ public class RenderHandTC implements IItemRenderer
 			    model.Floaty_part.render(0.0625F);
 			    GL11.glDisable(GL11.GL_BLEND);
 			    GL11.glPopMatrix();
+			    
+			        */
 			}
 			case INVENTORY:
 			{

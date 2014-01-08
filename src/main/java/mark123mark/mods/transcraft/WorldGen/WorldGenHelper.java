@@ -7,7 +7,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 
-public abstract class FishyWorldGenBase {
+public abstract class WorldGenHelper {
 
 	public World worldObj;
 	public Random rand;
@@ -18,9 +18,9 @@ public abstract class FishyWorldGenBase {
 	List<Integer> allowedBlocks = Arrays.asList(0, Block.tallGrass.blockID,
 			Block.plantRed.blockID, Block.plantYellow.blockID);
 
-	public FishyWorldGenBase(World worldObj, Random rand) {
+	public WorldGenHelper(World worldObj, Random rand) {
 		this.worldObj = worldObj;
-		this.rand = rand;
+		this.rand = rand;w
 	}
 
 	// 0 = xz, 1 = yx, 2 = yz, 3 = xz follow terrain
