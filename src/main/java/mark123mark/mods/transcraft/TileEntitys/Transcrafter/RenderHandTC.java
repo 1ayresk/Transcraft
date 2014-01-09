@@ -40,7 +40,7 @@ public class RenderHandTC implements IItemRenderer
 	{
 		switch(helper)
 		{
-//		case ENTITY_ROTATION:
+		case ENTITY_ROTATION:
 		case ENTITY_BOBBING: return true;
 		default: return false;
 		}
@@ -55,6 +55,7 @@ public class RenderHandTC implements IItemRenderer
 			{
 				GL11.glPushMatrix();
 				GL11.glRotatef(180F, 8f, 0f, 0f);
+				GL11.glScalef(0.5F, 0.5F, 0.5F);
 				GL11.glTranslatef(0f, -1.5f, 0f);
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/TranscrafterModel.png"));
 			    model.Middle.render(0.0625F);
@@ -71,8 +72,8 @@ public class RenderHandTC implements IItemRenderer
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 				GL11.glPushMatrix();
-	            GL11.glRotatef(0F, 1.0F, 1.0F, 1.0F);
-	            GL11.glTranslatef((float) 7.0F, (float)-2.5f, (float) 0.4F);
+	            GL11.glRotatef(50F, -1110.0F,0.0F, -1110.0F);
+	            GL11.glTranslatef((float) 1.0F, (float)-3.7f, (float) 1.4F);
 	            GL11.glScalef(13F, 13F, 13F);
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/TranscrafterModel.png"));
 			            

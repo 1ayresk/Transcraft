@@ -19,6 +19,7 @@ public class Transcrafter extends BlockContainer {
 		super(id, Material.rock);
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setHardness(2F);
+		
 	}
 
 	@Override
