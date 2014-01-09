@@ -50,43 +50,23 @@ public class RenderHandTC implements IItemRenderer
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) 
 	{
 		int renderType = 0;
-		
-		switch(type)
-		{
-			case ENTITY:
+
+			if(type == type.ENTITY)
 			{
-				
 				GL11.glPushMatrix();
-//				GL11.glEnable(GL11.GL_BLEND);
-//	            GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-			
-	            GL11.glRotatef(0F, 0.0F, 0.0F, 1.0F);
-//				GL11.glTranslatef(0.0F, -0.1F, 0.0F);
-				 GL11.glScalef(1F, 1F, 1F);
-//				 GL11.glDisable(GL11.GL_BLEND);
-					GL11.glPopMatrix();
-            	
-            /*
-             * 	
-         
-				renderType = 2;
-				GL11.glPushMatrix();
-				GL11.glDisable(GL11.GL_CULL_FACE);
-	            GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-	            GL11.glScalef(1F, 1F, 1F);
-	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/TranscrafterModel.png"));  
+				GL11.glRotatef(180F, 8f, 0f, 0f);
+				GL11.glTranslatef(0f, -1.5f, 0f);
+	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/TranscrafterModel.png"));
 			    model.Middle.render(0.0625F);
 			    model.Top_bit_1.render(0.0625F);
 			    model.Top_bit_2.render(0.0625F);
 			    model.Top_bit_3.render(0.0625F);
 			    model.Top_bit_4.render(0.0625F);
 			    model.Floaty_part.render(0.0625F);
-			    GL11.glDisable(GL11.GL_BLEND);
 			    GL11.glPopMatrix();
-			    
-			        */
 			}
-			case INVENTORY:
+			
+			if(type == type.INVENTORY)
 			{
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -105,7 +85,8 @@ public class RenderHandTC implements IItemRenderer
 			    GL11.glDisable(GL11.GL_BLEND);
 			    GL11.glPopMatrix();
 			}
-			case EQUIPPED_FIRST_PERSON:
+			
+			if(type == type.EQUIPPED_FIRST_PERSON)
 			{
 				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 				
@@ -131,7 +112,8 @@ public class RenderHandTC implements IItemRenderer
 			    
 			    GL11.glPopMatrix();
 			}
-			case EQUIPPED:
+			 
+			if(type == type.EQUIPPED)
 			{
 				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 				
@@ -161,8 +143,6 @@ public class RenderHandTC implements IItemRenderer
 				GL11.glPopMatrix();
 
 			}
-			
-		}
 				
 		}
 }

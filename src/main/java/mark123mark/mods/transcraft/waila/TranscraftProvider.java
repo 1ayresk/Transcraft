@@ -40,7 +40,8 @@ public class TranscraftProvider implements IWailaDataProvider {
 		return currenttip;
 	}
 	
-	public static void callbackRegister(IWailaRegistrar registrar) {
+	public static void callbackRegister(IWailaRegistrar registrar)
+	{
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ixpGrinder.blockID);
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ObsidianLever.blockID);
 	}

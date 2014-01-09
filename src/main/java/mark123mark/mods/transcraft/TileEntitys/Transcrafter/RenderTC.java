@@ -41,7 +41,7 @@ public class RenderTC extends TileEntitySpecialRenderer{
             	rotation = rotation + 0.10f;
             }
             
-//            this.model.setRotation(this.model.Floaty_part, -0.7853982F, rotation, -0.7853982F);
+            this.model.setRotation(this.model.Floaty_part, -0.7853982F, rotation, -0.7853982F);
             this.model.Floaty_part.render(0.0525F);
             this.model.Middle.render(0.0625F);
             this.model.Top_bit_1.render(0.0625F);
