@@ -38,6 +38,7 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
@@ -75,7 +76,6 @@ public class Transcraft {
 	public static Block ComGoldOre;
 	public static Block ComTransmutterOre;
 	public static Block ComOilOre;
-	public static Block ComTransmaniaOre;
 	public static Block DriedTransmutter;
 
 	public static Block Transcrafter;
@@ -87,13 +87,9 @@ public class Transcraft {
 
 	 public static Block ixpGrinder;
 
-	
 	public static final BiomeGenBase TransmutterBiome = (new mark123mark.mods.transcraft.biomes.TransmutterBiome(
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
 			0.4F);
-
-
-
 
 	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
 			"PlasticTool", 2, 750, 5.0F, 2, 0);
@@ -181,17 +177,8 @@ public class Transcraft {
 				.registerConnectionHandler(new PlayerEditor());
 
 		Coproxy.renderThings();
-		
-		
-/*
-		if (event.getSide() == Side.CLIENT) {
-			MinecraftForge.EVENT_BUS.register(new EventCloakRender());
-		}
- */
-
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
-		
 
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
 		NetworkRegistry.instance().registerGuiHandler(instance, new GuiHand());
@@ -234,17 +221,17 @@ public class Transcraft {
 	public static CreativeTabs TranstabBlocks = new CreativeTabs("TranstabBlocks") 
 	{
 		@Override
-		public ItemStack getIconItemStack() {
+		public ItemStack getIconItemStack() 
+		{
 			return new ItemStack(TranscraftOre, 1, 0);
 		}
 
 	};
 
-	public static CreativeTabs TranstabDecBlocks = new CreativeTabs(
-			"TranstabDecBlocks") {
-
+	public static CreativeTabs TranstabDecBlocks = new CreativeTabs("TranstabDecBlocks") {
 		@Override
-		public ItemStack getIconItemStack() {
+		public ItemStack getIconItemStack() 
+		{
 			return new ItemStack(EnderQuartzBigBrick, 1, 11);
 		}
 

@@ -39,7 +39,7 @@ public class Config {
 	public static int ComGoldOreID = 2022;
 	public static int ComTransmutterOreID = 2023;
 	public static int ComOilOreID = 2024;
-	public static int ComTransmaniaOreID = 2026;
+
 
 	 public static int ixpGrinderID =2025;
 
@@ -147,7 +147,6 @@ public class Config {
 		ComTransmutterOreID = config.getBlock("Packed Transmuter Ore", 2023)
 				.getInt();
 		ComOilOreID = config.getBlock("Packed Oil Ore", 2024).getInt();
-		ComTransmaniaOreID = config.getBlock("Packed Transmania Ore", 2026).getInt();
 
 		 ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
 

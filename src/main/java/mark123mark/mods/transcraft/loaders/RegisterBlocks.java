@@ -43,7 +43,6 @@ public class RegisterBlocks {
 		LanguageRegistry.addName(Transcraft.ComTransmutterOre,
 				"Packed Transmuter Ore");
 		LanguageRegistry.addName(Transcraft.ComOilOre, "Packed Oil Ore");
-		LanguageRegistry.addName(Transcraft.ComTransmaniaOre, "Packed Transmaina Ore");
 		LanguageRegistry.addName(Transcraft.enderQuartzBlock,
 				"Ender Quartz Block");
 
@@ -67,7 +66,6 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.ComTransmutterOre,
 				"Packed Transmuter Ore");
 		GameRegistry.registerBlock(Transcraft.ComOilOre, "Packed Oil Ore");
-		GameRegistry.registerBlock(Transcraft.ComTransmaniaOre, "Packed Transmania Ore");
 		GameRegistry.registerBlock(Transcraft.BunkerStair, "Bunker Stair");
 		GameRegistry.registerBlock(Transcraft.ObsidianLever, "Obsidian Lever");
 		GameRegistry.registerBlock(Transcraft.SmoothBunkerBlock,

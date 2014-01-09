@@ -19,6 +19,10 @@ public class TranscraftOre extends Block {
 	public void randomDisplayTick(World par1World, int par2, int par3,
 			int par4, Random par5Random) {
 
+		/*
+		 * 
+	
+		
 			for (int l = 0; l < 20; ++l) {
 				double d0 = par2 + par5Random.nextFloat();
 				double d1 = par3 + par5Random.nextFloat();
@@ -38,6 +42,8 @@ public class TranscraftOre extends Block {
 				par1World.spawnParticle("portal", d6, d1, d5, d2, d3, d4);
 			}
 
+
+	 */
 		}
 
 
