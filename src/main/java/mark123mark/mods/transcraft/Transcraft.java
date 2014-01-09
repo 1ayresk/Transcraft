@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.Listener.ListenerRegisterSound;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
+import mark123mark.mods.transcraft.addons.Addon;
 import mark123mark.mods.transcraft.addons.Addons;
 import mark123mark.mods.transcraft.command.CommandReloadConfig;
 import mark123mark.mods.transcraft.command.CommandTranscraftVersion;
@@ -155,6 +156,14 @@ public class Transcraft {
 
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
 		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());		
+		
+		Addon a = new Addon("Waila") {
+			@Override
+			public void load() {
+				FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.addons.waila.TranscraftProvider.callbackRegister");
+			}
+		};
+		a.preLoad();
 	}
 
 	@EventHandler

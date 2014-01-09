@@ -43,7 +43,7 @@ public class TranscraftProvider implements IWailaDataProvider {
 	
 	public static void callbackRegister(IWailaRegistrar registrar) 
 	{
-		FMLLog.info("[Transcraft Addons]	YEY");
+		FMLLog.info("[Transcraft Addons] Callback Register For Waila");
 		
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ixpGrinder.blockID);
 		registrar.registerBodyProvider(new TranscraftProvider(), Transcraft.ObsidianLever.blockID);
