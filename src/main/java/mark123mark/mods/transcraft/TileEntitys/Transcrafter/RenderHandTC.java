@@ -12,14 +12,11 @@ import org.lwjgl.opengl.GL11;
 
 public class RenderHandTC implements IItemRenderer 
 {
-
 	private TranscrafterModel model;
-
 
 	public RenderHandTC()
 	{
 		model = new TranscrafterModel();
-
 	}
 	
 	@Override
