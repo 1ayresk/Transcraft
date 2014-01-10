@@ -371,7 +371,11 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         			}
         		}
     		}
-    		
+
+    	}
+    	else
+    	{
+    		CurrnetMaxValue = 0;
     	}
     }
     /**
