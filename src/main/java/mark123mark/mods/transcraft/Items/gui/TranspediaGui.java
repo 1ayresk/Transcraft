@@ -46,7 +46,7 @@ public class TranspediaGui extends GuiContainer
     {
     	if(pageNumber != 0)
     	{
-            this.fontRenderer.drawString("Transpedia Page " + pageNumber, ((width / 2) / 6), (height/2) + (height/7) - 4, 4210752);	
+            this.fontRenderer.drawString("Transpedia Page " + pageNumber, ((width / 2) / 6), (height/2) + (height/5) - 4, 4210752);	
     	}
     	
 

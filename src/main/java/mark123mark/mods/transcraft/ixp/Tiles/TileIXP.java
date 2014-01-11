@@ -22,7 +22,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class TileIXP extends TileEntity implements IInventory, ISidedInventory
 {
     private ItemStack[] chestContents = new ItemStack[36];
-
+    private static final int[] slots_top = new int[] {0};
+    private static final int[] slots_bottom = new int[] {2, 1};
+    private static final int[] slots_sides = new int[] {1};
     
     /** The current angle of the lid (between 0 and 1) */
     public float lidAngle;
@@ -521,6 +523,12 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         }
     }
 
+    
+    public int[] getAccessibleSlotsFromSide(int par1)
+    {
+        return par1 == 0 ? slots_bottom : (par1 == 1 ? slots_top : slots_sides);
+    }
+    
     /**
      * Returns true if automation is allowed to insert the given stack (ignoring stack size) into the given slot.
      */
@@ -553,28 +561,11 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         return this.field_94046_i;
     }
 
-	@Override
-	public int[] getAccessibleSlotsFromSide(int side)
-	{
-		return new int[37];
-	}
+
 
 	@Override
 	public boolean canInsertItem(int slot, ItemStack itemstack, int side)
 	{
-		if(side == 0 || side == 1)
-		{
-			if(slot == 0)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		else
-		{
 			if(slot > 1 && slot < 37)
 			{
 				return true;
@@ -583,7 +574,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
 			{
 				return false;
 			}
-		}
+			
 	}
 
 	@Override
@@ -604,7 +595,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
 		{
 			if(slot > 1 && slot < 37)
 			{
-				return true;
+				return false;
 			}
 			else
 			{
@@ -612,4 +603,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
 			}
 		}
 	}
+	
+	
+
+	
 }

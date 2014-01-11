@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 public class ContainerIXP extends Container
 {
     private IInventory lowerChestInventory;
-    private int numRows = 1;
+    private int numRows = 3;
 
     private TileIXP tileEntity;
     
