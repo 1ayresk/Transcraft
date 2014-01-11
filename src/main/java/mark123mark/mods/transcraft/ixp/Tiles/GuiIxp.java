@@ -61,18 +61,21 @@ public class GuiIxp extends GuiContainer
      */
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
+    	GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.fontRenderer.drawString("Item Grinder", 8, 8, 4210752);
         this.fontRenderer.drawString("Inventory", 9, this.ySize - 100, 4210752);
-        this.fontRenderer.drawString("Current Item Essence: "+te.getIXPValue(), 77, 10, 4210752);
+        this.fontRenderer.drawString("Current Essence: "+te.getIXPValue(), 77, 10, 4210752);
         this.mc.getTextureManager().bindTexture(field_110421_t);
 
         if(te.getIXPValue() != 0)
         {
-        	te.CurrentintIXPValue = (int)te.getIXPValue();
-            int perint1 = (te.CurrentintIXPValue * 100);
-            int perint2  =( perint1 / te.CurrnetintMaxValue );
-            System.out.println(perint2);
-            this.drawTexturedModalRect(xSize - 226, ySize - 194, 0, 220, perint2, 14);
+        	if(te.CurrnetintMaxValue != 0)
+        	{
+        		te.CurrentintIXPValue = (int)te.getIXPValue();
+                int perint1 = (te.CurrentintIXPValue * 100);
+                int perint2  =( perint1 / te.CurrnetintMaxValue );
+                this.drawTexturedModalRect(xSize - 226, ySize - 194, 0, 220, perint2, 14);
+        	}
         }
 
     }

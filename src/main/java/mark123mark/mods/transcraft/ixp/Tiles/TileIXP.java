@@ -330,7 +330,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	int slot = 1;
     	
     	for(int j = 0; slot < 28; slot++)
-    	{
+    	{	
         	if(getStackInSlot(slot) != null )
         	{
             	int IXP = 1;
@@ -345,9 +345,9 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	int slot = 0;
     	int mainSlot = 1;
     	
-    	int BASIC = 512;
-    	int QUAD = 2512;
-    	int NANO = 20000;
+    	int BASIC = 1024;
+    	int QUAD = 5512;
+    	int NANO = 25256;
     	
     	if(getStackInSlot(0) != null)
     	{

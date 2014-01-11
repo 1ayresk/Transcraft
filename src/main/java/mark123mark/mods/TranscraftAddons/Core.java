@@ -32,9 +32,7 @@ public class Core {
 			{
 				if (Loader.isModLoaded("CodeChickenCore"))
 				{
-
 					AddonNEILoad.StartNei();
-
 					FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
 				}
 			}

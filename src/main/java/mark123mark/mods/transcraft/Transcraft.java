@@ -147,16 +147,18 @@ public class Transcraft {
 		
 		
 		
-
+		FMLLog.info("[TRANSCRAFT]	Loading Biomes");
 		BiomeDictionary.registerBiomeType(TransmutterBiome, Type.PLAINS, Type.WATER);
 		GameRegistry.addBiome(TransmutterBiome);
 		BiomeManager.addSpawnBiome(TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TransmutterBiome);
 
 
+		FMLLog.info("[TRANSCRAFT]	Loading Helper");
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
 		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());		
 		
+		FMLLog.info("[TRANSCRAFT]	Loading Addons");
 		Addon a = new Addon("Waila") {
 			@Override
 			public void load() {
