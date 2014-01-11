@@ -364,8 +364,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	{
     		NANO = NANO + 1;
     	}
-    	
-    	
+
     	if(getStackInSlot(0) != null)
     	{
     		if (getStackInSlot(0).itemID == TranscraftItems.BasicTransmuter.itemID)
@@ -456,13 +455,18 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
                     }
                 }
             }
+            
+            
+            
+           
+
+               
+           
         }
 
         this.prevLidAngle = this.lidAngle;
         f = 0.1F;
         double d0;
-
-       
 
         if (this.numUsingPlayers == 0 && this.lidAngle > 0.0F || this.numUsingPlayers > 0 && this.lidAngle < 1.0F)
         {
@@ -519,6 +523,11 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord, this.getBlockType().blockID, 1, this.numUsingPlayers);
         this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, this.getBlockType().blockID);
         this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord - 1, this.zCoord, this.getBlockType().blockID);
+        
+        
+        
+        
+        
     }
 
     public void closeChest()

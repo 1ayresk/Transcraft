@@ -201,7 +201,6 @@ public class IXPGrinderMk2 extends BlockContainer
             {
             	if(!par5EntityPlayer.isSneaking())
             	{
-            		par5EntityPlayer.playSound("transcraft:itemGrinderOpen", 10F, 1.0F);
             		par5EntityPlayer.openGui(Transcraft.instance, 2, par1World, par2, par3, par4);
             	}
             	
