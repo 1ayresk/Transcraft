@@ -423,9 +423,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     public void updateEntity()
     {
         super.updateEntity();
-        
-        
-        
+
         handleEnergy();
         makeItems();
 
