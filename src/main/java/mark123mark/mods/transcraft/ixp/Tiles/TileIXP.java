@@ -219,6 +219,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         this.field_94045_s = par1Str;
     }
 
+    @Override
     /**
      * Reads a tile entity from NBT.
      */
@@ -230,11 +231,6 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         
         this.CurrentIXPValue = par1NBTTagCompound.getDouble("IXP");
         
-        
-        
-        
-        
-
         if (par1NBTTagCompound.hasKey("CustomName"))
         {
             this.field_94045_s = par1NBTTagCompound.getString("CustomName");
@@ -263,7 +259,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	return this.CurrnetMaxValue;
     }
     
-    
+    @Override
     /**
      * Writes a tile entity to NBT.
      */
@@ -427,6 +423,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     public void updateEntity()
     {
         super.updateEntity();
+        
+        
         
         handleEnergy();
         makeItems();
