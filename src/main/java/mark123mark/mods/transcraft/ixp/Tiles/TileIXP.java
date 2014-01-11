@@ -29,6 +29,9 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     
     public double CurrentIXPValue = 0;
     public double CurrnetMaxValue = 0;
+    public int CurrentintIXPValue = 0;
+    public int CurrnetintMaxValue = 0;
+    
 
     /** The angle of the lid last tick */
     public float prevLidAngle;
@@ -67,6 +70,11 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     public void incIXP()
     {
     	CurrentIXPValue= CurrentIXPValue+0.125;
+    	
+    	
+    	
+    	
+    	
     }
     
     /**
@@ -220,6 +228,11 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         this.chestContents = new ItemStack[this.getSizeInventory()];
         
         this.CurrentIXPValue = par1NBTTagCompound.getDouble("IXP");
+        
+        
+        
+        
+        
 
         if (par1NBTTagCompound.hasKey("CustomName"))
         {
@@ -242,6 +255,14 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     {
     	return this.CurrentIXPValue;
     }
+    
+    
+    public double getCurrnetMaxValue()
+    {
+    	return this.CurrnetMaxValue;
+    }
+    
+    
     /**
      * Writes a tile entity to NBT.
      */
@@ -308,7 +329,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     {
     	int slot = 1;
     	
-    	for(int j = 0; slot < 10; slot++)
+    	for(int j = 0; slot < 28; slot++)
     	{
         	if(getStackInSlot(slot) != null )
         	{
@@ -333,6 +354,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     		if (getStackInSlot(0).itemID == TranscraftItems.BasicTransmuter.itemID)
     		{
     			CurrnetMaxValue = BASIC;
+    			CurrnetintMaxValue = BASIC;
     			if(BASIC != 0 && getStackInSlot(0).stackSize <=  64)
         		{
         			if(CurrentIXPValue >= BASIC)
@@ -347,6 +369,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     		if (getStackInSlot(0).itemID == TranscraftItems.QuadTransmuter.itemID)
     		{
     			CurrnetMaxValue = QUAD;
+    			CurrnetintMaxValue = QUAD;
     			if(QUAD != 0 && getStackInSlot(0).stackSize <=  64)
         		{
         			if(CurrentIXPValue >= QUAD)
@@ -361,6 +384,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     		if (getStackInSlot(0).itemID == TranscraftItems.NanoTransmuter.itemID)
     		{
     			CurrnetMaxValue = NANO;
+    			CurrnetintMaxValue = QUAD;
     			if(NANO != 0 && getStackInSlot(0).stackSize <=  64)
         		{
         			if(CurrentIXPValue >= NANO)
@@ -385,6 +409,10 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     public void updateEntity()
     {
         super.updateEntity();
+        
+       
+        
+        
 //        if(getStackInSlot(0) != null)
  //       {
 //        	if(getStackInSlot(0).stackSize != 64)

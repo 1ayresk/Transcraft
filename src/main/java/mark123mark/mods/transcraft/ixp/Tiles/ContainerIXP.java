@@ -24,10 +24,9 @@ public class ContainerIXP extends Container
 		
 		this.addSlotToContainer(new Slot(this.tileEntity, 0, 8, 24));
 
-		for (int y = 0; y < 1; y++) {
+		for (int y = 0; y < 3; y++) {
 			for (int x = 0; x < 9; x++) {
-				this.addSlotToContainer(new Slot(this.tileEntity, x + (y * 9)
-						+ 1, 8 + x * 18, 52 + y * 18));
+				this.addSlotToContainer(new Slot(this.tileEntity, x + (y * 9)+ 1, 8 + x * 18, 52 + y * 18));
 			}
 		}
 

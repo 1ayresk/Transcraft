@@ -38,6 +38,9 @@ public class GuiIxp extends GuiContainer
     private float xSize_lo;
     private float ySize_lo;
     
+   
+    
+    
     /**
      * window height is calculated with this values, the more rows, the heigher
      */
@@ -47,7 +50,7 @@ public class GuiIxp extends GuiContainer
 	public GuiIxp(InventoryPlayer player,TileIXP tileEntity) {
 		super(new ContainerIXP(player, tileEntity));
 		this.xSize = 256;
-		this.ySize = 256;
+		this.ySize = 219;
 		this.te = tileEntity;
 		this.lowerChestInventory = player;
 		this.upperChestInventory = te;
@@ -59,17 +62,19 @@ public class GuiIxp extends GuiContainer
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
         this.fontRenderer.drawString("Item Grinder", 8, 8, 4210752);
-        this.fontRenderer.drawString("Inventory", 8, this.ySize - 130, 4210752);
-        this.fontRenderer.drawString("IXP: "+te.getIXPValue(), 167, 10, 4210752);
-        
-        
-        
-        
-        this.fontRenderer.drawString("1. Put in 1 Transmutter", 26, this.ySize - 230, 4210752);
-        this.fontRenderer.drawString("2. Put items in the next 9 slots", 8, this.ySize - 180, 4210752);
-        this.fontRenderer.drawString("3. When your vaule hits the max", 8, this.ySize - 170, 4210752);
-        this.fontRenderer.drawString("You will get 1 Transmutter", 20, this.ySize - 160, 4210752);
-        this.fontRenderer.drawString("4. Put more items in!", 8, this.ySize - 151, 4210752);
+        this.fontRenderer.drawString("Inventory", 9, this.ySize - 100, 4210752);
+        this.fontRenderer.drawString("Current Item Essence: "+te.getIXPValue(), 77, 10, 4210752);
+        this.mc.getTextureManager().bindTexture(field_110421_t);
+
+        if(te.getIXPValue() != 0)
+        {
+        	te.CurrentintIXPValue = (int)te.getIXPValue();
+            int perint1 = (te.CurrentintIXPValue * 100);
+            int perint2  =( perint1 / te.CurrnetintMaxValue );
+            System.out.println(perint2);
+            this.drawTexturedModalRect(xSize - 226, ySize - 194, 0, 220, perint2, 14);
+        }
+
     }
 
     @SuppressWarnings("unchecked")
