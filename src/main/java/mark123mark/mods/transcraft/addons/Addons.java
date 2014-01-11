@@ -2,10 +2,9 @@ package mark123mark.mods.transcraft.addons;
 
 import java.util.ArrayList;
 
-
-import mark123mark.mods.TranscraftAddons.AddonNEI;
-import mark123mark.mods.TranscraftAddons.AddonNEILoad;
+import mark123mark.mods.transcraft.addons.fmp.TranscraftFMP;
 import mark123mark.mods.transcraft.addons.nei.TranscraftNEI;
+import codechicken.nei.api.API;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -14,12 +13,26 @@ public class Addons {
 	
 	public static ArrayList<Addon> addons;
 	
-	public static void loadAddons() {
+	public static void loadAddons(int loadStage) {
 		addons = new ArrayList<Addon>();
 		
 		//Waila addon is now done in Transcraft.class due to it being needed to be loaded at preInit
 		
-		addons.add(new Addon("IC2") {
+		addons.add(new Addon("Waila", 0) {
+			@Override
+			public void load() {
+				FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.addons.waila.TranscraftProvider.callbackRegister");
+			}
+		});
+		
+		addons.add(new Addon("ForgeMultipart", 1) {
+			@Override
+			public void load() {
+				TranscraftFMP.registerBlocks();
+			}
+		});
+		
+		addons.add(new Addon("IC2", 2) {
 			@Override
 			public void load() {
 				// ItemStack nuke = Items.getItem("nuke");
@@ -35,13 +48,12 @@ public class Addons {
 			}
 		});
 		
-		addons.add(new Addon("NotEnoughItems") {
+		addons.add(new Addon("NotEnoughItems", 2) {
 			@Override
 			public void load() {
 				LanguageRegistry.instance().addStringLocalization("nei.Transcrafter", "Transcrafter");
 				try {
-					AddonNEILoad.StartNei();;
-
+					API.registerRecipeHandler(new TranscraftNEI());
 				} catch (Exception e) {
 					
 				}
@@ -50,7 +62,9 @@ public class Addons {
 		
 		FMLLog.info("[Transcraft] Loading Transcraft Addons");
 		for(Addon addon : addons) {
-			addon.preLoad();
+			if(addon.loadStage == loadStage && !addon.loaded) {
+				addon.preLoad();
+			}
 		}
 	}
 }

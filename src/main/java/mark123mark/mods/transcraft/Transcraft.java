@@ -159,13 +159,8 @@ public class Transcraft {
 		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());		
 		
 		FMLLog.info("[TRANSCRAFT]	Loading Addons");
-		Addon a = new Addon("Waila") {
-			@Override
-			public void load() {
-				FMLInterModComms.sendMessage("Waila", "register", "mark123mark.mods.transcraft.addons.waila.TranscraftProvider.callbackRegister");
-			}
-		};
-		a.preLoad();
+		
+		Addons.loadAddons(0);
 	}
 
 	@EventHandler
@@ -193,12 +188,13 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
 		NetworkRegistry.instance().registerGuiHandler(instance, new GuiHand());
-
+		
+		Addons.loadAddons(1);
 	}
 	
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
-		Addons.loadAddons();
+		Addons.loadAddons(2);
 	}
 
 	public static void oreRegistration() {

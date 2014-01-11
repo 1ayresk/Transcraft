@@ -7,8 +7,13 @@ public class Addon {
 	
 	public String modid;
 	
-	public Addon(String modid) {
+	public int loadStage;
+
+	public boolean loaded = false;
+	
+	public Addon(String modid, int loadStage) {
 		this.modid = modid;
+		this.loadStage = loadStage;
 	}
 
 	
@@ -22,6 +27,7 @@ public class Addon {
 	public void preLoad() {
 		FMLLog.info("[Transcraft] Attempting to load the " + modid + " addon");
 		if(Loader.isModLoaded(modid)) {
+			loaded = true;
 			load();
 			FMLLog.info("[Transcraft] Successfully loaded the " + modid + " addon");
 		}

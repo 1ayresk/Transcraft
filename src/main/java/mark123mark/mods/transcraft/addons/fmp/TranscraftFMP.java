@@ -1,11 +1,11 @@
-package mark123mark.mods.TranscraftAddons;
+package mark123mark.mods.transcraft.addons.fmp;
 
 import mark123mark.mods.transcraft.Transcraft;
 import codechicken.microblock.BlockMicroMaterial;
 import codechicken.multipart.MultiPartRegistry.IPartFactory;
 import codechicken.multipart.TMultiPart;
 
-public class AddonFMP implements  IPartFactory 
+public class TranscraftFMP implements  IPartFactory 
 {
 
 	public static void registerBlocks() {
