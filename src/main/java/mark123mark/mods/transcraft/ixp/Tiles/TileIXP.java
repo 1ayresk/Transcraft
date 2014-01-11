@@ -5,6 +5,7 @@ import java.util.List;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
+import mark123mark.mods.transcraft.api.IItemTransmutter;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -33,6 +34,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     public double CurrnetMaxValue = 0;
     public int CurrentintIXPValue = 0;
     public int CurrnetintMaxValue = 0;
+    
     
 
     /** The angle of the lid last tick */
@@ -563,48 +565,38 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
 
 
 
-	@Override
-	public boolean canInsertItem(int slot, ItemStack itemstack, int side)
-	{
-			if(slot > 1 && slot < 37)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-			
-	}
+	
 
 	@Override
 	public boolean canExtractItem(int slot, ItemStack itemstack, int side)
 	{
-		if(side == 0 || side == 1)
-		{
-			if(slot == 0)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		else
-		{
-			if(slot > 1 && slot < 37)
-			{
-				return false;
-			}
-			else
-			{
-				return false;
-			}
-		}
+            if (slot == 0)
+            {
+                return itemstack.getItem() instanceof IItemTransmutter;
+            }
+            else
+            {
+                return false;
+            }
+ //       }
+
+        
 	}
 	
-	
+	@Override
+    public boolean canInsertItem(int slotID, ItemStack itemstack, int side)
+    {
+            if (slotID == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+     
+    }
 
 	
 }

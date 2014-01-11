@@ -1,9 +1,10 @@
 package mark123mark.mods.transcraft.Items;
 
+import mark123mark.mods.transcraft.api.IItemTransmutter;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
-public class BasicTransmuter extends Item {
+public class BasicTransmuter extends IItemTransmutter {
 
 	public BasicTransmuter(int id) {
 		super(id);

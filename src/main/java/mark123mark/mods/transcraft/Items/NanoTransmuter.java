@@ -1,11 +1,12 @@
 package mark123mark.mods.transcraft.Items;
 
+import mark123mark.mods.transcraft.api.IItemTransmutter;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class NanoTransmuter extends Item {
+public class NanoTransmuter extends IItemTransmutter {
 
 	public NanoTransmuter(int id) {
 		super(id);
