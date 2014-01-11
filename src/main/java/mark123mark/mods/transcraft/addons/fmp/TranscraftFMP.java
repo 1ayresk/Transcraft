@@ -5,45 +5,50 @@ import codechicken.microblock.BlockMicroMaterial;
 import codechicken.multipart.MultiPartRegistry.IPartFactory;
 import codechicken.multipart.TMultiPart;
 
-public class TranscraftFMP implements  IPartFactory 
-{
+public class TranscraftFMP implements IPartFactory {
 
 	public static void registerBlocks() {
 		BlockMicroMaterial.createAndRegister(Transcraft.TranscraftOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.OilOre);
+		BlockMicroMaterial.createAndRegister(Transcraft.BunkerBlock);
+
+		BlockMicroMaterial.createAndRegister(Transcraft.SmoothBunkerBlock);
+		BlockMicroMaterial.createAndRegister(Transcraft.DriedTransmutter);
+		BlockMicroMaterial.createAndRegister(Transcraft.FancyCrystalGlass);
+
 		BlockMicroMaterial.createAndRegister(Transcraft.BlueLight);
 		BlockMicroMaterial.createAndRegister(Transcraft.GreenLight);
 		BlockMicroMaterial.createAndRegister(Transcraft.OrangeLight);
 		BlockMicroMaterial.createAndRegister(Transcraft.DarkLight);
-		BlockMicroMaterial.createAndRegister(Transcraft.ClearGlass);
-		BlockMicroMaterial.createAndRegister(Transcraft.FancyCrystalGlass);
-		BlockMicroMaterial.createAndRegister(Transcraft.BunkerBlock);
-		BlockMicroMaterial.createAndRegister(Transcraft.SmoothBunkerBlock);
+
 		BlockMicroMaterial.createAndRegister(Transcraft.ComIronOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.ComGoldOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.ComTransmutterOre);
-		BlockMicroMaterial.createAndRegister(Transcraft.DriedTransmutter);
+		BlockMicroMaterial.createAndRegister(Transcraft.ComOilOre);
 
+		/*for(int i = 0; i < 16; i++) {
+			BlockMicroMaterial.createAndRegister(Transcraft.ClearGlass, i);
+		}
+		
+		for(int i = 0; i < 16; i++) {
+			BlockMicroMaterial.createAndRegister(Transcraft.FancyCrystalGlass, i);
+		}
 
-		/*
-		 * 
-		 * 
-		 * 
-		 * for(int i = 15; i >= 0; i--) {
-		 * BlockMicroMaterial.createAndRegister(Transcraft.enderQuartzBlock, i);
-		 * }
-		 * 
-		 * for(int i = 15; i >= 0; i--) {
-		 * BlockMicroMaterial.createAndRegister(Transcraft.CutenderQuartz ,i); }
-		 * 
-		 * for(int i = 15; i >= 0; i--) {
-		 * BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBrick, i);
-		 * }
-		 * 
-		 * for(int i = 15; i >= 0; i--) {
-		 * BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBigBrick,
-		 * i); }
-		 */
+		for(int i = 0; i < 16; i++) {
+			BlockMicroMaterial.createAndRegister(Transcraft.enderQuartzBlock, i);
+		}
+
+		for (int i = 15; i >= 0; i--) {
+			BlockMicroMaterial.createAndRegister(Transcraft.CutenderQuartz, i);
+		}
+
+		for(int i = 0; i < 16; i++) {
+			BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBrick, i);
+		}
+
+		for(int i = 0; i < 16; i++) {
+			BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBigBrick, i);
+		}*/
 
 	}
 
