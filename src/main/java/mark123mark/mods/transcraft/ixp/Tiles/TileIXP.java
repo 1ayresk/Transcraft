@@ -345,10 +345,26 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     {
     	int slot = 0;
     	int mainSlot = 1;
-    	
+
     	int BASIC = Config.BasicItemEssence;
     	int QUAD = Config.QuadItemEssence;
     	int NANO = Config.NanoItemEssence;
+    	
+    	if(BASIC == 0)
+    	{
+    		BASIC = BASIC + 1;
+    	}
+    	
+    	if(QUAD == 0)
+    	{
+    		QUAD = QUAD + 1;
+    	}
+    	
+    	if(NANO == 0)
+    	{
+    		NANO = NANO + 1;
+    	}
+    	
     	
     	if(getStackInSlot(0) != null)
     	{
