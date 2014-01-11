@@ -6,6 +6,7 @@ import java.util.List;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.api.IItemTransmutter;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -74,11 +75,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     public void incIXP()
     {
     	CurrentIXPValue= CurrentIXPValue+0.125;
-    	
-    	
-    	
-    	
-    	
+
     }
     
     /**
@@ -349,9 +346,9 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	int slot = 0;
     	int mainSlot = 1;
     	
-    	int BASIC = 1024;
-    	int QUAD = 5512;
-    	int NANO = 25256;
+    	int BASIC = Config.BasicItemEssence;
+    	int QUAD = Config.QuadItemEssence;
+    	int NANO = Config.NanoItemEssence;
     	
     	if(getStackInSlot(0) != null)
     	{
@@ -359,6 +356,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     		{
     			CurrnetMaxValue = BASIC;
     			CurrnetintMaxValue = BASIC;
+    			
     			if(BASIC != 0 && getStackInSlot(0).stackSize <=  64)
         		{
         			if(CurrentIXPValue >= BASIC)
@@ -374,6 +372,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     		{
     			CurrnetMaxValue = QUAD;
     			CurrnetintMaxValue = QUAD;
+    			
     			if(QUAD != 0 && getStackInSlot(0).stackSize <=  64)
         		{
         			if(CurrentIXPValue >= QUAD)
@@ -389,6 +388,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     		{
     			CurrnetMaxValue = NANO;
     			CurrnetintMaxValue = QUAD;
+    			
     			if(NANO != 0 && getStackInSlot(0).stackSize <=  64)
         		{
         			if(CurrentIXPValue >= NANO)
@@ -399,7 +399,6 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         			}
         		}
     		}
-
     	}
     	else
     	{
@@ -414,17 +413,9 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     {
         super.updateEntity();
         
-       
-        
-        
-//        if(getStackInSlot(0) != null)
- //       {
-//        	if(getStackInSlot(0).stackSize != 64)
-//        	{
-                handleEnergy();
-                makeItems();
-//        	}
-//        }
+        handleEnergy();
+        makeItems();
+
         ++this.ticksSinceSync;
         float f;
 
