@@ -1,12 +1,15 @@
 package mark123mark.mods.transcraft.addons.nei;
 
 import codechicken.nei.api.API;
+import cpw.mods.fml.common.FMLCommonHandler;
 
 public class StartNEIPlugin {
 
 	public static void START()
 	{
-		API.registerRecipeHandler(new TranscraftNEI());
+		if(FMLCommonHandler.instance().getSide().isClient()) {
+			API.registerRecipeHandler(new TranscraftNEI());
+		}
 	}
 	
 	

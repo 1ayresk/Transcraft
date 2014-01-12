@@ -14,6 +14,8 @@ public class Addons {
 	public static ArrayList<Addon> addons;
 	
 	public static void addAddons() {
+		addons = new ArrayList<Addon>();
+
 		addons.add(new Addon("Waila", 0) {
 			@Override
 			public void load() {
@@ -58,8 +60,6 @@ public class Addons {
 	}
 	
 	public static void loadAddons(int loadStage) {
-		addons = new ArrayList<Addon>();
-
 		FMLLog.info("[Transcraft] Loading Transcraft Addons");
 		for(Addon addon : addons) {
 			if(addon.loadStage == loadStage && !addon.loaded) {
