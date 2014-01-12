@@ -3,8 +3,8 @@ package mark123mark.mods.transcraft.addons;
 import java.util.ArrayList;
 
 import mark123mark.mods.transcraft.addons.fmp.TranscraftFMP;
+import mark123mark.mods.transcraft.addons.nei.StartNEIPlugin;
 import mark123mark.mods.transcraft.addons.nei.TranscraftNEI;
-import codechicken.nei.api.API;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -53,7 +53,7 @@ public class Addons {
 			public void load() {
 				LanguageRegistry.instance().addStringLocalization("nei.Transcrafter", "Transcrafter");
 				try {
-					API.registerRecipeHandler(new TranscraftNEI());
+					StartNEIPlugin.START();
 				} catch (Exception e) {
 					
 				}
