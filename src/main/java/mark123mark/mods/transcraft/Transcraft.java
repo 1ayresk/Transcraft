@@ -49,6 +49,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION+ Transcraft.STATE, useMetadata = true)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
@@ -156,7 +157,12 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Loading Helper");
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
-		MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());		
+		
+		 if (event.getSide() == Side.CLIENT) {
+			 MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());		
+		  }
+		
+		
 		
 		FMLLog.info("[TRANSCRAFT]	Loading Addons");
 		
