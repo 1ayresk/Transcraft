@@ -41,11 +41,16 @@ public class IColoredBlock extends Block
 		setHardness(3.0F);
 		setResistance(4.0F);
 	}
-		
+			
 	@Override
 	public boolean shouldSideBeRendered(IBlockAccess access, int par0, int par1, int par2, int par3)
 	{
 		return true;
+		
+	}
+	
+	public void addInformation(int i, int j, List l)
+	{
 		
 	}
 	

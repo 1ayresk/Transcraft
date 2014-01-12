@@ -174,9 +174,7 @@ public class RecipeLoader {
 						"bsb", "sbs", 'b', TranscraftItems.BasicTransmuter, 's',
 						Block.stone);
 
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.NanoTransmuter), "qqr",
-				"qqg", "qqr", 'q', TranscraftItems.QuadTransmuter, 'g',
-				Item.glowstone, 'r', Item.redstone);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.NanoTransmuter), "qqr","qqg", "qqr", 'q', TranscraftItems.QuadTransmuter, 'g',Item.glowstone, 'r', Item.redstone);
 
 		// GameRegistry.addRecipe(new ItemStack(Transcraft.DimPortalBlock, 1),
 		// "dgd","bbb", "dgd", 'd', Item.diamond, 'g', Item.ingotGold,'b',
@@ -190,6 +188,9 @@ public class RecipeLoader {
 		GameRegistry.addSmelting(Transcraft.OilOre.blockID, new ItemStack(
 				TranscraftItems.Oil), 2.3f);
 
+		GameRegistry.addRecipe(new ItemStack(Transcraft.ixpGrinder), "qcq","qdq", "qqq", 'q', TranscraftItems.QuadTransmuter, 'c',Block.chest, 'd', Item.diamond);
+		
+		
 	}
 
 }

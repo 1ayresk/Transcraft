@@ -24,6 +24,29 @@ public class ColoredBlockUtil
 	}
 	
 	/***
+	 * Add items to Zaet chest loot
+	 * 
+	 * @param itemBlock (ItemBlock) new ItemStack(coloredBlock).getItem(). Thank me later :).
+	 */
+	public static void addItemToChestHook(ItemBlock itemBlock)
+	{
+		for(int i = 15; i >= 0; i--)
+		{
+			ChestHookZaet.addItemToHook(new ItemStack(itemBlock, 1, i));
+		}
+	}
+	
+	/***
+	 * Add items to Zaet chest loot
+	 * 
+	 * @param itemBlock (ItemBlock) new ItemStack(coloredBlock).getItem(). Thank me later :).
+	 */
+	public static void addItemToChestHookNoMeta(ItemStack itemBlock)
+	{
+		ChestHookZaet.addItemToHook(itemBlock);
+	}
+	
+	/***
 	 * 
 	 * @param itemStack
 	 * @param middle
@@ -35,11 +58,11 @@ public class ColoredBlockUtil
 		{
 			if(shouldUseMetaFromMiddle)
 			{
-				GameRegistry.addShapedRecipe(new ItemStack(itemStack.itemID, 8, i), "DDD", "DSD", "DDD", 'S', new ItemStack(middle.itemID, 1, i), 'D', new ItemStack(Item.dyePowder, 1, i));
+				GameRegistry.addShapelessRecipe(new ItemStack(itemStack.itemID, 1, i), new ItemStack(middle.itemID, 1, i), new ItemStack(Item.dyePowder, 1, i), new ItemStack(Item.dyePowder, 1, i));
 			}
 			else
 			{
-				GameRegistry.addShapedRecipe(new ItemStack(itemStack.itemID, 8, i), "DDD", "DSD", "DDD", 'S', new ItemStack(middle.itemID, 1, middle.getItemDamage()), 'D', new ItemStack(Item.dyePowder, 1, i));
+				GameRegistry.addShapelessRecipe(new ItemStack(itemStack.itemID, 1, i), new ItemStack(middle.itemID, 1, middle.getItemDamage()), new ItemStack(Item.dyePowder, 1, i), new ItemStack(Item.dyePowder, 1, i));
 			}
 		}
 	}
