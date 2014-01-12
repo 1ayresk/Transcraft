@@ -13,11 +13,7 @@ public class Addons {
 	
 	public static ArrayList<Addon> addons;
 	
-	public static void loadAddons(int loadStage) {
-		addons = new ArrayList<Addon>();
-		
-		//Waila addon is now done in Transcraft.class due to it being needed to be loaded at preInit
-		
+	public static void addAddons() {
 		addons.add(new Addon("Waila", 0) {
 			@Override
 			public void load() {
@@ -59,7 +55,11 @@ public class Addons {
 				}
 			}
 		});
-		
+	}
+	
+	public static void loadAddons(int loadStage) {
+		addons = new ArrayList<Addon>();
+
 		FMLLog.info("[Transcraft] Loading Transcraft Addons");
 		for(Addon addon : addons) {
 			if(addon.loadStage == loadStage && !addon.loaded) {

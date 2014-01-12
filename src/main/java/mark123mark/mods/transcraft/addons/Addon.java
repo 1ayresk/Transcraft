@@ -11,6 +11,10 @@ public class Addon {
 
 	public boolean loaded = false;
 	
+	/**
+	 * @param modid The mod id of the mod that this addon adds content for.
+	 * @param loadStage The mod loading stage that this addon is loaded at. 0 is preInit, 1 is init and 2 is postInit.
+	 */
 	public Addon(String modid, int loadStage) {
 		this.modid = modid;
 		this.loadStage = loadStage;

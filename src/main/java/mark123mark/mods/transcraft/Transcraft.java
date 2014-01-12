@@ -166,6 +166,7 @@ public class Transcraft {
 		
 		FMLLog.info("[TRANSCRAFT]	Loading Addons");
 		
+		Addons.addAddons();
 		Addons.loadAddons(0);
 	}
 
