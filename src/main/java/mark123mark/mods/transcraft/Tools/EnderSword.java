@@ -2,10 +2,6 @@ package mark123mark.mods.transcraft.Tools;
 
 import java.util.List;
 
-import org.lwjgl.input.Keyboard;
-
-import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.WorldGen.ScamaticLoader;
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,6 +12,9 @@ import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.world.World;
+
+import org.lwjgl.input.Keyboard;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

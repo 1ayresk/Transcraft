@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import mark123mark.mods.transcraft.addons.fmp.TranscraftFMP;
 import mark123mark.mods.transcraft.addons.nei.StartNEIPlugin;
-import mark123mark.mods.transcraft.addons.nei.TranscraftNEI;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.registry.LanguageRegistry;

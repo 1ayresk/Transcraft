@@ -2,7 +2,6 @@ package mark123mark.mods.transcraft.Blocks;
 
 import java.util.Random;
 
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

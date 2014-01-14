@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft.ixp.Tiles;
 import java.util.Iterator;
 import java.util.List;
 
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.api.IItemTransmutter;
 import mark123mark.mods.transcraft.helpers.Config;
@@ -12,7 +11,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.InventoryLargeChest;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;

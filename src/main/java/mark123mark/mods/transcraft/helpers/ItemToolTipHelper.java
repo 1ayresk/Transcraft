@@ -1,8 +1,5 @@
 package mark123mark.mods.transcraft.helpers;
 
-import java.text.DecimalFormat;
-
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;

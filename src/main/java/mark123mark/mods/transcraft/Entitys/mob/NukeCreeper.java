@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.Entitys.mob;
 
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIWander;

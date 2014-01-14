@@ -2,10 +2,8 @@ package mark123mark.mods.transcraft.helpers;
 
 import java.util.EnumSet;
 
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import cpw.mods.fml.common.ITickHandler;

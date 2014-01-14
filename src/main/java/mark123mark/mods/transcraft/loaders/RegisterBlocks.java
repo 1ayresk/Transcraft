@@ -12,7 +12,6 @@ import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import mark123mark.zaetApi.api.IColoredItemBlock;
 import net.minecraft.item.Item;
-import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

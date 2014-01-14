@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.loaders;
 
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandomChestContent;

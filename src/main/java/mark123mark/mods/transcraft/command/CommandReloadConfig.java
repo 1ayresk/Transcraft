@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.command;
 
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatMessageComponent;

@@ -1,19 +1,13 @@
 package mark123mark.mods.transcraft.Blocks.FancyCrystalGlass;
 
-import java.util.Random;
-
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.zaetApi.api.IColoredBlock;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class FancyCrystalGlass extends IColoredBlock {
 	private Icon[] icons = new Icon[16];

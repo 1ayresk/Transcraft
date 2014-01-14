@@ -15,11 +15,11 @@ import java.util.HashMap;
 
 import javax.swing.ImageIcon;
 
-import com.google.common.eventbus.Subscribe;
-
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraftforge.client.event.RenderPlayerEvent;
-import net.minecraftforge.event.ForgeSubscribe;
+
+import com.google.common.eventbus.Subscribe;
+
 import cpw.mods.fml.common.Loader;
 
 public class EventCloakRender {
