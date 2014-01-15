@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TranscraftOre extends Block {
 
-	public static String[] types = {"Transmutter", "Chromite", "Vanadium", "Zirconium"};
+	public static String[] types = {"Transmutter", "Chromite", "Vanadium", "Zirconium" , "Ultimatium", "Cosmonite"};
 	
 	
 	private static Icon[] main = new Icon[types.length];

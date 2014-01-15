@@ -41,12 +41,16 @@ public class TranspediaGui extends GuiContainer
      */
     protected void drawGuiContainerForegroundLayer(int par1, int par2)
     {
+    	/*
+    	 * 
+    	
+    	
     	if(pageNumber != 0)
     	{
             this.fontRenderer.drawString("Transpedia Page " + pageNumber, ((width / 2) / 6), (height/2) + (height/5) - 4, 4210752);	
     	}
     	
-
+ */
     	
     }
 
