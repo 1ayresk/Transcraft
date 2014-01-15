@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.addons.fmp;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import codechicken.microblock.BlockMicroMaterial;
 import codechicken.multipart.MultiPartRegistry.IPartFactory;
 import codechicken.multipart.TMultiPart;
@@ -8,7 +9,10 @@ import codechicken.multipart.TMultiPart;
 public class TranscraftFMP implements IPartFactory {
 
 	public static void registerBlocks() {
-		BlockMicroMaterial.createAndRegister(Transcraft.TranscraftOre);
+		for(int i = 0; i < TranscraftOre.types.length; i++) {
+			BlockMicroMaterial.createAndRegister(Transcraft.TranscraftOre, i);
+		}
+		
 		BlockMicroMaterial.createAndRegister(Transcraft.OilOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.BunkerBlock);
 
