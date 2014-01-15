@@ -17,6 +17,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class IColoredBlock extends Block
 {
+	
+	public static String[] types = {"Transmutter", "Chromite", "Vanadium", "Zirconium"};
+	
+	
 	/***
 	 * 
 	 * @param id Block ID

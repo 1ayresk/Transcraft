@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.api.Fluids;
 import mark123mark.zaetApi.api.ColoredBlockUtil;
@@ -67,7 +68,9 @@ public class LoadLang {
 
 		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.ClearGlass, 1).getItem(), "Crystal Glass");
 
-
+		for(int i = 0; i < TranscraftOre.types.length; i++) {
+			LanguageRegistry.addName(new ItemStack(Transcraft.TranscraftOre, 1, i), TranscraftOre.types[i] + " Ore");
+		}
 
 		LanguageRegistry.addName(Transcraft.ixpGrinder, "Item Grinder");
 		

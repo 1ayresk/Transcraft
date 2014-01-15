@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ItemCrystalGlass;
+import mark123mark.mods.transcraft.Blocks.TranscraftOreItem;
 import mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.ItemFancyCryastalGlass;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemCutEnderQuartzBlock;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
@@ -18,7 +19,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class RegisterBlocks {
 
 	public static void RegisterBlocks() {
-		LanguageRegistry.addName(Transcraft.TranscraftOre, "Transmutter Ore");
+//		LanguageRegistry.addName(Transcraft.TranscraftOre, "Transmutter Ore");
 		LanguageRegistry.addName(Transcraft.OilOre, "Oil Ore");
 		LanguageRegistry.addName(Transcraft.BlueLight, "Blue Light");
 		LanguageRegistry.addName(Transcraft.GreenLight, "Green Light");
@@ -46,7 +47,7 @@ public class RegisterBlocks {
 		LanguageRegistry.addName(Transcraft.enderQuartzBlock,
 				"Ender Quartz Block");
 
-		GameRegistry.registerBlock(Transcraft.TranscraftOre, "Transmuter Ore");
+		
 		GameRegistry.registerBlock(Transcraft.OilOre, "Oil Ore");
 		GameRegistry.registerBlock(Transcraft.BlueLight, "Blue Light");
 		GameRegistry.registerBlock(Transcraft.GreenLight, "Green Light");
@@ -89,6 +90,10 @@ public class RegisterBlocks {
 				"Fancy Crystal Glass");
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemFancyCryastalGlass.class , "ItemFancyCryastalGlass");
 
+		GameRegistry.registerBlock(Transcraft.TranscraftOre, "Transmuter Ore");
+		GameRegistry.registerBlock(Transcraft.TranscraftOre,TranscraftOreItem.class , "ItemTranscraftOreItem");
+		
+		
 		GameRegistry.registerBlock(Transcraft.ClearGlass, IColoredItemBlock.class, "Clear Glass");
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemCrystalGlass.class ,"ItemCrystalGlass");
 
