@@ -118,7 +118,7 @@ public class Transcraft {
 		event.getModMetadata().logoFile = ("/assets/transcraft/textures/logo/logo.png");
 		event.getModMetadata().credits = ("By mark123mark, tattyseal, shifu_, klmDF14J");
 		event.getModMetadata().authorList = authorList;
-		
+
 		
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison "
 				+ Transcraft.VERSION);
