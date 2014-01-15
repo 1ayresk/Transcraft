@@ -11,3 +11,7 @@ write-output "Downloaded Not Enough Items";
 write-output "Downloading Code Chicken Lib";
 $client.DownloadFile("http://files.minecraftforge.net/CodeChickenLib/CodeChickenLib-dev-1.6.4-1.0.0.49.jar", "CCL.jar");
 write-output "Downloaded Code Chicken Lib";
+write-output "Downloading Waila";
+$client.DownloadFile("https://dl.dropboxusercontent.com/u/164771/MC%20Modding/Waila/Waila_1.4.4b.zip", "WAILA.jar");
+write-output "Downloaded Code Waila";
+

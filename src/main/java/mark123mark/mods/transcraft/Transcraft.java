@@ -1,5 +1,8 @@
 package mark123mark.mods.transcraft;
 
+import java.util.Arrays;
+import java.util.List;
+
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.Listener.ListenerRegisterSound;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
@@ -47,7 +50,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION+ Transcraft.STATE, useMetadata = true)
+@Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION+ Transcraft.STATE, useMetadata = false)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 public class Transcraft {
 	public static final String VERSION = "1.6.4_V2.0.0_";
@@ -103,11 +106,20 @@ public class Transcraft {
 	public static TranscraftCommonProxy Coproxy;
 	public static TranscraftClientProxy Clproxy;
 
+	List<String> authorList = Arrays.asList("mark123mark", "tattyseal", "shifu_", "klmDF14J");
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-
+		event.getModMetadata().version = (Transcraft.VERSION+ Transcraft.STATE);
+		event.getModMetadata().modId = ("transcraft");
+		event.getModMetadata().name = ("Transcraft");
+		event.getModMetadata().description = ("Transraft is a mod about transmuting items and blocks!");
+		event.getModMetadata().logoFile = ("/assets/transcraft/textures/logo/logo.png");
+		event.getModMetadata().credits = ("By mark123mark, tattyseal, shifu_, klmDF14J");
+		event.getModMetadata().authorList = authorList;
+		
+		
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison "
 				+ Transcraft.VERSION);
 
