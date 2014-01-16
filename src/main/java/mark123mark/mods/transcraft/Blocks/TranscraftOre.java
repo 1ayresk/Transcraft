@@ -18,7 +18,7 @@ public class TranscraftOre extends Block {
 	public static String[] types = {"Transmutter", "Chromite", "Vanadium", "Zirconium" , "Ultimatium", "Cosmonite"};
 	
 	
-	private static Icon[] main = new Icon[types.length];
+	private static Icon[] icons = new Icon[types.length];
 	
 	public TranscraftOre(int par1) {
 		super(par1, Material.rock);
@@ -34,7 +34,7 @@ public class TranscraftOre extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int side, int meta) {
-			return main[meta];
+			return icons[meta];
 	}
 	
 	@Override
@@ -42,7 +42,7 @@ public class TranscraftOre extends Block {
 	public void registerIcons(IconRegister icon) {
 		for(int i = 0; i < types.length; i++) {
 			String type = types[i].toLowerCase();
-			main[i] = icon.registerIcon("transcraft:ore_" + type);
+			icons[i] = icon.registerIcon("transcraft:ore_" + type);
 		}
 	}
 	
