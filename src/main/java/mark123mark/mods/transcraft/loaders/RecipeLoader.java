@@ -39,19 +39,24 @@ public class RecipeLoader {
 				"ii", 'i', Block.oreIron);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.ComGoldOre, 1), "ii",
 				"ii", 'i', Block.oreGold);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.ComTransmutterOre, 1),
-				"ii", "ii", 'i', Transcraft.TranscraftOre);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.ComOilOre, 1), "ii",
-				"ii", 'i', TranscraftItems.Oil);
-
+		
+		
+		ItemStack ComTransmutterOre4 = new ItemStack(Transcraft.ComTransmutterOre, 4, 0);
+		ItemStack TransmutterOre1 = new ItemStack(Transcraft.TranscraftOre, 1, 0);
+		GameRegistry.addRecipe(ComTransmutterOre4,"ii", "ii", 'i', TransmutterOre1);
+		
+		
+		GameRegistry.addRecipe(new ItemStack(Transcraft.ComOilOre, 1), "ii","ii", 'i', TranscraftItems.Oil);
+		GameRegistry.addRecipe(TransmutterOre1, "i",'i', Transcraft.ComTransmutterOre);
 
 
 		GameRegistry.addRecipe(new ItemStack(Block.oreIron, 4), "i", 'i',
 				Transcraft.ComIronOre);
 		GameRegistry.addRecipe(new ItemStack(Block.oreGold, 4), "i", 'i',
 				Transcraft.ComGoldOre);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.TranscraftOre, 4), "i",
-				'i', Transcraft.ComTransmutterOre);
+		
+		
+		
 		GameRegistry.addRecipe(new ItemStack(TranscraftItems.Oil, 4), "i", 'i',
 				Transcraft.ComOilOre);
 
