@@ -2,7 +2,9 @@ package mark123mark.mods.transcraft.WorldGen;
 
 import java.util.Random;
 
+import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.helpers.Config;
+import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -41,9 +43,9 @@ public class TranscraftGenerator implements IWorldGenerator {
 			int TranscraftOreYCoord = random.nextInt(32);
 			int TranscraftOreZCoord = j + random.nextInt(16);
 
-			(new WorldGenMinable(Config.TranscraftOreID, 7)).generate(world,
-					random, TranscraftOreXCoord, TranscraftOreYCoord,
-					TranscraftOreZCoord);
+			for(int l = 0; l < TranscraftOre.types.length; l++) {
+				new WorldGenMinable(Config.TranscraftOreID, l, 7, Block.stone.blockID).generate(world, random, TranscraftOreXCoord, TranscraftOreYCoord, TranscraftOreZCoord);
+			}
 
 		}
 		for (int k = 0; k < 10; k++) {
