@@ -42,7 +42,7 @@ public class TranscraftOre extends Block {
 	public void registerIcons(IconRegister icon) {
 		for(int i = 0; i < types.length; i++) {
 			String type = types[i].toLowerCase();
-			icons[i] = icon.registerIcon("transcraft:ore_" + type);
+			icons[i] = icon.registerIcon("transcraft:ores/ore_" + type);
 		}
 	}
 	
