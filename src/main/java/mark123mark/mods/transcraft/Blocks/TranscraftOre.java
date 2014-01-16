@@ -54,5 +54,9 @@ public class TranscraftOre extends Block {
 		}
 	}
 	
+	@Override
+	public int damageDropped(int dmg) {
+		return dmg;
+	}
 	
 }
