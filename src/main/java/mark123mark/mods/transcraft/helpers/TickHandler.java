@@ -14,6 +14,7 @@ public class TickHandler implements ITickHandler {
 
 	public static boolean adminfly = false;
 
+	
 	@Override
 	public void tickStart(EnumSet<TickType> type, Object... tickData) {
 
@@ -24,7 +25,6 @@ public class TickHandler implements ITickHandler {
 	public void tickEnd(EnumSet<TickType> type, Object... tickData) {
 		EntityPlayer player = (EntityPlayer) tickData[0];
 
-		
 		
 		if(Config.EnderArmorBuffs == true)
 		{

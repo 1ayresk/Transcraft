@@ -11,6 +11,7 @@ import mark123mark.mods.transcraft.command.CommandReloadConfig;
 import mark123mark.mods.transcraft.command.CommandTranscraftVersion;
 import mark123mark.mods.transcraft.fluids.TranscraftFluids;
 import mark123mark.mods.transcraft.helpers.Config;
+import mark123mark.mods.transcraft.helpers.DevMessageTick;
 import mark123mark.mods.transcraft.helpers.EventMobDeath;
 import mark123mark.mods.transcraft.helpers.FuelHandler;
 import mark123mark.mods.transcraft.helpers.GuiHand;
@@ -36,6 +37,7 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -48,6 +50,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION+ Transcraft.STATE, useMetadata = false)
@@ -55,7 +58,7 @@ import cpw.mods.fml.relauncher.Side;
 public class Transcraft {
 	public static final String VERSION = "1.6.4_V2.0.0_";
 	public static final String STATE = "BROKEN";
-	public static boolean SHOWDEVMESSGAE = false;
+	public static boolean DEVSTATUS = true;
 
 	// Listblocks here
 	public static Block TranscraftOre;
@@ -126,6 +129,19 @@ public class Transcraft {
 		FMLLog.info("[TRANSCRAFT]	Loading Handlers");
 		Coproxy.registerHandlers();
 		Coproxy.registerTickHandlers();
+		
+		
+		if(DEVSTATUS = true)
+		{
+			if(FMLCommonHandler.instance().getSide().isClient()) 
+			{
+				FMLLog.info("[TRANSCRAFT]	Adding Dev Message");
+
+				TickRegistry.registerTickHandler(new DevMessageTick(), Side.CLIENT);
+			}
+		}
+		
+		
 
 		FMLLog.info("[TRANSCRAFT]	Loading Config");
 		Config.initConfig();
@@ -210,6 +226,8 @@ public class Transcraft {
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
 		Addons.loadAddons(2);
+
+		
 	}
 
 	public static void oreRegistration() {
