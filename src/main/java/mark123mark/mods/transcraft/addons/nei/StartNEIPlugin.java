@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.addons.nei;
 
-import cpw.mods.fml.common.API;
+
+import codechicken.nei.api.API;
 import cpw.mods.fml.common.FMLCommonHandler;
 
 public class StartNEIPlugin {

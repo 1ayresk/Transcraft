@@ -4,6 +4,10 @@ import java.util.List;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
+import mcp.mobius.waila.api.IWailaConfigHandler;
+import mcp.mobius.waila.api.IWailaDataAccessor;
+import mcp.mobius.waila.api.IWailaDataProvider;
+import mcp.mobius.waila.api.IWailaRegistrar;
 import net.minecraft.item.ItemStack;
 
 public class TranscraftProvider implements IWailaDataProvider {
