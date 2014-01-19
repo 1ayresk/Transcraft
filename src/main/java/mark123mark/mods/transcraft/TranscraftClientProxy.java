@@ -6,6 +6,8 @@ import mark123mark.mods.transcraft.Entitys.mob.EnderBatRender;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
+import mark123mark.mods.transcraft.Renders.RenderEnderSword;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderHandTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
@@ -15,6 +17,7 @@ import mark123mark.mods.transcraft.helpers.TickHandler;
 import mark123mark.mods.transcraft.ixp.Tiles.ItemTileIxpRender;
 import mark123mark.mods.transcraft.ixp.Tiles.TileECRender;
 import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
+import mark123mark.mods.transcraft.models.EnderSwordModel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -51,7 +54,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class, new RenderTC());
 		
 		MinecraftForgeClient.registerItemRenderer(Config.TranscrafterID, new RenderHandTC());
-	
+		MinecraftForgeClient.registerItemRenderer(TranscraftItems.EnderSword.itemID, new RenderEnderSword());
 	}
 
 	public void postrenderThings()
