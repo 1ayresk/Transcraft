@@ -7,8 +7,8 @@ import mark123mark.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
+import mark123mark.mods.transcraft.TileEntitys.ItemGrinder.IXPGrinderMk2;
 import mark123mark.mods.transcraft.helpers.Config;
-import mark123mark.mods.transcraft.ixp.Tiles.IXPGrinderMk2;
 import net.minecraft.block.Block;
 
 public class LoadBlocks {

@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft.ixp.Tiles;
+package mark123mark.mods.transcraft.TileEntitys.ItemGrinder;
 
 
 import net.minecraft.entity.player.EntityPlayer;

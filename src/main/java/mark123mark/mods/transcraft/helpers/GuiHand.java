@@ -1,12 +1,12 @@
 package mark123mark.mods.transcraft.helpers;
 
 import mark123mark.mods.transcraft.Items.gui.TranspediaGui;
+import mark123mark.mods.transcraft.TileEntitys.ItemGrinder.ContainerIXP;
+import mark123mark.mods.transcraft.TileEntitys.ItemGrinder.GuiIxp;
+import mark123mark.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.ContainerTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
-import mark123mark.mods.transcraft.ixp.Tiles.ContainerIXP;
-import mark123mark.mods.transcraft.ixp.Tiles.GuiIxp;
-import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

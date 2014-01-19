@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft.ixp.Tiles;
+package mark123mark.mods.transcraft.TileEntitys.ItemGrinder;
 
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import net.minecraft.client.gui.inventory.GuiContainer;

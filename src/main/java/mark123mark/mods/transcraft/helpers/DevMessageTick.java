@@ -50,6 +50,7 @@ public class DevMessageTick implements ITickHandler {
 		 
 		if(type.contains(TickType.RENDER))
 		{
+			
 				minecraft.fontRenderer.drawString("\u00a74This is a dev version of Transcraft!", 0, 30, 10);
 				minecraft.fontRenderer.drawString("\u00a74If anyting breaks or crashes please report it on the Github!", 0, 40, 10);
 				

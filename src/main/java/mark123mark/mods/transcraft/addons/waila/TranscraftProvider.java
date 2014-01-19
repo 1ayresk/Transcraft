@@ -3,7 +3,7 @@ package mark123mark.mods.transcraft.addons.waila;
 import java.util.List;
 
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
+import mark123mark.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;
