@@ -27,7 +27,10 @@ import cpw.mods.fml.relauncher.Side;
 public class TranscraftClientProxy extends TranscraftCommonProxy {
 
 	public static Minecraft mc = Minecraft.getMinecraft();
-
+	 public static int TranscraftOreRenderType;
+     public static int renderPass;
+	
+	
 	@Override
 	public void registerHandlers() {
 		// TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
@@ -52,11 +55,15 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		
 		MinecraftForgeClient.registerItemRenderer(Config.TranscrafterID, new RenderHandTC());
 		
+		TranscraftOreRenderType = RenderingRegistry.getNextAvailableRenderId();
+        RenderingRegistry.registerBlockHandler(new RenderTranscraftOre());
+		
+		
 	}
 
 	public void postrenderThings()
 	{
-		RenderingRegistry.registerBlockHandler(RenderTranscraftOre.instance());
+		
 		
 	}
 	

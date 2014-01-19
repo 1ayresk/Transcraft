@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class Transcrafter extends BlockContainer {
@@ -61,6 +62,7 @@ public class Transcrafter extends BlockContainer {
 
 	}
 
+	
 	@Override
 	public TileEntity createNewTileEntity(World world) {
 		return new TileTC();

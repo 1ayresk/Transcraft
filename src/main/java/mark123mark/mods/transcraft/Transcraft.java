@@ -229,7 +229,6 @@ public class Transcraft {
 	public static void postInit(FMLPostInitializationEvent event) {
 		Addons.loadAddons(2);
 		//Clproxy.postrenderThings();
-		RenderingRegistry.registerBlockHandler(RenderTranscraftOre.instance());
 	}
 
 	public static void oreRegistration() {
