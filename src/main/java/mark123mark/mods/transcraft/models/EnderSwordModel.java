@@ -14,6 +14,7 @@ public class EnderSwordModel extends ModelBase {
 	// fields
 
 	public ModelRenderer base;
+	public ModelRenderer base2;
 	public ModelRenderer handle;
 	public ModelRenderer eye;
 
@@ -33,11 +34,11 @@ public class EnderSwordModel extends ModelBase {
 		handle.setTextureSize(64, 32);
 		handle.mirror = true;
 		setRotation(handle, -2.361978F, 0F, 0F);
-		base = new ModelRenderer(this, 9, 0);
-		base.addBox(0F, 0F, -2.5F, 0, 15, 5);
-		base.setRotationPoint(0F, 9F, 0F);
-		base.setTextureSize(64, 32);
-		base.mirror = true;
+		base2 = new ModelRenderer(this, 9, 0);
+		base2.addBox(0F, 0F, -2.5F, 0, 15, 5);
+		base2.setRotationPoint(0F, 9F, 0F);
+		base2.setTextureSize(64, 32);
+		base2.mirror = true;
 		setRotation(base, -2.361978F, 0F, 0F);
 		eye = new ModelRenderer(this, 27, 0);
 		eye.addBox(-1F, -2F, -2F, 2, 2, 2);

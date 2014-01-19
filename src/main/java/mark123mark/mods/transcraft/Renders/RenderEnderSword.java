@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft.Renders;
 
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TranscrafterModel;
 import mark123mark.mods.transcraft.models.EnderSwordModel;
+import mark123mark.mods.transcraft.models.EnderSwordModel_new;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -16,11 +17,11 @@ import scala.tools.nsc.Phases.Model;
 
 public class RenderEnderSword implements IItemRenderer 
 {
-	private EnderSwordModel model;
+	private EnderSwordModel_new model;
 
 	public RenderEnderSword()
 	{
-		model = new EnderSwordModel();
+		model = new EnderSwordModel_new();
 	}
 	
 	@Override
@@ -58,6 +59,7 @@ public class RenderEnderSword implements IItemRenderer
 				GL11.glTranslatef(0f, -1.5f, 0f);
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/EnderSwoadModelTexture.png"));
 	            model.base.render(0.0625F);
+	            model.Main.render(0.0625F);
 	            model.handle.render(0.0625F);
 	            model.base.render(0.0625F);
 	            model.eye.render(0.0625F);
@@ -74,6 +76,7 @@ public class RenderEnderSword implements IItemRenderer
 	            GL11.glScalef(15F, 15F, 15F);
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/EnderSwoadModelTexture.png"));     
 	            model.base.render(0.0625F);
+	            model.Main.render(0.0625F);
 	            model.handle.render(0.0625F);
 	            model.base.render(0.0625F);
 	            model.eye.render(0.0625F);
@@ -92,6 +95,7 @@ public class RenderEnderSword implements IItemRenderer
 	            GL11.glScalef(1F, 1F, 1F);
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/EnderSwoadModelTexture.png"));       
 	            model.base.render(0.0625F);
+	            model.Main.render(0.0625F);
 	            model.handle.render(0.0625F);
 	            model.base.render(0.0625F);
 	            model.eye.render(0.0625F);
@@ -108,6 +112,7 @@ public class RenderEnderSword implements IItemRenderer
 	            GL11.glScalef(1F, 1F, 1F);
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/EnderSwoadModelTexture.png"));     
 	            model.base.render(0.0625F);
+	            model.Main.render(0.0625F);
 	            model.handle.render(0.0625F);
 	            model.base.render(0.0625F);
 	            model.eye.render(0.0625F);
