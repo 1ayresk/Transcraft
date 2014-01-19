@@ -6,6 +6,7 @@ import mark123mark.mods.transcraft.Entitys.mob.EnderBatRender;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
+import mark123mark.mods.transcraft.Renders.Blocks.RenderTranscraftOre;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderHandTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
@@ -53,6 +54,12 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		
 	}
 
+	public void postrenderThings()
+	{
+		RenderingRegistry.registerBlockHandler(RenderTranscraftOre.instance());
+		
+	}
+	
 	@Override
 	public void spawnParticle(String string, double x, double y, double z) {
 		EntityFX entityfx = null;

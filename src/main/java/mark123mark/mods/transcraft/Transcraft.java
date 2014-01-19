@@ -5,6 +5,7 @@ import java.util.List;
 
 import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.Listener.ListenerRegisterSound;
+import mark123mark.mods.transcraft.Renders.Blocks.RenderTranscraftOre;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
 import mark123mark.mods.transcraft.addons.Addons;
 import mark123mark.mods.transcraft.command.CommandReloadConfig;
@@ -37,6 +38,7 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
@@ -226,8 +228,8 @@ public class Transcraft {
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
 		Addons.loadAddons(2);
-
-		
+		//Clproxy.postrenderThings();
+		RenderingRegistry.registerBlockHandler(RenderTranscraftOre.instance());
 	}
 
 	public static void oreRegistration() {

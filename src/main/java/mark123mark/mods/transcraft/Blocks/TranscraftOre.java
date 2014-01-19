@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft.Blocks;
 
 import java.util.List;
 
+import mark123mark.mods.transcraft.Renders.Blocks.RenderTranscraftOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -55,6 +56,11 @@ public class TranscraftOre extends Block {
 	@Override
 	public int damageDropped(int dmg) {
 		return dmg;
+	}
+	
+	@Override
+	public int getRenderType(){
+		return RenderTranscraftOre.instance().getRenderId();
 	}
 	
 }
