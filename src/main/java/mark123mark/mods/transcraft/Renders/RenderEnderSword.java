@@ -70,10 +70,10 @@ public class RenderEnderSword implements IItemRenderer
 				GL11.glDisable(GL11.GL_CULL_FACE);
 				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 				GL11.glPushMatrix();
-	            GL11.glRotatef(50F, -1110.0F,0.0F, -1110.0F);
-	            GL11.glTranslatef((float) 0.0F, (float)8.7f, (float) 1.4F);
+	            GL11.glRotatef(50F, 0.0F,0.0F, 1.0F);
+	            GL11.glTranslatef((float) 10.0F, (float)-9.5f, (float) 59.4F);
 	            
-	            GL11.glScalef(15F, 15F, 15F);
+	            GL11.glScalef(23F, 23F, 23F);
 	            Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation("transcraft", "textures/models/EnderSwoadModelTexture.png"));     
 	            model.base.render(0.0625F);
 	            model.Main.render(0.0625F);
