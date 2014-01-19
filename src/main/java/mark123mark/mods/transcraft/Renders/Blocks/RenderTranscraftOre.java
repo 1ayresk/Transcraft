@@ -25,12 +25,13 @@ public class RenderTranscraftOre implements ISimpleBlockRenderingHandler {
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
                     Block block, int modelId, RenderBlocks renderer) {
             
-            //which render pass are we doing?
+    	if(world.getBlockMetadata(x, y, z) == 0)
+    	{
+    		//which render pass are we doing?
             if(TranscraftClientProxy.renderPass == 0)
             {
-                    //we are on the solid block render pass, lets render the solid diamond block
-               //     drawDiamond(Block.stoneBrick,x,y,z);      
-                    renderer.renderStandardBlock(Transcraft.BlueLight, x, y, z);
+                    //we are on the solid block render pass, lets render the solid diamond block   
+                    renderer.renderStandardBlock(Block.stone, x, y, z);
             }
             else                    
             {
@@ -40,6 +41,12 @@ public class RenderTranscraftOre implements ISimpleBlockRenderingHandler {
             }
             
             return true;
+    	}
+    	else
+    	{
+    		renderer.renderStandardBlock(block, x, y, z);
+    	}
+    	return true;
     }
 
 
