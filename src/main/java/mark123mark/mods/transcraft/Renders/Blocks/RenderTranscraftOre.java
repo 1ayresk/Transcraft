@@ -33,10 +33,14 @@ public class RenderTranscraftOre extends BlockRenderBase
 			Tessellator tessellator = Tessellator.instance;
 			tessellator.setColorOpaque_I(0xFFFFFF);
 			tessellator.setBrightness(220);		
+
 			
-			/*
+			
+			
+			
+			/*################################################################# NEEDS FIXING
 			 * 
-			 
+
 			
 			if(block.shouldSideBeRendered(world, x - 1, y, z, 4) || renderer.renderAllFaces){
 				renderer.renderFaceXNeg(block, x, y, z, glow);
