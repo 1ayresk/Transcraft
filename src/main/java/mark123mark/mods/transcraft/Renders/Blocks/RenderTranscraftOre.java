@@ -15,7 +15,7 @@ public class RenderTranscraftOre extends BlockRenderBase
 	private static final RenderTranscraftOre INSTANCE = new RenderTranscraftOre();
 	
 	public static final String FACE_TRANSMUTTER_ORE = "transcraft:ores/ore_Transmutter";
-	public static final String GLOW_TRANSMUTTER_ORE = "transcraft:ores/glow_Transmutter";
+	public static final String GLOW_TRANSMUTTER_ORE = "transcraft:ores/glow_Transmutter.png";
 	
 	public static RenderTranscraftOre instance(){
 		return INSTANCE;
@@ -34,9 +34,13 @@ public class RenderTranscraftOre extends BlockRenderBase
 			tessellator.setColorOpaque_I(0xFFFFFF);
 			tessellator.setBrightness(220);		
 
-			/*################################################################# NEEDS FIXING
-			 * 
 
+	//		System.out.println(glow);
+	//		System.out.println(renderer);
+			
+			/*
+			 * 
+			
 			
 			if(block.shouldSideBeRendered(world, x - 1, y, z, 4) || renderer.renderAllFaces){
 				renderer.renderFaceXNeg(block, x, y, z, glow);
@@ -57,8 +61,7 @@ public class RenderTranscraftOre extends BlockRenderBase
 				renderer.renderFaceZPos(block, x, y, z, glow);
 			}
 			
-*/
-			
+			 */
 			return true;
 		}
 		else
