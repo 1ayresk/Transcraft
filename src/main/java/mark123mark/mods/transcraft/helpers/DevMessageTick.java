@@ -2,12 +2,9 @@ package mark123mark.mods.transcraft.helpers;
 
 import java.util.EnumSet;
 
-import org.lwjgl.opengl.XRandR.Screen;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.entity.player.EntityPlayer;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;

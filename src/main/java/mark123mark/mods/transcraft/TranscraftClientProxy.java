@@ -6,7 +6,6 @@ import mark123mark.mods.transcraft.Entitys.mob.EnderBatRender;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
-import mark123mark.mods.transcraft.Renders.Blocks.RenderTranscraftOre;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderHandTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.RenderTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
@@ -27,9 +26,7 @@ import cpw.mods.fml.relauncher.Side;
 public class TranscraftClientProxy extends TranscraftCommonProxy {
 
 	public static Minecraft mc = Minecraft.getMinecraft();
-	 public static int TranscraftOreRenderType;
-     public static int renderPass;
-	
+
 	
 	@Override
 	public void registerHandlers() {
@@ -54,11 +51,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class, new RenderTC());
 		
 		MinecraftForgeClient.registerItemRenderer(Config.TranscrafterID, new RenderHandTC());
-		
-		TranscraftOreRenderType = RenderingRegistry.getNextAvailableRenderId();
-        RenderingRegistry.registerBlockHandler(new RenderTranscraftOre());
-		
-		
+	
 	}
 
 	public void postrenderThings()

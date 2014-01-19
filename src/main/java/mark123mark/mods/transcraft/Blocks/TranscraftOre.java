@@ -2,8 +2,6 @@ package mark123mark.mods.transcraft.Blocks;
 
 import java.util.List;
 
-import mark123mark.mods.transcraft.TranscraftClientProxy;
-import mark123mark.mods.transcraft.Renders.Blocks.RenderTranscraftOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -58,38 +56,5 @@ public class TranscraftOre extends Block {
 	public int damageDropped(int dmg) {
 		return dmg;
 	}
-	
-	  @Override
-      public boolean renderAsNormalBlock()
-  {
-      return false;
-  }
-      
-      @Override
-      public int getRenderType()
-  {
-      return TranscraftClientProxy.TranscraftOreRenderType;
-  }
-      
-      @Override
-      public boolean isOpaqueCube()
-  {
-      return false;
-  }
-      
-      @Override
-      public int getRenderBlockPass()
-  {
-              return 1;
-  }
-      
-      @Override
-      public boolean canRenderInPass(int pass)
-  {
-              //Set the static var in the client proxy
-    	  TranscraftClientProxy.renderPass = pass;
-              //the block can render in both passes, so return true always
-      return true;
-  }
-	
+
 }

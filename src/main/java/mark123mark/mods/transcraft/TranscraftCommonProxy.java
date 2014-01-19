@@ -2,10 +2,8 @@ package mark123mark.mods.transcraft;
 
 import java.io.File;
 
-import mark123mark.mods.transcraft.Renders.Blocks.RenderTranscraftOre;
 import mark123mark.mods.transcraft.helpers.ServerTickHandler;
 import mark123mark.mods.transcraft.helpers.TickHandler;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
