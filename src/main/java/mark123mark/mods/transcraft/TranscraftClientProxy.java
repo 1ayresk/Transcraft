@@ -17,7 +17,6 @@ import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import mark123mark.mods.transcraft.helpers.Config;
 import mark123mark.mods.transcraft.helpers.ServerTickHandler;
 import mark123mark.mods.transcraft.helpers.TickHandler;
-import mark123mark.mods.transcraft.models.EnderSwordModel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraftforge.client.MinecraftForgeClient;

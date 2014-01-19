@@ -1,19 +1,12 @@
 package mark123mark.mods.transcraft.Renders;
 
-import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TranscrafterModel;
-import mark123mark.mods.transcraft.models.EnderSwordModel;
 import mark123mark.mods.transcraft.models.EnderSwordModel_new;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
-import net.minecraftforge.client.IItemRenderer.ItemRenderType;
-import net.minecraftforge.client.IItemRenderer.ItemRendererHelper;
 
 import org.lwjgl.opengl.GL11;
-
-import scala.tools.nsc.Phases.Model;
 
 public class RenderEnderSword implements IItemRenderer 
 {
