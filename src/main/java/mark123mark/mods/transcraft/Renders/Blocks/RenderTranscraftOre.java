@@ -34,10 +34,6 @@ public class RenderTranscraftOre extends BlockRenderBase
 			tessellator.setColorOpaque_I(0xFFFFFF);
 			tessellator.setBrightness(220);		
 
-			
-			
-			
-			
 			/*################################################################# NEEDS FIXING
 			 * 
 
@@ -64,6 +60,10 @@ public class RenderTranscraftOre extends BlockRenderBase
 */
 			
 			return true;
+		}
+		else
+		{
+			renderer.renderStandardBlock(block, x, y, z);
 		}
 		
 		return false;
