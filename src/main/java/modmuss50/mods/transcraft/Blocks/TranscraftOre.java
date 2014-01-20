@@ -2,14 +2,30 @@ package modmuss50.mods.transcraft.Blocks;
 
 import java.util.List;
 
+import modmuss50.mods.transcraft.TranscraftClientProxy;
+import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.EntityFX;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.util.MathHelper;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+
+import java.util.Random;
+
+import org.lwjgl.opengl.GL11;
+
+import cpw.mods.fml.client.FMLClientHandler;
 
 public class TranscraftOre extends Block {
 
@@ -57,4 +73,15 @@ public class TranscraftOre extends Block {
 		return dmg;
 	}
 
+	 @Override
+     public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random) {        
+            
+		 FXSparkle sparkle = new FXSparkle(par1World, par2 + 0.3 + par5Random.nextFloat() * 0.5, par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);
+         Minecraft.getMinecraft().effectRenderer.addEffect(sparkle);
+		 
+		 
+		// TranscraftClientProxy.sparkleFX(par1World, par2 + 0.3 + par5Random.nextFloat() * 0.5, par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);
+     }
+	
+	
 }

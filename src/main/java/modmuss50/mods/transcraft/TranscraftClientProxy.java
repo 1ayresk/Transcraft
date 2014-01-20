@@ -8,6 +8,7 @@ import modmuss50.mods.transcraft.Entitys.mob.NukeCreeper;
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeperRender;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.Renders.RenderEnderSword;
+import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemTileIxpRender;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileECRender;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
@@ -19,6 +20,7 @@ import modmuss50.mods.transcraft.helpers.ServerTickHandler;
 import modmuss50.mods.transcraft.helpers.TickHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
+import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -45,6 +47,11 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		
 	}
 
+	
+	public void sparkleFX(World world, double x, double y, double z, float size, int m) {
+            FXSparkle sparkle = new FXSparkle(world, x, y, z, size, m);
+            Minecraft.getMinecraft().effectRenderer.addEffect(sparkle);
+    }
 	
 	public void renderThings()
 	{

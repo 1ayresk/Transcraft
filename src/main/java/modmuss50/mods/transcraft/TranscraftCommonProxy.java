@@ -2,6 +2,7 @@ package modmuss50.mods.transcraft;
 
 import java.io.File;
 
+import net.minecraft.world.World;
 import modmuss50.mods.transcraft.helpers.ServerTickHandler;
 import modmuss50.mods.transcraft.helpers.TickHandler;
 import cpw.mods.fml.common.registry.TickRegistry;
@@ -35,6 +36,9 @@ public class TranscraftCommonProxy {
 		
 	}
 	
+	public void sparkleFX(World world, double x, double y, double z, float size, int m) {
+        // NO-OP
+	}
 	
 	public void renderThings()
 	{
