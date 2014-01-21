@@ -49,11 +49,11 @@ public class DevCapes
         capeResources = new HashMap<String, ResourceLocation>();
         downloadThreads = new HashMap<String, ThreadDownloadImageData>();
 
-        versionChecker = new DevCapesVersionChecker();
-        Thread vc = new Thread(versionChecker);
-        vc.setDaemon(true);
-        vc.setName("DevCapesVersionChecker");
-        vc.run();
+        //versionChecker = new DevCapesVersionChecker();
+      //  Thread vc = new Thread(versionChecker);
+      //  vc.setDaemon(true);
+      //  vc.setName("DevCapesVersionChecker");
+      //  vc.run();
     }
 
     /**
