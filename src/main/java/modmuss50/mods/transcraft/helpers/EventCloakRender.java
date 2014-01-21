@@ -18,6 +18,7 @@ import javax.swing.ImageIcon;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.ThreadDownloadImageData;
 import net.minecraftforge.client.event.RenderPlayerEvent;
+import net.minecraftforge.event.ForgeSubscribe;
 
 import com.google.common.eventbus.Subscribe;
 
@@ -43,7 +44,7 @@ public class EventCloakRender {
         instance = this;
     }
 
-    
+    @ForgeSubscribe
     @SideOnly(Side.CLIENT)
     public void onPreRenderSpecials(RenderPlayerEvent.Specials.Pre event)
     {
@@ -101,7 +102,7 @@ public class EventCloakRender {
                     }
                     else
                     {
-                        System.err.println("[BiomesOPlenty] [capes.txt] Syntax error on line " + linetracker + ": " + str);
+                        System.err.println("[Transcraft] [capes.txt] Syntax error on line " + linetracker + ": " + str);
                     }
                 }
                 linetracker++;
