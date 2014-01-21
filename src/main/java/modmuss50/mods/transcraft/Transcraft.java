@@ -12,6 +12,7 @@ import modmuss50.mods.transcraft.command.CommandTranscraftVersion;
 import modmuss50.mods.transcraft.fluids.TranscraftFluids;
 import modmuss50.mods.transcraft.helpers.Config;
 import modmuss50.mods.transcraft.helpers.DevMessageTick;
+import modmuss50.mods.transcraft.helpers.EventCloakRender;
 import modmuss50.mods.transcraft.helpers.EventMobDeath;
 import modmuss50.mods.transcraft.helpers.FuelHandler;
 import modmuss50.mods.transcraft.helpers.GuiHand;
@@ -219,6 +220,9 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
 		NetworkRegistry.instance().registerGuiHandler(instance, new GuiHand());
+		
+		
+		MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 		
 		Addons.loadAddons(1);
 	}
