@@ -7,6 +7,8 @@
 
 package modmuss50.mods.transcraft.Renders.particles;
 
+import java.util.Random;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.Tessellator;
@@ -28,9 +30,14 @@ public class FXSparkle extends EntityFX
 		super(world, x, y, z, 0.0D, 0.0D, 0.0D);
 
 		
-		float red = 1.0F;
-		float green = 1.0F;
-		float blue =1.0F;
+		float minX = 1.0f;
+		float maxX = 0.001f;
+
+		Random rand = new Random();
+
+		float red = rand.nextFloat() * (maxX - minX) + minX;
+		float green = rand.nextFloat() * (maxX - minX) + minX;
+		float blue = rand.nextFloat() * (maxX - minX) + minX;
 		
 		particleRed = red;
 		particleGreen = green;
