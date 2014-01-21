@@ -19,6 +19,7 @@ import modmuss50.mods.transcraft.helpers.GuiHand;
 import modmuss50.mods.transcraft.helpers.ItemToolTipHelper;
 import modmuss50.mods.transcraft.helpers.PacketHandlerTranscraft;
 import modmuss50.mods.transcraft.helpers.PlayerEditor;
+import modmuss50.mods.transcraft.helpers.capes.DevCapesUtil;
 import modmuss50.mods.transcraft.loaders.LoadBlockSettings;
 import modmuss50.mods.transcraft.loaders.LoadBlocks;
 import modmuss50.mods.transcraft.loaders.LoadChestGen;
@@ -215,6 +216,8 @@ public class Transcraft {
 				.registerConnectionHandler(new PlayerEditor());
 
 		Coproxy.renderThings();
+		
+		DevCapesUtil.addFileUrl("https://raw.github.com/modmuss50/Transcraft/master/Capes/capes.txt");
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
@@ -222,7 +225,7 @@ public class Transcraft {
 		NetworkRegistry.instance().registerGuiHandler(instance, new GuiHand());
 		
 		
-		MinecraftForge.EVENT_BUS.register(new EventCloakRender());
+		//MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 		
 		Addons.loadAddons(1);
 	}

@@ -1,1 +1,6 @@
-mark123mark:https://dl.dropboxusercontent.com/s/u32tnmr6pta5cx8/transcraft_dev.png?dl=1&token_hash=AAGmcRjgBcuQ548v6cMRRFbP0Rxp04pJvTVaKxJfUhOyaQ
+developer=https://dl.dropboxusercontent.com/s/u32tnmr6pta5cx8/transcraft_dev.png?dl=1&token_hash=AAGmcRjgBcuQ548v6cMRRFbP0Rxp04pJvTVaKxJfUhOyaQ
+developer=mark123mark
+developer=tattyseal
+tester=https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw
+tester=Drewzombie
+tester=username4
