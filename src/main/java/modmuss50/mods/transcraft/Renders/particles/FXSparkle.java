@@ -28,9 +28,9 @@ public class FXSparkle extends EntityFX
 		super(world, x, y, z, 0.0D, 0.0D, 0.0D);
 
 		
-		float red = 0.0F;
+		float red = 1.0F;
 		float green = 1.0F;
-		float blue = 1.0F;
+		float blue =1.0F;
 		
 		particleRed = red;
 		particleGreen = green;
