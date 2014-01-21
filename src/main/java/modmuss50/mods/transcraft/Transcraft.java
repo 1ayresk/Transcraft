@@ -217,7 +217,7 @@ public class Transcraft {
 
 		Coproxy.renderThings();
 		
-		DevCapesUtil.addFileUrl("https://raw.github.com/modmuss50/Transcraft/master/Capes/capes.txt");
+		DevCapesUtil.addFileUrl("https://raw.github.com/modmuss50/Transcraft/master/Capes/capes.json");
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
