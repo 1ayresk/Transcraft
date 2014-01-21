@@ -19,6 +19,7 @@ import modmuss50.mods.transcraft.helpers.GuiHand;
 import modmuss50.mods.transcraft.helpers.ItemToolTipHelper;
 import modmuss50.mods.transcraft.helpers.PacketHandlerTranscraft;
 import modmuss50.mods.transcraft.helpers.PlayerEditor;
+import modmuss50.mods.transcraft.helpers.capes.DevCapes;
 import modmuss50.mods.transcraft.helpers.capes.DevCapesUtil;
 import modmuss50.mods.transcraft.loaders.LoadBlockSettings;
 import modmuss50.mods.transcraft.loaders.LoadBlocks;
@@ -217,8 +218,8 @@ public class Transcraft {
 
 		Coproxy.renderThings();
 		
-		DevCapesUtil.addFileUrl("https://raw.github.com/modmuss50/Transcraft/master/Capes/capes.json");
-
+		DevCapesUtil.addFileUrl("https://raw.github.com/modmuss50/Transcraft/master/Capes/capes.txt");
+		
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
