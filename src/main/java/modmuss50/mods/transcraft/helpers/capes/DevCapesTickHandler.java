@@ -71,20 +71,6 @@ public class DevCapesTickHandler implements ITickHandler
                             downloadImageCapeField.set(p, instance.getDownloadThread(userGroup));
                         }
 
-                        //notifies qualified user that developer capes is outdated.
-                        if (!notified)
-                        {
-                            if (FMLClientHandler.instance().getClient().currentScreen == null)
-                            {
-                                if (instance.versionChecker.getResult() == 1)
-                                {
-
-                                    notified = true;
-
-                                    FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage("§6[DevCapes]: §fDevCapes is outdated.");
-                                }
-                            }
-                        }
                     }
                 }
 
