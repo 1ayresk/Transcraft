@@ -81,16 +81,16 @@ public class TranscraftOre extends Block {
 			 //FXSparkle sparkle = new FXSparkle(par1World, par2 + 0.3 + par5Random.nextFloat() * 0.5, par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);
 		        // Minecraft.getMinecraft().effectRenderer.addEffect(sparkle);
 				 
-		         FXSparkle sparkle2 = new FXSparkle(par1World, par2 + 0.5 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);
+		         FXSparkle sparkle2 = new FXSparkle(par1World, par2 + 0.5 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, 1, 20);
 		         Minecraft.getMinecraft().effectRenderer.addEffect(sparkle2);
 				 
-		         FXSparkle sparkle3 = new FXSparkle(par1World, par2 - 0.5 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);
+		         FXSparkle sparkle3 = new FXSparkle(par1World, par2 - 0.5 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, 1, 20);
 		         Minecraft.getMinecraft().effectRenderer.addEffect(sparkle3);
 		         
-		         FXSparkle sparkle4 = new FXSparkle(par1World, par2 + 0.3 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.5 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);
+		         FXSparkle sparkle4 = new FXSparkle(par1World, par2 + 0.3 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.5 + par5Random.nextFloat() * 0.5, 1, 20);
 		         Minecraft.getMinecraft().effectRenderer.addEffect(sparkle4);
 		         
-		         FXSparkle sparkle5 = new FXSparkle(par1World, par2 + 0.3 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 - 0.5 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);
+		         FXSparkle sparkle5 = new FXSparkle(par1World, par2 + 0.3 + par5Random.nextFloat(), par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 - 0.5 + par5Random.nextFloat() * 0.5, 1, 20);
 		         Minecraft.getMinecraft().effectRenderer.addEffect(sparkle5);
 		         
 				// TranscraftClientProxy.sparkleFX(par1World, par2 + 0.3 + par5Random.nextFloat() * 0.5, par3 + 0.5 + par5Random.nextFloat() * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5, par5Random.nextFloat(), 5);

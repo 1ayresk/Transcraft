@@ -35,6 +35,7 @@ public class FXSparkle extends EntityFX
 
 		Random rand = new Random();
 
+
 		float red = rand.nextFloat() * (maxX - minX) + minX;
 		float green = rand.nextFloat() * (maxX - minX) + minX;
 		float blue = rand.nextFloat() * (maxX - minX) + minX;
