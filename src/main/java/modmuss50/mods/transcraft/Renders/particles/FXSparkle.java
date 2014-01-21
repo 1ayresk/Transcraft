@@ -50,12 +50,9 @@ public class FXSparkle extends EntityFX
 	public FXSparkle(World world, double d, double d1, double d2, float f, int type, int m)
 	{
 		this(world, d, d1, d2, f, m);
-		currentColor = type;
 			particleRed=.75f + world.rand.nextFloat()*.25f;
 			particleGreen=.25f + world.rand.nextFloat()*.25f;
 			particleBlue=.75f + world.rand.nextFloat()*.25f;
-		
-
 	}
 
 	public FXSparkle(World world, double d, double d1, double d2, double x, double y, double z,
@@ -123,13 +120,7 @@ public class FXSparkle extends EntityFX
 	@Override
 	public void onUpdate()
 	{
-		//	 if (!leyLineEffect) {
-		//		 EntityLiving renderentity = FMLClientHandler.instance().getClient().renderViewEntity;
-		//		 int visibleDistance = 50;
-		//		 if (!FMLClientHandler.instance().getClient().gameSettings.fancyGraphics) visibleDistance=25;
-		//		 if (renderentity.getDistance(posX, posY, posZ)>visibleDistance) particleMaxAge=0;
-		//	 }
-
+		
 		prevPosX = posX;
 		prevPosY = posY;
 		prevPosZ = posZ;
