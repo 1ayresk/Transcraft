@@ -78,10 +78,7 @@ public class EnderSword extends ItemSword {
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, EntityPlayer player, List list,
-			boolean par4) {
-		
-		
+	public void addInformation(ItemStack stack, EntityPlayer player, List list,boolean par4) {
 		if(Config.enderswordpearl == true)
 		{
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))

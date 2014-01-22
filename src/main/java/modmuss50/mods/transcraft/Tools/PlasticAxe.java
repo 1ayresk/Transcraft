@@ -25,4 +25,7 @@ public class PlasticAxe extends ItemAxe {
 	public void registerIcons(IconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticAxe");
 	}
+	
+	
+	
 }
