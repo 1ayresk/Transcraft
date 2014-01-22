@@ -46,7 +46,7 @@ public class LoadLang {
 				"Plastic Shovel");
 		LanguageRegistry.addName(TranscraftItems.PlasticSword, "Plastic Sword");
 		LanguageRegistry.addName(TranscraftItems.BunkerPick, "Ender Pickaxe");
-		LanguageRegistry.addName(TranscraftItems.EnderSword, "Ender Sword");
+		LanguageRegistry.addName(TranscraftItems.EnderSword, "\u00A7dEnder Sword");
 
 		LanguageRegistry.addName(TranscraftItems.PlasticHelmet,
 				"Plastic Helmet");

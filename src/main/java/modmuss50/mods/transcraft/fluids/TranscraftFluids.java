@@ -37,7 +37,7 @@ public class TranscraftFluids {
 				Config.LiquidTransmutterFluidStillID,
 				Fluids.LiquidTransmutterFluid.get(), Material.water)
 				.setUnlocalizedName("transcraft:LiquidTransmutter")
-				.setCreativeTab(Transcraft.Transtab));
+				);
 	}
 
 	private static void initializeContainers() {

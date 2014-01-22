@@ -1,0 +1,15 @@
+[
+{
+  "modid": "transcraft",
+  "name": "\u00A73Transcraft",
+  "description": "\u00A73Transraft \u00A72is a mod about transmuting items and blocks!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["\u00A74mark123mark", "\u00A7etattyseal", "\u00A7eshifu_", "\u00A7eklmDF14J"],
+  "logoFile": "/assets/transcraft/textures/logo/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
