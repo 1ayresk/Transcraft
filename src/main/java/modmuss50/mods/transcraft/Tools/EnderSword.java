@@ -83,7 +83,7 @@ public class EnderSword extends ItemSword {
 		{
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
 	        {
-				list.add("Right click to throw an ender peral");
+				list.add("\u00a72Right click to throw an ender peral");
 	        }
 			else
 			{

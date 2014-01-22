@@ -31,7 +31,7 @@ public class BunkerPick extends ItemPickaxe {
 		{
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
 	        {
-				list.add("Just a pickaxe, Oh and it can mine bunker blocks!");
+				list.add("\u00a72Just a pickaxe, Oh and it can mine bunker blocks!");
 	        }
 			else
 			{
