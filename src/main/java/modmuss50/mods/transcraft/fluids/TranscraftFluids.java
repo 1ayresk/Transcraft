@@ -65,11 +65,13 @@ public class TranscraftFluids {
 		GameRegistry.registerItem(Fluids.ItemBucketLiquidTrasnmutter.get(),
 				"Transbucket");
 		// registerItem(Fluids.ItemBucketLiquidTrasnmutter.get());
+
+		LanguageRegistry.instance().addStringLocalization(Fluids.ItemBucketLiquidTrasnmutter.get().getUnlocalizedName(new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get().itemID, 1, 1)) + ".name","Transmutter Bucket " + "\u00a72Liquid Transmutter");
+		LanguageRegistry.instance().addStringLocalization(Fluids.ItemBucketLiquidTrasnmutter.get().getUnlocalizedName(new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get().itemID, 1, 0)) + ".name","Transmutter Bucket");
 	}
 
 	public static void registerItem(Item item) {
-		GameRegistry.registerItem(item,
-				item.getUnlocalizedName().replace("item.", ""));
+		GameRegistry.registerItem(item,item.getUnlocalizedName().replace("item.", ""));
 	}
 
 }

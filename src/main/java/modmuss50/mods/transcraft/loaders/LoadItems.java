@@ -42,6 +42,7 @@ public class LoadItems {
 				Config.OilID).setUnlocalizedName("Transcraft:Oil")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:Oil");
+		
 		TranscraftItems.Plastic = new modmuss50.mods.transcraft.Items.Plastic(
 				Config.PlasticID).setUnlocalizedName("Transcraft:Plastic")
 				.setCreativeTab(Transcraft.Transtab)
