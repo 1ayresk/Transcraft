@@ -42,18 +42,7 @@ public class LoadMod {
 
 	public static void preInit(FMLPreInitializationEvent event) {
 		event.getModMetadata().version = (TranscraftUtil.VERSION + TranscraftUtil.STATE);
-		
-		/*
-		 * 
 
-		event.getModMetadata().modId = ("transcraft");
-		event.getModMetadata().name = ("Transcraft");
-		event.getModMetadata().description = ("Transraft is a mod about transmuting items and blocks!");
-		event.getModMetadata().logoFile = ("/assets/transcraft/textures/logo/logo.png");
-		event.getModMetadata().credits = ("By mark123mark, tattyseal, shifu_, klmDF14J");
-		event.getModMetadata().authorList = TranscraftUtil.authorList;
-
-*/
 
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison "
 				+ TranscraftUtil.VERSION);
