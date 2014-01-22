@@ -37,7 +37,7 @@ public class TranscraftFluids {
 				Config.LiquidTransmutterFluidStillID,
 				Fluids.LiquidTransmutterFluid.get(), Material.water)
 				.setUnlocalizedName("transcraft:LiquidTransmutter")
-				.setCreativeTab(Transcraft.TranstabBlocks));
+				.setCreativeTab(Transcraft.Transtab));
 	}
 
 	private static void initializeContainers() {
@@ -46,7 +46,7 @@ public class TranscraftFluids {
 				.of((new ItemBucketLiquidTrasnmutter(
 						Config.BucketLiquidTrasnmutterID).setMaxStackSize(1)
 						.setUnlocalizedName("transcraft.BucketLiquidTrasnmutter"))
-						.setCreativeTab(Transcraft.TranstabItems));
+						.setCreativeTab(Transcraft.Transtab));
 
 		FluidContainerRegistry.registerFluidContainer(
 				Fluids.LiquidTransmutterFluid.get(), new ItemStack(

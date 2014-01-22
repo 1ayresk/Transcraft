@@ -1,4 +1,11 @@
-package modmuss50.mods.transcraft.Blocks.Quartz;
+/**
+ * This class is part of the mod Transcraft. 
+ * 
+ * Transcraft is Open Source but you cant use any code without permission!
+ * 
+ */
+
+package modmuss50.mods.transcraft.Blocks;
 
 import java.util.List;
 
@@ -12,10 +19,11 @@ import org.lwjgl.input.Keyboard;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemEnderQuartzBrick extends IColoredItemBlock {
+public class ItemThinCrystalGlass extends IColoredItemBlock {
 
-	public ItemEnderQuartzBrick(int par1) {
+	public ItemThinCrystalGlass(int par1) {
 		super(par1);
+
 	}
 
 	@Override
@@ -25,7 +33,7 @@ public class ItemEnderQuartzBrick extends IColoredItemBlock {
 		if (Config.enderswordpearl == true) {
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)
 					|| Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
-				list.add("\u00a72This block is just to look good!");
+				list.add("\u00a72This glass has a clean look to it.");
 				list.add("\u00a72It can be broken with any Pickaxe");
 			} else {
 				list.add("\u00a72[\u00a74SHIFT\u00a72]");

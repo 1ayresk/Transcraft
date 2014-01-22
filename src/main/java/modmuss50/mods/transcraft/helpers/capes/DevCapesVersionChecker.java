@@ -5,45 +5,44 @@
  */
 package modmuss50.mods.transcraft.helpers.capes;
 
-import argo.jdom.JdomParser;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-public class DevCapesVersionChecker implements Runnable
-{
-    private static final String versionFileURL = "https://raw.github.com/jadar/DeveloperCapes/master/version.json";
+import argo.jdom.JdomParser;
 
-    private byte result = 0;
+public class DevCapesVersionChecker implements Runnable {
+	private static final String versionFileURL = "https://raw.github.com/jadar/DeveloperCapes/master/version.json";
 
-    private static final byte ERROR   = 0;
-    private static final byte OLD     = 1;
-    private static final byte CURRENT = 2;
+	private byte result = 0;
 
-    @Override
-    public void run()
-    {
+	private static final byte ERROR = 0;
+	private static final byte OLD = 1;
+	private static final byte CURRENT = 2;
 
-        try
-        {
+	@Override
+	public void run() {
 
-            URL url = new URL(versionFileURL);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            double version = Double.valueOf(new JdomParser().parse(reader).getStringValue("version"));
+		try {
 
-            if (version > DevCapes.version) result = OLD;
-            else if (version == DevCapes.version) result = CURRENT;
-            else result = ERROR;
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
+			URL url = new URL(versionFileURL);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					url.openStream()));
+			double version = Double.valueOf(new JdomParser().parse(reader)
+					.getStringValue("version"));
 
-    public byte getResult()
-    {
-        return result;
-    }
+			if (version > DevCapes.version)
+				result = OLD;
+			else if (version == DevCapes.version)
+				result = CURRENT;
+			else
+				result = ERROR;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public byte getResult() {
+		return result;
+	}
 }

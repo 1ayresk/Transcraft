@@ -43,8 +43,11 @@ public class TranscraftGenerator implements IWorldGenerator {
 			int TranscraftOreYCoord = random.nextInt(32);
 			int TranscraftOreZCoord = j + random.nextInt(16);
 
-			for(int l = 0; l < TranscraftOre.types.length; l++) {
-				new WorldGenMinable(Config.TranscraftOreID, l, 7, Block.stone.blockID).generate(world, random, TranscraftOreXCoord, TranscraftOreYCoord, TranscraftOreZCoord);
+			for (int l = 0; l < TranscraftOre.types.length; l++) {
+				new WorldGenMinable(Config.TranscraftOreID, l, 7,
+						Block.stone.blockID).generate(world, random,
+						TranscraftOreXCoord, TranscraftOreYCoord,
+						TranscraftOreZCoord);
 			}
 
 		}

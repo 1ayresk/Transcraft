@@ -12,26 +12,20 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ItemToolTipHelper {
 
 	@SideOnly(Side.CLIENT)
-	public class ItemTooltipEventHandler
-	{
+	public class ItemTooltipEventHandler {
 
-	    @ForgeSubscribe
-	    public void handleItemTooltipEvent(ItemTooltipEvent event)
-	    {
-	        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
-	        {
+		@ForgeSubscribe
+		public void handleItemTooltipEvent(ItemTooltipEvent event) {
+			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)
+					|| Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
 
-	            if (TranscraftItems.BasicTransmuter != null)
-	            {
-	                event.toolTip.add("TEST");
-	            }
-	            else
-	            {
-	                event.toolTip.add("TEST222");
-	            }
-	        }
-	    }
+				if (TranscraftItems.BasicTransmuter != null) {
+					event.toolTip.add("TEST");
+				} else {
+					event.toolTip.add("TEST222");
+				}
+			}
+		}
 	}
-	
-	
+
 }

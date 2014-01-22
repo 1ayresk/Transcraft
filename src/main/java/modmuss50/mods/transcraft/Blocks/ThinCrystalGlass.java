@@ -1,12 +1,9 @@
 package modmuss50.mods.transcraft.Blocks;
 
-import net.minecraft.block.BlockPane;
-import net.minecraft.block.material.Material;
+import modmuss50.mods.transcraft.api.ICloulouredGlassPane;
 
-public class ThinCrystalGlass extends BlockPane {
+public class ThinCrystalGlass extends ICloulouredGlassPane {
 	public ThinCrystalGlass(int id) {
-		super(id, "transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.glass, true);
-
+		super(id);
 	}
 }

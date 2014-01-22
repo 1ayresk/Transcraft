@@ -20,7 +20,7 @@ public class FancyCrystalGlass extends IColoredBlock {
 		this.setStepSound(soundGlassFootstep);
 
 		renderPass = hasAlpha ? 1 : 0;
-		this.setCreativeTab(Transcraft.TranstabBlocks);
+		this.setCreativeTab(Transcraft.Transtab);
 		this.setHardness(0.3f);
 	}
 
@@ -482,8 +482,6 @@ public class FancyCrystalGlass extends IColoredBlock {
 				.registerIcon("Transcraft:glass/FancyGlass/glass_3_r");
 		icons[15] = par1IconRegister
 				.registerIcon("Transcraft:glass/FancyGlass/glass_4");
-	
+
 	}
 }
-
-

@@ -17,5 +17,5 @@ public class BasicTransmuter extends IItemTransmutter {
 	public void registerIcons(IconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:BasicTransmuter");
 	}
-	
+
 }

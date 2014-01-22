@@ -31,7 +31,6 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 
 	public static Minecraft mc = Minecraft.getMinecraft();
 
-	
 	@Override
 	public void registerHandlers() {
 		// TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
@@ -41,34 +40,40 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	public void registerTickHandlers() {
 		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
 		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
-		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,new NukeCreeperRender());
-		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,new  EnderBatRender());
+		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,
+				new NukeCreeperRender());
+		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,
+				new EnderBatRender());
 
-		
 	}
 
-	
-	public void sparkleFX(World world, double x, double y, double z, float size, int m) {
-            FXSparkle sparkle = new FXSparkle(world, x, y, z, size, m);
-            Minecraft.getMinecraft().effectRenderer.addEffect(sparkle);
-    }
-	
-	public void renderThings()
-	{
-		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class, new TileECRender());
-		MinecraftForgeClient.registerItemRenderer(Config.ixpGrinderID, new ItemTileIxpRender());
-		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class, new RenderTC());
-		
-		MinecraftForgeClient.registerItemRenderer(Config.TranscrafterID, new RenderHandTC());
-		MinecraftForgeClient.registerItemRenderer(TranscraftItems.EnderSword.itemID, new RenderEnderSword());
+	public void sparkleFX(World world, double x, double y, double z,
+			float size, int m) {
+		FXSparkle sparkle = new FXSparkle(world, x, y, z, size, m);
+		Minecraft.getMinecraft().effectRenderer.addEffect(sparkle);
 	}
 
-	public void postrenderThings()
-	{
-		
-		
+	public void renderThings() {
+		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class,
+				new TileECRender());
+		MinecraftForgeClient.registerItemRenderer(Config.ixpGrinderID,
+				new ItemTileIxpRender());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class,
+				new RenderTC());
+
+		MinecraftForgeClient.registerItemRenderer(Config.TranscrafterID,
+				new RenderHandTC());
+
+		// MinecraftForgeClient.registerItemRenderer(TranscraftItems.EnderSword.itemID,
+		// new RenderEnderSword());
+
+		// I was not happy with this, might add a config option to turn it on!
 	}
-	
+
+	public void postrenderThings() {
+
+	}
+
 	@Override
 	public void spawnParticle(String string, double x, double y, double z) {
 		EntityFX entityfx = null;

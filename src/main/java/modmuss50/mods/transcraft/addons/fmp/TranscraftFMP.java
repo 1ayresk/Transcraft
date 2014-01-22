@@ -1,6 +1,6 @@
 package modmuss50.mods.transcraft.addons.fmp;
 
-import modmuss50.mods.transcraft.Transcraft;
+import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOre;
 import codechicken.microblock.BlockMicroMaterial;
 import codechicken.multipart.MultiPartRegistry.IPartFactory;
@@ -9,50 +9,54 @@ import codechicken.multipart.TMultiPart;
 public class TranscraftFMP implements IPartFactory {
 
 	public static void registerBlocks() {
-		for(int i = 0; i < TranscraftOre.types.length; i++) {
-			BlockMicroMaterial.createAndRegister(Transcraft.TranscraftOre, i);
-		}
-		
-		BlockMicroMaterial.createAndRegister(Transcraft.OilOre);
-		BlockMicroMaterial.createAndRegister(Transcraft.BunkerBlock);
-
-		BlockMicroMaterial.createAndRegister(Transcraft.SmoothBunkerBlock);
-		BlockMicroMaterial.createAndRegister(Transcraft.DriedTransmutter);
-		BlockMicroMaterial.createAndRegister(Transcraft.FancyCrystalGlass);
-
-		BlockMicroMaterial.createAndRegister(Transcraft.BlueLight);
-		BlockMicroMaterial.createAndRegister(Transcraft.GreenLight);
-		BlockMicroMaterial.createAndRegister(Transcraft.OrangeLight);
-		BlockMicroMaterial.createAndRegister(Transcraft.DarkLight);
-
-		BlockMicroMaterial.createAndRegister(Transcraft.ComIronOre);
-		BlockMicroMaterial.createAndRegister(Transcraft.ComGoldOre);
-		BlockMicroMaterial.createAndRegister(Transcraft.ComTransmutterOre);
-		BlockMicroMaterial.createAndRegister(Transcraft.ComOilOre);
-
-		/*for(int i = 0; i < 16; i++) {
-			BlockMicroMaterial.createAndRegister(Transcraft.ClearGlass, i);
-		}
-		
-		for(int i = 0; i < 16; i++) {
-			BlockMicroMaterial.createAndRegister(Transcraft.FancyCrystalGlass, i);
+		for (int i = 0; i < TranscraftOre.types.length; i++) {
+			BlockMicroMaterial.createAndRegister(
+					TranscraftBlocks.TranscraftOre, i);
 		}
 
-		for(int i = 0; i < 16; i++) {
-			BlockMicroMaterial.createAndRegister(Transcraft.enderQuartzBlock, i);
-		}
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.OilOre);
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.BunkerBlock);
 
-		for (int i = 15; i >= 0; i--) {
-			BlockMicroMaterial.createAndRegister(Transcraft.CutenderQuartz, i);
-		}
+		BlockMicroMaterial
+				.createAndRegister(TranscraftBlocks.SmoothBunkerBlock);
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.DriedTransmutter);
+		BlockMicroMaterial
+				.createAndRegister(TranscraftBlocks.FancyCrystalGlass);
 
-		for(int i = 0; i < 16; i++) {
-			BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBrick, i);
-		}
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.BlueLight);
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.GreenLight);
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.OrangeLight);
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.DarkLight);
 
-		for(int i = 0; i < 16; i++) {
-			BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBigBrick, i);
-		}*/
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.ComIronOre);
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.ComGoldOre);
+		BlockMicroMaterial
+				.createAndRegister(TranscraftBlocks.ComTransmutterOre);
+		BlockMicroMaterial.createAndRegister(TranscraftBlocks.ComOilOre);
+
+		/*
+		 * for(int i = 0; i < 16; i++) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.ClearGlass, i); }
+		 * 
+		 * for(int i = 0; i < 16; i++) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.FancyCrystalGlass,
+		 * i); }
+		 * 
+		 * for(int i = 0; i < 16; i++) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.enderQuartzBlock, i);
+		 * }
+		 * 
+		 * for (int i = 15; i >= 0; i--) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.CutenderQuartz, i); }
+		 * 
+		 * for(int i = 0; i < 16; i++) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBrick, i);
+		 * }
+		 * 
+		 * for(int i = 0; i < 16; i++) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBigBrick,
+		 * i); }
+		 */
 
 	}
 

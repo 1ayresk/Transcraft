@@ -5,8 +5,6 @@ import net.minecraft.inventory.Container;
 
 public class ContanierTranspedia extends Container {
 
-
-
 	public ContanierTranspedia(EntityPlayer par1Player) {
 
 	}
@@ -16,7 +14,5 @@ public class ContanierTranspedia extends Container {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	
 
 }

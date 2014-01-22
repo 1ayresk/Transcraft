@@ -14,20 +14,16 @@ public class TickHandler implements ITickHandler {
 
 	public static boolean adminfly = false;
 
-	
 	@Override
 	public void tickStart(EnumSet<TickType> type, Object... tickData) {
 
-		
 	}
 
 	@Override
 	public void tickEnd(EnumSet<TickType> type, Object... tickData) {
 		EntityPlayer player = (EntityPlayer) tickData[0];
 
-		
-		if(Config.EnderArmorBuffs == true)
-		{
+		if (Config.EnderArmorBuffs == true) {
 			if (player.getCurrentArmor(3) != null) {
 				if (player.getCurrentArmor(3).itemID == TranscraftItems.EnderHelmet.itemID) {
 					player.addPotionEffect(new PotionEffect(16, 240, 0, true));
@@ -58,9 +54,9 @@ public class TickHandler implements ITickHandler {
 						player.fallDistance = 0;
 					}
 				}
+			}
+
 		}
-	
-	}
 	}
 
 	@Override

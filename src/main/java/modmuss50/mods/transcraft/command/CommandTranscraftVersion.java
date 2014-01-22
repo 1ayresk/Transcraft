@@ -1,6 +1,6 @@
 package modmuss50.mods.transcraft.command;
 
-import modmuss50.mods.transcraft.Transcraft;
+import modmuss50.mods.transcraft.helpers.TranscraftUtil;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatMessageComponent;
 
@@ -18,10 +18,10 @@ public class CommandTranscraftVersion extends Command {
 						.createFromTranslationWithSubstitutions("----------Transcraft!----------"));
 		par1ICommandSender.sendChatToPlayer(ChatMessageComponent
 				.createFromTranslationWithSubstitutions("Transcraft Version "
-						+ Transcraft.VERSION + Transcraft.STATE));
-		par1ICommandSender
-				.sendChatToPlayer(ChatMessageComponent
-						.createFromTranslationWithSubstitutions("Made by mark123mark, shifu_ and tattyseal"));
+						+ TranscraftUtil.VERSION + TranscraftUtil.STATE));
+		par1ICommandSender.sendChatToPlayer(ChatMessageComponent
+				.createFromTranslationWithSubstitutions("Made by "
+						+ TranscraftUtil.authorList));
 		par1ICommandSender
 				.sendChatToPlayer(ChatMessageComponent
 						.createFromTranslationWithSubstitutions("----------Transcraft!----------"));

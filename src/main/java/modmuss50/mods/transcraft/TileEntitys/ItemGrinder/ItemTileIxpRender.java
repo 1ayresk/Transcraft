@@ -8,28 +8,26 @@ import net.minecraftforge.client.IItemRenderer;
 public class ItemTileIxpRender implements IItemRenderer {
 
 	private ModelChest chest;
-	
-	public ItemTileIxpRender()
-	{
+
+	public ItemTileIxpRender() {
 		chest = new ModelChest();
 	}
-	
+
 	@Override
-	public boolean handleRenderType(ItemStack item, ItemRenderType type)
-	{
+	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
 		return true;
 	}
 
 	@Override
-	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper)
-	{
+	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item,
+			ItemRendererHelper helper) {
 		return true;
 	}
 
 	@Override
-	public void renderItem(ItemRenderType type, ItemStack item, Object... data)
-	{
-		TileEntityRenderer.instance.renderTileEntityAt(new TileIXP(), 0.0, 0.0, 0.0, 0.0F);
+	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+		TileEntityRenderer.instance.renderTileEntityAt(new TileIXP(), 0.0, 0.0,
+				0.0, 0.0F);
 	}
 
 }

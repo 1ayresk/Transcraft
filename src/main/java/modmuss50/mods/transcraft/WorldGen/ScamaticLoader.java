@@ -8,9 +8,8 @@ import net.minecraft.world.World;
 
 import com.google.common.primitives.UnsignedBytes;
 
-
 public class ScamaticLoader {
-	
+
 	public byte[] blocks;
 	public byte[] datablocks;
 	public short width;
@@ -29,8 +28,11 @@ public class ScamaticLoader {
 
 	public void loadstructures(String path) {
 		try {
-			InputStream inputstream = ScamaticLoader.class.getResourceAsStream("/assets/transcraft/structures/" + path);
-			NBTTagCompound nbt = CompressedStreamTools.readCompressed(inputstream);
+			InputStream inputstream = ScamaticLoader.class
+					.getResourceAsStream("/assets/transcraft/structures/"
+							+ path);
+			NBTTagCompound nbt = CompressedStreamTools
+					.readCompressed(inputstream);
 
 			blocks = nbt.getByteArray("Blocks");
 			datablocks = nbt.getByteArray("Data");
@@ -43,7 +45,8 @@ public class ScamaticLoader {
 		}
 	}
 
-	public void generate(World world, int posX, int posY, int posZ, boolean spawnairblocks) {
+	public void generate(World world, int posX, int posY, int posZ,
+			boolean spawnairblocks) {
 		try {
 			int xnum = 0;
 			int ynum = 0;
@@ -51,8 +54,10 @@ public class ScamaticLoader {
 
 			for (int i = 0; i < blocks.length; i++) {
 				int blockId = UnsignedBytes.toInt(blocks[i]);
-				if (((blocks[i] != 0) && (!spawnairblocks)) || (spawnairblocks == true)) {
-					world.setBlock(posX + xnum, posY + ynum, posZ + znum, blockId, datablocks[i], 2);
+				if (((blocks[i] != 0) && (!spawnairblocks))
+						|| (spawnairblocks == true)) {
+					world.setBlock(posX + xnum, posY + ynum, posZ + znum,
+							blockId, datablocks[i], 2);
 				}
 
 				if (xnum < width - 1) {
@@ -60,7 +65,8 @@ public class ScamaticLoader {
 				} else if ((xnum >= width - 1) && (znum < length - 1)) {
 					xnum = 0;
 					znum++;
-				} else if ((xnum >= width - 1) && (znum >= length - 1) && (ynum < height - 1)) {
+				} else if ((xnum >= width - 1) && (znum >= length - 1)
+						&& (ynum < height - 1)) {
 					xnum = 0;
 					znum = 0;
 					ynum++;
@@ -70,6 +76,5 @@ public class ScamaticLoader {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 }

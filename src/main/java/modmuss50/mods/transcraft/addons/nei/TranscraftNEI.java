@@ -171,16 +171,15 @@ public class TranscraftNEI extends TemplateRecipeHandler {
 		}
 	}
 
-	
-	
-	
 	public CachedShapedRecipe forgeShapedRecipe(ShapedOreRecipe recipe) {
 		int width;
 		int height;
 		Object[] items;
 		try {
-			width = ReflectionManager.getField(ShapedOreRecipe.class,Integer.class, recipe, 4);
-			height = ReflectionManager.getField(ShapedOreRecipe.class,Integer.class, recipe, 5);
+			width = ReflectionManager.getField(ShapedOreRecipe.class,
+					Integer.class, recipe, 4);
+			height = ReflectionManager.getField(ShapedOreRecipe.class,
+					Integer.class, recipe, 5);
 			items = ReflectionManager.getField(ShapedOreRecipe.class,
 					Object[].class, recipe, 3);
 		} catch (Exception e) {
@@ -199,7 +198,6 @@ public class TranscraftNEI extends TemplateRecipeHandler {
 		return new CachedShapedRecipe(width, height, items,
 				recipe.getRecipeOutput());
 	}
-
 
 	@Override
 	public String getGuiTexture() {

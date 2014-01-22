@@ -11,24 +11,21 @@ import cpw.mods.fml.common.TickType;
 
 public class DevMessageTick implements ITickHandler {
 
-	private int render =0;
-	
+	private int render = 0;
+
 	private final Minecraft mc;
 
 	public DevMessageTick() {
-	mc = Minecraft.getMinecraft();
+		mc = Minecraft.getMinecraft();
 	}
-	
+
 	@Override
 	public void tickStart(EnumSet<TickType> type, Object... tickData) {
 
-		
-		
 	}
 
 	@Override
 	public void tickEnd(EnumSet<TickType> type, Object... tickData) {
-	
 
 		FontRenderer fontRender = mc.fontRenderer;
 		mc.entityRenderer.setupOverlayRendering();
@@ -39,26 +36,26 @@ public class DevMessageTick implements ITickHandler {
 		int x = 1;
 		int y = 1;
 		int color = 0xFFFFFF;
-		
-		 Minecraft minecraft = FMLClientHandler.instance().getClient();
-		
-	     
-		 ScaledResolution res = new ScaledResolution(this.mc.gameSettings,
-				 this.mc.displayWidth, this.mc.displayHeight);
-				 int width = res.getScaledWidth();
-				 int height = res.getScaledHeight();
-		 
-		if(type.contains(TickType.RENDER))
-		{
-			
-				minecraft.fontRenderer.drawString("\u00a74This is a dev version of Transcraft!", 0, 30, 10);
-				minecraft.fontRenderer.drawString("\u00a74If anyting breaks or crashes please report it on the Github!", 0, 40, 10);
-				
+
+		Minecraft minecraft = FMLClientHandler.instance().getClient();
+
+		ScaledResolution res = new ScaledResolution(this.mc.gameSettings,
+				this.mc.displayWidth, this.mc.displayHeight);
+		int width = res.getScaledWidth();
+		int height = res.getScaledHeight();
+
+		if (type.contains(TickType.RENDER)) {
+
+			minecraft.fontRenderer.drawString(
+					"\u00a74This is a dev version of Transcraft!", 0, 30, 10);
+			minecraft.fontRenderer
+					.drawString(
+							"\u00a74If anyting breaks or crashes please report it on the Github!",
+							0, 40, 10);
+
 		}
-		
-	
+
 	}
-	
 
 	@Override
 	public EnumSet<TickType> ticks() {

@@ -1,6 +1,6 @@
 package modmuss50.mods.transcraft.TileEntitys.Transcrafter;
 
-import modmuss50.mods.transcraft.Transcraft;
+import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -84,7 +84,7 @@ public class ContainerTC extends Container {
 
 	@Override
 	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.worldObj.getBlockId(this.posX, this.posY, this.posZ) != Transcraft.Transcrafter.blockID ? false
+		return this.worldObj.getBlockId(this.posX, this.posY, this.posZ) != TranscraftBlocks.Transcrafter.blockID ? false
 				: par1EntityPlayer.getDistanceSq(this.posX + 0.5D,
 						this.posY + 0.5D, this.posZ + 0.5D) <= 64.0D;
 	}

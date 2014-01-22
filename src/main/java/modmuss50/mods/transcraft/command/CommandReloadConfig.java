@@ -11,10 +11,11 @@ public class CommandReloadConfig extends Command {
 	}
 
 	@Override
-	public void processCommand(ICommandSender par1ICommandSender,String[] par2ArrayOfStr) 
-	{
+	public void processCommand(ICommandSender par1ICommandSender,
+			String[] par2ArrayOfStr) {
 		Config.initConfig();
-		par1ICommandSender.sendChatToPlayer(ChatMessageComponent.createFromTranslationWithSubstitutions("Config Reloaded"));
+		par1ICommandSender.sendChatToPlayer(ChatMessageComponent
+				.createFromTranslationWithSubstitutions("Config Reloaded"));
 
 	}
 
@@ -27,7 +28,7 @@ public class CommandReloadConfig extends Command {
 	public int compareTo(Object arg0) {
 		return 0;
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 }

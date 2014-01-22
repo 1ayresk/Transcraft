@@ -48,8 +48,8 @@ public class RecipesTC {
 
 		addRecipe(new ItemStack(Item.coal, 10), "   ", "qcq", "   ", 'q',
 				TranscraftItems.QuadTransmuter, 'c', Item.coal);
-		addRecipe(new ItemStack(TranscraftItems.Oil, 10), "   ", "qoq", "   ", 'q',
-				TranscraftItems.QuadTransmuter, 'o', TranscraftItems.Oil);
+		addRecipe(new ItemStack(TranscraftItems.Oil, 10), "   ", "qoq", "   ",
+				'q', TranscraftItems.QuadTransmuter, 'o', TranscraftItems.Oil);
 		addRecipe(new ItemStack(Item.ingotIron, 4), "   ", "qiq", "   ", 'q',
 				TranscraftItems.QuadTransmuter, 'i', Item.ingotIron);
 		addRecipe(new ItemStack(Item.ingotGold, 6), "   ", "qgq", "   ", 'q',

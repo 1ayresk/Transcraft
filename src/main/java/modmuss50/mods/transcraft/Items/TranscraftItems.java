@@ -4,7 +4,6 @@ import net.minecraft.item.Item;
 
 public class TranscraftItems {
 
-
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
 	public static Item NanoTransmuter;
@@ -17,7 +16,6 @@ public class TranscraftItems {
 	public static Item EnderQuartz;
 	public static Item DarkEndershard;
 	public static Item Transpedia;
-
 
 	public static Item PlasticAxe;
 	public static Item PlasticHoe;
@@ -35,6 +33,5 @@ public class TranscraftItems {
 	public static Item EnderChest;
 	public static Item EnderLegs;
 	public static Item EnderBoots;
-	
-	
+
 }

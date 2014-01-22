@@ -18,7 +18,7 @@ public class Transcrafter extends BlockContainer {
 		super(id, Material.rock);
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setHardness(2F);
-		
+
 	}
 
 	@Override
@@ -61,25 +61,23 @@ public class Transcrafter extends BlockContainer {
 
 	}
 
-	
 	@Override
 	public TileEntity createNewTileEntity(World world) {
 		return new TileTC();
 	}
 
-    @Override
-    public int getRenderType() {
-            return -1;
-    }
+	@Override
+	public int getRenderType() {
+		return -1;
+	}
 
-    @Override
-    public boolean isOpaqueCube() {
-            return false;
-    }
+	@Override
+	public boolean isOpaqueCube() {
+		return false;
+	}
 
-    public boolean renderAsNormalBlock() {
-            return false;
-    }
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
 
-    
 }

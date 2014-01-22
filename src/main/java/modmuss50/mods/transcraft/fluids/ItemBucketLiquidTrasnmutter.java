@@ -30,7 +30,7 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 		super(id);
 		// Constructor Configuration
 		maxStackSize = 1;
-		setCreativeTab(Transcraft.TranstabItems);
+		setCreativeTab(Transcraft.Transtab);
 		setUnlocalizedName("ItemBucketLiquidTrasnmutter");
 		this.setHasSubtypes(true);
 	}

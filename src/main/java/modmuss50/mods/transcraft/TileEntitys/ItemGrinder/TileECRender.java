@@ -14,7 +14,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class TileECRender extends TileEntitySpecialRenderer {
-	private static final ResourceLocation field_110631_g = new ResourceLocation("transcraft", "textures/models/ixp.png");
+	private static final ResourceLocation field_110631_g = new ResourceLocation(
+			"transcraft", "textures/models/ixp.png");
 
 	/** The normal small chest model. */
 	private ModelChest chestModel = new ModelChest();
@@ -46,9 +47,7 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 		modelchest = this.chestModel;
 
-	
 		this.bindTexture(field_110631_g);
-
 
 		GL11.glPushMatrix();
 		GL11.glEnable(GL12.GL_RESCALE_NORMAL);
