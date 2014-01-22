@@ -45,7 +45,7 @@ public class LoadLang {
 		LanguageRegistry.addName(TranscraftItems.PlasticShovel,
 				"Plastic Shovel");
 		LanguageRegistry.addName(TranscraftItems.PlasticSword, "Plastic Sword");
-		LanguageRegistry.addName(TranscraftItems.BunkerPick, "Ender Pickaxe");
+		LanguageRegistry.addName(TranscraftItems.BunkerPick, "\u00A7dEnder Pickaxe");
 		LanguageRegistry.addName(TranscraftItems.EnderSword, "\u00A7dEnder Sword");
 
 		LanguageRegistry.addName(TranscraftItems.PlasticHelmet,
@@ -54,11 +54,11 @@ public class LoadLang {
 		LanguageRegistry.addName(TranscraftItems.PlasticLegs, "Plastic Legs");
 		LanguageRegistry.addName(TranscraftItems.PlasticBoots, "Plastic Boots");
 
-		LanguageRegistry.addName(TranscraftItems.EnderHelmet, "Ender Helmet");
+		LanguageRegistry.addName(TranscraftItems.EnderHelmet, "\u00A7dEnder Helmet");
 		LanguageRegistry
-				.addName(TranscraftItems.EnderChest, "Ender Chestplate");
-		LanguageRegistry.addName(TranscraftItems.EnderLegs, "Ender Legs");
-		LanguageRegistry.addName(TranscraftItems.EnderBoots, "Ender Boots");
+				.addName(TranscraftItems.EnderChest, "\u00A7dEnder Chestplate");
+		LanguageRegistry.addName(TranscraftItems.EnderLegs, "\u00A7dEnder Legs");
+		LanguageRegistry.addName(TranscraftItems.EnderBoots, "\u00A7dEnder Boots");
 
 		ColoredBlockUtil
 				.addLocalizationsForBlock((ItemBlock) new ItemStack(

@@ -28,6 +28,7 @@ public class TranspediaGui extends GuiContainer {
 	private float ySize_lo;
 
 	private int pageNumber = 0;
+	public int numberofpages = 2 -1;
 
 	public TranspediaGui() {
 		super(new ContainerTranspedia());
@@ -234,12 +235,16 @@ public class TranspediaGui extends GuiContainer {
 
 	public void actionPerformed(GuiButton par0Button) {
 		/** Back **/
-		if (par0Button.id == 1) {
+		if (par0Button.id == 1) 
+		{
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 				pageNumber = 0;
 			} else {
-				if (pageNumber != 0) {
-					pageNumber -= 1;
+				if(pageNumber != numberofpages)
+				{
+					if (pageNumber != 0) {
+						pageNumber -= 1;
+					}
 				}
 			}
 
