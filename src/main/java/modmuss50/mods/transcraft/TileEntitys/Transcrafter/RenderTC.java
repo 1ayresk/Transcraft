@@ -1,6 +1,10 @@
 package modmuss50.mods.transcraft.TileEntitys.Transcrafter;
 
+import java.awt.Color;
+
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
@@ -42,8 +46,15 @@ public class RenderTC extends TileEntitySpecialRenderer {
 		this.model.Top_bit_2.render(0.0625F);
 		this.model.Top_bit_3.render(0.0625F);
 		this.model.Top_bit_4.render(0.0625F);
+		
+		
+		
+		
 		GL11.glPopMatrix();
 
 	}
 
+	
+	
+	
 }
