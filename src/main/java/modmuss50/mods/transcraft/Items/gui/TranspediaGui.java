@@ -28,7 +28,7 @@ public class TranspediaGui extends GuiContainer {
 	private float ySize_lo;
 
 	private int pageNumber = 0;
-	public int numberofpages = 2 -1;
+	public int numberofpages = 2;
 
 	public TranspediaGui() {
 		super(new ContainerTranspedia());
@@ -240,22 +240,21 @@ public class TranspediaGui extends GuiContainer {
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 				pageNumber = 0;
 			} else {
-				if(pageNumber != numberofpages)
-				{
+				
 					if (pageNumber != 0) {
 						pageNumber -= 1;
 					}
-				}
+				
 			}
 
 		}
 
 		/** Next **/
 		if (par0Button.id == 0) {
-			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
-				pageNumber = Integer.MAX_VALUE - 1;
-			}
+			if(pageNumber != numberofpages)
+			{
 			pageNumber += 1;
+			}
 		}
 	}
 
