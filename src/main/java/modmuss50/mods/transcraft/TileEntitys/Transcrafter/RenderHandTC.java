@@ -61,8 +61,8 @@ public class RenderHandTC implements IItemRenderer {
 			GL11.glDisable(GL11.GL_CULL_FACE);
 			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 			GL11.glPushMatrix();
-			GL11.glRotatef(50F, -1110.0F, 0.0F, -1110.0F);
-			GL11.glTranslatef((float) 1.0F, (float) -3.7f, (float) 1.4F);
+			GL11.glRotatef(50F, -1000.0F, 1000.0F, -1110.0F);
+			GL11.glTranslatef((float) 4.0F, (float) -2.7f, (float) 0.4F);
 			GL11.glScalef(13F, 13F, 13F);
 			Minecraft.getMinecraft().renderEngine
 					.bindTexture(new ResourceLocation("transcraft",

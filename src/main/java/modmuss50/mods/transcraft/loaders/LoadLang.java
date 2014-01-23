@@ -3,6 +3,7 @@ package modmuss50.mods.transcraft.loaders;
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOre;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
+import modmuss50.mods.transcraft.api.ColouredNamesUtil;
 import modmuss50.mods.transcraft.api.Fluids;
 import modmuss50.zaetApi.api.ColoredBlockUtil;
 import net.minecraft.item.ItemBlock;
@@ -60,32 +61,31 @@ public class LoadLang {
 		LanguageRegistry.addName(TranscraftItems.EnderLegs, "\u00A7dEnder Legs");
 		LanguageRegistry.addName(TranscraftItems.EnderBoots, "\u00A7dEnder Boots");
 
-		ColoredBlockUtil
-				.addLocalizationsForBlock((ItemBlock) new ItemStack(
+		ColouredNamesUtil.addColourLocalizationsForBlock((ItemBlock) new ItemStack(
 						TranscraftBlocks.enderQuartzBlock, 1).getItem(),
 						"Ender Quartz");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+		ColouredNamesUtil.addColourLocalizationsForBlock((ItemBlock) new ItemStack(
 				TranscraftBlocks.CutenderQuartz, 1).getItem(),
 				"Chiseled Ender Quartz");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+		ColouredNamesUtil.addColourLocalizationsForBlock((ItemBlock) new ItemStack(
 				TranscraftBlocks.EnderQuartzBrick, 1).getItem(),
 				"Ender Quartz Brick");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+		ColouredNamesUtil.addColourLocalizationsForBlock((ItemBlock) new ItemStack(
 				TranscraftBlocks.EnderQuartzBigBrick, 1).getItem(),
 				"Ender Quartz Big Brick");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+		ColouredNamesUtil.addColourLocalizationsForBlock((ItemBlock) new ItemStack(
 				TranscraftBlocks.ThinClearGlass, 1).getItem(),
 				"Thin Crystal Glass");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+		ColouredNamesUtil.addColourLocalizationsForBlock((ItemBlock) new ItemStack(
 				TranscraftBlocks.FancyCrystalGlass, 1).getItem(),
 				"Fancy Crystal Glass");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+		ColouredNamesUtil.addColourLocalizationsForBlock((ItemBlock) new ItemStack(
 				TranscraftBlocks.ClearGlass, 1).getItem(), "Crystal Glass");
 
 		for (int i = 0; i < TranscraftOre.types.length; i++) {
