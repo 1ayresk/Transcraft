@@ -217,9 +217,13 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 						.loadItemStackFromNBT(nbttagcompound1);
 			}
 		}
-
-		this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
-		this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
+		if (par1NBTTagCompound.hasKey("ItemEssence")) {
+			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
+		}
+		else
+		{
+			this.CurrentIXPValue = 0;
+		}
 
 	}
 
@@ -241,8 +245,9 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 		System.out.println("SAVING TILE");
 
+		
 		par1NBTTagCompound.setDouble("ItemEssence", getIXPValue());
-
+		
 		for (int i = 0; i < this.chestContents.length; ++i) {
 			if (this.chestContents[i] != null) {
 				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
