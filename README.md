@@ -4,8 +4,10 @@ Transcraft
 Transcraft
 
 Download here!
-https://bitbucket.org/modmuss50/transcraft/wiki/Home
+http://modmuss50.github.io/Transcraft
+
+Get news and downloads here:
+http://modmuss50.github.io/Transcraft
 
 My twitter:
-
 http://www.twitter.com/modmuss50
