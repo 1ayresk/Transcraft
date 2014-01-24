@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
+import modmuss50.mods.transcraft.Renders.particles.FXSparkleRun;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -61,47 +62,10 @@ public class TranscraftOre extends Block {
 		return dmg;
 	}
 
+	@SideOnly(Side.CLIENT)
 	@Override
-	public void randomDisplayTick(World par1World, int par2, int par3,
-			int par4, Random par5Random) {
-
-		if (par1World.getBlockMetadata(par2, par3, par4) == 0) {
-			// FXSparkle sparkle = new FXSparkle(par1World, par2 + 0.3 +
-			// par5Random.nextFloat() * 0.5, par3 + 0.5 + par5Random.nextFloat()
-			// * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5,
-			// par5Random.nextFloat(), 5);
-			// Minecraft.getMinecraft().effectRenderer.addEffect(sparkle);
-
-			FXSparkle sparkle2 = new FXSparkle(par1World, par2 + 0.5
-					+ par5Random.nextFloat(), par3 + 0.5
-					+ par5Random.nextFloat() * 0.5, par4 + 0.3
-					+ par5Random.nextFloat() * 0.5, 1, 20);
-			Minecraft.getMinecraft().effectRenderer.addEffect(sparkle2);
-
-			FXSparkle sparkle3 = new FXSparkle(par1World, par2 - 0.5
-					+ par5Random.nextFloat(), par3 + 0.5
-					+ par5Random.nextFloat() * 0.5, par4 + 0.3
-					+ par5Random.nextFloat() * 0.5, 1, 20);
-			Minecraft.getMinecraft().effectRenderer.addEffect(sparkle3);
-
-			FXSparkle sparkle4 = new FXSparkle(par1World, par2 + 0.3
-					+ par5Random.nextFloat(), par3 + 0.5
-					+ par5Random.nextFloat() * 0.5, par4 + 0.5
-					+ par5Random.nextFloat() * 0.5, 1, 20);
-			Minecraft.getMinecraft().effectRenderer.addEffect(sparkle4);
-
-			FXSparkle sparkle5 = new FXSparkle(par1World, par2 + 0.3
-					+ par5Random.nextFloat(), par3 + 0.5
-					+ par5Random.nextFloat() * 0.5, par4 - 0.5
-					+ par5Random.nextFloat() * 0.5, 1, 20);
-			Minecraft.getMinecraft().effectRenderer.addEffect(sparkle5);
-
-			// TranscraftClientProxy.sparkleFX(par1World, par2 + 0.3 +
-			// par5Random.nextFloat() * 0.5, par3 + 0.5 + par5Random.nextFloat()
-			// * 0.5, par4 + 0.3 + par5Random.nextFloat() * 0.5,
-			// par5Random.nextFloat(), 5);
-		}
-
+	public void randomDisplayTick(World par1World, int par2, int par3,int par4, Random par5Random) {
+		FXSparkleRun.randomDisplayTick(par1World, par2, par3, par4, par5Random);
 	}
 
 }
