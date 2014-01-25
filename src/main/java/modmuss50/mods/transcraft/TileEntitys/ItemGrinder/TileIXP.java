@@ -217,14 +217,12 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 						.loadItemStackFromNBT(nbttagcompound1);
 			}
 		}
-		if (par1NBTTagCompound.hasKey("ItemEssence")) {
-			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
-		}
-		else
-		{
-			this.CurrentIXPValue = 0;
-		}
-
+		
+			CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
+			System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
+		
+		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
+		
 	}
 
 	public double getIXPValue() {
@@ -247,6 +245,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 		
 		par1NBTTagCompound.setDouble("ItemEssence", getIXPValue());
+		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
 		
 		for (int i = 0; i < this.chestContents.length; ++i) {
 			if (this.chestContents[i] != null) {
@@ -338,7 +337,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 				if (BASIC != 0 && getStackInSlot(0).stackSize <= 64) {
 					if (CurrentIXPValue >= BASIC) {
-						CurrentIXPValue = CurrentIXPValue - BASIC;
+						CurrentIXPValue -= BASIC;
 						incrStackSize(0, 1);
 
 					}
@@ -351,7 +350,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 				if (QUAD != 0 && getStackInSlot(0).stackSize <= 64) {
 					if (CurrentIXPValue >= QUAD) {
-						CurrentIXPValue = CurrentIXPValue - QUAD;
+						CurrentIXPValue -= QUAD;
 						incrStackSize(0, 1);
 
 					}
@@ -364,7 +363,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 				if (NANO != 0 && getStackInSlot(0).stackSize <= 64) {
 					if (CurrentIXPValue >= NANO) {
-						CurrentIXPValue = CurrentIXPValue - NANO;
+						CurrentIXPValue -= NANO;
 						incrStackSize(0, 1);
 
 					}
