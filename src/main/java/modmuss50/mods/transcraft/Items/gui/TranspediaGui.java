@@ -28,7 +28,7 @@ public class TranspediaGui extends GuiContainer {
 	private float ySize_lo;
 
 	private int pageNumber = 0;
-	public int numberofpages = 2;
+	public int numberofpages =3;
 
 	public TranspediaGui() {
 		super(new ContainerTranspedia());
