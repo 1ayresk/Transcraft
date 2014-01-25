@@ -10,7 +10,7 @@ public class FuelHandler implements IFuelHandler
 	public int getBurnTime(ItemStack fuel) {
 
 		if (fuel.itemID == TranscraftItems.Oil.itemID) {
-			return 300;
+			return 1000;
 		} else {
 			return 0;
 		}
