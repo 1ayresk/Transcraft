@@ -37,9 +37,13 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	}
 
 	@Override
-	public void registerTickHandlers() {
+	public void registerTickHandlers() 
+	{
+	
+		
 		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
 		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
+		
 		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,
 				new NukeCreeperRender());
 		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,

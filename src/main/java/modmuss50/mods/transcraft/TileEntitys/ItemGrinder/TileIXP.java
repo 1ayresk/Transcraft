@@ -1,13 +1,18 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
+import ibxm.Player;
+
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.util.Iterator;
 import java.util.List;
 
+import com.google.common.io.ByteArrayDataInput;
+
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.api.IItemTransmutter;
 import modmuss50.mods.transcraft.helpers.Config;
+import modmuss50.mods.transcraft.helpers.PackUtils;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -16,6 +21,8 @@ import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.INetworkManager;
+import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -403,6 +410,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		this.sync();
 		++this.ticksSinceSync;
 
+
+		
 	}
 
 	/**
@@ -502,34 +511,38 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 	
 	public void sync() {
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER) {
-			ByteArrayOutputStream bos = new ByteArrayOutputStream();
-			DataOutputStream outputStream = new DataOutputStream(bos);
+		
+		getDescriptionPacket();
+		
+		
+		ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+	    DataOutputStream outputStream = new DataOutputStream(bos);
+	    try {
+	        outputStream.writeInt(xCoord);
+	        outputStream.writeInt(yCoord);
+	        outputStream.writeInt(zCoord);
+	        //write the relevant information here... exemple:
+	        outputStream.writeDouble(CurrentIXPValue);
+	    } catch (Exception ex) {
+	        ex.printStackTrace();
+	    }
+	               
+	    Packet250CustomPayload packet = new Packet250CustomPayload();
+	    packet.channel = "GenericRandom";
+	    packet.data = bos.toByteArray();
+	    packet.length = bos.size();
 
-			try {
-				outputStream.writeInt(this.xCoord);
-				outputStream.writeInt(this.yCoord);
-				outputStream.writeInt(this.zCoord);
-				outputStream.writeDouble(this.CurrentIXPValue);
-			} catch (Exception ex) {
-				ex.printStackTrace();
-			}
-
-			Packet250CustomPayload packet = new Packet250CustomPayload();
-			packet.channel = "transcraft";
-			packet.data = bos.toByteArray();
-			packet.length = bos.size();
-			if (this.worldObj != null && this.worldObj.provider != null) {
-				PacketDispatcher.sendPacketToAllAround(this.xCoord,
-						this.yCoord, this.zCoord, 7,
-						this.worldObj.provider.dimensionId, packet);
-			}
-		}
+	    PacketDispatcher.sendPacketToServer(packet);
 	}
 
 	public void recieveSync(int par1energy) {
 		this.CurrentIXPValue = par1energy;
 	}
 
+	public Packet getDescriptionPacket() {
+	      return PackUtils.packetFromTileEntity(this);
+	   }
+
+	
 	
 }
