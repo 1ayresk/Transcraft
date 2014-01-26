@@ -12,7 +12,6 @@ import com.google.common.io.ByteArrayDataInput;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.api.IItemTransmutter;
 import modmuss50.mods.transcraft.helpers.Config;
-import modmuss50.mods.transcraft.helpers.PackUtils;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -239,7 +238,6 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 	public double getIXPValue() 
 	{
-		this.sync();
 		return this.CurrentIXPValue;
 	}
 
@@ -407,7 +405,6 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		handleEnergy();
 		
 		makeItems();
-		this.sync();
 		++this.ticksSinceSync;
 
 
@@ -510,38 +507,6 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	}
 
 	
-	public void sync() {
-		
-		getDescriptionPacket();
-		
-		
-		ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
-	    DataOutputStream outputStream = new DataOutputStream(bos);
-	    try {
-	        outputStream.writeInt(xCoord);
-	        outputStream.writeInt(yCoord);
-	        outputStream.writeInt(zCoord);
-	        //write the relevant information here... exemple:
-	        outputStream.writeDouble(CurrentIXPValue);
-	    } catch (Exception ex) {
-	        ex.printStackTrace();
-	    }
-	               
-	    Packet250CustomPayload packet = new Packet250CustomPayload();
-	    packet.channel = "GenericRandom";
-	    packet.data = bos.toByteArray();
-	    packet.length = bos.size();
-
-	    PacketDispatcher.sendPacketToServer(packet);
-	}
-
-	public void recieveSync(int par1energy) {
-		this.CurrentIXPValue = par1energy;
-	}
-
-	public Packet getDescriptionPacket() {
-	      return PackUtils.packetFromTileEntity(this);
-	   }
 
 	
 	

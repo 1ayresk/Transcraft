@@ -25,18 +25,7 @@ public class PacketHandlerTranscraft implements IPacketHandler {
 			handlePacket(packet);
 		}
 		
-		NBTTagCompound tag = PackUtils.nbtFromPacket(packet);
-	      int x = tag.getInteger("x");
-	      int y = tag.getInteger("y");
-	      int z = tag.getInteger("z");
-	      World world = Minecraft.getMinecraft().theWorld;
-	      if (world.blockExists(x, y, z)) {
-	         TileEntity te = world.getBlockTileEntity(x, y, z);
-	         if (te != null) {
-	            te.readFromNBT(tag);
-	            te.onInventoryChanged();
-	         }
-	      }
+		
 		
 	}
 
