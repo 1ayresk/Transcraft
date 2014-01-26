@@ -34,13 +34,19 @@ public class TranscraftOre extends Block {
 	public String func_149739_a() {
 		return "ore_" + nextNum;
 	}
-/*
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon func_149691_a(int side, int meta) {
-		return icons[meta];
+
+		for(int i = 5; i >= 0; i--)
+		{
+			return icons[meta];
+		}
+
+		return null;
 	}
- */
+
 	 
 	
 	@Override
@@ -58,11 +64,14 @@ public class TranscraftOre extends Block {
 	@SideOnly(Side.CLIENT)
     public void func_149666_a(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_)
     {
-        for (int i = 0; i < 16; ++i)
+        for (int i = 0; i < 5; ++i)
         {
             p_149666_3_.add(new ItemStack(p_149666_1_, 1, i));
         }
     }
+	
+	
+	
 	
 	
 	@Override

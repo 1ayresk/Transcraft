@@ -4,6 +4,7 @@ import javax.swing.Icon;
 
 import modmuss50.mods.transcraft.Transcraft;
 import net.minecraft.block.material.Material;
+import net.minecraft.world.IBlockAccess;
 
 public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	private Icon[] icons = new Icon[16];
@@ -19,7 +20,7 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	}
 
 	
-	/*
+
 	@Override
 	public boolean func_149662_c() {
 		return false;
@@ -31,10 +32,10 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	}
 
 	@Override
-	public int getRenderBlockPass() {
+	public int func_149701_w() {
 		return renderPass;
 	}
- */
+
 	
 	/**
 	 * This is checked to see if the texture should connect to this block
@@ -53,34 +54,26 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	 * @return true if should connect
 	 */
 	
-	/*
-	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,
-			int par2, int par3, int par4, int par5, int par6) {
-		return par5 == this.blockID;
-	}
- */
-	
-	/*
-	 * 
-	
-	@Override
-	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2,
-			int par3, int par4, int par5) {
-		return getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,
-				par5, icons);
+
+	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5, int par6) {
+		return true;
 	}
 
- */
 	
-	/*
-	 * 
+
+	
+	@Override
+	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2,int par3, int par4, int par5) {
+		return getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,par5, icons);
+	}
+
+
+	
+
 	 
 	
 	public Icon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,
 			int par2, int par3, int par4, int par5, Icon[] icons) {
-
-		// if (Minecraft.isFancyGraphicsEnabled())
-		// {
 
 		boolean isOpenUp = false, isOpenDown = false, isOpenLeft = false, isOpenRight = false;
 
@@ -427,8 +420,8 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 				return icons[3];
 			}
 			break;
-		// }
-		}
+		 }
+		
 
 		return icons[0];
 	}

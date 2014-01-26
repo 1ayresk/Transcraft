@@ -147,9 +147,7 @@ public class FXSparkle extends EntityFX {
 
 		motionY -= 0.040000000000000001D * particleGravity;
 		if (noClip == false)
-			pushOutOfBlocks(posX, (boundingBox.minY + boundingBox.maxY) / 2.0D,
-					posZ);
-		// moveEntity(motionX, motionY, motionZ);
+			pushOutOfBlocks(posX, (boundingBox.minY + boundingBox.maxY) / 2.0D,posZ);
 		posX += motionX;
 		posY += motionY;
 		posZ += motionZ;
@@ -182,7 +180,7 @@ public class FXSparkle extends EntityFX {
 		particleGravity = value;
 	}
 
-	@Override
+
 	protected boolean pushOutOfBlocks(double par1, double par3, double par5) {
 		int var7 = MathHelper.floor_double(par1);
 		int var8 = MathHelper.floor_double(par3);
@@ -191,13 +189,13 @@ public class FXSparkle extends EntityFX {
 		double var12 = par3 - var8;
 		double var14 = par5 - var9;
 
-		if (!worldObj.isAirBlock(var7, var8, var9)) {
-			boolean var16 = !worldObj.isBlockNormalCube(var7 - 1, var8, var9);
-			boolean var17 = !worldObj.isBlockNormalCube(var7 + 1, var8, var9);
-			boolean var18 = !worldObj.isBlockNormalCube(var7, var8 - 1, var9);
-			boolean var19 = !worldObj.isBlockNormalCube(var7, var8 + 1, var9);
-			boolean var20 = !worldObj.isBlockNormalCube(var7, var8, var9 - 1);
-			boolean var21 = !worldObj.isBlockNormalCube(var7, var8, var9 + 1);
+		if (!worldObj.func_147437_c(var7, var8, var9)) {
+			boolean var16 = !worldObj.func_147445_c(var7 - 1, var8, var9, true);
+			boolean var17 = !worldObj.func_147445_c(var7 + 1, var8, var9, true);
+			boolean var18 = !worldObj.func_147445_c(var7, var8 - 1, var9, true);
+			boolean var19 = !worldObj.func_147445_c(var7, var8 + 1, var9, true);
+			boolean var20 = !worldObj.func_147445_c(var7, var8, var9 - 1, true);
+			boolean var21 = !worldObj.func_147445_c(var7, var8, var9 + 1, true);
 			byte var22 = -1;
 			double var23 = 9999.0D;
 
@@ -268,6 +266,9 @@ public class FXSparkle extends EntityFX {
 		} else {
 			return false;
 		}
+		
+		 
+		
 	}
 
 	public boolean leyLineEffect = false;
