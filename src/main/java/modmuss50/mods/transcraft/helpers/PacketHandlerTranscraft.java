@@ -34,8 +34,7 @@ public class PacketHandlerTranscraft implements IPacketHandler {
 			return;
 		}
 
-		System.out
-				.println("[Transcraft Gui's]" + randomInt1 + " " + randomInt2);
+		//System.out.println("[Transcraft Gui's]" + randomInt1 + " " + randomInt2);
 	}
 
 }

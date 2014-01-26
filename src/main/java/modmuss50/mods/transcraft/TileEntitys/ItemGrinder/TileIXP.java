@@ -391,13 +391,17 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER)
 		{
-			System.out.println(this.CurrentIXPValue);
+			System.out.println("SERVER "+ this.CurrentIXPValue);
+		}
+		else
+		{
+			System.out.println("CLIENT "+ this.CurrentIXPValue);
 		}
 		handleEnergy();
 		
 		makeItems();
 		this.sync();
-		//++this.ticksSinceSync;
+		++this.ticksSinceSync;
 
 	}
 
