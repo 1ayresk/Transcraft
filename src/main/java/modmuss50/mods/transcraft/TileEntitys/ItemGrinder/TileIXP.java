@@ -1,5 +1,7 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.util.Iterator;
 import java.util.List;
 
@@ -14,8 +16,11 @@ import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -218,14 +223,16 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 			}
 		}
 		
-			CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
+			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
 			System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
 		
 		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
 		
 	}
 
-	public double getIXPValue() {
+	public double getIXPValue() 
+	{
+		this.sync();
 		return this.CurrentIXPValue;
 	}
 
@@ -244,7 +251,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		System.out.println("SAVING TILE");
 
 		
-		par1NBTTagCompound.setDouble("ItemEssence", getIXPValue());
+		par1NBTTagCompound.setDouble("ItemEssence", this.CurrentIXPValue);
 		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
 		
 		for (int i = 0; i < this.chestContents.length; ++i) {
@@ -382,70 +389,16 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	public void updateEntity() {
 		super.updateEntity();
 
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER)
+		{
+			System.out.println(this.CurrentIXPValue);
+		}
 		handleEnergy();
+		
 		makeItems();
+		this.sync();
+		//++this.ticksSinceSync;
 
-		++this.ticksSinceSync;
-		float f;
-
-		if (!this.worldObj.isRemote
-				&& this.numUsingPlayers != 0
-				&& (this.ticksSinceSync + this.xCoord + this.yCoord + this.zCoord) % 200 == 0) {
-			this.numUsingPlayers = 0;
-			f = 5.0F;
-			List list = this.worldObj.getEntitiesWithinAABB(
-					EntityPlayer.class,
-					AxisAlignedBB.getAABBPool().getAABB(
-							(double) ((float) this.xCoord - f),
-							(double) ((float) this.yCoord - f),
-							(double) ((float) this.zCoord - f),
-							(double) ((float) (this.xCoord + 1) + f),
-							(double) ((float) (this.yCoord + 1) + f),
-							(double) ((float) (this.zCoord + 1) + f)));
-			Iterator iterator = list.iterator();
-
-			while (iterator.hasNext()) {
-				EntityPlayer entityplayer = (EntityPlayer) iterator.next();
-
-				if (entityplayer.openContainer instanceof ContainerIXP) {
-					IInventory iinventory = ((ContainerIXP) entityplayer.openContainer)
-							.getLowerChestInventory();
-
-					if (iinventory == this
-							|| iinventory instanceof InventoryLargeChest
-							&& ((InventoryLargeChest) iinventory)
-									.isPartOfLargeChest(this)) {
-						++this.numUsingPlayers;
-					}
-				}
-			}
-
-		}
-
-		this.prevLidAngle = this.lidAngle;
-		f = 0.1F;
-		double d0;
-
-		if (this.numUsingPlayers == 0 && this.lidAngle > 0.0F
-				|| this.numUsingPlayers > 0 && this.lidAngle < 1.0F) {
-			float f1 = this.lidAngle;
-
-			if (this.numUsingPlayers > 0) {
-				this.lidAngle += f;
-			} else {
-				this.lidAngle -= f;
-			}
-
-			if (this.lidAngle > 1.0F) {
-				this.lidAngle = 1.0F;
-			}
-
-			float f2 = 0.5F;
-
-			if (this.lidAngle < 0.0F) {
-				this.lidAngle = 0.0F;
-			}
-		}
 	}
 
 	/**
@@ -543,4 +496,36 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 	}
 
+	
+	public void sync() {
+		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER) {
+			ByteArrayOutputStream bos = new ByteArrayOutputStream();
+			DataOutputStream outputStream = new DataOutputStream(bos);
+
+			try {
+				outputStream.writeInt(this.xCoord);
+				outputStream.writeInt(this.yCoord);
+				outputStream.writeInt(this.zCoord);
+				outputStream.writeDouble(this.CurrentIXPValue);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+
+			Packet250CustomPayload packet = new Packet250CustomPayload();
+			packet.channel = "transcraft";
+			packet.data = bos.toByteArray();
+			packet.length = bos.size();
+			if (this.worldObj != null && this.worldObj.provider != null) {
+				PacketDispatcher.sendPacketToAllAround(this.xCoord,
+						this.yCoord, this.zCoord, 7,
+						this.worldObj.provider.dimensionId, packet);
+			}
+		}
+	}
+
+	public void recieveSync(int par1energy) {
+		this.CurrentIXPValue = par1energy;
+	}
+
+	
 }

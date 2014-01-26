@@ -1,5 +1,8 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeper;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -9,11 +12,13 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
+import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -38,6 +43,7 @@ public class GuiIxp extends GuiContainer {
 		this.xSize = 256;
 		this.ySize = 219;
 		this.te = tileEntity;
+		this.requestSync();
 		this.lowerChestInventory = player;
 		this.upperChestInventory = te;
 	}
@@ -50,8 +56,7 @@ public class GuiIxp extends GuiContainer {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.fontRenderer.drawString("Item Grinder", 8, 8, 4210752);
 		this.fontRenderer.drawString("Inventory", 9, this.ySize - 100, 4210752);
-		this.fontRenderer.drawString("Current Essence: " + te.getIXPValue(),
-				77, 10, 4210752);
+		this.fontRenderer.drawString("Current Essence: " + te.getIXPValue(),77, 10, 4210752);
 		this.mc.getTextureManager().bindTexture(field_110421_t);
 
 		if (te.getIXPValue() != 0) {
@@ -196,4 +201,25 @@ public class GuiIxp extends GuiContainer {
 		OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
 	}
 
+	private void requestSync() {
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		DataOutputStream outputStream = new DataOutputStream(bos);
+
+		try {
+			outputStream.writeDouble(this.te.CurrentIXPValue);
+			outputStream.writeInt(this.te.xCoord);
+			outputStream.writeInt(this.te.yCoord);
+			outputStream.writeInt(this.te.zCoord);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		Packet250CustomPayload packet = new Packet250CustomPayload();
+		packet.channel = "transcraft";
+		packet.data = bos.toByteArray();
+		packet.length = bos.size();
+		PacketDispatcher.sendPacketToServer(packet);
+	}
+	
+	
 }

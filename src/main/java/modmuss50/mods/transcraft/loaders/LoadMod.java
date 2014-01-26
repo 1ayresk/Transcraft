@@ -14,6 +14,7 @@ import modmuss50.mods.transcraft.addons.Addons;
 import modmuss50.mods.transcraft.command.CommandReloadConfig;
 import modmuss50.mods.transcraft.command.CommandTranscraftVersion;
 import modmuss50.mods.transcraft.fluids.TranscraftFluids;
+import modmuss50.mods.transcraft.helpers.ConectionHanderler;
 import modmuss50.mods.transcraft.helpers.Config;
 import modmuss50.mods.transcraft.helpers.DevMessageTick;
 import modmuss50.mods.transcraft.helpers.EventMobDeath;
@@ -138,6 +139,9 @@ public class LoadMod {
 
 		// MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 
+		NetworkRegistry.instance().registerConnectionHandler(
+				new ConectionHanderler());
+		
 		Addons.loadAddons(1);
 	}
 
