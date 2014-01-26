@@ -1,13 +1,10 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
-import static net.minecraftforge.common.ForgeDirection.DOWN;
-
 import java.util.Random;
 
 import modmuss50.mods.transcraft.Transcraft;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;

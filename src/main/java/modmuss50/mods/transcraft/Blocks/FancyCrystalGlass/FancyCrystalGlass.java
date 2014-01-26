@@ -1,11 +1,11 @@
 package modmuss50.mods.transcraft.Blocks.FancyCrystalGlass;
 
+import javax.swing.Icon;
+
 import modmuss50.mods.transcraft.Transcraft;
 import modmuss50.zaetApi.api.IColoredBlock;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 

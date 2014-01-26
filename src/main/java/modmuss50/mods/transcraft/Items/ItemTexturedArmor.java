@@ -1,7 +1,5 @@
 package modmuss50.mods.transcraft.Items;
 
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
@@ -14,9 +12,9 @@ public class ItemTexturedArmor extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ItemTexturedArmor(int par1, EnumArmorMaterial par2EnumArmorMaterial,
+	public ItemTexturedArmor(int par1, ArmorMaterial par2EnumArmorMaterial,
 			int par3, int par4) {
-		super(par1, par2EnumArmorMaterial, par3, par4);
+		super(par2EnumArmorMaterial, par3, par4);
 	}
 
 	public ItemTexturedArmor setRepairItem(int id) {

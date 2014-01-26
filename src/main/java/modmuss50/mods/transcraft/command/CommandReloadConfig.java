@@ -2,7 +2,7 @@ package modmuss50.mods.transcraft.command;
 
 import modmuss50.mods.transcraft.helpers.Config;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.util.ChatMessageComponent;
+import net.minecraft.util.ChatComponentTranslation;
 
 public class CommandReloadConfig extends Command {
 
@@ -14,8 +14,7 @@ public class CommandReloadConfig extends Command {
 	public void processCommand(ICommandSender par1ICommandSender,
 			String[] par2ArrayOfStr) {
 		Config.initConfig();
-		par1ICommandSender.sendChatToPlayer(ChatMessageComponent
-				.createFromTranslationWithSubstitutions("Config Reloaded"));
+		par1ICommandSender.func_145747_a(new ChatComponentTranslation("Config Reloaded"));
 
 	}
 

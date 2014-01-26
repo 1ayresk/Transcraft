@@ -1,7 +1,6 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
 import net.minecraft.client.model.ModelChest;
-import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 

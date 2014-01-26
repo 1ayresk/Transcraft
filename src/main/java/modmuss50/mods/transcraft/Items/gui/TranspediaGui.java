@@ -32,8 +32,8 @@ public class TranspediaGui extends GuiContainer {
 
 	public TranspediaGui() {
 		super(new ContainerTranspedia());
-		this.xSize = 256;
-		this.ySize = 256;
+		this.xSize_lo = 256;
+		this.xSize_lo = 256;
 	}
 
 	/**
@@ -81,9 +81,9 @@ public class TranspediaGui extends GuiContainer {
 		field_110421_t = new ResourceLocation("transcraft",
 				"textures/gui/Transpedia/Transpedia_" + pageNumber + ".png");
 		this.mc.renderEngine.bindTexture(field_110421_t);
-		int k = (this.width - this.xSize) / 2;
-		int l = (this.height - this.ySize) / 2;
-		this.drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
+		int k = (this.width - this.xSize_lo) / 2;
+		int l = (this.height - this.xSize_lo) / 2;
+		this.drawTexturedModalRect(k, l, 0, 0, xSize_lo, xSize_lo);
 
 		if (pageNumber != 0) {
 			if (this.mc.thePlayer.username.contains("shifu_")) {

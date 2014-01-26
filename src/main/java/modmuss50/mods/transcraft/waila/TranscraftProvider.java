@@ -2,12 +2,7 @@ package modmuss50.mods.transcraft.waila;
 
 import java.util.List;
 
-import mcp.mobius.waila.api.IWailaConfigHandler;
-import mcp.mobius.waila.api.IWailaDataAccessor;
-import mcp.mobius.waila.api.IWailaDataProvider;
-import mcp.mobius.waila.api.IWailaRegistrar;
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import net.minecraft.item.ItemStack;
 
 public class TranscraftProvider implements IWailaDataProvider {

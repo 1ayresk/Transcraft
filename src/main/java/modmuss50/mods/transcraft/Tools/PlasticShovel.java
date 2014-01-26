@@ -1,8 +1,6 @@
 package modmuss50.mods.transcraft.Tools;
 
 import modmuss50.mods.transcraft.helpers.Config;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 

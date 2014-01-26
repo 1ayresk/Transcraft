@@ -3,15 +3,13 @@ package modmuss50.mods.transcraft.Blocks;
 import java.util.List;
 import java.util.Random;
 
-import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
+import javax.swing.Icon;
+
 import modmuss50.mods.transcraft.Renders.particles.FXSparkleRun;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,13 +22,13 @@ public class TranscraftOre extends Block {
 	private static Icon[] icons = new Icon[types.length];
 
 	public TranscraftOre(int par1) {
-		super(par1, Material.rock);
+		super(Material.field_151574_g);
 	}
 
 	private int nextNum;
 
 	@Override
-	public String getUnlocalizedName() {
+	public String func_149739_a() {
 		return "ore_" + nextNum;
 	}
 

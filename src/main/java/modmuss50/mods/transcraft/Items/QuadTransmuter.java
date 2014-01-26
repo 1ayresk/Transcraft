@@ -1,7 +1,6 @@
 package modmuss50.mods.transcraft.Items;
 
 import modmuss50.mods.transcraft.api.IItemTransmutter;
-import net.minecraft.client.renderer.texture.IconRegister;
 
 public class QuadTransmuter extends IItemTransmutter {
 
@@ -13,9 +12,5 @@ public class QuadTransmuter extends IItemTransmutter {
 		setUnlocalizedName("QuadTransmuter");
 	}
 
-	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
-		itemIcon = par1IconRegister.registerIcon("Transcraft:QuadTransmuter");
-	}
 
 }

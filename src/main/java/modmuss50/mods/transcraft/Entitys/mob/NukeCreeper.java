@@ -5,6 +5,8 @@ import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityDamageSource;
@@ -72,60 +74,7 @@ public class NukeCreeper extends EntityCreeper {
 		}
 	}
 
-	@Override
-	public void onUpdate() {
-		if (this.isEntityAlive()) {
-			this.lastActiveTime = this.timeSinceIgnited;
-			int i = this.getCreeperState();
-
-			if (i > 0 && this.timeSinceIgnited == 0) {
-				this.playSound("random.fuse", 1.0F, 0.5F);
-			}
-
-			this.timeSinceIgnited += i;
-
-			if (this.timeSinceIgnited < 0) {
-				this.timeSinceIgnited = 0;
-			}
-
-			int difficulty = worldObj.difficultySetting;
-			int lengthBoost = 4 * (3 - difficulty);
-			int powered = this.getPowered() ? 12 : 0;
-
-			for (i = 0; i < 2; ++i) {
-				this.worldObj.spawnParticle("portal",
-						this.posX + (this.rand.nextDouble() - 0.5D)
-								* this.width,
-						this.posY + this.rand.nextDouble() * this.height
-								- 0.25D, this.posZ
-								+ (this.rand.nextDouble() - 0.5D) * this.width,
-						(this.rand.nextDouble() - 0.5D) * 2.0D,
-						-this.rand.nextDouble(),
-						(this.rand.nextDouble() - 0.5D) * 2.0D);
-			}
-
-			if (this.timeSinceIgnited >= this.fuseTime + difficulty + powered) {
-				this.timeSinceIgnited = this.fuseTime;
-
-				if (!this.worldObj.isRemote) {
-					boolean flag = this.worldObj.getGameRules()
-							.getGameRuleBooleanValue("mobGriefing");
-
-					if (powered > 0) {
-						this.worldObj.createExplosion(this, this.posX,
-								this.posY, this.posZ, 20f, flag);
-					} else {
-						this.worldObj.createExplosion(this, this.posX,
-								this.posY, this.posZ, 3f, flag);
-					}
-
-					this.setDead();
-				}
-			}
-		}
-
-		super.onUpdate();
-	}
+	
 
 	@Override
 	public float getCreeperFlashIntensity(float par1) {
@@ -136,9 +85,6 @@ public class NukeCreeper extends EntityCreeper {
 
 	@Override
 	protected void dropFewItems(boolean par1, int par2) {
-		int j = this.getDropItemId();
-
-		if (j > 0) {
 			int k = this.rand.nextInt(4) + 2;
 
 			if (par2 > 0) {
@@ -146,23 +92,8 @@ public class NukeCreeper extends EntityCreeper {
 			}
 
 			for (int l = 0; l < k; ++l) {
-				this.dropItem(j, 1);
+				this.func_145779_a(Item.func_150899_d(k), 1);
 			}
-		}
-
-		if (this.getPowered()) {
-			if (j > 0) {
-				int k = this.rand.nextInt(40) + 20;
-
-				if (par2 > 0) {
-					k += this.rand.nextInt(par2 * 6 + 1);
-				}
-
-				for (int l = 0; l < k; ++l) {
-					this.dropItem(j, 1);
-				}
-			}
-		}
 	}
 
 	public boolean attackEntityFrom(DamageSource source, int damage) {
@@ -176,9 +107,10 @@ public class NukeCreeper extends EntityCreeper {
 	/**
 	 * Returns the item ID for the item the mob drops on death.
 	 */
-	@Override
-	protected int getDropItemId() {
-		return TranscraftItems.DarkEndershard.itemID;
-	}
+	@Override	
+	protected Item func_146068_u()
+    {
+        return TranscraftItems.DarkEndershard;
+    }
 
 }

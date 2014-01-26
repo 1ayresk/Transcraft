@@ -1,13 +1,12 @@
 package modmuss50.mods.transcraft.Items;
 
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
 public class EnderSword extends ItemSword {
-	public EnderSword(int id, EnumToolMaterial EnumToolMaterial) {
-		super(id, EnumToolMaterial);
+	public EnderSword(int id, ToolMaterial EnumToolMaterial) {
+		super(EnumToolMaterial);
 	}
 
 	@Override

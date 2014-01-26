@@ -1,13 +1,13 @@
 package modmuss50.mods.transcraft.TileEntitys.Transcrafter;
 
+import javax.swing.Icon;
+
 import modmuss50.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
 public class Transcrafter extends BlockContainer {

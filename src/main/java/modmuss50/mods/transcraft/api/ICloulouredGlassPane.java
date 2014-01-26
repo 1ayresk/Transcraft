@@ -34,10 +34,9 @@ public class ICloulouredGlassPane extends BlockPane {
 	 * 
 	 */
 	public ICloulouredGlassPane(int id) {
-		super(id, "transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.glass, true);
-		setHardness(3.0F);
-		setResistance(4.0F);
+		super("transcraft:ClearGlass", "transcraft:ClearGlass",Material.field_151581_o, true);
+		func_149711_c(3.0F);
+		func_149752_b(4.0F);
 	}
 
 	/***
@@ -50,13 +49,13 @@ public class ICloulouredGlassPane extends BlockPane {
 	 */
 	public ICloulouredGlassPane(int id, Material m) {
 		super(id, "transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.glass, true);
-		setHardness(3.0F);
-		setResistance(4.0F);
+				Material.field_151581_o, true);
+		func_149711_c(3.0F);
+		func_149752_b(4.0F);
 	}
 
 	@Override
-	public boolean shouldSideBeRendered(IBlockAccess access, int par0,
+	public boolean func_149646_a(IBlockAccess access, int par0,
 			int par1, int par2, int par3) {
 		return true;
 

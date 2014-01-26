@@ -11,7 +11,7 @@ public class CrystalGlass extends IColoredBlock {
 	public static String texName;
 
 	public CrystalGlass(int par1) {
-		super(par1, Material.glass);
+		super(par1, Material.field_151581_o);
 	}
 
 	@Override
@@ -19,7 +19,7 @@ public class CrystalGlass extends IColoredBlock {
 	/**
 	 * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
 	 */
-	public int getRenderBlockPass() {
+	public int func_149701_w() {
 		return 0;
 	}
 
@@ -29,7 +29,7 @@ public class CrystalGlass extends IColoredBlock {
 	 * the player can attach torches, redstone wire, etc to this block.
 	 */
 	@Override
-	public boolean isOpaqueCube() {
+	public boolean func_149662_c() {
 		return false;
 	}
 
@@ -38,10 +38,13 @@ public class CrystalGlass extends IColoredBlock {
 	 * (examples: signs, buttons, stairs, etc)
 	 */
 	@Override
-	public boolean renderAsNormalBlock() {
+	public boolean func_149686_d() {
 		return false;
 	}
 
+	/*
+	 
+	
 	@Override
 	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,
 			int par2, int par3, int par4, int par5) // Renders // blocks
@@ -50,5 +53,8 @@ public class CrystalGlass extends IColoredBlock {
 
 		return i == blockID ? false : true;
 	}
+
+*/
+
 
 }

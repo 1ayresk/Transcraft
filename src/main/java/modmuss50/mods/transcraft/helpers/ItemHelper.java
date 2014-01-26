@@ -14,7 +14,7 @@ public class ItemHelper {
 			rand = Math.random();
 
 			if (rand < 0.15d) {
-				entity.dropItem(TranscraftItems.BasicTransmuter.itemID, 1);
+				entity.entityDropItem(TranscraftItems.BasicTransmuter, 1);
 			}
 		}
 	}

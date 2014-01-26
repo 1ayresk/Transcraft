@@ -36,37 +36,37 @@ public class ColouredNamesUtil {
 	{
 		int i = 0;
 		
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Black + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Black + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", DarkRed + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", DarkRed + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", DarkGreen  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", DarkGreen  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Brown  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Brown  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Blue  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Blue  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Purple  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Purple  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Cyan  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Cyan  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Sliver  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Sliver  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Grey  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Grey  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Pink  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Pink  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Lime  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Lime  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Yellow  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Yellow  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", LightBlue  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", LightBlue  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Magenta  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Magenta  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", Organge  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", Organge  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 			i = i + 1;
-			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock.itemID, 1, i)) + ".name", White  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
+			LanguageRegistry.instance().addStringLocalization(itemBlock.getUnlocalizedName(new ItemStack(itemBlock, 1, i)) + ".name", White  + ColoredBlockUtil.getColorNameByMetadata(i) + " " + suffix);
 	
 	
 	}

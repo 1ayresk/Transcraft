@@ -6,8 +6,6 @@ import modmuss50.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import cpw.mods.fml.common.ITickHandler;
-import cpw.mods.fml.common.TickType;
 
 public class TickHandler implements ITickHandler {
 	ItemStack currentItemStack = null;

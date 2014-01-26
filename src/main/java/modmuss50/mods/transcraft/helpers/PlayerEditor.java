@@ -1,13 +1,8 @@
 package modmuss50.mods.transcraft.helpers;
 
-import net.minecraft.network.INetworkManager;
-import net.minecraft.network.NetLoginHandler;
-import net.minecraft.network.packet.NetHandler;
-import net.minecraft.network.packet.Packet1Login;
+import ibxm.Player;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.server.MinecraftServer;
-import cpw.mods.fml.common.network.IConnectionHandler;
-import cpw.mods.fml.common.network.Player;
 
 public class PlayerEditor implements IConnectionHandler {
 

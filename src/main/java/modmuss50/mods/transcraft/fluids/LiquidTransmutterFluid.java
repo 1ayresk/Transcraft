@@ -1,6 +1,7 @@
 package modmuss50.mods.transcraft.fluids;
 
-import net.minecraft.util.Icon;
+import javax.swing.Icon;
+
 import net.minecraftforge.fluids.Fluid;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -2,7 +2,7 @@ package modmuss50.mods.transcraft.command;
 
 import modmuss50.mods.transcraft.helpers.TranscraftUtil;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.util.ChatMessageComponent;
+import net.minecraft.util.ChatComponentTranslation;
 
 public class CommandTranscraftVersion extends Command {
 
@@ -13,18 +13,10 @@ public class CommandTranscraftVersion extends Command {
 	@Override
 	public void processCommand(ICommandSender par1ICommandSender,
 			String[] par2ArrayOfStr) {
-		par1ICommandSender
-				.sendChatToPlayer(ChatMessageComponent
-						.createFromTranslationWithSubstitutions("----------Transcraft!----------"));
-		par1ICommandSender.sendChatToPlayer(ChatMessageComponent
-				.createFromTranslationWithSubstitutions("Transcraft Version "
-						+ TranscraftUtil.VERSION + TranscraftUtil.STATE));
-		par1ICommandSender.sendChatToPlayer(ChatMessageComponent
-				.createFromTranslationWithSubstitutions("Made by "
-						+ TranscraftUtil.authorList));
-		par1ICommandSender
-				.sendChatToPlayer(ChatMessageComponent
-						.createFromTranslationWithSubstitutions("----------Transcraft!----------"));
+		par1ICommandSender.func_145747_a(new ChatComponentTranslation("----------Transcraft!----------"));
+		par1ICommandSender.func_145747_a(new ChatComponentTranslation("Transcraft Version "+ TranscraftUtil.VERSION + TranscraftUtil.STATE));
+		par1ICommandSender.func_145747_a(new ChatComponentTranslation("Made by "+ TranscraftUtil.authorList));
+		par1ICommandSender.func_145747_a(new ChatComponentTranslation("----------Transcraft!----------"));
 
 	}
 

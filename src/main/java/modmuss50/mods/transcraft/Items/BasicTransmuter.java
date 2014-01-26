@@ -1,7 +1,7 @@
 package modmuss50.mods.transcraft.Items;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
 import modmuss50.mods.transcraft.api.IItemTransmutter;
-import net.minecraft.client.renderer.texture.IconRegister;
 
 public class BasicTransmuter extends IItemTransmutter {
 
@@ -14,7 +14,7 @@ public class BasicTransmuter extends IItemTransmutter {
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:BasicTransmuter");
 	}
 

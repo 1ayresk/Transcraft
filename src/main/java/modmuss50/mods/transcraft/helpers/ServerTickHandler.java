@@ -2,9 +2,6 @@ package modmuss50.mods.transcraft.helpers;
 
 import java.util.EnumSet;
 
-import cpw.mods.fml.common.ITickHandler;
-import cpw.mods.fml.common.TickType;
-
 public class ServerTickHandler implements ITickHandler {
 	private boolean raining;
 

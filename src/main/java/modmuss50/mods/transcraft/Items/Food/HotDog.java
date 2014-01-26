@@ -1,12 +1,12 @@
 package modmuss50.mods.transcraft.Items.Food;
 
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemFood;
 
 public class HotDog extends ItemFood {
 
 	public HotDog(int id) {
-		super(id, 3, 1, false);
+		super( 3, 1, false);
 		// Constructor Configuration
 		maxStackSize = 64;
 		// setCreativeTab(Transcraft.Transtab);
@@ -14,7 +14,7 @@ public class HotDog extends ItemFood {
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:HotDog");
 	}
 

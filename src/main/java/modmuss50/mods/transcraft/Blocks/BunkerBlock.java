@@ -5,7 +5,7 @@ import net.minecraft.block.material.Material;
 
 public class BunkerBlock extends Block {
 	public BunkerBlock(int par1) {
-		super(par1, Material.anvil);
+		super(Material.field_151574_g);
 	}
 
 }

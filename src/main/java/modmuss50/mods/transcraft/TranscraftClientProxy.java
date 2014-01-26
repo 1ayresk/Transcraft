@@ -2,14 +2,12 @@ package modmuss50.mods.transcraft;
 
 import java.util.Random;
 
+import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Entitys.mob.EnderBatRender;
 import modmuss50.mods.transcraft.Entitys.mob.Enderbat;
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeper;
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeperRender;
-import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.Renders.RenderEnderSword;
 import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemTileIxpRender;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileECRender;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.RenderHandTC;
@@ -24,7 +22,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 public class TranscraftClientProxy extends TranscraftCommonProxy {
@@ -65,8 +62,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class,
 				new RenderTC());
 
-		MinecraftForgeClient.registerItemRenderer(Config.TranscrafterID,
-				new RenderHandTC());
+		MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.Transcrafter,new RenderHandTC());
 
 		// MinecraftForgeClient.registerItemRenderer(TranscraftItems.EnderSword.itemID,
 		// new RenderEnderSword());

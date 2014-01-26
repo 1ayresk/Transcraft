@@ -14,8 +14,7 @@ import modmuss50.mods.transcraft.armor.ArmorPlasticHelmet;
 import modmuss50.mods.transcraft.armor.ArmorPlasticLegs;
 import modmuss50.mods.transcraft.helpers.Config;
 import modmuss50.mods.transcraft.helpers.TranscraftUtil;
-import net.minecraft.item.EnumArmorMaterial;
-import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.common.util.EnumHelper;
 
 public class LoadItems {
 

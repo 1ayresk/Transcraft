@@ -3,6 +3,7 @@ package modmuss50.mods.transcraft.Blocks;
 import java.util.List;
 
 import modmuss50.mods.transcraft.helpers.Config;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -14,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TranscraftOreItem extends ItemBlock {
 
-	public TranscraftOreItem(int id) {
+	public TranscraftOreItem(Block id) {
 		super(id);
 		setHasSubtypes(true);
 	}

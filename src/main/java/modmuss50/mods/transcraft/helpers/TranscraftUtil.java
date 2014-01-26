@@ -10,9 +10,9 @@ package modmuss50.mods.transcraft.helpers;
 import java.util.Arrays;
 import java.util.List;
 
-import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.common.util.EnumHelper;
 
 public class TranscraftUtil {
 
@@ -24,11 +24,11 @@ public class TranscraftUtil {
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
 			0.4F);
 
-	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
+	public static ToolMaterial PlasticTool = EnumHelper.addToolMaterial(
 			"PlasticTool", 2, 750, 5.0F, 2, 0);
-	public static EnumToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial(
+	public static ToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial(
 			"BunkerToolEnum", 4, 1000, 20.0F, 4, 0);
-	public static EnumToolMaterial EnderToolEnum = EnumHelper.addToolMaterial(
+	public static ToolMaterial EnderToolEnum = EnumHelper.addToolMaterial(
 			"EnderToolEnum", 400, 10000, 80.0F, 46, 100);
 
 	public static List<String> authorList = Arrays.asList("mark123mark",

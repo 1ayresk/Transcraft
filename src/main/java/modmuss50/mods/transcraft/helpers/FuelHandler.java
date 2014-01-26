@@ -9,7 +9,7 @@ public class FuelHandler implements IFuelHandler
 	@Override
 	public int getBurnTime(ItemStack fuel) {
 
-		if (fuel.itemID == TranscraftItems.Oil.itemID) {
+		if (fuel.getItem() == TranscraftItems.Oil) {
 			return 1000;
 		} else {
 			return 0;

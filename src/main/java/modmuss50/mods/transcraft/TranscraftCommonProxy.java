@@ -5,7 +5,6 @@ import java.io.File;
 import modmuss50.mods.transcraft.helpers.ServerTickHandler;
 import modmuss50.mods.transcraft.helpers.TickHandler;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 public class TranscraftCommonProxy {

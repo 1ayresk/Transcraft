@@ -8,7 +8,6 @@ import modmuss50.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.IXPGrinderMk2;
 import modmuss50.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
 

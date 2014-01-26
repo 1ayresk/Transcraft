@@ -2,9 +2,6 @@ package modmuss50.mods.transcraft.addons.fmp;
 
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOre;
-import codechicken.microblock.BlockMicroMaterial;
-import codechicken.multipart.MultiPartRegistry.IPartFactory;
-import codechicken.multipart.TMultiPart;
 
 public class TranscraftFMP implements IPartFactory {
 

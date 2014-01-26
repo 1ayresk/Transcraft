@@ -6,8 +6,8 @@ import modmuss50.mods.transcraft.helpers.PacketHandlerTranscraft;
 import modmuss50.mods.transcraft.helpers.TranscraftUtil;
 import modmuss50.mods.transcraft.loaders.LoadMod;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.WorldType;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,12 +16,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.network.NetworkMod;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = TranscraftUtil.VERSION
 		+ TranscraftUtil.STATE, useMetadata = false)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 public class Transcraft {
 
 	@Instance("transcraft")
@@ -59,17 +56,18 @@ public class Transcraft {
 
 	public static CreativeTabs Transtab = new CreativeTabs("Transtab") {
 		@Override
-		public ItemStack getIconItemStack() {
-			return new ItemStack(TranscraftItems.EnderSword, 1, 0);
+		public Item getTabIconItem() {
+			// TODO Auto-generated method stub
+			return TranscraftItems.EnderSword;
 		}
 
 	};
 
-	public static CreativeTabs TranstabDecBlocks = new CreativeTabs(
-			"TranstabDecBlocks") {
+	public static CreativeTabs TranstabDecBlocks = new CreativeTabs("TranstabDecBlocks") {
 		@Override
-		public ItemStack getIconItemStack() {
-			return new ItemStack(TranscraftBlocks.EnderQuartzBigBrick, 1, 11);
+		public Item getTabIconItem() {
+			// TODO Auto-generated method stub
+			return TranscraftItems.EnderQuartz;
 		}
 
 	};

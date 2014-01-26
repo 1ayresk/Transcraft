@@ -3,7 +3,7 @@ package modmuss50.mods.transcraft.helpers;
 import java.io.File;
 import java.io.IOException;
 
-import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
@@ -119,89 +119,7 @@ public class Config {
 		Configuration config = new Configuration(cfgFile);
 		config.load();
 
-		// Blocks
-		TranscraftOreID = config.getBlock("TransmutterOre", 2000).getInt();
-		OilOreID = config.getBlock("OilOre", 2001).getInt();
-		BlueLightID = config.getBlock("BlueLight", 2011).getInt();
-		GreenLightID = config.getBlock("GreenLight", 2012).getInt();
-		OrangeLightID = config.getBlock("OrangeLight", 2013).getInt();
-		DarkLightID = config.getBlock("DarkLight", 2014).getInt();
-		IronTorchID = config.getBlock("IronTorch", 2015).getInt();
-		ClearGlassID = config.getBlock("Crystal Glass", 2003).getInt();
-		ObsidianLeverID = config.getBlock("ObsidianLever", 2004).getInt();
-		BunkerBlockID = config.getBlock("BunkerBlock", 2002).getInt();
-		BunkerStairID = config.getBlock("BunkerStair", 2005).getInt();
-		SmoothBunkerBlockID = config.getBlock("SmoothBunkerBlock", 2006)
-				.getInt();
-		SmoothBunkerStairID = config.getBlock("SmoothBunkerStair", 2007)
-				.getInt();
-		DriedTransmutterID = config.getBlock("Dried Transmuter", 2008).getInt();
-		ThinClearGlassID = config.getBlock("Thin Crystal Glass", 2009).getInt();
-		FancyCrystalGlassID = config.getBlock("Fancy Crystal Glass", 2010)
-				.getInt();
-		TransManiaOreID = config.getBlock("TransMania Ore", 2011).getInt();
-
-		BlockEnderQuartzID = config.getBlock("Ender Quartz", 2113).getInt();
-		BlockCutEnderQuartzID = config.getBlock("Cut Ender Quartz", 2114)
-				.getInt();
-		BlockEnderQuartzBrickID = config.getBlock("Ender Quartz Brick", 2115)
-				.getInt();
-		BlockEnderQuartzBigBrickID = config.getBlock("Big Ender Quartz Brick",
-				2116).getInt();
-
-		ComIronOreID = config.getBlock("Packed Iron Ore", 2021).getInt();
-		ComGoldOreID = config.getBlock("Packed Gold Ore", 2022).getInt();
-		ComTransmutterOreID = config.getBlock("Packed Transmuter Ore", 2023)
-				.getInt();
-		ComOilOreID = config.getBlock("Packed Oil Ore", 2024).getInt();
-
-//		ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
-
-		LiquidTransmutterFluidStillID = config.getBlock(
-				"LiquidTransmuterFluidStillID", 2101).getInt();
-
-		TranscrafterID = config.getBlock("Transcrafter", 2112).getInt();
-		LTranscrafterID = config.getBlock("Liquid Transcrafter", 2113).getInt();
-
-		DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
-		DimPortalEscapeBlockID = config.getBlock("Portal Escape Block", 2201)
-				.getInt();
-
-		// Items
-		BasicTransmuterID = config.getItem("BasicTransmuter", 5000).getInt();
-		QuadTransmuterID = config.getItem("QuadTransmuter", 5001).getInt();
-		NanoTransmuterID = config.getItem("NanoTransmuter", 5002).getInt();
-		HotdogID = config.getItem("Hot Dog", 5003).getInt();
-		OilID = config.getItem("Oil", 5011).getInt();
-		PlasticID = config.getItem("Plastic", 5012).getInt();
-		IronStickID = config.getItem("IronStick", 5013).getInt();
-		HardendPlasticID = config.getItem("HardendPlastic", 5014).getInt();
-		EnderGemID = config.getItem("EnderGem", 5015).getInt();
-		EnderQuartzID = config.getItem("EnderQuartz", 5016).getInt();
-		DarkEndershardID = config.getItem("DarkEndershard", 5017).getInt();
-		BucketLiquidTrasnmutterID = config.getItem("BucketLiquidTrasnmutter",
-				5018).getInt();
-		TranspeadiaID = config.getItem("Transpeadia", 5019).getInt();
-		TransmaniaTeleporterID = config.getItem("TranmaniaTeleporter", 5020)
-				.getInt();
-
-		PlasticAxeID = config.getItem("PlasticAxe", 5031).getInt();
-		PlasticHoeID = config.getItem("PlasticHoe", 5032).getInt();
-		PlasticPickaxeID = config.getItem("PlasticPickaxe", 5033).getInt();
-		PlasticShovelID = config.getItem("PlasticShovel", 5034).getInt();
-		PlasticSwordID = config.getItem("PlasticSword", 5035).getInt();
-		BunkerPickID = config.getItem("Ender Pickaxe", 5036).getInt();
-		EnderSwordID = config.getItem("Ender Sword", 5037).getInt();
-
-		PlasticHelmetID = config.getItem("PlasticHelmet", 5041).getInt();
-		PlasticChestID = config.getItem("PlasticChest", 5042).getInt();
-		PlasticLegsID = config.getItem(" PlasticLegs", 5043).getInt();
-		PlasticBootsID = config.getItem("PlasticBoots", 5044).getInt();
-		EnderHelmetID = config.getItem("EnderHelmet", 5045).getInt();
-		EnderChestID = config.getItem("EnderChest", 5046).getInt();
-		EnderLegsID = config.getItem("EnderLegs", 5047).getInt();
-		EnderBootsID = config.getItem("EnderBoots", 5048).getInt();
-
+		
 		enderswordpearl = config.get("Settings",
 				"Endersword ender pearl right click", true).getBoolean(true);
 		EnderArmorBuffs = config.get("Settings", "Ender Armor Buffs", true)

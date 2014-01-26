@@ -1,17 +1,13 @@
 package modmuss50.mods.transcraft.Items;
 
-import net.minecraft.client.renderer.texture.IconRegister;
+import javax.swing.Icon;
+
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
-import net.minecraft.util.Icon;
 
 public class DarkEndershard extends Item {
-
-	public void updateIcons(IconRegister iconRegister) {
-		Icon iconIndex = iconRegister.registerIcon("Transcraft:DarkEndershard");
-	}
-
 	public DarkEndershard(int id) {
-		super(id);
+		super();
 		maxStackSize = 64;
 
 	}
