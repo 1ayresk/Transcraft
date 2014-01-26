@@ -3,7 +3,7 @@ package modmuss50.mods.transcraft.Blocks.Quartz;
 import java.util.List;
 
 import modmuss50.mods.transcraft.helpers.Config;
-import modmuss50.zaetApi.api.IColoredItemBlock;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
@@ -12,9 +12,9 @@ import org.lwjgl.input.Keyboard;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemEnderQuartzBlock extends IColoredItemBlock {
+public class ItemEnderQuartzBlock extends org.zaet.api.IColoredItemBlock {
 
-	public ItemEnderQuartzBlock(int par1) {
+	public ItemEnderQuartzBlock(Block par1) {
 		super(par1);
 	}
 

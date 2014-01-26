@@ -1,8 +1,7 @@
 package modmuss50.mods.transcraft.Blocks.Quartz;
 
-import modmuss50.zaetApi.api.IColoredBlock;
 
-public class EnderQuartz extends IColoredBlock {
+public class EnderQuartz extends org.zaet.api.IColoredBlock {
 
 	public static String texName;
 

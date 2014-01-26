@@ -3,6 +3,8 @@ package modmuss50.mods.transcraft.loaders;
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -10,18 +12,18 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class RecipeLoader {
 
 	public static void LoadRecipe() {
-		ItemStack dirtStack = new ItemStack(Block.dirt);
-		ItemStack gravelStack = new ItemStack(Block.gravel);
-		ItemStack CStoneStack = new ItemStack(Block.cobblestone);
-		ItemStack CoalStack = new ItemStack(Item.coal);
-		ItemStack GoldIStack = new ItemStack(Item.ingotGold);
-		ItemStack IronIStack = new ItemStack(Item.ingotIron);
-		ItemStack neatherbrickStack = new ItemStack(Block.netherBrick);
-		ItemStack ObsidianStack = new ItemStack(Block.obsidian);
-		ItemStack Water = new ItemStack(Item.bucketWater);
-		ItemStack sponge = new ItemStack(Block.sponge);
-		ItemStack DiamondBlock = new ItemStack(Block.blockDiamond);
-		ItemStack Owood = new ItemStack(Block.wood);
+		ItemStack dirtStack = new ItemStack(Blocks.dirt);
+		ItemStack gravelStack = new ItemStack(Blocks.gravel);
+		ItemStack CStoneStack = new ItemStack(Blocks.cobblestone);
+		ItemStack CoalStack = new ItemStack(Items.coal);
+		ItemStack GoldIStack = new ItemStack(Items.gold_ingot);
+		ItemStack IronIStack = new ItemStack(Items.iron_ingot);
+		ItemStack neatherbrickStack = new ItemStack(Blocks.nether_brick);
+		ItemStack ObsidianStack = new ItemStack(Blocks.obsidian);
+		ItemStack Water = new ItemStack(Items.water_bucket);
+		ItemStack sponge = new ItemStack(Blocks.sponge);
+		ItemStack DiamondBlock = new ItemStack(Blocks.diamond_block);
+		ItemStack Owood = new ItemStack(Blocks.wood);
 		ItemStack Swood = new ItemStack(Block.wood, 1, 1);
 		ItemStack Bwood = new ItemStack(Block.wood, 1, 2);
 		ItemStack Jwood = new ItemStack(Block.wood, 1, 3);
@@ -36,9 +38,9 @@ public class RecipeLoader {
 				"   ", "p p", "p p", 'p', TranscraftItems.Plastic);
 
 		GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ComIronOre, 1),
-				"ii", "ii", 'i', Block.oreIron);
+				"ii", "ii", 'i', Blocks.iron_ore);
 		GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ComGoldOre, 1),
-				"ii", "ii", 'i', Block.oreGold);
+				"ii", "ii", 'i', Blocks.gold_ore);
 
 		ItemStack ComTransmutterOre4 = new ItemStack(
 				TranscraftBlocks.ComTransmutterOre, 4, 0);

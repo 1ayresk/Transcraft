@@ -1,12 +1,10 @@
 package modmuss50.mods.transcraft.Blocks;
 
-import modmuss50.zaetApi.api.IColoredBlock;
 import net.minecraft.block.material.Material;
-import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class CrystalGlass extends IColoredBlock {
+public class CrystalGlass extends org.zaet.api.IColoredBlock {
 
 	public static String texName;
 

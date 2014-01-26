@@ -15,6 +15,7 @@ import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
@@ -48,8 +49,7 @@ public class ICloulouredGlassPane extends BlockPane {
 	 * 
 	 */
 	public ICloulouredGlassPane(int id, Material m) {
-		super(id, "transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.field_151581_o, true);
+		super("transcraft:ClearGlass", "transcraft:ClearGlass",Material.field_151581_o, true);
 		func_149711_c(3.0F);
 		func_149752_b(4.0F);
 	}
@@ -156,24 +156,16 @@ public class ICloulouredGlassPane extends BlockPane {
 		return metadata;
 	}
 
+	@Override
 	/***
-	 * Get's the block dropped from ID.
+	 * Get's block dropped from metadata.
 	 */
-	public int idDropped(int i, Random r, int j) {
-		return blockID;
+	public int func_149692_a(int metadata)
+	{
+		return metadata;
 	}
 
-	/***
-	 * Get's the color from the metadata and ID.
-	 */
-	public ArrayList<ItemStack> getBlockDropped(World w, int x, int y, int z,
-			int metadata, int fortune) {
-		ArrayList<ItemStack> list = new ArrayList<ItemStack>();
 
-		list.add(new ItemStack(blockID, 1, metadata));
-
-		return list;
-	}
 
 	/***
 	 * Adds the blocks to the creative tab.
@@ -185,16 +177,18 @@ public class ICloulouredGlassPane extends BlockPane {
 		}
 	}
 
-	public boolean onBlockActivated(World w, int x, int y, int z,
-			EntityPlayer p, int i, float f, float f1, float f2) {
-		if (p.getHeldItem() != null
-				&& p.getHeldItem().getItem() == Item.dyePowder) {
-			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem()
-					.getItemDamage(), 3);
-			w.markBlockForUpdate(x, y, z);
-			w.markBlockForRenderUpdate(x, y, z);
+	@Override
+	public boolean func_149727_a(World w, int x, int y, int z, EntityPlayer p, int i, float f, float f1, float f2)
+	{
+		if(p.getHeldItem() != null && p.getHeldItem().getItem() == Items.dye)
+		{
+			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem().getItemDamage(), 3);
+			w.func_147471_g(x, y, z);
+			//w.func_147588_b(x, y, z);
 			return true;
-		} else {
+		}
+		else
+		{
 			return false;
 		}
 	}

@@ -3,34 +3,33 @@ package modmuss50.mods.transcraft.Blocks.FancyCrystalGlass;
 import javax.swing.Icon;
 
 import modmuss50.mods.transcraft.Transcraft;
-import modmuss50.zaetApi.api.IColoredBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class FancyCrystalGlass extends IColoredBlock {
+public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	private Icon[] icons = new Icon[16];
 	private boolean shouldRenderSelectionBox = true;
 	protected String folder;
 	private int renderPass;
 
 	public FancyCrystalGlass(int par1, String location, boolean hasAlpha) {
-		super(par1, Material.glass);
-		this.setStepSound(soundGlassFootstep);
-
+		super(par1, Material.field_151581_o);
 		renderPass = hasAlpha ? 1 : 0;
-		this.setCreativeTab(Transcraft.Transtab);
-		this.setHardness(0.3f);
+		this.func_149647_a(Transcraft.Transtab);
+		this.func_149711_c(0.3f);
 	}
 
+	
+	/*
 	@Override
-	public boolean isOpaqueCube() {
+	public boolean func_149662_c() {
 		return false;
 	}
 
 	@Override
-	public boolean renderAsNormalBlock() {
+	public boolean func_149686_d() {
 		return false;
 	}
 
@@ -38,7 +37,8 @@ public class FancyCrystalGlass extends IColoredBlock {
 	public int getRenderBlockPass() {
 		return renderPass;
 	}
-
+ */
+	
 	/**
 	 * This is checked to see if the texture should connect to this block
 	 * 
@@ -55,11 +55,17 @@ public class FancyCrystalGlass extends IColoredBlock {
 	 *            Metadata of the block this block is trying to connect to
 	 * @return true if should connect
 	 */
+	
+	/*
 	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,
 			int par2, int par3, int par4, int par5, int par6) {
 		return par5 == this.blockID;
 	}
-
+ */
+	
+	/*
+	 * 
+	
 	@Override
 	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2,
 			int par3, int par4, int par5) {
@@ -67,6 +73,12 @@ public class FancyCrystalGlass extends IColoredBlock {
 				par5, icons);
 	}
 
+ */
+	
+	/*
+	 * 
+	 
+	
 	public Icon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,
 			int par2, int par3, int par4, int par5, Icon[] icons) {
 
@@ -423,7 +435,10 @@ public class FancyCrystalGlass extends IColoredBlock {
 
 		return icons[0];
 	}
+*/
 
+	
+	/*
 	@Override
 	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,
 			int par2, int par3, int par4, int par5) {
@@ -431,12 +446,19 @@ public class FancyCrystalGlass extends IColoredBlock {
 		return i1 == this.blockID ? false : super.shouldSideBeRendered(
 				par1IBlockAccess, par2, par3, par4, par5);
 	}
+*/
 
+	/*
 	@Override
 	public Icon getIcon(int par1, int par2) {
 		return icons[0];
 	}
-
+*/
+	
+	
+	/*
+	 * 
+	 
 	@Override
 	public AxisAlignedBB getSelectedBoundingBoxFromPool(World par1World,
 			int par2, int par3, int par4) {
@@ -447,9 +469,13 @@ public class FancyCrystalGlass extends IColoredBlock {
 			return AxisAlignedBB.getAABBPool().getAABB(0D, 0D, 0D, 0D, 0D, 0D);
 		}
 	}
-
+*/
+	
+	/*
+	 * 
+	
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void func_149651_a(IconRegister par1IconRegister) {
 		icons[0] = par1IconRegister
 				.registerIcon("Transcraft:glass/FancyGlass/glass");
 		icons[1] = par1IconRegister
@@ -484,4 +510,7 @@ public class FancyCrystalGlass extends IColoredBlock {
 				.registerIcon("Transcraft:glass/FancyGlass/glass_4");
 
 	}
+	
+	
+	 */
 }
