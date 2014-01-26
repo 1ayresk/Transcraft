@@ -30,10 +30,10 @@ public class TranscraftProvider implements IWailaDataProvider {
 	public List<String> getWailaBody(ItemStack itemStack,
 			List<String> currenttip, IWailaDataAccessor accessor,
 			IWailaConfigHandler config) {
-		if (accessor.getBlock() == TranscraftBlocks.ixpGrinder) {
-			TileIXP te = (TileIXP) accessor.getTileEntity();
-			currenttip.add("Amount Of IXP: " + te.CurrentIXPValue);
-		}
+//		if (accessor.getBlock() == TranscraftBlocks.ixpGrinder) {
+//			TileIXP te = (TileIXP) accessor.getTileEntity();
+//			currenttip.add("Amount Of IXP: " + te.CurrentIXPValue);
+//		}
 		if (accessor.getBlock() == TranscraftBlocks.ObsidianLever) {
 			currenttip.add("State: "
 					+ (accessor.getMetadata() < 8 ? "Off" : "On"));
@@ -51,8 +51,8 @@ public class TranscraftProvider implements IWailaDataProvider {
 	public static void callbackRegister(IWailaRegistrar registrar) {
 		FMLLog.info("[Transcraft Addons] Callback Register For Waila");
 
-		registrar.registerBodyProvider(new TranscraftProvider(),
-				TranscraftBlocks.ixpGrinder.blockID);
+//		registrar.registerBodyProvider(new TranscraftProvider(),
+//				TranscraftBlocks.ixpGrinder.blockID);
 		registrar.registerBodyProvider(new TranscraftProvider(),
 				TranscraftBlocks.ObsidianLever.blockID);
 	}

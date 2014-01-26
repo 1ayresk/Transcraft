@@ -17,8 +17,8 @@ import net.minecraftforge.common.EnumHelper;
 public class TranscraftUtil {
 
 	public static final String VERSION = "1.6.4_V2.0.0_";
-	public static final String STATE = "DevAlpha";
-	public static boolean DEVSTATUS = true;
+	public static final String STATE = "Prerelease_1";
+	public static boolean DEVSTATUS = false;
 
 	public static final BiomeGenBase TransmutterBiome = (new modmuss50.mods.transcraft.biomes.TransmutterBiome(
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,

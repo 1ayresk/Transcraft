@@ -2,7 +2,6 @@ package modmuss50.mods.transcraft;
 
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.biomes.EndlessWater;
 import modmuss50.mods.transcraft.helpers.PacketHandlerTranscraft;
 import modmuss50.mods.transcraft.helpers.TranscraftUtil;
 import modmuss50.mods.transcraft.loaders.LoadMod;
@@ -27,8 +26,6 @@ public class Transcraft {
 
 	@Instance("transcraft")
 	public static Transcraft instance;
-
-	public static WorldType tutorialWorld = new EndlessWater(15, "ENDLESSWATER");
 	
 	
 	@SidedProxy(clientSide = "modmuss50.mods.transcraft.TranscraftClientProxy", serverSide = "modmuss50.mods.transcraft.TranscraftCommonProxy")
@@ -43,8 +40,6 @@ public class Transcraft {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		LoadMod.init(event);
-		
-		LanguageRegistry.instance().addStringLocalization("generator.ENDLESSWATER", "en_US", "Transcraft TEST");
 	}
 
 	@EventHandler

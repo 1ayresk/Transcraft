@@ -174,10 +174,10 @@ public class LoadBlocks {
 				.setTextureName("Transcraft:EnderQuartzBrick2")
 				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 
-		TranscraftBlocks.ixpGrinder = new IXPGrinderMk2(Config.ixpGrinderID, 0)
-				.setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
-				.setTextureName("Transcraft:ixpGrinder")
-				.setCreativeTab(Transcraft.Transtab);
+//		TranscraftBlocks.ixpGrinder = new IXPGrinderMk2(Config.ixpGrinderID, 0)
+//				.setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
+//				.setTextureName("Transcraft:ixpGrinder")
+//				.setCreativeTab(Transcraft.Transtab);
 
 	}
 }

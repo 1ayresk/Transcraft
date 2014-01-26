@@ -40,6 +40,6 @@ public class TranscraftBlocks {
 	public static Block EnderQuartzBrick;
 	public static Block EnderQuartzBigBrick;
 
-	public static Block ixpGrinder;
+//	public static Block ixpGrinder;
 
 }

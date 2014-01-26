@@ -187,9 +187,9 @@ public class RecipeLoader {
 		GameRegistry.addSmelting(TranscraftBlocks.OilOre.blockID,
 				new ItemStack(TranscraftItems.Oil), 3.3f);
 
-		GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ixpGrinder),
-				"qcq", "qdq", "qqq", 'q', TranscraftItems.NanoTransmuter, 'c',
-				Block.chest, 'd', Item.netherStar);
+//		GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ixpGrinder),
+//				"qcq", "qdq", "qqq", 'q', TranscraftItems.NanoTransmuter, 'c',
+//				Block.chest, 'd', Item.netherStar);
 
 		for (int i = 15; i >= 0; i--) {
 			GameRegistry.addShapelessRecipe(new ItemStack(
