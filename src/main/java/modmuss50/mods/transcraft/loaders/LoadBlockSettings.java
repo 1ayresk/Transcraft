@@ -8,6 +8,9 @@ public class LoadBlockSettings {
 
 	public static void LoadSet() {
 
+		/*
+		 * 
+		
 		MinecraftForge.setBlockHarvestLevel(TranscraftBlocks.OilOre, "pickaxe",
 				1);
 		MinecraftForge.setBlockHarvestLevel(TranscraftBlocks.TranscraftOre,
@@ -22,6 +25,9 @@ public class LoadBlockSettings {
 				"pickaxe", 4);
 		MinecraftForge.setBlockHarvestLevel(TranscraftBlocks.ObsidianLever,
 				"pickaxe", 4);
+
+ */
+		
 
 	}
 

@@ -14,6 +14,7 @@ import modmuss50.mods.transcraft.armor.ArmorPlasticHelmet;
 import modmuss50.mods.transcraft.armor.ArmorPlasticLegs;
 import modmuss50.mods.transcraft.helpers.Config;
 import modmuss50.mods.transcraft.helpers.TranscraftUtil;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class LoadItems {
@@ -113,9 +114,9 @@ public class LoadItems {
 				.setUnlocalizedName("Transcraft:EnderSword")
 				.setCreativeTab(Transcraft.Transtab).setFull3D();
 
-		EnumArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",
+		ArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",
 				15, new int[] { 3, 5, 5, 2 }, 5);
-		EnumArmorMaterial EnderEnum = EnumHelper.addArmorMaterial("Ender",
+		ArmorMaterial EnderEnum = EnumHelper.addArmorMaterial("Ender",
 				9850, new int[] { 10000, 10000, 10000, 10000 }, 100);
 
 		TranscraftItems.PlasticHelmet = (new ArmorPlasticHelmet(

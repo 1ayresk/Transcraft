@@ -16,8 +16,7 @@ public class LoadEntity {
 		entityID = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(NukeCreeper.class,
 				"EnderCreeper", entityID);
-		EntityList.addMapping(NukeCreeper.class, "EnderCreeper", entityID,
-				0x515838, 0x868F6B);
+		EntityList.addMapping(NukeCreeper.class, "EnderCreeper", entityID,0x515838, 0x868F6B);
 		EntityRegistry.registerModEntity(NukeCreeper.class, "EnderCreeper", 2,
 				Transcraft.instance, 64, 5, true);
 

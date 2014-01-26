@@ -13,25 +13,16 @@ import modmuss50.mods.transcraft.WorldGen.TranscraftGenerator;
 import modmuss50.mods.transcraft.addons.Addons;
 import modmuss50.mods.transcraft.command.CommandReloadConfig;
 import modmuss50.mods.transcraft.command.CommandTranscraftVersion;
-import modmuss50.mods.transcraft.fluids.TranscraftFluids;
 import modmuss50.mods.transcraft.helpers.Config;
-import modmuss50.mods.transcraft.helpers.DevMessageTick;
 import modmuss50.mods.transcraft.helpers.EventMobDeath;
 import modmuss50.mods.transcraft.helpers.FuelHandler;
-import modmuss50.mods.transcraft.helpers.GuiHand;
-import modmuss50.mods.transcraft.helpers.PlayerEditor;
 import modmuss50.mods.transcraft.helpers.TranscraftUtil;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.BiomeDictionary.Type;
-import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 
@@ -48,6 +39,10 @@ public class LoadMod {
 		Transcraft.Coproxy.registerHandlers();
 		Transcraft.Coproxy.registerTickHandlers();
 
+		/*
+		 * 
+		 
+		
 		if (TranscraftUtil.DEVSTATUS = true) {
 			if (FMLCommonHandler.instance().getSide().isClient()) {
 				FMLLog.info("[TRANSCRAFT]	Adding Dev Message");
@@ -56,7 +51,7 @@ public class LoadMod {
 						Side.CLIENT);
 			}
 		}
-
+*/
 		FMLLog.info("[TRANSCRAFT]	Loading Config");
 		Config.initConfig();
 
@@ -66,8 +61,8 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Loading Items");
 		LoadItems.LoadItems();
 
-		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
-		TranscraftFluids.init();
+//		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
+//		TranscraftFluids.init();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
@@ -81,8 +76,16 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Adding Recipes");
 		RecipeLoader.LoadRecipe();
 
+		/*
+		 * 
+		
+		
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
+	 */	
+		
+		
+/*
 
 		FMLLog.info("[TRANSCRAFT]	Loading Biomes");
 		BiomeDictionary.registerBiomeType(TranscraftUtil.TransmutterBiome,
@@ -90,10 +93,13 @@ public class LoadMod {
 		GameRegistry.addBiome(TranscraftUtil.TransmutterBiome);
 		BiomeManager.addSpawnBiome(TranscraftUtil.TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TranscraftUtil.TransmutterBiome);
-
+ */
+	/*
+	 * 	
+	
 		FMLLog.info("[TRANSCRAFT]	Loading Helper");
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
-
+ */
 		if (event.getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());
 		}
@@ -113,25 +119,21 @@ public class LoadMod {
 		LoadChestGen.LoadChest();
 
 		FMLLog.info("[TRANSCRAFT]	Registering world gen");
-		GameRegistry.registerWorldGenerator(new TranscraftGenerator());
+		GameRegistry.registerWorldGenerator(new TranscraftGenerator(), 0);
 
 		FMLLog.info("[TRANSCRAFT]	Registering Fuel handler");
 		GameRegistry.registerFuelHandler(new FuelHandler());
 
-		FMLLog.info("[TRANSCRAFT]	Registering Player Editor");
-		NetworkRegistry.instance()
-				.registerConnectionHandler(new PlayerEditor());
+
 
 		Transcraft.Coproxy.renderThings();
 
-		DevCapesUtil
-				.addFileUrl("https://dl.dropboxusercontent.com/s/nd6xhvygxqu229c/capes.txt?dl=1&token_hash=AAG0Xu3F0ghpuIIG5KReyogHwGdhflG6u0TKFD-W8xf1mA");
-
+		
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
-		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
-		NetworkRegistry.instance().registerGuiHandler(Transcraft.instance,
-				new GuiHand());
+//		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
+//		NetworkRegistry.instance().registerGuiHandler(Transcraft.instance,
+//				new GuiHand());
 
 		// MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 

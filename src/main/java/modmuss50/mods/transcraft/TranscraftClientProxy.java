@@ -37,8 +37,8 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	{
 	
 		
-		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
-		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
+//		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
+//		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
 		
 		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,
 				new NukeCreeperRender());
@@ -61,7 +61,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class,
 				new RenderTC());
 
-		MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.Transcrafter,new RenderHandTC());
+//		MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.Transcrafter,new RenderHandTC());
 
 		// MinecraftForgeClient.registerItemRenderer(TranscraftItems.EnderSword.itemID,
 		// new RenderEnderSword());
