@@ -13,21 +13,10 @@ public class ArmorEnderBoots extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorEnderBoots(int id, EnumArmorMaterial enumarmormaterial,
+	public ArmorEnderBoots(int id, ArmorMaterial enumarmormaterial,
 			int renderIndex, int armorType) {
-		super(id, enumarmormaterial, renderIndex, armorType);
+		super(enumarmormaterial, renderIndex, armorType);
 
-	}
-
-	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
-			int layer) {
-		return "Transcraft:textures/armor/EnderArmor_1.png";
-	}
-
-	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
-		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderBoots");
 	}
 
 }

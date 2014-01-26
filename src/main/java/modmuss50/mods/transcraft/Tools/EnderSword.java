@@ -3,6 +3,7 @@ package modmuss50.mods.transcraft.Tools;
 import java.util.List;
 
 import modmuss50.mods.transcraft.helpers.Config;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,12 +19,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EnderSword extends ItemSword {
 
-	public EnderSword(int par1, EnumToolMaterial par2EnumToolMaterial) {
-		super(par1, par2EnumToolMaterial);
+	public EnderSword(int par1, ToolMaterial par2EnumToolMaterial) {
+		super(par2EnumToolMaterial);
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderSword");
 	}
 
@@ -48,15 +49,9 @@ public class EnderSword extends ItemSword {
 			}
 
 			else {
-				if (par3EntityPlayer.username.contains("mark123mark")
-						|| par3EntityPlayer.username.contains("tattyseal")
-						|| par3EntityPlayer.username.contains("shifu_")) {
-					par3EntityPlayer.playSound("transcraft:bassDrop", 10F, 1F);
-				} else {
+				
 					par2World.playSoundAtEntity(par3EntityPlayer, "random.bow",
 							0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-				}
-
 				if (!par2World.isRemote) {
 					par2World.spawnEntityInWorld(new EntityEnderPearl(
 							par2World, par3EntityPlayer));

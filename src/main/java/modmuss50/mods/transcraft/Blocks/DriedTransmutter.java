@@ -3,10 +3,8 @@ package modmuss50.mods.transcraft.Blocks;
 import java.util.Random;
 
 import modmuss50.mods.transcraft.api.Fluids;
-import modmuss50.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 public class DriedTransmutter extends Block {

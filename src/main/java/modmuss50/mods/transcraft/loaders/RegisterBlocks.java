@@ -12,8 +12,10 @@ import modmuss50.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBrick;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.TileTC;
-import modmuss50.zaetApi.api.IColoredItemBlock;
 import net.minecraft.item.Item;
+
+import org.zaet.api.IColoredItemBlock;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 

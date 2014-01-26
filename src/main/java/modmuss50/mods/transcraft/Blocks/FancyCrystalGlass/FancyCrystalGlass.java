@@ -4,9 +4,6 @@ import javax.swing.Icon;
 
 import modmuss50.mods.transcraft.Transcraft;
 import net.minecraft.block.material.Material;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 
 public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	private Icon[] icons = new Icon[16];

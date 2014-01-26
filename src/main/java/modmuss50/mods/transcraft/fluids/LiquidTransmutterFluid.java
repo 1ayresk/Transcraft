@@ -11,6 +11,9 @@ public class LiquidTransmutterFluid extends Fluid {
 		super(fluidName);
 	}
 
+	/*
+	 
+	 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Icon getStillIcon() {
@@ -22,5 +25,9 @@ public class LiquidTransmutterFluid extends Fluid {
 	public Icon getFlowingIcon() {
 		return BlockFluidLiquidTransmuter.springWaterFlowingIcon;
 	}
+
+*/
+	
+
 
 }

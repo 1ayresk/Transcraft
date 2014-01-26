@@ -76,7 +76,7 @@ public class ContainerTC extends Container {
 						.getStackInSlotOnClosing(i);
 
 				if (itemstack != null) {
-					par1EntityPlayer.dropPlayerItem(itemstack);
+					 par1EntityPlayer.dropPlayerItemWithRandomChoice(itemstack, false);
 				}
 			}
 		}
@@ -84,7 +84,7 @@ public class ContainerTC extends Container {
 
 	@Override
 	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.worldObj.getBlockId(this.posX, this.posY, this.posZ) != TranscraftBlocks.Transcrafter.blockID ? false
+		return this.worldObj.func_147439_a(this.posX, this.posY, this.posZ) != TranscraftBlocks.Transcrafter ? false
 				: par1EntityPlayer.getDistanceSq(this.posX + 0.5D,
 						this.posY + 0.5D, this.posZ + 0.5D) <= 64.0D;
 	}

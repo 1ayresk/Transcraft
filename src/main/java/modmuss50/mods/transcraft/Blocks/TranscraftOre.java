@@ -8,8 +8,11 @@ import javax.swing.Icon;
 import modmuss50.mods.transcraft.Renders.particles.FXSparkleRun;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,7 +22,7 @@ public class TranscraftOre extends Block {
 	public static String[] types = { "Transmutter", "Chromite", "Vanadium",
 			"Zirconium", "Ultimatium", "Cosmonite" };
 
-	private static Icon[] icons = new Icon[types.length];
+	private static IIcon[] icons = new IIcon[types.length];
 
 	public TranscraftOre(int par1) {
 		super(Material.field_151574_g);
@@ -34,35 +37,43 @@ public class TranscraftOre extends Block {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public Icon getIcon(int side, int meta) {
+	public IIcon func_149691_a(int side, int meta) {
 		return icons[meta];
 	}
 
+	 
+	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister icon) {
+	public void func_149651_a(IIconRegister icon) {
 		for (int i = 0; i < types.length; i++) {
 			String type = types[i].toLowerCase();
 			icons[i] = icon.registerIcon("transcraft:ores/ore_" + type);
 		}
 	}
+	
+	
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(int id, CreativeTabs tab, List list) {
-		for (int i = 0; i < types.length; i++) {
-			list.add(new ItemStack(id, 1, i));
-		}
-	}
-
+    public void func_149666_a(Item p_149666_1_, CreativeTabs p_149666_2_, List p_149666_3_)
+    {
+        for (int i = 0; i < 16; ++i)
+        {
+            p_149666_3_.add(new ItemStack(p_149666_1_, 1, i));
+        }
+    }
+	
+	
 	@Override
-	public int damageDropped(int dmg) {
-		return dmg;
+	public int func_149692_a(int metadata)
+	{
+		return metadata;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void randomDisplayTick(World par1World, int par2, int par3,int par4, Random par5Random) {
+	public void func_149734_b(World par1World, int par2, int par3,int par4, Random par5Random) {
 		FXSparkleRun.randomDisplayTick(par1World, par2, par3, par4, par5Random);
 	}
 

@@ -3,6 +3,7 @@ package modmuss50.mods.transcraft.Tools;
 import java.util.List;
 
 import modmuss50.mods.transcraft.helpers.Config;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
@@ -14,12 +15,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BunkerPick extends ItemPickaxe {
 
-	public BunkerPick(int par1, EnumToolMaterial par2EnumToolMaterial) {
-		super(par1, par2EnumToolMaterial);
+	public BunkerPick(int par1, ToolMaterial par2EnumToolMaterial) {
+		super(par2EnumToolMaterial);
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderPick");
 	}
 

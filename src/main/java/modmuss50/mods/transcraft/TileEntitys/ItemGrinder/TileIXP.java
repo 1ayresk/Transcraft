@@ -15,6 +15,11 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
+	
+	
+
+	 
+	
 	private ItemStack[] chestContents = new ItemStack[36];
 	private static final int[] slots_top = new int[] { 0 };
 	private static final int[] slots_bottom = new int[] { 2, 1 };

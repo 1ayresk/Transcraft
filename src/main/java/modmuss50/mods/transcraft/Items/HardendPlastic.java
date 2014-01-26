@@ -1,6 +1,5 @@
 package modmuss50.mods.transcraft.Items;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
 public class HardendPlastic extends Item {

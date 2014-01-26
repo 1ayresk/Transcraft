@@ -1,10 +1,10 @@
 package modmuss50.mods.transcraft.biomes;
 
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
 
-public class TransmutterBiome extends BiomeGenBase {
+public class TransmutterBiome extends BiomeGenBase 
+{
 	private TranscraftBiomeDec customBiomeDecorator;
 
 	public TransmutterBiome(int par1) {

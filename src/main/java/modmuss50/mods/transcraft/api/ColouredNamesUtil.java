@@ -7,9 +7,12 @@
 
 package modmuss50.mods.transcraft.api;
 
-import modmuss50.zaetApi.api.ColoredBlockUtil;
+
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+
+import org.zaet.api.ColoredBlockUtil;
+
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ColouredNamesUtil {

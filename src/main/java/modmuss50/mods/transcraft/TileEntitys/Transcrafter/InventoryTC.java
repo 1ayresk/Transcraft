@@ -58,7 +58,7 @@ public class InventoryTC implements IInventory {
 	 * Returns the name of the inventory.
 	 */
 	@Override
-	public String getInvName() {
+	public String func_145825_b() {
 		return "Transcrafer";
 	}
 
@@ -68,7 +68,7 @@ public class InventoryTC implements IInventory {
 	 * used directly.
 	 */
 	@Override
-	public boolean isInvNameLocalized() {
+	public boolean func_145818_k_() {
 		return false;
 	}
 

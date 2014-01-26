@@ -6,23 +6,24 @@ import modmuss50.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class Transcrafter extends BlockContainer {
-	public static Icon[] icons = new Icon[2];
+	public static IIcon[] icons = new IIcon[2];
 	public int multiblock;
 
 	public Transcrafter(int id) {
-		super(id, Material.rock);
-		this.setStepSound(Block.soundStoneFootstep);
-		this.setHardness(2F);
+		super(Material.field_151574_g);
+		this.func_149711_c(2F);
 
 	}
 
 	@Override
-	public Icon getIcon(int side, int meta) {
+	public IIcon func_149691_a(int side, int meta) {
 		if (side == 1 || side == 0) {
 			return icons[0];
 		} else {
@@ -35,13 +36,13 @@ public class Transcrafter extends BlockContainer {
 	}
 
 	@Override
-	public void registerIcons(IconRegister i) {
+	public void func_149651_a(IIconRegister i) {
 		icons[0] = i.registerIcon("transcraft:TC_top");
 		icons[1] = i.registerIcon("transcraft:TC_side");
 	}
 
 	@Override
-	public boolean onBlockActivated(World w, int x, int y, int z,
+	public boolean func_149727_a(World w, int x, int y, int z,
 			EntityPlayer p, int par6, float par7, float par8, float par9) {
 		int xs = 0;
 		int ys = 0;
@@ -61,18 +62,21 @@ public class Transcrafter extends BlockContainer {
 
 	}
 
-	@Override
-	public TileEntity createNewTileEntity(World world) {
-		return new TileTC();
-	}
 
 	@Override
-	public int getRenderType() {
+    public TileEntity func_149915_a (World world, int metadata)
+    {
+        return new TileTC();
+    }
+	
+	
+	@Override
+	public int func_149645_b() {
 		return -1;
 	}
 
 	@Override
-	public boolean isOpaqueCube() {
+	public boolean func_149662_c() {
 		return false;
 	}
 

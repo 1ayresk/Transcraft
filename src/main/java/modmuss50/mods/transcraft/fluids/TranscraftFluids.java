@@ -16,6 +16,10 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class TranscraftFluids {
 
+	/*
+	 * 
+	
+	
 	public static void init() {
 		registerFluids();
 		initializeLiquids();
@@ -73,5 +77,7 @@ public class TranscraftFluids {
 	public static void registerItem(Item item) {
 		GameRegistry.registerItem(item,item.getUnlocalizedName().replace("item.", ""));
 	}
+
+ */
 
 }

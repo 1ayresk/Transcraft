@@ -1,7 +1,5 @@
 package modmuss50.mods.transcraft.Items;
 
-import javax.swing.Icon;
-
 import modmuss50.mods.transcraft.Transcraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;

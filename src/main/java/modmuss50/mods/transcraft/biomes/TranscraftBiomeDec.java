@@ -43,7 +43,7 @@ public class TranscraftBiomeDec extends BiomeDecorator {
 	public int TransmutterPerChunk;
 
 	public TranscraftBiomeDec(BiomeGenBase par1BiomeGenBase) {
-		super(par1BiomeGenBase);
+		super();
 		TransmutterPerChunk = 0;
 		biome = par1BiomeGenBase;
 	}

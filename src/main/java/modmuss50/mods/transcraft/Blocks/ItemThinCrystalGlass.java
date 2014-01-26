@@ -10,18 +10,19 @@ package modmuss50.mods.transcraft.Blocks;
 import java.util.List;
 
 import modmuss50.mods.transcraft.helpers.Config;
-import modmuss50.zaetApi.api.IColoredItemBlock;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
 import org.lwjgl.input.Keyboard;
+import org.zaet.api.IColoredItemBlock;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemThinCrystalGlass extends IColoredItemBlock {
 
-	public ItemThinCrystalGlass(int par1) {
+	public ItemThinCrystalGlass(Block par1) {
 		super(par1);
 
 	}

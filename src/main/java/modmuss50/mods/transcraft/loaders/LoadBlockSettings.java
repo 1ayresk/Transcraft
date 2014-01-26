@@ -7,8 +7,6 @@ import net.minecraftforge.common.MinecraftForge;
 public class LoadBlockSettings {
 
 	public static void LoadSet() {
-		Block.torchWood.setLightValue(0.8F);
-		Block.whiteStone.setHardness(0.5F);
 
 		MinecraftForge.setBlockHarvestLevel(TranscraftBlocks.OilOre, "pickaxe",
 				1);

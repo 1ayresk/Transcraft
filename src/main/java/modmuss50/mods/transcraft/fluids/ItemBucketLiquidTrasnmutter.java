@@ -16,6 +16,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemBucketLiquidTrasnmutter extends Item {
+/*
 
 	private int isFull;
 
@@ -150,6 +151,9 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 	/**
 	 * Attempts to place the liquid contained inside the bucket.
 	 */
+	
+	/*
+	
 	public boolean tryPlaceContainedLiquid(World par1World, double par2,
 			double par4, double par6, int par8, int par9, int par10) {
 		if (isFull <= 0)
@@ -252,4 +256,6 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 
 	}
 
+*/
+	
 }

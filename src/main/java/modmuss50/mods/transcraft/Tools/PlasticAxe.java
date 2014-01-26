@@ -1,26 +1,21 @@
 package modmuss50.mods.transcraft.Tools;
 
+import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.helpers.Config;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 
 public class PlasticAxe extends ItemAxe {
 
-	public PlasticAxe(int par1, EnumToolMaterial par2EnumToolMaterial) {
-		super(par1, par2EnumToolMaterial);
+	public PlasticAxe(int par1, ToolMaterial par2EnumToolMaterial) {
+		super(par2EnumToolMaterial);
 	}
 
-	/**
-	 * Return whether this item is repairable in an anvil.
-	 */
-	@Override
-	public boolean getIsRepairable(ItemStack par1ItemStack,
-			ItemStack par2ItemStack) {
-		return par2ItemStack.itemID == Config.PlasticID;
-	}
+
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticAxe");
 	}
 

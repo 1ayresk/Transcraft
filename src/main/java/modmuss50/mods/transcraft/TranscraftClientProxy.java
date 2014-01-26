@@ -13,7 +13,6 @@ import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.RenderHandTC;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.RenderTC;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.TileTC;
-import modmuss50.mods.transcraft.helpers.Config;
 import modmuss50.mods.transcraft.helpers.ServerTickHandler;
 import modmuss50.mods.transcraft.helpers.TickHandler;
 import net.minecraft.client.Minecraft;
