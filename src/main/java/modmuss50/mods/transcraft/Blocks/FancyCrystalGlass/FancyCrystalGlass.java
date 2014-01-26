@@ -53,7 +53,10 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	 *            Metadata of the block this block is trying to connect to
 	 * @return true if should connect
 	 */
-	
+
+/*
+ * 
+ * 
 
 	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5, int par6) {
 		return true;
@@ -70,7 +73,6 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 
 	
 
-	 
 	
 	public Icon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,
 			int par2, int par3, int par4, int par5, Icon[] icons) {
