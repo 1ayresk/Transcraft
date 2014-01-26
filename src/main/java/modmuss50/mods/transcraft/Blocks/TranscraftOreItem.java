@@ -25,13 +25,13 @@ public class TranscraftOreItem extends ItemBlock {
 		return damageValue;
 	}
 
+	/*
+	
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack) {
-		return getUnlocalizedName()
-				+ "."
-				+ TranscraftOre.types[itemstack.getItemDamage()].replace(" ",
-						"").toLowerCase();
+		return getUnlocalizedName()+ "."+ TranscraftOre.types[itemstack.getItemDamage()].replace(" ","").toLowerCase();
 	}
+	*/
 
 	@Override
 	@SideOnly(Side.CLIENT)

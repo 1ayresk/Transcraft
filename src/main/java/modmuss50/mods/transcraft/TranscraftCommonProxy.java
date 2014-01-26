@@ -2,10 +2,7 @@ package modmuss50.mods.transcraft;
 
 import java.io.File;
 
-import modmuss50.mods.transcraft.helpers.ServerTickHandler;
-import modmuss50.mods.transcraft.helpers.TickHandler;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
 
 public class TranscraftCommonProxy {
 

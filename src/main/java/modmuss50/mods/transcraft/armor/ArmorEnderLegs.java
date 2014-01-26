@@ -1,5 +1,6 @@
 package modmuss50.mods.transcraft.armor;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -18,6 +19,9 @@ public class ArmorEnderLegs extends ItemArmor // implements
 		super(par2EnumArmorMaterial, par3, par4);
 	}
 
-
+	@Override
+	public void registerIcons(IIconRegister par1IconRegister) {
+		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderLegs");
+	}
 
 }

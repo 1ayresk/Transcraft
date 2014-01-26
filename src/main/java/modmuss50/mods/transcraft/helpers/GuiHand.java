@@ -17,11 +17,11 @@ public class GuiHand implements IGuiHandler {
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
-		TileEntity te = world.getBlockTileEntity(x, y, z);
 
-		if (te instanceof TileIXP) {
-			return new ContainerIXP(player.inventory, (TileIXP) te);
-		} else if (te instanceof TileTC) {
+
+		if (ID == 2) {
+			return new ContainerIXP(player.inventory, x, y, z);
+		} else if (ID == 1) {
 			return new ContainerTC(player.inventory, world, x, y, z);
 		} else {
 			return null;
@@ -31,7 +31,7 @@ public class GuiHand implements IGuiHandler {
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
-		TileEntity te = world.getBlockTileEntity(x, y, z);
+
 
 		switch (ID) {
 
@@ -40,9 +40,9 @@ public class GuiHand implements IGuiHandler {
 
 		}
 
-		if (te instanceof TileIXP) {
+		if (ID == 2) {
 			return new GuiIxp(player.inventory, (TileIXP) te);
-		} else if (te instanceof TileTC) {
+		} else if (ID == 1) {
 			return new GuiTC(player.inventory, world, x, y, z);
 		} else {
 			return null;

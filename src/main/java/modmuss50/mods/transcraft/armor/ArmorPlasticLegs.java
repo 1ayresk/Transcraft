@@ -1,5 +1,6 @@
 package modmuss50.mods.transcraft.armor;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -17,6 +18,9 @@ public class ArmorPlasticLegs extends ItemArmor {
 		maxStackSize = 1;
 	}
 
-
+	@Override
+	public void registerIcons(IIconRegister par1IconRegister) {
+		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticLegs");
+	}
 
 }

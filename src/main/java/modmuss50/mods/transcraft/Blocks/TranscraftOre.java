@@ -34,13 +34,13 @@ public class TranscraftOre extends Block {
 	public String func_149739_a() {
 		return "ore_" + nextNum;
 	}
-
+/*
 	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon func_149691_a(int side, int meta) {
 		return icons[meta];
 	}
-
+ */
 	 
 	
 	@Override

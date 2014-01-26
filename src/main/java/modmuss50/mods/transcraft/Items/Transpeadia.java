@@ -1,6 +1,7 @@
 package modmuss50.mods.transcraft.Items;
 
 import modmuss50.mods.transcraft.Transcraft;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -23,4 +24,10 @@ public class Transpeadia extends Item {
 		return i;
 	}
 
+	@Override
+	public void registerIcons(IIconRegister par1IconRegister) {
+		itemIcon = par1IconRegister.registerIcon("Transcraft:Transpeadia");
+	}
+	
+	
 }
