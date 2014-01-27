@@ -24,9 +24,19 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 	}
 
+	@Override
+	public void func_147500_a(TileEntity var1, double var2, double var4,
+			double var6, float var8) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/**
 	 * Renders the TileEntity for the chest at a position.
 	 */
+	/*
+	 * 
+	 
 	public void renderTileECAt(TileIXP par1TileEC, double par2, double par4,
 			double par6, float par8) {
 		int i;
@@ -91,4 +101,6 @@ public class TileECRender extends TileEntitySpecialRenderer {
 			double par4, double par6, float par8) {
 		this.renderTileECAt((TileIXP) par1TileEntity, par2, par4, par6, par8);
 	}
+	
+	*/
 }

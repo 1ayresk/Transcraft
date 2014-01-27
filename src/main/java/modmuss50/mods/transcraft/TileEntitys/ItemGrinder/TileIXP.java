@@ -192,10 +192,15 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		this.field_94045_s = par1Str;
 	}
 
+	
+	 
+	 
 	@Override
 	/**
 	 * Reads a tile entity from NBT.
 	 */
+	/*
+	 *
 	public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
 		super.readFromNBT(par1NBTTagCompound);
 		NBTTagList nbttaglist = par1NBTTagCompound.getTagList("Items");
@@ -233,11 +238,15 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	public double getCurrnetMaxValue() {
 		return this.CurrnetMaxValue;
 	}
-
-	@Override
+*/
+	
+//	@Override
 	/**
 	 * Writes a tile entity to NBT.
 	 */
+	/*
+	 * 
+	
 	public void writeToNBT(NBTTagCompound par1NBTTagCompound) {
 		super.writeToNBT(par1NBTTagCompound);
 		NBTTagList nbttaglist = new NBTTagList();
@@ -263,7 +272,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 			par1NBTTagCompound.setString("CustomName", this.field_94045_s);
 		}
 	}
-
+ */
 	/**
 	 * Returns the maximum stack size for a inventory slot. Seems to always be
 	 * 64, possibly will be extended. *Isn't this more of a set than a get?*
@@ -276,18 +285,25 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	 * Do not make give this method the name canInteractWith because it clashes
 	 * with Container
 	 */
+	/*
+	 * (non-Javadoc)
+	 * @see net.minecraft.inventory.IInventory#isUseableByPlayer(net.minecraft.entity.player.EntityPlayer)
+	 
 	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
 		return this.worldObj.getBlockTileEntity(this.xCoord, this.yCoord,
 				this.zCoord) != this ? false : par1EntityPlayer.getDistanceSq(
 				(double) this.xCoord + 0.5D, (double) this.yCoord + 0.5D,
 				(double) this.zCoord + 0.5D) <= 64.0D;
 	}
-
+*/
+	
 	/**
 	 * Causes the TileEntity to reset all it's cached values for it's container
 	 * block, blockID, metaData and in the case of chests, the adjcacent chest
 	 * check
 	 */
+	/*
+	 
 	public void updateContainingBlockInfo() {
 		super.updateContainingBlockInfo();
 	}
@@ -298,7 +314,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		return block != null && block instanceof IXPGrinderMk2 ? ((IXPGrinderMk2) block).isTrapped == this
 				.func_98041_l() : false;
 	}
-
+	 * 
+	 */
 	private void handleEnergy() {
 		int slot = 1;
 
@@ -310,6 +327,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 			}
 		}
 	}
+/*
+ * 
 
 	private void makeItems() {
 		int slot = 0;
@@ -379,12 +398,18 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 			CurrnetMaxValue = 0;
 		}
 	}
-
+ */
+	
+	
 	/**
 	 * Allows the entity to update its state. Overridden in most subclasses,
 	 * e.g. the mob spawner uses this to count ticks and creates a new spawn
 	 * inside its implementation.
 	 */
+	
+	/*
+	 * 
+	 
 	public void updateEntity() {
 		super.updateEntity();
 
@@ -405,10 +430,14 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		
 	}
 
+*/
 	/**
 	 * Called when a client event is received with the event number and
 	 * argument, see World.sendClientEvent
 	 */
+	/*
+	 * 
+	
 	public boolean receiveClientEvent(int par1, int par2) {
 		if (par1 == 1) {
 			this.numUsingPlayers = par2;
@@ -450,6 +479,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		return par1 == 0 ? slots_bottom : (par1 == 1 ? slots_top : slots_sides);
 	}
 
+ */
+	
 	/**
 	 * Returns true if automation is allowed to insert the given stack (ignoring
 	 * stack size) into the given slot.
@@ -458,9 +489,60 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		return true;
 	}
 
+@Override
+public int[] getAccessibleSlotsFromSide(int var1) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public boolean canInsertItem(int var1, ItemStack var2, int var3) {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean canExtractItem(int var1, ItemStack var2, int var3) {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public String func_145825_b() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public boolean func_145818_k_() {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public boolean isUseableByPlayer(EntityPlayer var1) {
+	// TODO Auto-generated method stub
+	return false;
+}
+
+@Override
+public void openChest() {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void closeChest() {
+	// TODO Auto-generated method stub
+	
+}
+
 	/**
 	 * invalidates a tile entity
 	 */
+	/*
+	 * 
+	
 	public void invalidate() {
 		super.invalidate();
 		this.updateContainingBlockInfo();
@@ -500,7 +582,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 
 	}
 
-	
+	 */
+	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	
 	

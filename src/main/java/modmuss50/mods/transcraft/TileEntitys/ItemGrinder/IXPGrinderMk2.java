@@ -21,9 +21,21 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class IXPGrinderMk2 extends BlockContainer {
-	private final Random random = new Random();
+	
+	protected IXPGrinderMk2(Material p_i45386_1_) {
+		super(p_i45386_1_);
+		// TODO Auto-generated constructor stub
+	}
 
+	/*
+	 * 
+	 
+	private final Random random = new Random();
+*/
 	/** Determines whether of not the chest is trapped. */
+	/*
+	 * 
+	 
 	public final int isTrapped;
 
 	public IXPGrinderMk2(int par1, int par2) {
@@ -32,23 +44,23 @@ public class IXPGrinderMk2 extends BlockContainer {
 		this.setCreativeTab(Transcraft.Transtab);
 		this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
 	}
-
+*/
 	/**
 	 * Is this block (a) opaque and (b) a full 1m cube? This determines whether
 	 * or not to render the shared face of two adjacent blocks and also whether
 	 * the player can attach torches, redstone wire, etc to this block.
 	 */
-	public boolean isOpaqueCube() {
-		return false;
-	}
+//	public boolean isOpaqueCube() {
+//		return false;
+//	}
 
 	/**
 	 * If this block doesn't render as an ordinary block it will return False
 	 * (examples: signs, buttons, stairs, etc)
 	 */
-	public boolean renderAsNormalBlock() {
-		return false;
-	}
+//	public boolean renderAsNormalBlock() {
+//		return false;
+//	}
 
 	/**
 	 * The type of render function that is called for this block
@@ -61,6 +73,10 @@ public class IXPGrinderMk2 extends BlockContainer {
 	 * Updates the blocks bounds based on its current state. Args: world, x, y,
 	 * z
 	 */
+	
+	/*
+	 * 
+	 
 	public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess,
 			int par2, int par3, int par4) {
 		if (par1IBlockAccess.getBlockId(par2, par3, par4 - 1) == this.blockID) {
@@ -76,10 +92,14 @@ public class IXPGrinderMk2 extends BlockContainer {
 					0.9375F);
 		}
 	}
-
+*/
+	
 	/**
 	 * Called when the block is placed in the world.
 	 */
+	/*
+	 * 
+	
 	public void onBlockPlacedBy(World par1World, int par2, int par3, int par4,
 			EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack) {
 		int l = par1World.getBlockId(par2, par3, par4 - 1);
@@ -116,11 +136,14 @@ public class IXPGrinderMk2 extends BlockContainer {
 					.setChestGuiName(par6ItemStack.getDisplayName());
 		}
 	}
-
+ */
 	/**
 	 * ejects contained items into the world, and notifies neighbours of an
 	 * update, as appropriate
 	 */
+	/*
+	 * 
+	 
 	public void breakBlock(World par1World, int par2, int par3, int par4,
 			int par5, int par6) {
 		TileIXP tileentitychest = (TileIXP) par1World.getBlockTileEntity(par2,
@@ -172,10 +195,14 @@ public class IXPGrinderMk2 extends BlockContainer {
 
 		super.breakBlock(par1World, par2, par3, par4, par5, par6);
 	}
-
+*/
+	
 	/**
 	 * Called upon block activation (right click on the block.)
 	 */
+	/*
+	 * 
+	 
 	public boolean onBlockActivated(World par1World, int par2, int par3,
 			int par4, EntityPlayer par5EntityPlayer, int par6, float par7,
 			float par8, float par9) {
@@ -200,11 +227,16 @@ public class IXPGrinderMk2 extends BlockContainer {
 			return true;
 		}
 	}
-
+*/
+	
 	/**
 	 * Gets the inventory of the chest at the specified coords, accounting for
 	 * blocks or ocelots on top of the chest, and double chests.
 	 */
+	
+	/*
+	 * 
+	
 	public IInventory getInventory(World par1World, int par2, int par3, int par4) {
 		Object object = (TileIXP) par1World
 				.getBlockTileEntity(par2, par3, par4);
@@ -259,7 +291,8 @@ public class IXPGrinderMk2 extends BlockContainer {
 			return (IInventory) object;
 		}
 	}
-
+ */
+	
 	/**
 	 * Returns a new instance of a block's tile entity class. Called on placing
 	 * the block.
@@ -277,23 +310,36 @@ public class IXPGrinderMk2 extends BlockContainer {
 		return true;
 	}
 
+	@Override
+	public TileEntity func_149915_a(World var1, int var2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	/**
 	 * If hasComparatorInputOverride returns true, the return value from this is
 	 * used instead of the redstone signal strength when this block inputs to a
 	 * comparator.
 	 */
+	/*
+	 * 
+	
 	public int getComparatorInputOverride(World par1World, int par2, int par3,
 			int par4, int par5) {
 		return Container.calcRedstoneFromInventory(this.getInventory(par1World,
 				par2, par3, par4));
 	}
-
-	@SideOnly(Side.CLIENT)
+ */
+//	@SideOnly(Side.CLIENT)
 	/**
 	 * When this method is called, your block should register all the icons it needs with the given IconRegister. This
 	 * is the only chance you get to register icons.
 	 */
+	/*
+	 * 
+	
 	public void registerIcons(IconRegister par1IconRegister) {
 		this.blockIcon = par1IconRegister.registerIcon("planks_oak");
 	}
+	 */
 }

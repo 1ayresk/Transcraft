@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
@@ -22,6 +23,21 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class GuiIxp extends GuiContainer {
+
+	public GuiIxp(Container par1Container) {
+		super(par1Container);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	protected void func_146976_a(float var1, int var2, int var3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/*
+	 * 
+	
 	private static final ResourceLocation field_110421_t = new ResourceLocation(
 			"transcraft", "textures/gui/IxpGrinder.png");
 	private IInventory upperChestInventory;
@@ -33,6 +49,7 @@ public class GuiIxp extends GuiContainer {
 	/**
 	 * window height is calculated with this values, the more rows, the heigher
 	 */
+	/*
 	private int inventoryRows;
 	private TileIXP te;
 
@@ -50,6 +67,10 @@ public class GuiIxp extends GuiContainer {
 	 * Draw the foreground layer for the GuiContainer (everything in front of
 	 * the items)
 	 */
+	
+	/*
+	 * 
+	
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.fontRenderer.drawString("Item Grinder", 8, 8, 4210752);
@@ -69,6 +90,7 @@ public class GuiIxp extends GuiContainer {
 
 	}
 
+
 	@SuppressWarnings("unchecked")
 	@Override
 	public void initGui() {
@@ -81,11 +103,16 @@ public class GuiIxp extends GuiContainer {
 		this.xSize_lo = (float) par1;
 		this.ySize_lo = (float) par2;
 	}
-
+ */
+	
 	/**
 	 * Draw the background layer for the GuiContainer (everything behind the
 	 * items)
 	 */
+	
+	/*
+	 * 
+	
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2,
 			int par3) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -112,9 +139,15 @@ public class GuiIxp extends GuiContainer {
 		// 126, this.xSize, 96);
 	}
 
+ */
+	
 	/**
 	 * This renders the player model in standard inventory position
 	 */
+	
+	/*
+	 * 
+	 
 	public static void drawPlayerModel(int par0, int par1, int par2,
 			float par3, float par4, EntityLivingBase par5EntityLivingBase) {
 		GL11.glEnable(GL11.GL_COLOR_MATERIAL);
@@ -219,5 +252,5 @@ public class GuiIxp extends GuiContainer {
 		PacketDispatcher.sendPacketToServer(packet);
 	}
 	
-	
+	*/
 }

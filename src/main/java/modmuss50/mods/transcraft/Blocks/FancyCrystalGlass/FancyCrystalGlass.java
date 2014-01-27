@@ -2,8 +2,13 @@ package modmuss50.mods.transcraft.Blocks.FancyCrystalGlass;
 
 import javax.swing.Icon;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import modmuss50.mods.transcraft.Transcraft;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
 public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
@@ -46,7 +51,7 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	 *            y
 	 * @param par4
 	 *            z
-	 * @param par5
+	 * @param block
 	 *            ID this block is asking to connect to (may be 0 if there is no
 	 *            block)
 	 * @param par6
@@ -54,53 +59,48 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	 * @return true if should connect
 	 */
 
-/*
- * 
- * 
 
-	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5, int par6) {
+
+	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, Block block, int par6) {
 		return true;
 	}
 
 	
-
+	/*
 	
 	@Override
 	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2,int par3, int par4, int par5) {
 		return getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,par5, icons);
 	}
 
-
 	
-
-	
-	public Icon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,
-			int par2, int par3, int par4, int par5, Icon[] icons) {
+	public Icon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5, Icon[] icons) 
+	{
 
 		boolean isOpenUp = false, isOpenDown = false, isOpenLeft = false, isOpenRight = false;
 
 		switch (par5) {
 		case 0:
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 - 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 - 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 - 1, par3, par4))) {
 				isOpenDown = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 + 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 + 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 + 1, par3, par4))) {
 				isOpenUp = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 - 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 - 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 - 1))) {
 				isOpenLeft = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 + 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 + 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 + 1))) {
 				isOpenRight = true;
 			}
@@ -139,25 +139,25 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 			break;
 		case 1:
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 - 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 - 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 - 1, par3, par4))) {
 				isOpenDown = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 + 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 + 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 + 1, par3, par4))) {
 				isOpenUp = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 - 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 - 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 - 1))) {
 				isOpenLeft = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 + 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 + 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 + 1))) {
 				isOpenRight = true;
 			}
@@ -196,25 +196,25 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 			break;
 		case 2:
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 - 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 - 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 - 1, par4))) {
 				isOpenDown = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 + 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 + 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 + 1, par4))) {
 				isOpenUp = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 - 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 - 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 - 1, par3, par4))) {
 				isOpenLeft = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 + 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 + 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 + 1, par3, par4))) {
 				isOpenRight = true;
 			}
@@ -253,25 +253,25 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 			break;
 		case 3:
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 - 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 - 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 - 1, par4))) {
 				isOpenDown = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 + 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 + 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 + 1, par4))) {
 				isOpenUp = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 - 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 - 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 - 1, par3, par4))) {
 				isOpenLeft = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2 + 1, par3, par4),
+					par1IBlockAccess.func_147439_a(par2 + 1, par3, par4),
 					par1IBlockAccess.getBlockMetadata(par2 + 1, par3, par4))) {
 				isOpenRight = true;
 			}
@@ -310,25 +310,25 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 			break;
 		case 4:
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 - 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 - 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 - 1, par4))) {
 				isOpenDown = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 + 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 + 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 + 1, par4))) {
 				isOpenUp = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 - 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 - 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 - 1))) {
 				isOpenLeft = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 + 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 + 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 + 1))) {
 				isOpenRight = true;
 			}
@@ -367,25 +367,25 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 			break;
 		case 5:
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 - 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 - 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 - 1, par4))) {
 				isOpenDown = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3 + 1, par4),
+					par1IBlockAccess.func_147439_a(par2, par3 + 1, par4),
 					par1IBlockAccess.getBlockMetadata(par2, par3 + 1, par4))) {
 				isOpenUp = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 - 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 - 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 - 1))) {
 				isOpenLeft = true;
 			}
 
 			if (shouldConnectToBlock(par1IBlockAccess, par2, par3, par4,
-					par1IBlockAccess.getBlockId(par2, par3, par4 + 1),
+					par1IBlockAccess.func_147439_a(par2, par3, par4 + 1),
 					par1IBlockAccess.getBlockMetadata(par2, par3, par4 + 1))) {
 				isOpenRight = true;
 			}
@@ -427,8 +427,10 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 
 		return icons[0];
 	}
-*/
 
+
+ * 
+ */
 	
 	/*
 	@Override
