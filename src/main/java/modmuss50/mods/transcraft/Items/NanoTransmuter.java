@@ -7,8 +7,8 @@ import net.minecraft.item.ItemStack;
 
 public class NanoTransmuter extends IItemTransmutter {
 
-	public NanoTransmuter(int id) {
-		super(id);
+	public NanoTransmuter() {
+		super();
 		// Constructor Configuration
 		maxStackSize = 64;
 		// setCreativeTab(Transcraft.Transtab);

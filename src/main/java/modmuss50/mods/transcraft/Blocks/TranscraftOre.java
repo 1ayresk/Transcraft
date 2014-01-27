@@ -24,7 +24,7 @@ public class TranscraftOre extends Block {
 
 	private static IIcon[] icons = new IIcon[types.length];
 
-	public TranscraftOre(int par1) {
+	public TranscraftOre() {
 		super(Material.field_151574_g);
 	}
 

@@ -3,8 +3,8 @@ package modmuss50.mods.transcraft.Blocks.Quartz;
 
 public class CutEnderQuartz extends org.zaet.api.IColoredBlock {
 
-	public CutEnderQuartz(int par1) {
-		super(par1);
+	public CutEnderQuartz() {
+		super();
 
 	}
 

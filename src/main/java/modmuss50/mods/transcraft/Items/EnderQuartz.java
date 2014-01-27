@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 
 public class EnderQuartz extends Item {
 
-	public EnderQuartz(int id) {
+	public EnderQuartz() {
 		super();
 		// Constructor Configuration
 		maxStackSize = 16;

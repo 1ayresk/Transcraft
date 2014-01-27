@@ -9,7 +9,7 @@ import net.minecraft.item.Item;
 
 public class DriedTransmutter extends Block {
 
-	public DriedTransmutter(int par1) {
+	public DriedTransmutter() {
 		super(Material.field_151576_e);
 	}
 

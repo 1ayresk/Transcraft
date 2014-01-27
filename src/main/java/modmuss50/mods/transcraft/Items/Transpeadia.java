@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 public class Transpeadia extends Item {
 
 
-	public Transpeadia(int id) {
+	public Transpeadia() {
 		super();
 		maxStackSize = 1;
 		setCreativeTab(Transcraft.Transtab);

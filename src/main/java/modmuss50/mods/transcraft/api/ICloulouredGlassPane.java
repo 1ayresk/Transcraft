@@ -31,7 +31,7 @@ public class ICloulouredGlassPane extends BlockPane {
 	 *            Block ID
 	 * 
 	 */
-	public ICloulouredGlassPane(int id) {
+	public ICloulouredGlassPane() {
 		super("transcraft:ClearGlass", "transcraft:ClearGlass",Material.field_151581_o, true);
 		func_149711_c(3.0F);
 		func_149752_b(4.0F);

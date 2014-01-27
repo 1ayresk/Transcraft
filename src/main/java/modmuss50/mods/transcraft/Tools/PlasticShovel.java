@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 
 public class PlasticShovel extends ItemSpade {
 
-	public PlasticShovel(int par1, ToolMaterial par2EnumToolMaterial) {
+	public PlasticShovel(ToolMaterial par2EnumToolMaterial) {
 		super(par2EnumToolMaterial);
 	}
 

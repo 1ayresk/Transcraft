@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EnderSword extends ItemSword {
 
-	public EnderSword(int par1, ToolMaterial par2EnumToolMaterial) {
+	public EnderSword(ToolMaterial par2EnumToolMaterial) {
 		super(par2EnumToolMaterial);
 	}
 

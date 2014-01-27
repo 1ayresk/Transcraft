@@ -8,68 +8,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 
-	public static int TranscraftOreID = 2000;
-	public static int OilOreID = 2001;
-
-	public static int BlueLightID = 2011;
-	public static int GreenLightID = 2012;
-	public static int OrangeLightID = 2013;
-	public static int DarkLightID = 2014;
-	public static int IronTorchID = 2015;
-	public static int BunkerBlockID = 2002;
-	public static int ClearGlassID = 2003;
-	public static int ObsidianLeverID = 2004;
-	public static int BunkerStairID = 2005;
-	public static int SmoothBunkerBlockID = 2006;
-	public static int SmoothBunkerStairID = 2007;
-	public static int DriedTransmutterID = 2008;
-	public static int ThinClearGlassID = 2009;
-	public static int FancyCrystalGlassID = 2010;
-	public static int TransManiaOreID = 2011;
-
-	public static int BlockEnderQuartzID = 2113;
-	public static int BlockCutEnderQuartzID = 2114;
-	public static int BlockEnderQuartzBrickID = 2115;
-	public static int BlockEnderQuartzBigBrickID = 2116;
-
-	public static int DimPortalBlockID = 2200;
-	public static int DimPortalEscapeBlockID = 2201;
-
-	public static int ComIronOreID = 2021;
-	public static int ComGoldOreID = 2022;
-	public static int ComTransmutterOreID = 2023;
-	public static int ComOilOreID = 2024;
-
-//	public static int ixpGrinderID = 2025;
-
-	public static int LiquidTransmutterFluidStillID = 2101;
-
-	public static int TranscrafterID = 2112;
-	public static int LTranscrafterID = 2113;
-
-	public static int BasicTransmuterID = 5000;
-	public static int QuadTransmuterID = 5001;
-	public static int NanoTransmuterID = 5002;
-	public static int HotdogID = 5003;
-	public static int OilID = 5011;
-	public static int PlasticID = 5012;
-	public static int IronStickID = 5013;
-	public static int HardendPlasticID = 5014;
-	public static int EnderGemID = 5015;
-	public static int EnderQuartzID = 5016;
-	public static int DarkEndershardID = 5017;
-	public static int BucketLiquidTrasnmutterID = 5018;
-	public static int TranspeadiaID = 5019;
-	public static int TransmaniaTeleporterID = 5020;
-
-	public static int PlasticAxeID = 5031;
-	public static int PlasticHoeID = 5032;
-	public static int PlasticPickaxeID = 5033;
-	public static int PlasticShovelID = 5034;
-	public static int PlasticSwordID = 5035;
-	public static int BunkerPickID = 5036;
-	public static int EnderSwordID = 5037;
-
 	public static int PlasticHelmetID = 5041;
 	public static int PlasticChestID = 5042;
 	public static int PlasticLegsID = 5043;

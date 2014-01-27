@@ -9,7 +9,7 @@ import net.minecraft.item.Item;
 
 public class OilOre extends Block {
 
-	public OilOre(int par1) {
+	public OilOre() {
 		super(Material.field_151576_e);
 	}
 

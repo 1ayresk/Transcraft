@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 
 public class Plastic extends Item {
 
-	public Plastic(int id) {
+	public Plastic() {
 		super();
 		// Constructor Configuration
 		maxStackSize = 64;

@@ -21,96 +21,96 @@ public class LoadItems {
 
 	public static void LoadItems() {
 		TranscraftItems.BasicTransmuter = new BasicTransmuter(
-				Config.BasicTransmuterID)
+				)
 				.setUnlocalizedName("transcraft:BasicTransmuter")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:BasicTransmuter");
 
 		TranscraftItems.QuadTransmuter = new modmuss50.mods.transcraft.Items.QuadTransmuter(
-				Config.QuadTransmuterID)
+				)
 				.setUnlocalizedName("Transcraft:QuadTransmuter")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:QuadTransmuter");
 
 		TranscraftItems.NanoTransmuter = new modmuss50.mods.transcraft.Items.NanoTransmuter(
-				Config.NanoTransmuterID)
+				)
 				.setUnlocalizedName("Transcraft:NanoTransmuter")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:NanoTransmuter");
 
 		TranscraftItems.Oil = new modmuss50.mods.transcraft.Items.Oil(
-				Config.OilID).setUnlocalizedName("Transcraft:Oil")
+				).setUnlocalizedName("Transcraft:Oil")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:Oil");
 		
 		TranscraftItems.Plastic = new modmuss50.mods.transcraft.Items.Plastic(
-				Config.PlasticID).setUnlocalizedName("Transcraft:Plastic")
+				).setUnlocalizedName("Transcraft:Plastic")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:Plastic");
 
 		TranscraftItems.IronStick = new modmuss50.mods.transcraft.Items.IronStick(
-				Config.IronStickID).setUnlocalizedName("Transcraft:IronStick")
+				).setUnlocalizedName("Transcraft:IronStick")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:BasicTransmuter");
 		TranscraftItems.HardendPlastic = new modmuss50.mods.transcraft.Items.HardendPlastic(
-				Config.HardendPlasticID)
+				)
 				.setUnlocalizedName("Transcraft:HardendPlastic")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:IronStick");
 
 		TranscraftItems.EnderGem = new modmuss50.mods.transcraft.Items.EnderGem(
-				Config.EnderGemID).setUnlocalizedName("Transcraft:EnderGem")
+				).setUnlocalizedName("Transcraft:EnderGem")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:EnderGem");
 
 		TranscraftItems.EnderQuartz = new modmuss50.mods.transcraft.Items.EnderQuartz(
-				Config.EnderQuartzID)
+				)
 				.setUnlocalizedName("Transcraft:EnderQuartz")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:EnderQuartz");
 
 		TranscraftItems.DarkEndershard = new modmuss50.mods.transcraft.Items.DarkEndershard(
-				Config.DarkEndershardID)
+				)
 				.setUnlocalizedName("Transcraft:DarkEndershard")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:DarkEndershard");
 
 		TranscraftItems.HotDog = new modmuss50.mods.transcraft.Items.Food.HotDog(
-				Config.HotdogID).setUnlocalizedName("Transcraft:HotDog")
+				).setUnlocalizedName("Transcraft:HotDog")
 				.setCreativeTab(Transcraft.Transtab);
 
 		TranscraftItems.PlasticAxe = new modmuss50.mods.transcraft.Tools.PlasticAxe(
-				Config.PlasticAxeID, TranscraftUtil.PlasticTool)
+				TranscraftUtil.PlasticTool)
 				.setUnlocalizedName("Transcraft:PlasticAxe").setCreativeTab(
 						Transcraft.Transtab);
 
 		TranscraftItems.PlasticHoe = new modmuss50.mods.transcraft.Tools.PlasticHoe(
-				Config.PlasticHoeID, TranscraftUtil.PlasticTool)
+				TranscraftUtil.PlasticTool)
 				.setUnlocalizedName("Transcraft:PlasticHoe").setCreativeTab(
 						Transcraft.Transtab);
 
 		TranscraftItems.PlasticPickaxe = new modmuss50.mods.transcraft.Tools.PlasticPickaxe(
-				Config.PlasticPickaxeID, TranscraftUtil.PlasticTool)
+				TranscraftUtil.PlasticTool)
 				.setUnlocalizedName("Transcraft:PlasticPickaxe")
 				.setCreativeTab(Transcraft.Transtab);
 
 		TranscraftItems.PlasticShovel = new modmuss50.mods.transcraft.Tools.PlasticShovel(
-				Config.PlasticShovelID, TranscraftUtil.PlasticTool)
+				TranscraftUtil.PlasticTool)
 				.setUnlocalizedName("Transcraft:PlasticShovel").setCreativeTab(
 						Transcraft.Transtab);
 
 		TranscraftItems.PlasticSword = new modmuss50.mods.transcraft.Tools.PlasticSword(
-				Config.PlasticSwordID, TranscraftUtil.PlasticTool)
+				TranscraftUtil.PlasticTool)
 				.setUnlocalizedName("Transcraft:PlasticSword").setCreativeTab(
 						Transcraft.Transtab);
 
 		TranscraftItems.BunkerPick = new modmuss50.mods.transcraft.Tools.BunkerPick(
-				Config.BunkerPickID, TranscraftUtil.BunkerToolEnum)
+				TranscraftUtil.BunkerToolEnum)
 				.setUnlocalizedName("Transcraft:EnderPick").setCreativeTab(
 						Transcraft.Transtab);
 
 		TranscraftItems.EnderSword = new modmuss50.mods.transcraft.Tools.EnderSword(
-				Config.EnderSwordID, TranscraftUtil.EnderToolEnum)
+				TranscraftUtil.EnderToolEnum)
 				.setUnlocalizedName("Transcraft:EnderSword")
 				.setCreativeTab(Transcraft.Transtab).setFull3D();
 
@@ -151,7 +151,7 @@ public class LoadItems {
 				EnderEnum, 0, 3)).setUnlocalizedName("Transcraft:EnderBoots")
 				.setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.Transpedia = new Transpeadia(Config.TranspeadiaID)
+		TranscraftItems.Transpedia = new Transpeadia()
 				.setUnlocalizedName("Transcraft:Transpedia")
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:Transpedia");

@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 
 public class PlasticHoe extends ItemHoe {
 
-	public PlasticHoe(int par1, ToolMaterial par2EnumToolMaterial) {
+	public PlasticHoe(ToolMaterial par2EnumToolMaterial) {
 		super(par2EnumToolMaterial);
 	}
 

@@ -4,7 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class ComTransmutterOre extends Block {
-	public ComTransmutterOre(int par1) {
+	public ComTransmutterOre() {
 		super(Material.field_151576_e);
 	}
 

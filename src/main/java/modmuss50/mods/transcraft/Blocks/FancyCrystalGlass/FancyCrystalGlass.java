@@ -17,8 +17,8 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	protected String folder;
 	private int renderPass;
 
-	public FancyCrystalGlass(int par1, String location, boolean hasAlpha) {
-		super(par1, Material.field_151581_o);
+	public FancyCrystalGlass( String location, boolean hasAlpha) {
+		super();
 		renderPass = hasAlpha ? 1 : 0;
 		this.func_149647_a(Transcraft.Transtab);
 		this.func_149711_c(0.3f);

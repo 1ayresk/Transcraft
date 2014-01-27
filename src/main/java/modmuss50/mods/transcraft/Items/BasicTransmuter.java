@@ -5,8 +5,8 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 
 public class BasicTransmuter extends IItemTransmutter {
 
-	public BasicTransmuter(int id) {
-		super(id);
+	public BasicTransmuter() {
+		super();
 		// Constructor Configuration
 		maxStackSize = 64;
 		// setCreativeTab(Transcraft.Transtab);

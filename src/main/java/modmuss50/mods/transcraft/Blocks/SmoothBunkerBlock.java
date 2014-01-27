@@ -5,7 +5,7 @@ import net.minecraft.block.material.Material;
 
 public class SmoothBunkerBlock extends Block {
 
-	public SmoothBunkerBlock(int par1) {
+	public SmoothBunkerBlock() {
 		super(Material.field_151574_g);
 	}
 

@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 public class PlasticAxe extends ItemAxe {
 
-	public PlasticAxe(int par1, ToolMaterial par2EnumToolMaterial) {
+	public PlasticAxe(ToolMaterial par2EnumToolMaterial) {
 		super(par2EnumToolMaterial);
 	}
 

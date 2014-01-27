@@ -21,7 +21,7 @@ public class IColoredBlock extends Block
 	 * @param id Block ID
 	 * 
 	 */
-	public IColoredBlock(int id)
+	public IColoredBlock()
 	{
 		super(Material.field_151576_e);
 		func_149711_c(3.0F);

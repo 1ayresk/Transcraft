@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 
 public class IronStick extends Item {
 
-	public IronStick(int id) {
+	public IronStick() {
 		super();
 		// Constructor Configuration
 		maxStackSize = 64;

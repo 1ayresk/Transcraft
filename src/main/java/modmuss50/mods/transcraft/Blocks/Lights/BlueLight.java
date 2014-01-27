@@ -5,7 +5,7 @@ import net.minecraft.block.material.Material;
 
 public class BlueLight extends Block {
 
-	public BlueLight(int par1) {
+	public BlueLight() {
 		super(Material.field_151581_o);
 	}
 

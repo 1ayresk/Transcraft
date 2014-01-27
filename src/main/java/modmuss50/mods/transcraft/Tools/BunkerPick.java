@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BunkerPick extends ItemPickaxe {
 
-	public BunkerPick(int par1, ToolMaterial par2EnumToolMaterial) {
+	public BunkerPick(ToolMaterial par2EnumToolMaterial) {
 		super(par2EnumToolMaterial);
 	}
 

@@ -5,8 +5,8 @@ public class EnderQuartz extends org.zaet.api.IColoredBlock {
 
 	public static String texName;
 
-	public EnderQuartz(int par1) {
-		super(par1);
+	public EnderQuartz() {
+		super();
 	}
 
 }

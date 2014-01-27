@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 
 public class EnderGem extends Item {
 
-	public EnderGem(int id) {
+	public EnderGem() {
 		super();
 		// Constructor Configuration
 		maxStackSize = 16;

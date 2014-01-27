@@ -7,7 +7,7 @@ import net.minecraft.item.ItemSword;
 
 public class PlasticSword extends ItemSword {
 
-	public PlasticSword(int par1, ToolMaterial par2EnumToolMaterial) {
+	public PlasticSword(ToolMaterial par2EnumToolMaterial) {
 		super(par2EnumToolMaterial);
 	}
 

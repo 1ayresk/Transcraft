@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 
 public class PlasticPickaxe extends ItemPickaxe {
 
-	public PlasticPickaxe(int par1, ToolMaterial par2EnumToolMaterial) {
+	public PlasticPickaxe(ToolMaterial par2EnumToolMaterial) {
 		super(par2EnumToolMaterial);
 	}
 

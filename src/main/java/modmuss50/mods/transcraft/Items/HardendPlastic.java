@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 
 public class HardendPlastic extends Item {
 
-	public HardendPlastic(int id) {
+	public HardendPlastic() {
 		super();
 		// Constructor Configuration
 		maxStackSize = 64;

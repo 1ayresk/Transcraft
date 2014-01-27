@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 
 public class IItemTransmutter extends Item {
 
-	public IItemTransmutter(int par1) {
+	public IItemTransmutter() {
 		super();
 	}
 

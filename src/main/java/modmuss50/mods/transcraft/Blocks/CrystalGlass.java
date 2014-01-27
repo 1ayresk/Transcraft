@@ -8,8 +8,8 @@ public class CrystalGlass extends org.zaet.api.IColoredBlock {
 
 	public static String texName;
 
-	public CrystalGlass(int par1) {
-		super(par1, Material.field_151581_o);
+	public CrystalGlass() {
+		super();
 	}
 
 	@Override

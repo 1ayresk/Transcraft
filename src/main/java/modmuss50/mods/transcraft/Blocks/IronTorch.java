@@ -8,7 +8,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class IronTorch extends BlockTorch {
-	public IronTorch(int par1) {
+	public IronTorch() {
 		super();
 		this.func_149675_a(true);
 	}
