@@ -20,8 +20,11 @@ public class GuiHand implements IGuiHandler {
 
 
 		if (ID == 2) {
-			return new ContainerIXP(player.inventory, x, y, z);
-		} else if (ID == 1) {
+//			return new ContainerIXP(player.inventory, x, y, z);
+			return null;
+		} 
+		else if (ID == 1) 
+		{
 			return new ContainerTC(player.inventory, world, x, y, z);
 		} else {
 			return null;
@@ -41,7 +44,8 @@ public class GuiHand implements IGuiHandler {
 		}
 
 		if (ID == 2) {
-			return new GuiIxp(player.inventory, (TileIXP) te);
+			//return new GuiIxp(player.inventory, (TileIXP) te);
+			return null;
 		} else if (ID == 1) {
 			return new GuiTC(player.inventory, world, x, y, z);
 		} else {

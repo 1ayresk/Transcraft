@@ -23,5 +23,8 @@ public class ArmorPlasticChestplate extends ItemArmor // implements
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticChest");
 	}
 
-
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+        
+        return "transcraft:textures/armor/PlasticArmor_1.png";
+	}
 }

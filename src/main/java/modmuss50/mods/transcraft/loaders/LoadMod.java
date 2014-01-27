@@ -16,13 +16,17 @@ import modmuss50.mods.transcraft.command.CommandTranscraftVersion;
 import modmuss50.mods.transcraft.helpers.Config;
 import modmuss50.mods.transcraft.helpers.EventMobDeath;
 import modmuss50.mods.transcraft.helpers.FuelHandler;
+import modmuss50.mods.transcraft.helpers.GuiHand;
+import modmuss50.mods.transcraft.helpers.TickHelper;
 import modmuss50.mods.transcraft.helpers.TranscraftUtil;
 import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 
@@ -94,12 +98,7 @@ public class LoadMod {
 		BiomeManager.addSpawnBiome(TranscraftUtil.TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TranscraftUtil.TransmutterBiome);
  */
-	/*
-	 * 	
 	
-		FMLLog.info("[TRANSCRAFT]	Loading Helper");
-		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
- */
 		if (event.getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());
 		}
@@ -108,6 +107,11 @@ public class LoadMod {
 
 		Addons.addAddons();
 		Addons.loadAddons(0);
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(Transcraft.instance, new GuiHand());
+
+		FMLCommonHandler.instance().bus().register(new TickHelper());
+        MinecraftForge.EVENT_BUS.register(new TickHelper());
 	}
 
 	public static void init(FMLInitializationEvent event) {

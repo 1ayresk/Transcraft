@@ -23,4 +23,10 @@ public class ArmorPlasticLegs extends ItemArmor {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticLegs");
 	}
 
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+        
+        return "transcraft:textures/armor/PlasticArmor_2.png";
+	}
+	
+	
 }

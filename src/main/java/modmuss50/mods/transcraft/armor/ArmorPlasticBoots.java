@@ -25,4 +25,9 @@ public class ArmorPlasticBoots extends ItemArmor {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticBoots");
 	}
 	
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+        
+        return "transcraft:textures/armor/PlasticArmor_1.png";
+}
+	
 }

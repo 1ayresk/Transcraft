@@ -2,6 +2,7 @@ package modmuss50.mods.transcraft.Tools;
 
 import java.util.List;
 
+import modmuss50.mods.transcraft.Listener.ListenerRegisterSound;
 import modmuss50.mods.transcraft.helpers.Config;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -84,9 +85,7 @@ public class EnderSword extends ItemSword {
 	 * Current implementations of this method in child classes do not use the entry argument beside ev. They just raise
 	 * the damage on the stack.
 	 */
-	public boolean hitEntity(ItemStack par1ItemStack,
-			EntityLivingBase par2EntityLivingBase,
-			EntityLivingBase par3EntityLivingBase) {
+	public boolean hitEntity(ItemStack par1ItemStack,EntityLivingBase par2EntityLivingBase,EntityLivingBase par3EntityLivingBase) {
 		par3EntityLivingBase.playSound("transcraft:swordHit", 10F, 1F);
 		par1ItemStack.damageItem(1, par3EntityLivingBase);
 		return true;

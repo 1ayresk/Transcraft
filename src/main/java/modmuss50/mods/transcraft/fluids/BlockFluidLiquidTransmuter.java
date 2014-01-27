@@ -20,22 +20,24 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockFluidLiquidTransmuter extends BlockFluidClassic {
+	
+	
 	public static Icon springWaterStillIcon;
 	public static Icon springWaterFlowingIcon;
 
 	
-	/*
-	 * 
-	 
 	
 	public BlockFluidLiquidTransmuter(int id, Fluid fluid, Material material) {
 		super(id, fluid, material);
 		for (int i = 8; i < 11; i++) {
-			displacementIds.put(i, false);
+	//		displacementIds.put(i, false);
 		}
 
 	}
 
+	/*
+	 * 
+	 
 	// @Override
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World par1World, int par2, int par3,

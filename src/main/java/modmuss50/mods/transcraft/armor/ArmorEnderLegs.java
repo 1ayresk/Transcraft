@@ -23,5 +23,10 @@ public class ArmorEnderLegs extends ItemArmor // implements
 	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderLegs");
 	}
+	
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+     
+        return "transcraft:textures/armor/EnderArmor_2.png";
+}
 
 }
