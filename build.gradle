@@ -8,7 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.1-SNAPSHOT'
-		files('libs/NEI.jar', 'libs/FMP.jar', 'libs/CCL.jar', 'libs/CCC.jar', 'libs/WAILA.jar')
+		//files('libs/NEI.jar', 'libs/FMP.jar', 'libs/CCL.jar', 'libs/CCC.jar', 'libs/WAILA.jar')
 	}
 }
 

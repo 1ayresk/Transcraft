@@ -57,8 +57,8 @@ public class TranspediaGui extends GuiContainer {
 	public void initGui() {
 		super.initGui();
 
-		this.field_146292_n.add(new GuiButton(1, this.width / 2 - 123,height / 2 + 100, 20, 20, "<"));
-		this.field_146292_n.add(new GuiButton(0, this.width / 2 + 48,height / 2 + 100, 20, 20, ">"));
+		this.field_146292_n.add(new GuiButton(1, this.field_147003_i / 2 - 123,field_147009_r / 2 + 100, 20, 20, "<"));
+		this.field_146292_n.add(new GuiButton(0, this.field_147003_i / 2 + 48,field_147009_r / 2 + 100, 20, 20, ">"));
 
 	}
 
@@ -73,35 +73,16 @@ public class TranspediaGui extends GuiContainer {
 	 * Draw the background layer for the GuiContainer (everything behind the
 	 * items)
 	 */
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2,
-			int par3) {
+	protected void func_146976_a(float par1, int par2,int par3) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		field_110421_t = new ResourceLocation("transcraft","textures/gui/Transpedia/Transpedia_" + pageNumber + ".png");
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
-		int k = (this.width - this.xSize_lo) / 2;
-		int l = (this.height - this.xSize_lo) / 2;
-		this.drawTexturedModalRect(k, l, 0, 0, xSize_lo, xSize_lo);
+		int k = this.field_147003_i;
+	    int l = this.field_147009_r;
+	    this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f, this.field_147000_g);
 
 		if (pageNumber != 0) {
-			if (this.mc.thePlayer.username.contains("shifu_")) {
-				drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)
-						- this.xSize_lo, (float) (l + 60 - 10) - this.ySize_lo,
-						new EntityIronGolem(this.mc.theWorld));
-			} else if (this.mc.thePlayer.username.contains("mark123mark")) {
-				drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)
-						- this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo,
-						new NukeCreeper(this.mc.theWorld));
-			} else if (this.mc.thePlayer.username.contains("tattyseal")) {
-				EntitySheep toby = new EntitySheep(this.mc.theWorld);
-				toby.setFleeceColor(5);
-				drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)
-						- this.xSize_lo, (float) (l + 60 - 20) - this.ySize_lo,
-						toby);
-			} else {
-				drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)
-						- this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo,
-						this.mc.thePlayer);
-			}
+				drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)- this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo,this.field_146297_k.thePlayer);
 		}
 	}
 
@@ -184,54 +165,11 @@ public class TranspediaGui extends GuiContainer {
 		OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
 	}
 
-	/**
-	 * This renders the player model in standard inventory position
-	 */
-	public static void drawBigPlayerModel(int par0, int par1, int par2,
-			float par3, float par4, EntityLivingBase par5EntityLivingBase) {
-		GL11.glEnable(GL11.GL_COLOR_MATERIAL);
-		GL11.glPushMatrix();
-		GL11.glTranslatef((float) par0, (float) par1, 50.0F);
-		GL11.glScalef(100f, 100f, 100f);
-		GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
-		float f2 = par5EntityLivingBase.renderYawOffset;
-		float f3 = par5EntityLivingBase.rotationYaw;
-		float f4 = par5EntityLivingBase.rotationPitch;
-		float f5 = par5EntityLivingBase.prevRotationYawHead;
-		float f6 = par5EntityLivingBase.rotationYawHead;
-		GL11.glRotatef(135.0F, 0.0F, 1.0F, 0.0F);
-		RenderHelper.enableStandardItemLighting();
-		GL11.glRotatef(-135.0F, 0.0F, 1.0F, 0.0F);
-		GL11.glRotatef(-((float) Math.atan((double) (par4 / 40.0F))) * 20.0F,
-				1.0F, 0.0F, 0.0F);
-		par5EntityLivingBase.renderYawOffset = (float) Math
-				.atan((double) (par3 / 40.0F)) * 20.0F;
-		par5EntityLivingBase.rotationYaw = (float) Math
-				.atan((double) (par3 / 40.0F)) * 40.0F;
-		par5EntityLivingBase.rotationPitch = -((float) Math
-				.atan((double) (par4 / 40.0F))) * 20.0F;
-		par5EntityLivingBase.rotationYawHead = par5EntityLivingBase.rotationYaw;
-		par5EntityLivingBase.prevRotationYawHead = par5EntityLivingBase.rotationYaw;
-		GL11.glTranslatef(0.0F, par5EntityLivingBase.yOffset, 0.0F);
-		RenderManager.instance.playerViewY = 180.0F;
-		RenderManager.instance.func_147940_a(par5EntityLivingBase,
-				0.0D, 0.0D, 0.0D, 0.0F, 1.0F);
-		par5EntityLivingBase.renderYawOffset = f2;
-		par5EntityLivingBase.rotationYaw = f3;
-		par5EntityLivingBase.rotationPitch = f4;
-		par5EntityLivingBase.prevRotationYawHead = f5;
-		par5EntityLivingBase.rotationYawHead = f6;
-		GL11.glPopMatrix();
-		RenderHelper.disableStandardItemLighting();
-		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-		OpenGlHelper.setActiveTexture(OpenGlHelper.lightmapTexUnit);
-		GL11.glDisable(GL11.GL_TEXTURE_2D);
-		OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
-	}
+	
 
 	public void actionPerformed(GuiButton par0Button) {
 		/** Back **/
-		if (par0Button.id == 1) 
+		if (par0Button.field_146127_k == 1) 
 		{
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 				pageNumber = 0;
@@ -246,12 +184,13 @@ public class TranspediaGui extends GuiContainer {
 		}
 
 		/** Next **/
-		if (par0Button.id == 0) {
+		if (par0Button.field_146127_k == 0) {
 			if(pageNumber != numberofpages)
 			{
 			pageNumber += 1;
 			}
 		}
 	}
+
 
 }

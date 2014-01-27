@@ -3,9 +3,15 @@ package modmuss50.mods.transcraft.addons.fmp;
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOre;
 
-public class TranscraftFMP implements IPartFactory {
+public class TranscraftFMP {//implements IPartFactory {
 
-	public static void registerBlocks() {
+	
+	
+	public static void registerBlocks() 
+	{
+		/*
+		 * 
+		 
 		for (int i = 0; i < TranscraftOre.types.length; i++) {
 			BlockMicroMaterial.createAndRegister(
 					TranscraftBlocks.TranscraftOre, i);
@@ -31,6 +37,7 @@ public class TranscraftFMP implements IPartFactory {
 				.createAndRegister(TranscraftBlocks.ComTransmutterOre);
 		BlockMicroMaterial.createAndRegister(TranscraftBlocks.ComOilOre);
 
+*/
 		/*
 		 * for(int i = 0; i < 16; i++) {
 		 * BlockMicroMaterial.createAndRegister(Transcraft.ClearGlass, i); }
@@ -56,11 +63,13 @@ public class TranscraftFMP implements IPartFactory {
 		 */
 
 	}
+/*
+ * 
 
 	@Override
 	public TMultiPart createPart(String arg0, boolean arg1) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+ */
 }

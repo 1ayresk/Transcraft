@@ -6,8 +6,11 @@ import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.FMLLog;
 
-public class TranscraftProvider implements IWailaDataProvider {
+public class TranscraftProvider{// implements IWailaDataProvider {
+/*
+ * 
 
+	
 	@Override
 	public ItemStack getWailaStack(IWailaDataAccessor accessor,
 			IWailaConfigHandler config) {
@@ -51,4 +54,6 @@ public class TranscraftProvider implements IWailaDataProvider {
 		registrar.registerBodyProvider(new TranscraftProvider(),
 				TranscraftBlocks.ObsidianLever.blockID);
 	}
+	
+	 */
 }

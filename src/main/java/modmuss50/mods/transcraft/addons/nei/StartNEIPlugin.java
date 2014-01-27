@@ -7,7 +7,7 @@ public class StartNEIPlugin {
 
 	public static void START() {
 		if (FMLCommonHandler.instance().getSide().isClient()) {
-			API.registerRecipeHandler(new TranscraftNEI());
+	//		API.registerRecipeHandler(new TranscraftNEI());
 		}
 	}
 

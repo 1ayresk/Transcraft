@@ -15,7 +15,11 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TranscraftNEI extends TemplateRecipeHandler {
+public class TranscraftNEI{// extends TemplateRecipeHandler {
+	
+	/*
+	 * 
+
 	public class CachedShapedRecipe extends CachedRecipe {
 		public ArrayList<PositionedStack> ingredients;
 		public PositionedStack result;
@@ -40,6 +44,9 @@ public class TranscraftNEI extends TemplateRecipeHandler {
 		 * @param height
 		 * @param items an ItemStack[] or ItemStack[][]
 		 */
+	
+	/*
+	 * 
 		public void setIngredients(int width, int height, Object[] items) {
 			for (int x = 0; x < width; x++) {
 				for (int y = 0; y < height; y++) {
@@ -178,10 +185,10 @@ public class TranscraftNEI extends TemplateRecipeHandler {
 		}
 
 		for (int i = 0; i < items.length; i++) {
-			if (items[i] instanceof List && ((List<?>) items[i]).isEmpty())// ore
-																			// handler,
-																			// no
-																			// ores
+			if (items[i] instanceof List && ((List<?>) items[i]).isEmpty())
+																			
+																			
+																			
 				return null;
 		}
 
@@ -236,4 +243,5 @@ public class TranscraftNEI extends TemplateRecipeHandler {
 
 		return true;
 	}
+	 */
 }
