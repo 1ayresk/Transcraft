@@ -43,19 +43,6 @@ public class LoadMod {
 		Transcraft.Coproxy.registerHandlers();
 		Transcraft.Coproxy.registerTickHandlers();
 
-		/*
-		 * 
-		 
-		
-		if (TranscraftUtil.DEVSTATUS = true) {
-			if (FMLCommonHandler.instance().getSide().isClient()) {
-				FMLLog.info("[TRANSCRAFT]	Adding Dev Message");
-
-				TickRegistry.registerTickHandler(new DevMessageTick(),
-						Side.CLIENT);
-			}
-		}
-*/
 		FMLLog.info("[TRANSCRAFT]	Loading Config");
 		Config.initConfig();
 
@@ -80,13 +67,9 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Adding Recipes");
 		RecipeLoader.LoadRecipe();
 
-		/*
-		 * 
-		
-		
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
-	 */	
+
 		
 		
 /*
@@ -135,13 +118,6 @@ public class LoadMod {
 		
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
-//		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
-//		NetworkRegistry.instance().registerGuiHandler(Transcraft.instance,
-//				new GuiHand());
-
-		// MinecraftForge.EVENT_BUS.register(new EventCloakRender());
-
-		
 		Addons.loadAddons(1);
 	}
 
