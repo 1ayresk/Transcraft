@@ -214,7 +214,6 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		NBTTagList nbttaglist = par1NBTTagCompound.getTagList("Items");
 		this.chestContents = new ItemStack[this.getSizeInventory()];
 
-		System.out.println("READING TILE");
 
 		if (par1NBTTagCompound.hasKey("CustomName")) {
 			this.field_94045_s = par1NBTTagCompound.getString("CustomName");
@@ -255,7 +254,6 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		super.writeToNBT(par1NBTTagCompound);
 		NBTTagList nbttaglist = new NBTTagList();
 
-		System.out.println("SAVING TILE");
 
 		
 		par1NBTTagCompound.setDouble("ItemEssence", this.CurrentIXPValue);
@@ -398,14 +396,6 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 	public void updateEntity() {
 		super.updateEntity();
 
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER)
-		{
-			System.out.println("SERVER "+ this.CurrentIXPValue);
-		}
-		else
-		{
-			System.out.println("CLIENT "+ this.CurrentIXPValue);
-		}
 		handleEnergy();
 		
 		makeItems();
