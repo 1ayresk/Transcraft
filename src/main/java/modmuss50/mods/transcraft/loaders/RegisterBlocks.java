@@ -14,6 +14,7 @@ import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import modmuss50.zaetApi.api.IColoredItemBlock;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -124,7 +125,7 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(TranscraftBlocks.Transcrafter,
 				"Transcrafter");
 
-//		GameRegistry.registerBlock(TranscraftBlocks.ixpGrinder, "ItemGrinder");
+		GameRegistry.registerBlock(TranscraftBlocks.ixpGrinder, "ItemGrinder");
 
 		registerItem(TranscraftItems.BasicTransmuter);
 		registerItem(TranscraftItems.QuadTransmuter);
@@ -158,7 +159,7 @@ public class RegisterBlocks {
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
 		GameRegistry.registerTileEntity(TileIXP.class, "TileItemGrinder");
-		// TileEntity.addMapping(TileIXP.class, "TileItemGrinder2");
+		TileEntity.addMapping(TileIXP.class, "TileItemGrinder2");
 
 	}
 

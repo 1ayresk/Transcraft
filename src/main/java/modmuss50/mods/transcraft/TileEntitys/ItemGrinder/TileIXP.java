@@ -10,6 +10,7 @@ import java.util.List;
 import com.google.common.io.ByteArrayDataInput;
 
 import modmuss50.mods.transcraft.Items.TranscraftItems;
+import modmuss50.mods.transcraft.TileEntitys.TileBase;
 import modmuss50.mods.transcraft.api.IItemTransmutter;
 import modmuss50.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
@@ -22,6 +23,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -30,7 +32,7 @@ import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
+public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 	private ItemStack[] chestContents = new ItemStack[36];
 	private static final int[] slots_top = new int[] { 0 };
 	private static final int[] slots_bottom = new int[] { 2, 1 };
@@ -326,14 +328,11 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		int slot = 0;
 		int mainSlot = 1;
 
-//		int BASIC = Config.BasicItemEssence;
-//		int QUAD = Config.QuadItemEssence;
-//		int NANO = Config.NanoItemEssence;
+		int BASIC = Config.BasicItemEssence;
+		int QUAD = Config.QuadItemEssence;
+		int NANO = Config.NanoItemEssence;
 
-		int BASIC = 1;
-		int QUAD = 1;
-		int NANO = 1;
-		
+
 		
 		if (BASIC == 0) {
 			BASIC = BASIC + 1;
@@ -412,6 +411,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		makeItems();
 		++this.ticksSinceSync;
 
+		
+		PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 		
 	}
@@ -512,7 +513,21 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	}
 
 	
+	
+	public void writeCustomNBT(NBTTagCompound cmp) {
+		super.writeCustomNBT(cmp);
+		
+		cmp.setDouble("IEV", CurrentIXPValue);
+	}
+	
+	
+	public void readCustomNBT(NBTTagCompound cmp) {
+		super.readCustomNBT(cmp);
+		
+		CurrentIXPValue = cmp.getDouble("IEV");
+		
 
+	}
 	
 	
 }

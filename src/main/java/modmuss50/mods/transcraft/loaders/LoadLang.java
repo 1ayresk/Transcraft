@@ -94,7 +94,7 @@ public class LoadLang {
 					TranscraftOre.types[i] + " Ore");
 		}
 
-//		LanguageRegistry.addName(TranscraftBlocks.ixpGrinder, "Item Grinder");
+		LanguageRegistry.addName(TranscraftBlocks.ixpGrinder, "Item Grinder");
 
 	}
 
