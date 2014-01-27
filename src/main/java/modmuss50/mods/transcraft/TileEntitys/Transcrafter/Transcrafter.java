@@ -16,7 +16,7 @@ public class Transcrafter extends BlockContainer {
 	public static IIcon[] icons = new IIcon[2];
 	public int multiblock;
 
-	public Transcrafter(int id) {
+	public Transcrafter() {
 		super(Material.field_151574_g);
 		this.func_149711_c(2F);
 

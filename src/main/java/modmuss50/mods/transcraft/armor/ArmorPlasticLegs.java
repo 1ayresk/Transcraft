@@ -12,7 +12,7 @@ public class ArmorPlasticLegs extends ItemArmor {
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorPlasticLegs(int par1, ArmorMaterial par2EnumArmorMaterial,
+	public ArmorPlasticLegs(ArmorMaterial par2EnumArmorMaterial,
 			int par3, int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 		maxStackSize = 1;

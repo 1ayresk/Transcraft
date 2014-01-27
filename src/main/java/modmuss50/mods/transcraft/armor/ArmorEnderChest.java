@@ -14,7 +14,7 @@ public class ArmorEnderChest extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorEnderChest(int par1, ArmorMaterial par2EnumArmorMaterial,
+	public ArmorEnderChest(ArmorMaterial par2EnumArmorMaterial,
 			int par3, int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 	}

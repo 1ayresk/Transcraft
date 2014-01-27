@@ -14,7 +14,7 @@ public class ArmorEnderBoots extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorEnderBoots(int id, ArmorMaterial enumarmormaterial,
+	public ArmorEnderBoots(ArmorMaterial enumarmormaterial,
 			int renderIndex, int armorType) {
 		super(enumarmormaterial, renderIndex, armorType);
 

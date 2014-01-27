@@ -142,7 +142,7 @@ public class LoadBlocks {
 				.func_149658_d("Transcraft:ComOilOre");
 
 		TranscraftBlocks.Transcrafter = new modmuss50.mods.transcraft.TileEntitys.Transcrafter.Transcrafter(
-				Config.TranscrafterID).func_149647_a(Transcraft.Transtab)
+			).func_149647_a(Transcraft.Transtab)
 				.func_149711_c(1.0F)
 				.func_149663_c("Transcraft:Transcrafter");
 

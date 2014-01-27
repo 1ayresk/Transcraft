@@ -14,7 +14,7 @@ public class ArmorPlasticChestplate extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorPlasticChestplate(int par1,
+	public ArmorPlasticChestplate(
 			ArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 	}

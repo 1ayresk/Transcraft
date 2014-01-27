@@ -14,7 +14,7 @@ public class ArmorPlasticHelmet extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorPlasticHelmet(int par1,
+	public ArmorPlasticHelmet(
 			ArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 	}

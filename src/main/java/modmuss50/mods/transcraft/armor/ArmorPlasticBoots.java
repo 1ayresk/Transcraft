@@ -14,7 +14,7 @@ public class ArmorPlasticBoots extends ItemArmor {
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorPlasticBoots(int par1, ArmorMaterial par2EnumArmorMaterial,
+	public ArmorPlasticBoots(ArmorMaterial par2EnumArmorMaterial,
 			int par3, int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 	}

@@ -8,15 +8,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 
-	public static int PlasticHelmetID = 5041;
-	public static int PlasticChestID = 5042;
-	public static int PlasticLegsID = 5043;
-	public static int PlasticBootsID = 5044;
-	public static int EnderHelmetID = 5045;
-	public static int EnderChestID = 5046;
-	public static int EnderLegsID = 5047;
-	public static int EnderBootsID = 5048;
-
 	public static int DimID = 234;
 
 	public static boolean WorldGen = true;

@@ -120,34 +120,34 @@ public class LoadItems {
 				9850, new int[] { 10000, 10000, 10000, 10000 }, 100);
 
 		TranscraftItems.PlasticHelmet = (new ArmorPlasticHelmet(
-				Config.PlasticHelmetID, PlasticEnum, 0, 0)).setUnlocalizedName(
+				PlasticEnum, 0, 0)).setUnlocalizedName(
 				"Transcraft:PlasticHelmet").setCreativeTab(Transcraft.Transtab);
 
 		TranscraftItems.PlasticChest = (new ArmorPlasticChestplate(
-				Config.PlasticChestID, PlasticEnum, 0, 1)).setUnlocalizedName(
+				PlasticEnum, 0, 1)).setUnlocalizedName(
 				"Transcraft:PlasticChest").setCreativeTab(Transcraft.Transtab);
 
 		TranscraftItems.PlasticLegs = (new ArmorPlasticLegs(
-				Config.PlasticLegsID, PlasticEnum, 0, 2)).setUnlocalizedName(
+				PlasticEnum, 0, 2)).setUnlocalizedName(
 				"Transcraft:PlasticLegs").setCreativeTab(Transcraft.Transtab);
 
 		TranscraftItems.PlasticBoots = (new ArmorPlasticBoots(
-				Config.PlasticBootsID, PlasticEnum, 0, 3)).setUnlocalizedName(
+				PlasticEnum, 0, 3)).setUnlocalizedName(
 				"Transcraft:PlasticBoots").setCreativeTab(Transcraft.Transtab);
 
 		TranscraftItems.EnderHelmet = (new ArmorEnderHelmet(
-				Config.EnderHelmetID, EnderEnum, 0, 0)).setUnlocalizedName(
+				EnderEnum, 0, 0)).setUnlocalizedName(
 				"Transcraft:EnderHelmet").setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.EnderChest = (new ArmorEnderChest(Config.EnderChestID,
+		TranscraftItems.EnderChest = (new ArmorEnderChest(
 				EnderEnum, 0, 1)).setUnlocalizedName("Transcraft:EnderChest")
 				.setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.EnderLegs = (new ArmorEnderLegs(Config.EnderLegsID,
+		TranscraftItems.EnderLegs = (new ArmorEnderLegs(
 				EnderEnum, 0, 2)).setUnlocalizedName("Transcraft:EnderLegs")
 				.setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.EnderBoots = (new ArmorEnderBoots(Config.EnderBootsID,
+		TranscraftItems.EnderBoots = (new ArmorEnderBoots(
 				EnderEnum, 0, 3)).setUnlocalizedName("Transcraft:EnderBoots")
 				.setCreativeTab(Transcraft.Transtab);
 
