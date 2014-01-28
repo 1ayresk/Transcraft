@@ -66,12 +66,12 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	}
 
 	
-	/*
 	
-	@Override
-	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2,int par3, int par4, int par5) {
-		return getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,par5, icons);
-	}
+	
+//	@Override
+//	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2,int par3, int par4, int par5) {
+//		return getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,par5, icons);
+//	}
 
 	
 	public Icon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5, Icon[] icons) 
@@ -429,25 +429,31 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	}
 
 
- * 
- */
 	
-	/*
-	@Override
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,
-			int par2, int par3, int par4, int par5) {
-		int i1 = par1IBlockAccess.getBlockId(par2, par3, par4);
-		return i1 == this.blockID ? false : super.shouldSideBeRendered(
-				par1IBlockAccess, par2, par3, par4, par5);
-	}
-*/
 
-	/*
-	@Override
-	public Icon getIcon(int par1, int par2) {
-		return icons[0];
+	
+	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5) {
+		return true;
+//		int i1 = par1IBlockAccess.getBlockId(par2, par3, par4);
+//		return i1 == this.blockID ? false : super.shouldSideBeRendered(
+//				par1IBlockAccess, par2, par3, par4, par5);
+
 	}
-*/
+
+
+	
+//	@Override
+//	public Icon getIcon(int par1, int par2) {
+//		return icons[0];
+//	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon func_149691_a(int side, int meta) {
+			//return icons[0];
+		return null;
+	}
+
 	
 	
 	/*
