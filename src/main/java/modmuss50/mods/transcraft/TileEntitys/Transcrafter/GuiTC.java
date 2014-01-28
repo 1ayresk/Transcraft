@@ -21,7 +21,6 @@ public class GuiTC extends GuiContainer {
 	 * Draw the foreground layer for the GuiContainer (everything in front of
 	 * the items)
 	 */
-	@Override
 	protected void func_146979_b(int p_146979_1_, int p_146979_2_)
     {
         this.field_146289_q.drawString(I18n.getStringParams("Transcrafter"), 28, 6,1210752);
