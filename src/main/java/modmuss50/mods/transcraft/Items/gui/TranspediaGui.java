@@ -28,7 +28,7 @@ public class TranspediaGui extends GuiContainer {
 	private float ySize_lo;
 
 	private int pageNumber = 0;
-	public int numberofpages =3;
+	public int numberofpages =4;
 
 	public TranspediaGui() {
 		super(new ContainerTranspedia());
@@ -41,14 +41,7 @@ public class TranspediaGui extends GuiContainer {
 	 * the items)
 	 */
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		/*
-		 * 
-		 * 
-		 * 
-		 * if(pageNumber != 0) { this.fontRenderer.drawString("Transpedia Page "
-		 * + pageNumber, ((width / 2) / 6), (height/2) + (height/5) - 4,
-		 * 4210752); }
-		 */
+
 
 	}
 

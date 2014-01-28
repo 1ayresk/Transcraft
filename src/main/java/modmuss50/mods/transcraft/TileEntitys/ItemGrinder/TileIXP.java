@@ -1,14 +1,5 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
-import ibxm.Player;
-
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.util.Iterator;
-import java.util.List;
-
-import com.google.common.io.ByteArrayDataInput;
-
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.TileEntitys.TileBase;
 import modmuss50.mods.transcraft.api.IItemTransmutter;
@@ -17,17 +8,9 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.network.INetworkManager;
-import net.minecraft.network.packet.Packet;
-import net.minecraft.network.packet.Packet132TileEntityData;
-import net.minecraft.network.packet.Packet250CustomPayload;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -232,7 +215,6 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		
 			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
 
-			PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 	}
 
 	public double getIXPValue() 
@@ -271,8 +253,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		if (this.isInvNameLocalized()) {
 			par1NBTTagCompound.setString("CustomName", this.field_94045_s);
 		}
-		
-		PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
+
 	}
 
 	/**
@@ -343,9 +324,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 
 		int BASIC = Config.BasicItemEssence;
 		int QUAD = Config.QuadItemEssence;
-		int NANO = Config.NanoItemEssence;
-
-
+		int NANO = Config.NanoItemEssence;		
 		
 		if (BASIC == 0) {
 			BASIC = BASIC + 1;
@@ -418,7 +397,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		++this.ticksSinceSync;
 
 		
-		
+		PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 		
 	}
