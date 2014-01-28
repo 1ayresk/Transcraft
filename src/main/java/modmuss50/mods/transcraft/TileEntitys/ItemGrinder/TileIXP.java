@@ -388,7 +388,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 
 			if (getStackInSlot(0).itemID == TranscraftItems.NanoTransmuter.itemID) {
 				CurrnetMaxValue = NANO;
-				CurrnetintMaxValue = QUAD;
+				CurrnetintMaxValue = NANO;
 
 				if (NANO != 0 && getStackInSlot(0).stackSize <= 64) {
 					if (CurrentIXPValue >= NANO) {
