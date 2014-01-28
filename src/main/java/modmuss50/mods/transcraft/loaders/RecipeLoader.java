@@ -229,6 +229,10 @@ public class RecipeLoader {
 					new ItemStack(Item.dyePowder, 1, i));
 		}
 
+		for (int i = 15; i >= 0; i--) {
+			GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ThinClearGlass, 1, i),"   ", "ggg", "ggg", 'g', new ItemStack(TranscraftBlocks.ClearGlass, 1, i));
+		}
+		
 	}
 
 }

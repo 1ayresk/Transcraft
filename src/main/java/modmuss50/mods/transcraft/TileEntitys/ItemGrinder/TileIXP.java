@@ -231,9 +231,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		}
 		
 			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
-			System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
-		
-		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
+
 		
 	}
 
@@ -257,7 +255,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 
 		
 		par1NBTTagCompound.setDouble("ItemEssence", this.CurrentIXPValue);
-		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
+
 		
 		for (int i = 0; i < this.chestContents.length; ++i) {
 			if (this.chestContents[i] != null) {
@@ -313,12 +311,28 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 	private void handleEnergy() {
 		int slot = 1;
 
-		for (int j = 0; slot < 28; slot++) {
-			if (getStackInSlot(slot) != null) {
-				int IXP = 1;
-				CurrentIXPValue = CurrentIXPValue + IXP;
-				decrStackSize(slot, 1);
+		for (int j = 0; slot < 28; slot++) 
+		{
+			if(slot == 1)
+			{
+				if (getStackInSlot(slot) != null) {
+					int IXP = 1;
+					CurrentIXPValue = CurrentIXPValue + IXP;
+					decrStackSize(slot, 1);
+					PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
+				}
+			}else{
+					if(getStackInSlot(slot-1) == null)
+					{
+						if (getStackInSlot(slot) != null) {
+							int IXP = 1;
+							CurrentIXPValue = CurrentIXPValue + IXP;
+							decrStackSize(slot, 1);
+							PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
+						}
+					}
 			}
+			
 		}
 	}
 
@@ -353,6 +367,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 					if (CurrentIXPValue >= BASIC) {
 						CurrentIXPValue -= BASIC;
 						incrStackSize(0, 1);
+						PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 					}
 				}
@@ -366,6 +381,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 					if (CurrentIXPValue >= QUAD) {
 						CurrentIXPValue -= QUAD;
 						incrStackSize(0, 1);
+						PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 					}
 				}
@@ -379,12 +395,14 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 					if (CurrentIXPValue >= NANO) {
 						CurrentIXPValue -= NANO;
 						incrStackSize(0, 1);
+						PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 					}
 				}
 			}
 		} else {
 			CurrnetMaxValue = 0;
+			PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 		}
 	}
 
@@ -395,14 +413,15 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 	 */
 	public void updateEntity() {
 		super.updateEntity();
-
+		
+		
 		handleEnergy();
 		
 		makeItems();
 		++this.ticksSinceSync;
 
 		
-		PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
+		
 
 		
 	}
