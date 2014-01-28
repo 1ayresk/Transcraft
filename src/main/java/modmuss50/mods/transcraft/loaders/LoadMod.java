@@ -15,7 +15,6 @@ import modmuss50.mods.transcraft.command.CommandReloadConfig;
 import modmuss50.mods.transcraft.command.CommandTranscraftVersion;
 import modmuss50.mods.transcraft.fluids.TranscraftFluids;
 import modmuss50.mods.transcraft.helpers.Config;
-import modmuss50.mods.transcraft.helpers.DevMessageTick;
 import modmuss50.mods.transcraft.helpers.EventMobDeath;
 import modmuss50.mods.transcraft.helpers.FuelHandler;
 import modmuss50.mods.transcraft.helpers.GuiHand;
@@ -51,15 +50,7 @@ public class LoadMod {
 		Transcraft.Coproxy.registerHandlers();
 		Transcraft.Coproxy.registerTickHandlers();
 
-		if (TranscraftUtil.DEVSTATUS = true) {
-			if (FMLCommonHandler.instance().getSide().isClient()) {
-				FMLLog.info("[TRANSCRAFT]	Adding Dev Message");
-
-				TickRegistry.registerTickHandler(new DevMessageTick(),
-						Side.CLIENT);
-			}
-		}
-
+		
 		FMLLog.info("[TRANSCRAFT]	Loading Config");
 		Config.initConfig();
 

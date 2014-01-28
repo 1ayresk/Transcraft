@@ -232,7 +232,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		
 			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
 
-		
+			PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 	}
 
 	public double getIXPValue() 
@@ -271,6 +271,8 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 		if (this.isInvNameLocalized()) {
 			par1NBTTagCompound.setString("CustomName", this.field_94045_s);
 		}
+		
+		PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 	}
 
 	/**
@@ -319,7 +321,6 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 					int IXP = 1;
 					CurrentIXPValue = CurrentIXPValue + IXP;
 					decrStackSize(slot, 1);
-					PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 				}
 			}else{
 					if(getStackInSlot(slot-1) == null)
@@ -328,7 +329,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 							int IXP = 1;
 							CurrentIXPValue = CurrentIXPValue + IXP;
 							decrStackSize(slot, 1);
-							PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
+							
 						}
 					}
 			}
@@ -367,7 +368,6 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 					if (CurrentIXPValue >= BASIC) {
 						CurrentIXPValue -= BASIC;
 						incrStackSize(0, 1);
-						PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 					}
 				}
@@ -381,7 +381,6 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 					if (CurrentIXPValue >= QUAD) {
 						CurrentIXPValue -= QUAD;
 						incrStackSize(0, 1);
-						PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 					}
 				}
@@ -395,14 +394,12 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 					if (CurrentIXPValue >= NANO) {
 						CurrentIXPValue -= NANO;
 						incrStackSize(0, 1);
-						PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 
 					}
 				}
 			}
 		} else {
 			CurrnetMaxValue = 0;
-			PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
 		}
 	}
 
