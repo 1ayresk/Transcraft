@@ -7,6 +7,8 @@ import modmuss50.mods.transcraft.Entitys.mob.EnderBatRender;
 import modmuss50.mods.transcraft.Entitys.mob.Enderbat;
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeper;
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeperRender;
+import modmuss50.mods.transcraft.Items.TranscraftItems;
+import modmuss50.mods.transcraft.Renders.RenderEnderSword;
 import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileECRender;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
@@ -47,19 +49,17 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	}
 
 	public void renderThings() {
-		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class,
-				new TileECRender());
+//		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class,
+//				new TileECRender());
 //		MinecraftForgeClient.registerItemRenderer(Config.ixpGrinderID,
 //				new ItemTileIxpRender());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class,
 				new RenderTC());
 
-//		MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.Transcrafter,new RenderHandTC());
+//		MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.Transcrafter ,new RenderHandTC());
 
-		// MinecraftForgeClient.registerItemRenderer(TranscraftItems.EnderSword.itemID,
-		// new RenderEnderSword());
-
-		// I was not happy with this, might add a config option to turn it on!
+		 MinecraftForgeClient.registerItemRenderer(TranscraftItems.EnderSword,
+		 new RenderEnderSword());
 	}
 
 	public void postrenderThings() {

@@ -1,5 +1,7 @@
 package modmuss50.mods.transcraft.helpers;
 
+import org.lwjgl.opengl.GL11;
+
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,6 +20,7 @@ public class TickHelper {
 	@SubscribeEvent
     public void TranscraftTickEvent(TickEvent.PlayerTickEvent event)
 	{
+		
 		if (Config.EnderArmorBuffs == true) {
 			if (event.player.getCurrentArmor(3) != null) {
 				if (event.player.getCurrentArmor(3).getItem() == TranscraftItems.EnderHelmet) {
