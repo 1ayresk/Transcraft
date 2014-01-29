@@ -59,7 +59,7 @@ public class LoadMod {
 		RegisterBlocks.RegisterBlocks();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Items with the LanguageRegistry");
-		LoadLang.loadlang();
+//		LoadLang.loadlang();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Block Settings");
 		LoadBlockSettings.LoadSet();
@@ -70,8 +70,6 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
 
-		
-		
 /*
 
 		FMLLog.info("[TRANSCRAFT]	Loading Biomes");
