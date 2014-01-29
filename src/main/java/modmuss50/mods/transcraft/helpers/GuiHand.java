@@ -18,10 +18,11 @@ public class GuiHand implements IGuiHandler {
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
 
-
+		TileEntity te = world.func_147438_o(x, y, z);
+		
+		
 		if (ID == 2) {
-//			return new ContainerIXP(player.inventory, x, y, z);
-			return null;
+			return new ContainerIXP(player.inventory, (TileIXP) te);
 		} 
 		else if (ID == 1) 
 		{
@@ -35,7 +36,8 @@ public class GuiHand implements IGuiHandler {
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
 
-
+		 TileEntity te = world.func_147438_o(x, y, z);
+		
 		switch (ID) {
 
 		case 3:
@@ -44,8 +46,7 @@ public class GuiHand implements IGuiHandler {
 		}
 
 		if (ID == 2) {
-			//return new GuiIxp(player.inventory, (TileIXP) te);
-			return null;
+			return new GuiIxp(player.inventory, (TileIXP) te);
 		} else if (ID == 1) {
 			return new GuiTC(player.inventory, world, x, y, z);
 		} else {

@@ -12,8 +12,7 @@ public class GuiTC extends GuiContainer {
 	private static final ResourceLocation field_110422_t = new ResourceLocation(
 			"transcraft", "textures/gui/Transcrafter.png");
 
-	public GuiTC(InventoryPlayer par1InventoryPlayer, World par2World,
-			int par3, int par4, int par5) {
+	public GuiTC(InventoryPlayer par1InventoryPlayer, World par2World,int par3, int par4, int par5) {
 		super(new ContainerTC(par1InventoryPlayer, par2World, par3, par4, par5));
 	}
 

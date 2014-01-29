@@ -10,6 +10,7 @@ import modmuss50.mods.transcraft.Entitys.mob.NukeCreeperRender;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.Renders.RenderEnderSword;
 import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
+import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemTileIxpRender;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileECRender;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.RenderHandTC;
@@ -51,8 +52,9 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	public void renderThings() {
 //		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class,
 //				new TileECRender());
-//		MinecraftForgeClient.registerItemRenderer(Config.ixpGrinderID,
-//				new ItemTileIxpRender());
+		
+//		MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.ixpGrinder,new ItemTileIxpRender());
+	
 		ClientRegistry.bindTileEntitySpecialRenderer(TileTC.class,
 				new RenderTC());
 
