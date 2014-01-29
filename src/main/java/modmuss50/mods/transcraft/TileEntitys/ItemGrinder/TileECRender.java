@@ -24,31 +24,25 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 	}
 
-	@Override
-	public void func_147500_a(TileEntity var1, double var2, double var4,
-			double var6, float var8) {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 	/**
 	 * Renders the TileEntity for the chest at a position.
 	 */
-	/*
-	 * 
-	 
-	public void renderTileECAt(TileIXP par1TileEC, double par2, double par4,
+	
+	@Override
+	public void func_147500_a(TileEntity par1TileEC, double par2, double par4,
 			double par6, float par8) {
 		int i;
 
-		if (!par1TileEC.hasWorldObj()) {
+		if (!par1TileEC.func_145830_o()) {
 			i = 0;
 		} else {
-			Block block = par1TileEC.getBlockType();
-			i = par1TileEC.getBlockMetadata();
+			Block block = par1TileEC.func_145838_q();
+			i = par1TileEC.func_145832_p();
 
 			if (block instanceof IXPGrinderMk2 && i == 0) {
-				i = par1TileEC.getBlockMetadata();
+				i = par1TileEC.func_145832_p();
 			}
 
 		}
@@ -57,7 +51,7 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 		modelchest = this.chestModel;
 
-		this.bindTexture(field_110631_g);
+		this.func_147499_a(field_110631_g);
 
 		GL11.glPushMatrix();
 		GL11.glEnable(GL12.GL_RESCALE_NORMAL);
@@ -86,11 +80,7 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 		GL11.glRotatef((float) short1, 0.0F, 1.0F, 0.0F);
 		GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
-		float f1 = par1TileEC.prevLidAngle
-				+ (par1TileEC.lidAngle - par1TileEC.prevLidAngle) * par8;
-		f1 = 1.0F - f1;
-		f1 = 1.0F - f1 * f1 * f1;
-		modelchest.chestLid.rotateAngleX = -(f1 * (float) Math.PI / 2.0F);
+
 		modelchest.renderAll();
 		GL11.glDisable(GL12.GL_RESCALE_NORMAL);
 		GL11.glPopMatrix();
@@ -99,8 +89,21 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 	public void renderTileEntityAt(TileEntity par1TileEntity, double par2,
 			double par4, double par6, float par8) {
-		this.renderTileECAt((TileIXP) par1TileEntity, par2, par4, par6, par8);
+		this.func_147500_a((TileIXP) par1TileEntity, par2, par4, par6, par8);
 	}
+
+
+
 	
-	*/
+	
+
+
+
+	
+
+
+
+	
+	
+	
 }

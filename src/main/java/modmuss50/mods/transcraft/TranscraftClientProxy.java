@@ -50,8 +50,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	}
 
 	public void renderThings() {
-//		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class,
-//				new TileECRender());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class,new TileECRender());
 		
 //		MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.ixpGrinder,new ItemTileIxpRender());
 	
