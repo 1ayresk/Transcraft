@@ -227,16 +227,32 @@ public class IXPGrinderMk2 extends BlockContainer {
 	/**
 	 * Called upon block activation (right click on the block.)
 	 */
-	 
-	public boolean onBlockActivated(World par1World, int par2, int par3,int par4, EntityPlayer par5EntityPlayer, int par6, float par7,float par8, float par9) {	
+	 @Override
+	public boolean func_149727_a(World par1World, int par2, int par3,int par4, EntityPlayer par5EntityPlayer, int par6, float par7,float par8, float par9) {	
+ 
+	            TileIXP tile = (TileIXP) par1World.func_147438_o(par2, par3, par4);
 
-	            	if (!par5EntityPlayer.isSneaking()) {
-						par5EntityPlayer.openGui(Transcraft.instance, 2, par1World,par2, par3, par4);
-					}
-	    
+                par1World.func_147476_b(par2, par3, par4, tile);
 
-	            return true;
-	        
+                if (par1World.isRemote) {
+                        return true;
+                } else {
+                        IInventory iinventory = this.func_149951_m(par1World, par2, par3,
+                                        par4);
+
+                        System.out.println(iinventory);
+                        
+                        if (iinventory != null) {
+                                if (!par5EntityPlayer.isSneaking()) {
+                                        par5EntityPlayer.openGui(Transcraft.instance, 2, par1World, par2, par3, par4);
+                                }
+
+                        }
+
+                        return true;
+                }
+	            
+	            
 		
 	}
 
@@ -338,7 +354,7 @@ public class IXPGrinderMk2 extends BlockContainer {
 	 @SideOnly(Side.CLIENT)
     public void func_149651_a(IIconRegister p_149651_1_)
     {
-        this.field_149761_L = p_149651_1_.registerIcon("planks_oak");
+        this.field_149761_L = p_149651_1_.registerIcon("trancraft:ItemGrinder");
     }
 
 	
