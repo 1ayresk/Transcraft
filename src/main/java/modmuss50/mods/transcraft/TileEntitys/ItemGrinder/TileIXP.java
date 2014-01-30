@@ -489,12 +489,7 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 
 	@Override
 	public boolean canInsertItem(int slotID, ItemStack itemstack, int side) {
-		if (slotID == 0) {
-			return false;
-		} else {
 			return true;
-		}
-
 	}
 
 	
