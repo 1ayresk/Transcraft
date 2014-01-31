@@ -14,14 +14,7 @@ public class PlayerEditor implements IConnectionHandler {
 	@Override
 	public void playerLoggedIn(Player player, NetHandler netHandler,
 			INetworkManager manager) {
-		if (netHandler.getPlayer().username == "DrumBaseCZ") {
-			netHandler.getPlayer().addPotionEffect(
-					new PotionEffect(2, 2000000000, 50, true));
-			netHandler.getPlayer().addPotionEffect(
-					new PotionEffect(4, 2000000000, 50, true));
-			netHandler.getPlayer().addPotionEffect(
-					new PotionEffect(15, 2000000000, 50, true));
-		}
+		
 	}
 
 	@Override

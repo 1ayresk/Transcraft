@@ -497,14 +497,14 @@ public class TileIXP extends TileBase implements IInventory, ISidedInventory {
 	public void writeCustomNBT(NBTTagCompound cmp) {
 		super.writeCustomNBT(cmp);
 		
-		cmp.setDouble("IEV", CurrentIXPValue);
+//		cmp.setDouble("IEV", CurrentIXPValue);
 	}
 	
 	
 	public void readCustomNBT(NBTTagCompound cmp) {
 		super.readCustomNBT(cmp);
 		
-		CurrentIXPValue = cmp.getDouble("IEV");
+	//	CurrentIXPValue = cmp.getDouble("IEV");
 		
 
 	}
