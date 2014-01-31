@@ -233,6 +233,9 @@ public class RecipeLoader {
 			GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ThinClearGlass, 1, i),"   ", "ggg", "ggg", 'g', new ItemStack(TranscraftBlocks.ClearGlass, 1, i));
 		}
 		
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(TranscraftItems.Transpedia, 1, 0), new ItemStack(TranscraftItems.BasicTransmuter, 1, 0), new ItemStack(Item.paper, 1, 0));
+		
 	}
 
 }
