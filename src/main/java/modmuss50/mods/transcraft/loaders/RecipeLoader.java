@@ -2,6 +2,7 @@ package modmuss50.mods.transcraft.loaders;
 
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
+import modmuss50.mods.transcraft.api.Fluids;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -178,6 +179,9 @@ public class RecipeLoader {
 		GameRegistry.addRecipe(new ItemStack(TranscraftItems.NanoTransmuter),
 				"qqr", "qqg", "qqr", 'q', TranscraftItems.QuadTransmuter, 'g',
 				Item.glowstone, 'r', Item.redstone);
+		
+		
+		GameRegistry.addRecipe(new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get() , 1, 0),"btb", "btb", "bbb", 'b', Item.bucketEmpty, 't',TranscraftItems.BasicTransmuter);
 
 		// Smelting Recipes
 		GameRegistry.addSmelting(TranscraftBlocks.TranscraftOre.blockID,

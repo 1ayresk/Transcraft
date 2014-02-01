@@ -19,8 +19,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = "transcraft", name = "Transcraft", version = TranscraftUtil.VERSION
-		+ TranscraftUtil.STATE, useMetadata = false)
+@Mod(modid = "transcraft", name = "Transcraft", version = TranscraftUtil.VERSION + TranscraftUtil.STATE, useMetadata = false)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 public class Transcraft {
 
