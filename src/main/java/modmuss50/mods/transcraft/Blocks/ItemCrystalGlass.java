@@ -24,7 +24,6 @@ public class ItemCrystalGlass extends IColoredItemBlock {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer player, List list,
 			boolean par4) {
-		if (Config.enderswordpearl == true) {
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)
 					|| Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
 				list.add("\u00a72This glass has a clean look to it.");
@@ -33,7 +32,6 @@ public class ItemCrystalGlass extends IColoredItemBlock {
 			} else {
 				list.add("\u00a72[\u00a74SHIFT\u00a72]");
 			}
-		}
 	}
 
 }

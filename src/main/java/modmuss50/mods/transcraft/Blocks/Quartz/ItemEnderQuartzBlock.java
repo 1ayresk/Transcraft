@@ -22,7 +22,6 @@ public class ItemEnderQuartzBlock extends org.zaet.api.IColoredItemBlock {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer player, List list,
 			boolean par4) {
-		if (Config.enderswordpearl == true) {
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)
 					|| Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)) {
 				list.add("\u00a72This block is just to look good!");
@@ -32,5 +31,4 @@ public class ItemEnderQuartzBlock extends org.zaet.api.IColoredItemBlock {
 				list.add("\u00a72[\u00a74SHIFT\u00a72]");
 			}
 		}
-	}
 }

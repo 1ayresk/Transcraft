@@ -39,7 +39,7 @@ public class TranscraftOre extends Block {
 	@SideOnly(Side.CLIENT)
 	public IIcon func_149691_a(int side, int meta) {
 
-		for(int i = 5; i >= 0; i--)
+		for(int i = types.length; i >= 0; i--)
 		{
 			return icons[meta];
 		}
