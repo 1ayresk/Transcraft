@@ -468,16 +468,9 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	@Override
 	public boolean func_145818_k_() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
-	/**
-	 * invalidates a tile entity
-	 */
-
-	public void func_145843_s() {
-		super.func_145843_s();
-		this.func_145836_u();
-	}
+	
 
 }

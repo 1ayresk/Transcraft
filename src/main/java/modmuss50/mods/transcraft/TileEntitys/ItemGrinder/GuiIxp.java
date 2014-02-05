@@ -26,6 +26,9 @@ public class GuiIxp extends GuiContainer {
 	private float xSize_lo;
 	private float ySize_lo;
 
+	
+	private int field_147018_x;
+	
 	/**
 	 * window height is calculated with this values, the more rows, the heigher
 	 */
@@ -40,6 +43,7 @@ public class GuiIxp extends GuiContainer {
 		this.te = tileEntity;
 		this.lowerChestInventory = player;
 		this.upperChestInventory = te;
+		this.field_147018_x = 3;
 	}
 
 	/**
@@ -50,8 +54,7 @@ public class GuiIxp extends GuiContainer {
 	protected void func_146979_b(int par1, int par2) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.field_146289_q.drawString("Item Grinder", 8, 8, 4210752);
-		this.field_146289_q.drawString("Inventory", 9,
-				this.field_146999_f - 100, 4210752);
+		this.field_146289_q.drawString("Inventory", 9,this.field_146999_f - 60, 4210752);
 		this.field_146289_q.drawString("Current Essence: " + te.getIXPValue(),
 				77, 10, 4210752);
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
@@ -90,15 +93,15 @@ public class GuiIxp extends GuiContainer {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
 		int k = (this.field_146294_l - this.field_146999_f) / 2;
-		int l = (this.field_146295_m - this.field_147000_g) / 2;
-		this.drawTexturedModalRect(k, l, 0, 0, field_147000_g, field_146999_f);
-
+        int l = (this.field_146295_m - this.field_147000_g) / 2;
+        this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f + 50, this.field_147018_x * 18 + 165);
+   //     this.drawTexturedModalRect(k, l + this.inventoryRows * 18 + 127, 0,126, this.field_146999_f, 96);
+   	 
 		drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo,
 				(float) (l + 60 - 30) - this.ySize_lo,
 				this.field_146297_k.thePlayer);
 
-		// this.drawTexturedModalRect(k, l + this.inventoryRows * 18 + 17, 0,
-		// 126, this.xSize, 96);
+	
 	}
 
 	/**
