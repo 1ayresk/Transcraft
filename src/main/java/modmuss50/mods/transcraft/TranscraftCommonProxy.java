@@ -2,10 +2,7 @@ package modmuss50.mods.transcraft;
 
 import java.io.File;
 
-import cpw.mods.fml.common.FMLCommonHandler;
-import modmuss50.mods.transcraft.helpers.TickHelper;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
 
 public class TranscraftCommonProxy {
 
@@ -14,13 +11,15 @@ public class TranscraftCommonProxy {
 	}
 
 	public void registerHandlers() {
-//		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
-//		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
+		// TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
+		// TickRegistry.registerTickHandler(new ServerTickHandler(),
+		// Side.SERVER);
 	}
 
 	public void registerTickHandlers() {
 		// TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
-//		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
+		// TickRegistry.registerTickHandler(new ServerTickHandler(),
+		// Side.SERVER);
 
 	}
 

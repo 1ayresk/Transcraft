@@ -76,7 +76,8 @@ public class ContainerTC extends Container {
 						.getStackInSlotOnClosing(i);
 
 				if (itemstack != null) {
-					 par1EntityPlayer.dropPlayerItemWithRandomChoice(itemstack, false);
+					par1EntityPlayer.dropPlayerItemWithRandomChoice(itemstack,
+							false);
 				}
 			}
 		}

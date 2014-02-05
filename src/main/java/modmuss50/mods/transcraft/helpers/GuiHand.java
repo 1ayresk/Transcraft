@@ -6,7 +6,6 @@ import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.GuiIxp;
 import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.ContainerTC;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.GuiTC;
-import modmuss50.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -19,13 +18,10 @@ public class GuiHand implements IGuiHandler {
 			int x, int y, int z) {
 
 		TileEntity te = world.func_147438_o(x, y, z);
-		
-		
+
 		if (ID == 2) {
 			return new ContainerIXP(player.inventory, (TileIXP) te);
-		} 
-		else if (ID == 1) 
-		{
+		} else if (ID == 1) {
 			return new ContainerTC(player.inventory, world, x, y, z);
 		} else {
 			return null;
@@ -36,8 +32,8 @@ public class GuiHand implements IGuiHandler {
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
 
-		 TileEntity te = world.func_147438_o(x, y, z);
-		
+		TileEntity te = world.func_147438_o(x, y, z);
+
 		switch (ID) {
 
 		case 3:

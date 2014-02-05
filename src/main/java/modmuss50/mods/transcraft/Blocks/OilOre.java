@@ -13,13 +13,10 @@ public class OilOre extends Block {
 		super(Material.field_151576_e);
 	}
 
-	
 	@Override
-	public Item func_149650_a(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
-    {
-        return TranscraftItems.Oil;
-    }
-	
-	
-	
+	public Item func_149650_a(int p_149650_1_, Random p_149650_2_,
+			int p_149650_3_) {
+		return TranscraftItems.Oil;
+	}
+
 }

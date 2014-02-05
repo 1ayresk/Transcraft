@@ -39,9 +39,8 @@ public class EnderBatRender extends RenderBat {
 			"textures/mob/EnderBat.png");
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityBat par1EntityBat)
-    {
-        return texture;
-    }
+	protected ResourceLocation getEntityTexture(EntityBat par1EntityBat) {
+		return texture;
+	}
 
 }

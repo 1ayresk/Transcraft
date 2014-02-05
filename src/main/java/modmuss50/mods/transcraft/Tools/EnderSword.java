@@ -2,7 +2,6 @@ package modmuss50.mods.transcraft.Tools;
 
 import java.util.List;
 
-import modmuss50.mods.transcraft.Listener.ListenerRegisterSound;
 import modmuss50.mods.transcraft.helpers.Config;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -50,9 +49,9 @@ public class EnderSword extends ItemSword {
 			}
 
 			else {
-				
-					par2World.playSoundAtEntity(par3EntityPlayer, "random.bow",
-							0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+
+				par2World.playSoundAtEntity(par3EntityPlayer, "random.bow",
+						0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 				if (!par2World.isRemote) {
 					par2World.spawnEntityInWorld(new EntityEnderPearl(
 							par2World, par3EntityPlayer));
@@ -85,7 +84,9 @@ public class EnderSword extends ItemSword {
 	 * Current implementations of this method in child classes do not use the entry argument beside ev. They just raise
 	 * the damage on the stack.
 	 */
-	public boolean hitEntity(ItemStack par1ItemStack,EntityLivingBase par2EntityLivingBase,EntityLivingBase par3EntityLivingBase) {
+	public boolean hitEntity(ItemStack par1ItemStack,
+			EntityLivingBase par2EntityLivingBase,
+			EntityLivingBase par3EntityLivingBase) {
 		par3EntityLivingBase.playSound("transcraft:swordHit", 10F, 1F);
 		par1ItemStack.damageItem(1, par3EntityLivingBase);
 		return true;

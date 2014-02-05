@@ -4,8 +4,7 @@ import modmuss50.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.IFuelHandler;
 
-public class FuelHandler implements IFuelHandler 
-{
+public class FuelHandler implements IFuelHandler {
 	@Override
 	public int getBurnTime(ItemStack fuel) {
 

@@ -73,8 +73,6 @@ public class NukeCreeper extends EntityCreeper {
 		}
 	}
 
-	
-
 	@Override
 	public float getCreeperFlashIntensity(float par1) {
 		return (this.lastActiveTime + (this.timeSinceIgnited - this.lastActiveTime)
@@ -84,15 +82,15 @@ public class NukeCreeper extends EntityCreeper {
 
 	@Override
 	protected void dropFewItems(boolean par1, int par2) {
-			int k = this.rand.nextInt(4) + 2;
+		int k = this.rand.nextInt(4) + 2;
 
-			if (par2 > 0) {
-				k += this.rand.nextInt(par2 + 1);
-			}
+		if (par2 > 0) {
+			k += this.rand.nextInt(par2 + 1);
+		}
 
-			for (int l = 0; l < k; ++l) {
-				this.func_145779_a(Item.func_150899_d(k), 1);
-			}
+		for (int l = 0; l < k; ++l) {
+			this.func_145779_a(Item.func_150899_d(k), 1);
+		}
 	}
 
 	public boolean attackEntityFrom(DamageSource source, int damage) {
@@ -106,10 +104,9 @@ public class NukeCreeper extends EntityCreeper {
 	/**
 	 * Returns the item ID for the item the mob drops on death.
 	 */
-	@Override	
-	protected Item func_146068_u()
-    {
-        return TranscraftItems.DarkEndershard;
-    }
+	@Override
+	protected Item func_146068_u() {
+		return TranscraftItems.DarkEndershard;
+	}
 
 }

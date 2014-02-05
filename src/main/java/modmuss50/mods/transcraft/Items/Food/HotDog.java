@@ -6,7 +6,7 @@ import net.minecraft.item.ItemFood;
 public class HotDog extends ItemFood {
 
 	public HotDog() {
-		super( 3, 1, false);
+		super(3, 1, false);
 		// Constructor Configuration
 		maxStackSize = 64;
 		// setCreativeTab(Transcraft.Transtab);

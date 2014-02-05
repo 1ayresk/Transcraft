@@ -91,8 +91,8 @@ public class RecipeLoader {
 				'b', TranscraftBlocks.SmoothBunkerBlock);
 
 		GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.Transcrafter),
-				"ddd", "ece", "ooo", 'e', Items.emerald, 'd', Items.diamond, 'c',
-				Blocks.chest, 'o', Blocks.obsidian);
+				"ddd", "ece", "ooo", 'e', Items.emerald, 'd', Items.diamond,
+				'c', Blocks.chest, 'o', Blocks.obsidian);
 
 		ItemStack BlueDye = new ItemStack(Items.dye, 1, 12);
 		ItemStack GreenDye = new ItemStack(Items.dye, 1, 2);
@@ -180,31 +180,29 @@ public class RecipeLoader {
 				Items.glowstone_dust, 'r', Items.redstone);
 
 		// Smelting Recipes
-		GameRegistry.addSmelting(TranscraftBlocks.TranscraftOre,
-				new ItemStack(TranscraftItems.BasicTransmuter), 5.0f);
+		GameRegistry.addSmelting(TranscraftBlocks.TranscraftOre, new ItemStack(
+				TranscraftItems.BasicTransmuter), 5.0f);
 		GameRegistry.addSmelting(TranscraftItems.Oil, new ItemStack(
 				TranscraftItems.Plastic), 1.3f);
-		GameRegistry.addSmelting(TranscraftBlocks.OilOre,
-				new ItemStack(TranscraftItems.Oil), 3.3f);
+		GameRegistry.addSmelting(TranscraftBlocks.OilOre, new ItemStack(
+				TranscraftItems.Oil), 3.3f);
 
-//		GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ixpGrinder),
-//				"qcq", "qdq", "qqq", 'q', TranscraftItems.NanoTransmuter, 'c',
-//				Block.chest, 'd', Item.netherStar);
+		// GameRegistry.addRecipe(new ItemStack(TranscraftBlocks.ixpGrinder),
+		// "qcq", "qdq", "qqq", 'q', TranscraftItems.NanoTransmuter, 'c',
+		// Block.chest, 'd', Item.netherStar);
 
 		for (int i = 15; i >= 0; i--) {
 			GameRegistry.addShapelessRecipe(new ItemStack(
 					TranscraftBlocks.enderQuartzBlock, 1, i), new ItemStack(
-					Blocks.sandstone, 1, 2),
-					new ItemStack(Items.dye, 1, i), new ItemStack(
-							Items.dye, 1, i));
+					Blocks.sandstone, 1, 2), new ItemStack(Items.dye, 1, i),
+					new ItemStack(Items.dye, 1, i));
 		}
 
 		for (int i = 15; i >= 0; i--) {
 			GameRegistry.addShapelessRecipe(new ItemStack(
 					TranscraftBlocks.CutenderQuartz, 1, i), new ItemStack(
-					Blocks.sandstone, 1, 1),
-					new ItemStack(Items.dye, 1, i), new ItemStack(
-							Items.dye, 1, i));
+					Blocks.sandstone, 1, 1), new ItemStack(Items.dye, 1, i),
+					new ItemStack(Items.dye, 1, i));
 		}
 
 		for (int i = 15; i >= 0; i--) {
@@ -218,8 +216,8 @@ public class RecipeLoader {
 			GameRegistry.addShapelessRecipe(new ItemStack(
 					TranscraftBlocks.FancyCrystalGlass, 1, i), new ItemStack(
 					TranscraftBlocks.ClearGlass, 1, i), new ItemStack(
-					Items.gold_nugget, 1, 0),
-					new ItemStack(Items.gold_nugget, 1, 0));
+					Items.gold_nugget, 1, 0), new ItemStack(Items.gold_nugget,
+					1, 0));
 		}
 
 		for (int i = 15; i >= 0; i--) {

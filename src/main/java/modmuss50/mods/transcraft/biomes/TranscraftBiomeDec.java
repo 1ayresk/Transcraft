@@ -71,7 +71,6 @@ public class TranscraftBiomeDec extends BiomeDecorator {
 	 * The method that does the work of actually decorating chunks
 	 */
 
-	
 	protected void decorate() {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(currentWorld,
 				randomGenerator, chunk_X, chunk_Z));
@@ -93,8 +92,8 @@ public class TranscraftBiomeDec extends BiomeDecorator {
 			var4 = randomGenerator.nextInt(randomGenerator
 					.nextInt(randomGenerator.nextInt(112) + 8) + 8);
 			var5 = chunk_Z + randomGenerator.nextInt(16) + 8;
-			(new WorldGenLakes(Fluids.LiquidTransmutter.get()))
-					.generate(currentWorld, randomGenerator, var3, var4, var5);
+			(new WorldGenLakes(Fluids.LiquidTransmutter.get())).generate(
+					currentWorld, randomGenerator, var3, var4, var5);
 
 		}
 

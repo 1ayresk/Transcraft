@@ -87,8 +87,8 @@ public class RecipesTC {
 				TranscraftItems.NanoTransmuter, 'd', Items.emerald);
 		addRecipe(new ItemStack(Items.redstone, 32), " n ", "nrn", " n ", 'n',
 				TranscraftItems.NanoTransmuter, 'r', Items.redstone);
-		addRecipe(new ItemStack(Items.iron_ingot, 10), "   ", "nin", "   ", 'n',
-				TranscraftItems.NanoTransmuter, 'i', Items.iron_ingot);
+		addRecipe(new ItemStack(Items.iron_ingot, 10), "   ", "nin", "   ",
+				'n', TranscraftItems.NanoTransmuter, 'i', Items.iron_ingot);
 		addRecipe(new ItemStack(Items.coal, 24), "   ", "qcq", "   ", 'q',
 				TranscraftItems.NanoTransmuter, 'c', Items.coal);
 		addRecipe(new ItemStack(Blocks.glass, 24), "   ", "qgq", "   ", 'q',
@@ -109,10 +109,10 @@ public class RecipesTC {
 				TranscraftItems.NanoTransmuter, 'c', Jwood);
 		addRecipe(new ItemStack(Items.apple, 25), "   ", "bcb", "   ", 'b',
 				TranscraftItems.NanoTransmuter, 'c', Items.apple);
-		addRecipe(new ItemStack(Items.slime_ball, 15), "   ", "bcb", "   ", 'b',
-				TranscraftItems.NanoTransmuter, 'c', Items.slime_ball);
-		addRecipe(new ItemStack(Items.ender_pearl, 2), "   ", "bcb", "   ", 'b',
-				TranscraftItems.NanoTransmuter, 'c', Items.ender_pearl);
+		addRecipe(new ItemStack(Items.slime_ball, 15), "   ", "bcb", "   ",
+				'b', TranscraftItems.NanoTransmuter, 'c', Items.slime_ball);
+		addRecipe(new ItemStack(Items.ender_pearl, 2), "   ", "bcb", "   ",
+				'b', TranscraftItems.NanoTransmuter, 'c', Items.ender_pearl);
 
 		addRecipe(new ItemStack(Blocks.dirt, 8), "   ", "bdb", "   ", 'b',
 				TranscraftItems.BasicTransmuter, 'd', Blocks.dirt);
@@ -250,63 +250,55 @@ public class RecipesTC {
 		this.recipes.add(new ShapelessRecipes(par1ItemStack, arraylist));
 	}
 
-	 public ItemStack findMatchingRecipe(InventoryCrafting par1InventoryCrafting, World par2World)
-	    {
-	        int i = 0;
-	        ItemStack itemstack = null;
-	        ItemStack itemstack1 = null;
-	        int j;
+	public ItemStack findMatchingRecipe(
+			InventoryCrafting par1InventoryCrafting, World par2World) {
+		int i = 0;
+		ItemStack itemstack = null;
+		ItemStack itemstack1 = null;
+		int j;
 
-	        for (j = 0; j < par1InventoryCrafting.getSizeInventory(); ++j)
-	        {
-	            ItemStack itemstack2 = par1InventoryCrafting.getStackInSlot(j);
+		for (j = 0; j < par1InventoryCrafting.getSizeInventory(); ++j) {
+			ItemStack itemstack2 = par1InventoryCrafting.getStackInSlot(j);
 
-	            if (itemstack2 != null)
-	            {
-	                if (i == 0)
-	                {
-	                    itemstack = itemstack2;
-	                }
+			if (itemstack2 != null) {
+				if (i == 0) {
+					itemstack = itemstack2;
+				}
 
-	                if (i == 1)
-	                {
-	                    itemstack1 = itemstack2;
-	                }
+				if (i == 1) {
+					itemstack1 = itemstack2;
+				}
 
-	                ++i;
-	            }
-	        }
+				++i;
+			}
+		}
 
-	        if (i == 2 && itemstack.getItem() == itemstack1.getItem() && itemstack.stackSize == 1 && itemstack1.stackSize == 1 && itemstack.getItem().isRepairable())
-	        {
-	            Item item = itemstack.getItem();
-	            int j1 = item.getMaxDamage() - itemstack.getItemDamageForDisplay();
-	            int k = item.getMaxDamage() - itemstack1.getItemDamageForDisplay();
-	            int l = j1 + k + item.getMaxDamage() * 5 / 100;
-	            int i1 = item.getMaxDamage() - l;
+		if (i == 2 && itemstack.getItem() == itemstack1.getItem()
+				&& itemstack.stackSize == 1 && itemstack1.stackSize == 1
+				&& itemstack.getItem().isRepairable()) {
+			Item item = itemstack.getItem();
+			int j1 = item.getMaxDamage() - itemstack.getItemDamageForDisplay();
+			int k = item.getMaxDamage() - itemstack1.getItemDamageForDisplay();
+			int l = j1 + k + item.getMaxDamage() * 5 / 100;
+			int i1 = item.getMaxDamage() - l;
 
-	            if (i1 < 0)
-	            {
-	                i1 = 0;
-	            }
+			if (i1 < 0) {
+				i1 = 0;
+			}
 
-	            return new ItemStack(itemstack.getItem(), 1, i1);
-	        }
-	        else
-	        {
-	            for (j = 0; j < this.recipes.size(); ++j)
-	            {
-	                IRecipe irecipe = (IRecipe)this.recipes.get(j);
+			return new ItemStack(itemstack.getItem(), 1, i1);
+		} else {
+			for (j = 0; j < this.recipes.size(); ++j) {
+				IRecipe irecipe = (IRecipe) this.recipes.get(j);
 
-	                if (irecipe.matches(par1InventoryCrafting, par2World))
-	                {
-	                    return irecipe.getCraftingResult(par1InventoryCrafting);
-	                }
-	            }
+				if (irecipe.matches(par1InventoryCrafting, par2World)) {
+					return irecipe.getCraftingResult(par1InventoryCrafting);
+				}
+			}
 
-	            return null;
-	        }
-	    }
+			return null;
+		}
+	}
 
 	/**
 	 * returns the List<> of all recipes

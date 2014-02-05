@@ -25,7 +25,8 @@ public class ItemTileIxpRender implements IItemRenderer {
 
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
-		//TileEntityRenderer.instance.renderTileEntityAt(new TileIXP(), 0.0, 0.0,0.0, 0.0F);
+		// TileEntityRenderer.instance.renderTileEntityAt(new TileIXP(), 0.0,
+		// 0.0,0.0, 0.0F);
 	}
 
 }

@@ -14,8 +14,8 @@ public class ArmorPlasticHelmet extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorPlasticHelmet(
-			ArmorMaterial par2EnumArmorMaterial, int par3, int par4) {
+	public ArmorPlasticHelmet(ArmorMaterial par2EnumArmorMaterial, int par3,
+			int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 	}
 
@@ -24,9 +24,10 @@ public class ArmorPlasticHelmet extends ItemArmor // implements
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticHelmet");
 	}
 
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-        
-        return "transcraft:textures/armor/PlasticArmor_1.png";
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
+			String type) {
+
+		return "transcraft:textures/armor/PlasticArmor_1.png";
 	}
-	
+
 }

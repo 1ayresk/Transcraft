@@ -1,6 +1,5 @@
 package modmuss50.mods.transcraft.Items.gui;
 
-import modmuss50.mods.transcraft.Entitys.mob.NukeCreeper;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -8,8 +7,6 @@ import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.EntityIronGolem;
-import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.input.Keyboard;
@@ -28,7 +25,7 @@ public class TranspediaGui extends GuiContainer {
 	private float ySize_lo;
 
 	private int pageNumber = 0;
-	public int numberofpages =3;
+	public int numberofpages = 3;
 
 	public TranspediaGui() {
 		super(new ContainerTranspedia());
@@ -57,15 +54,17 @@ public class TranspediaGui extends GuiContainer {
 	public void initGui() {
 		super.initGui();
 
-//		this.field_146292_n.add(new GuiButton(1, 123,field_147009_r / 2 + 100, 20, 20, "<"));
-//		this.field_146292_n.add(new GuiButton(0, 48,field_147009_r / 2 + 100, 20, 20, ">"));
+		// this.field_146292_n.add(new GuiButton(1, 123,field_147009_r / 2 +
+		// 100, 20, 20, "<"));
+		// this.field_146292_n.add(new GuiButton(0, 48,field_147009_r / 2 + 100,
+		// 20, 20, ">"));
 
 	}
 
 	public void drawScreen(int par1, int par2, float par3) {
 		super.drawScreen(par1, par2, par3);
-//		this.xSize_lo = (float) par1;
-	//	this.ySize_lo = (float) par2;
+		// this.xSize_lo = (float) par1;
+		// this.ySize_lo = (float) par2;
 
 	}
 
@@ -73,20 +72,24 @@ public class TranspediaGui extends GuiContainer {
 	 * Draw the background layer for the GuiContainer (everything behind the
 	 * items)
 	 */
-	protected void func_146976_a(float par1, int par2,int par3) 
-	{
-//		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-//		field_110421_t = new ResourceLocation("transcraft","textures/gui/Transpedia/Transpedia_" + pageNumber + ".png");
-//		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
-//		int k = this.field_147003_i;
-//	    int l = this.field_147009_r;
-//		int k = 0;
-//	    int l = 0;
-//	    this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f, this.field_147000_g);
-//
-//		if (pageNumber != 0) {
-//				drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)- this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo,this.field_146297_k.thePlayer);
-//		}
+	protected void func_146976_a(float par1, int par2, int par3) {
+		// GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+		// field_110421_t = new
+		// ResourceLocation("transcraft","textures/gui/Transpedia/Transpedia_" +
+		// pageNumber + ".png");
+		// this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
+		// int k = this.field_147003_i;
+		// int l = this.field_147009_r;
+		// int k = 0;
+		// int l = 0;
+		// this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f,
+		// this.field_147000_g);
+		//
+		// if (pageNumber != 0) {
+		// drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)-
+		// this.xSize_lo, (float) (l + 60 - 30) -
+		// this.ySize_lo,this.field_146297_k.thePlayer);
+		// }
 	}
 
 	/**
@@ -119,7 +122,8 @@ public class TranspediaGui extends GuiContainer {
 		par5EntityLivingBase.prevRotationYawHead = par5EntityLivingBase.rotationYaw;
 		GL11.glTranslatef(0.0F, par5EntityLivingBase.yOffset, 0.0F);
 		RenderManager.instance.playerViewY = 180.0F;
-		RenderManager.instance.func_147940_a(par5EntityLivingBase,0.0D, 0.0D, 0.0D, 0.0F, 1.0F);
+		RenderManager.instance.func_147940_a(par5EntityLivingBase, 0.0D, 0.0D,
+				0.0D, 0.0F, 1.0F);
 		par5EntityLivingBase.renderYawOffset = f2;
 		par5EntityLivingBase.rotationYaw = f3;
 		par5EntityLivingBase.rotationPitch = f4;
@@ -156,8 +160,8 @@ public class TranspediaGui extends GuiContainer {
 				.atan((double) (par4 / 40.0F))) * 20.0F;
 		GL11.glTranslatef(0.0F, par5EntityLivingBase.yOffset, 0.0F);
 		RenderManager.instance.playerViewY = 180.0F;
-		RenderManager.instance.func_147940_a(par5EntityLivingBase,
-				0.0D, 0.0D, 0.0D, 0.0F, 1.0F);
+		RenderManager.instance.func_147940_a(par5EntityLivingBase, 0.0D, 0.0D,
+				0.0D, 0.0F, 1.0F);
 		par5EntityLivingBase.rotationYaw = f3;
 		par5EntityLivingBase.rotationPitch = f4;
 		GL11.glPopMatrix();
@@ -168,32 +172,27 @@ public class TranspediaGui extends GuiContainer {
 		OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
 	}
 
-	
-
 	public void actionPerformed(GuiButton par0Button) {
 		/** Back **/
-		if (par0Button.field_146127_k == 1) 
-		{
+		if (par0Button.field_146127_k == 1) {
 			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 				pageNumber = 0;
 			} else {
-				
-					if (pageNumber != 0) {
-						pageNumber -= 1;
-					}
-				
+
+				if (pageNumber != 0) {
+					pageNumber -= 1;
+				}
+
 			}
 
 		}
 
 		/** Next **/
 		if (par0Button.field_146127_k == 0) {
-			if(pageNumber != numberofpages)
-			{
-			pageNumber += 1;
+			if (pageNumber != numberofpages) {
+				pageNumber += 1;
 			}
 		}
 	}
-
 
 }

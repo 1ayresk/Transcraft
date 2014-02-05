@@ -24,12 +24,10 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 	}
 
-
-
 	/**
 	 * Renders the TileEntity for the chest at a position.
 	 */
-	
+
 	@Override
 	public void func_147500_a(TileEntity par1TileEC, double par2, double par4,
 			double par6, float par8) {
@@ -92,18 +90,4 @@ public class TileECRender extends TileEntitySpecialRenderer {
 		this.func_147500_a((TileIXP) par1TileEntity, par2, par4, par6, par8);
 	}
 
-
-
-	
-	
-
-
-
-	
-
-
-
-	
-	
-	
 }

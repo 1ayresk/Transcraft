@@ -14,8 +14,8 @@ public class ArmorEnderChest extends ItemArmor // implements
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorEnderChest(ArmorMaterial par2EnumArmorMaterial,
-			int par3, int par4) {
+	public ArmorEnderChest(ArmorMaterial par2EnumArmorMaterial, int par3,
+			int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 	}
 
@@ -23,9 +23,10 @@ public class ArmorEnderChest extends ItemArmor // implements
 	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderChest");
 	}
-	
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-    
-        return "transcraft:textures/armor/EnderArmor_1.png";
-}
+
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
+			String type) {
+
+		return "transcraft:textures/armor/EnderArmor_1.png";
+	}
 }

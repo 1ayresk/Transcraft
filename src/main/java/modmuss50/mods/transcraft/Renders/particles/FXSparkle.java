@@ -147,7 +147,8 @@ public class FXSparkle extends EntityFX {
 
 		motionY -= 0.040000000000000001D * particleGravity;
 		if (noClip == false)
-			pushOutOfBlocks(posX, (boundingBox.minY + boundingBox.maxY) / 2.0D,posZ);
+			pushOutOfBlocks(posX, (boundingBox.minY + boundingBox.maxY) / 2.0D,
+					posZ);
 		posX += motionX;
 		posY += motionY;
 		posZ += motionZ;
@@ -179,7 +180,6 @@ public class FXSparkle extends EntityFX {
 	public void setGravity(float value) {
 		particleGravity = value;
 	}
-
 
 	protected boolean pushOutOfBlocks(double par1, double par3, double par5) {
 		int var7 = MathHelper.floor_double(par1);
@@ -266,9 +266,7 @@ public class FXSparkle extends EntityFX {
 		} else {
 			return false;
 		}
-		
-		 
-		
+
 	}
 
 	public boolean leyLineEffect = false;

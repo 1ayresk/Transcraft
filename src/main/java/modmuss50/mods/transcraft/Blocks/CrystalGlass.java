@@ -1,6 +1,5 @@
 package modmuss50.mods.transcraft.Blocks;
 
-import net.minecraft.block.material.Material;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -41,18 +40,13 @@ public class CrystalGlass extends org.zaet.api.IColoredBlock {
 	}
 
 	/*
-	 
-	
-	@Override
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,
-			int par2, int par3, int par4, int par5) // Renders // blocks
-	{
-		int i = par1IBlockAccess.getBlockId(par2, par3, par4);
-
-		return i == blockID ? false : true;
-	}
-
-*/
-
+	 * 
+	 * 
+	 * @Override public boolean shouldSideBeRendered(IBlockAccess
+	 * par1IBlockAccess, int par2, int par3, int par4, int par5) // Renders //
+	 * blocks { int i = par1IBlockAccess.getBlockId(par2, par3, par4);
+	 * 
+	 * return i == blockID ? false : true; }
+	 */
 
 }

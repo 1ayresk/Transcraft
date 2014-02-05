@@ -1,30 +1,30 @@
 package modmuss50.mods.transcraft.Blocks.FancyCrystalGlass;
 
-import javax.swing.Icon;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import modmuss50.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
-	private Icon[] icons = new Icon[16];
+	protected IIcon[] icons = new IIcon[16];
 	private boolean shouldRenderSelectionBox = true;
 	protected String folder;
 	private int renderPass;
 
-	public FancyCrystalGlass( String location, boolean hasAlpha) {
+	public FancyCrystalGlass(String location, boolean hasAlpha) {
 		super();
 		renderPass = hasAlpha ? 1 : 0;
 		this.func_149647_a(Transcraft.Transtab);
 		this.func_149711_c(0.3f);
 	}
 
-	
+	// For FMP support
+	public IIcon[] getIcons() {
+		return icons;
+	}
 
 	@Override
 	public boolean func_149662_c() {
@@ -41,7 +41,6 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 		return renderPass;
 	}
 
-	
 	/**
 	 * This is checked to see if the texture should connect to this block
 	 * 
@@ -51,31 +50,28 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	 *            y
 	 * @param par4
 	 *            z
-	 * @param block
+	 * @param par5
 	 *            ID this block is asking to connect to (may be 0 if there is no
 	 *            block)
 	 * @param par6
 	 *            Metadata of the block this block is trying to connect to
 	 * @return true if should connect
 	 */
-
-
-
-	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, Block block, int par6) {
-		return true;
+	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess,
+			int par2, int par3, int par4, Block par5, int par6) {
+		return par5 == (Block) this;
 	}
 
-	
-	
-	
-//	@Override
-//	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2,int par3, int par4, int par5) {
-//		return getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,par5, icons);
-//	}
+	@Override
+	public IIcon func_149673_e(IBlockAccess par1IBlockAccess, int par2,
+			int par3, int par4, int par5) {
+		return par1IBlockAccess.getBlockMetadata(par2, par3, par4) == 15 ? icons[0]
+				: getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,
+						par5, icons);
+	}
 
-	
-	public Icon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5, Icon[] icons) 
-	{
+	public IIcon getConnectedBlockTexture(IBlockAccess par1IBlockAccess,
+			int par2, int par3, int par4, int par5, IIcon[] icons) {
 
 		boolean isOpenUp = false, isOpenDown = false, isOpenLeft = false, isOpenRight = false;
 
@@ -422,60 +418,36 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 				return icons[3];
 			}
 			break;
-		 }
-		
+		}
 
 		return icons[0];
 	}
 
-
-	
-
-	
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5) {
-		return true;
-//		int i1 = par1IBlockAccess.getBlockId(par2, par3, par4);
-//		return i1 == this.blockID ? false : super.shouldSideBeRendered(
-//				par1IBlockAccess, par2, par3, par4, par5);
-
+	@Override
+	public boolean func_149646_a(IBlockAccess par1IBlockAccess, int par2,
+			int par3, int par4, int par5) {
+		Block b = par1IBlockAccess.func_147439_a(par2, par3, par4);
+		return b == (Block) this ? false : super.func_149646_a(
+				par1IBlockAccess, par2, par3, par4, par5);
 	}
 
-
-	
-//	@Override
-//	public Icon getIcon(int par1, int par2) {
-//		return icons[0];
-//	}
-	
 	@Override
-	@SideOnly(Side.CLIENT)
-	public IIcon func_149691_a(int side, int meta) {
-			//return icons[0];
-		return null;
+	public IIcon func_149691_a(int par1, int par2) {
+		return icons[0];
 	}
 
-	
-	
-	/*
-	 * 
-	 
 	@Override
-	public AxisAlignedBB getSelectedBoundingBoxFromPool(World par1World,
-			int par2, int par3, int par4) {
+	public AxisAlignedBB func_149633_g(World par1World, int par2, int par3,
+			int par4) {
 		if (shouldRenderSelectionBox) {
-			return super.getSelectedBoundingBoxFromPool(par1World, par2, par3,
-					par4);
+			return super.func_149633_g(par1World, par2, par3, par4);
 		} else {
 			return AxisAlignedBB.getAABBPool().getAABB(0D, 0D, 0D, 0D, 0D, 0D);
 		}
 	}
-*/
-	
-	/*
-	 * 
-	
+
 	@Override
-	public void func_149651_a(IconRegister par1IconRegister) {
+	public void func_149651_a(IIconRegister par1IconRegister) {
 		icons[0] = par1IconRegister
 				.registerIcon("Transcraft:glass/FancyGlass/glass");
 		icons[1] = par1IconRegister
@@ -510,7 +482,5 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 				.registerIcon("Transcraft:glass/FancyGlass/glass_4");
 
 	}
-	
-	
-	 */
+
 }

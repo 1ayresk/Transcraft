@@ -35,7 +35,6 @@ public class LoadMod {
 	public static void preInit(FMLPreInitializationEvent event) {
 		event.getModMetadata().version = (TranscraftUtil.VERSION + TranscraftUtil.STATE);
 
-
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison "
 				+ TranscraftUtil.VERSION);
 
@@ -52,14 +51,14 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Loading Items");
 		LoadItems.LoadItems();
 
-//		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
-//		TranscraftFluids.init();
+		// FMLLog.info("[TRANSCRAFT]	Loading Fluids");
+		// TranscraftFluids.init();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Items with the LanguageRegistry");
-//		LoadLang.loadlang();
+		// LoadLang.loadlang();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Block Settings");
 		LoadBlockSettings.LoadSet();
@@ -70,16 +69,16 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
 
-/*
+		/*
+		 * 
+		 * FMLLog.info("[TRANSCRAFT]	Loading Biomes");
+		 * BiomeDictionary.registerBiomeType(TranscraftUtil.TransmutterBiome,
+		 * Type.PLAINS, Type.WATER);
+		 * GameRegistry.addBiome(TranscraftUtil.TransmutterBiome);
+		 * BiomeManager.addSpawnBiome(TranscraftUtil.TransmutterBiome);
+		 * BiomeManager.addStrongholdBiome(TranscraftUtil.TransmutterBiome);
+		 */
 
-		FMLLog.info("[TRANSCRAFT]	Loading Biomes");
-		BiomeDictionary.registerBiomeType(TranscraftUtil.TransmutterBiome,
-				Type.PLAINS, Type.WATER);
-		GameRegistry.addBiome(TranscraftUtil.TransmutterBiome);
-		BiomeManager.addSpawnBiome(TranscraftUtil.TransmutterBiome);
-		BiomeManager.addStrongholdBiome(TranscraftUtil.TransmutterBiome);
- */
-	
 		if (event.getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());
 		}
@@ -88,11 +87,12 @@ public class LoadMod {
 
 		Addons.addAddons();
 		Addons.loadAddons(0);
-		
-		NetworkRegistry.INSTANCE.registerGuiHandler(Transcraft.instance, new GuiHand());
+
+		NetworkRegistry.INSTANCE.registerGuiHandler(Transcraft.instance,
+				new GuiHand());
 
 		FMLCommonHandler.instance().bus().register(new TickHelper());
-        MinecraftForge.EVENT_BUS.register(new TickHelper());
+		MinecraftForge.EVENT_BUS.register(new TickHelper());
 	}
 
 	public static void init(FMLInitializationEvent event) {
@@ -109,11 +109,8 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Registering Fuel handler");
 		GameRegistry.registerFuelHandler(new FuelHandler());
 
-
-
 		Transcraft.Coproxy.renderThings();
 
-		
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
 		Addons.loadAddons(1);

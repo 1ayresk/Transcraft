@@ -12,8 +12,8 @@ public class ArmorPlasticLegs extends ItemArmor {
 	public String IconName;
 	private int repairItemID = 0;
 
-	public ArmorPlasticLegs(ArmorMaterial par2EnumArmorMaterial,
-			int par3, int par4) {
+	public ArmorPlasticLegs(ArmorMaterial par2EnumArmorMaterial, int par3,
+			int par4) {
 		super(par2EnumArmorMaterial, par3, par4);
 		maxStackSize = 1;
 	}
@@ -23,10 +23,10 @@ public class ArmorPlasticLegs extends ItemArmor {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticLegs");
 	}
 
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-        
-        return "transcraft:textures/armor/PlasticArmor_2.png";
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
+			String type) {
+
+		return "transcraft:textures/armor/PlasticArmor_2.png";
 	}
-	
-	
+
 }

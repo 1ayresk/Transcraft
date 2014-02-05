@@ -4,8 +4,6 @@ import java.util.Random;
 
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOre;
-import modmuss50.mods.transcraft.helpers.Config;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -55,15 +53,12 @@ public class TranscraftGenerator implements IWorldGenerator {
 			int TranscraftOreYCoord = random.nextInt(64);
 			int TranscraftOreZCoord = j + random.nextInt(16);
 
-			(new WorldGenMinable(TranscraftBlocks.OilOre, 10)).generate(world, random,
-					TranscraftOreXCoord, TranscraftOreYCoord,
+			(new WorldGenMinable(TranscraftBlocks.OilOre, 10)).generate(world,
+					random, TranscraftOreXCoord, TranscraftOreYCoord,
 					TranscraftOreZCoord);
 		}
 
-
 	}
-
-	
 
 	private void generateNether(World world, Random random, int i, int j) {
 	}

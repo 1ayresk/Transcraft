@@ -20,8 +20,7 @@ public class Transcraft {
 
 	@Instance("transcraft")
 	public static Transcraft instance;
-	
-	
+
 	@SidedProxy(clientSide = "modmuss50.mods.transcraft.TranscraftClientProxy", serverSide = "modmuss50.mods.transcraft.TranscraftCommonProxy")
 	public static TranscraftCommonProxy Coproxy;
 	public static TranscraftClientProxy Clproxy;
@@ -60,7 +59,8 @@ public class Transcraft {
 
 	};
 
-	public static CreativeTabs TranstabDecBlocks = new CreativeTabs("TranstabDecBlocks") {
+	public static CreativeTabs TranstabDecBlocks = new CreativeTabs(
+			"TranstabDecBlocks") {
 		@Override
 		public Item getTabIconItem() {
 			// TODO Auto-generated method stub

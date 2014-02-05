@@ -1,17 +1,11 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-
-import modmuss50.mods.transcraft.Entitys.mob.NukeCreeper;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
@@ -24,8 +18,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class GuiIxp extends GuiContainer {
 
-
-	
 	private static final ResourceLocation field_110421_t = new ResourceLocation(
 			"transcraft", "textures/gui/IxpGrinder.png");
 	private IInventory upperChestInventory;
@@ -54,13 +46,14 @@ public class GuiIxp extends GuiContainer {
 	 * Draw the foreground layer for the GuiContainer (everything in front of
 	 * the items)
 	 */
-	
 
 	protected void func_146979_b(int par1, int par2) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.field_146289_q.drawString("Item Grinder", 8, 8, 4210752);
-		this.field_146289_q.drawString("Inventory", 9, this.field_146999_f - 100, 4210752);
-		this.field_146289_q.drawString("Current Essence: " + te.getIXPValue(),77, 10, 4210752);
+		this.field_146289_q.drawString("Inventory", 9,
+				this.field_146999_f - 100, 4210752);
+		this.field_146289_q.drawString("Current Essence: " + te.getIXPValue(),
+				77, 10, 4210752);
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
 
 		if (te.getIXPValue() != 0) {
@@ -68,13 +61,12 @@ public class GuiIxp extends GuiContainer {
 				te.CurrentintIXPValue = (int) te.getIXPValue();
 				int perint1 = (te.CurrentintIXPValue * 100);
 				int perint2 = (perint1 / te.CurrnetintMaxValue);
-				this.drawTexturedModalRect(field_147000_g - 226, field_146999_f - 194, 0, 220,
-						perint2, 14);
+				this.drawTexturedModalRect(field_147000_g - 226,
+						field_146999_f - 194, 0, 220, perint2, 14);
 			}
 		}
 
 	}
-
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -89,37 +81,29 @@ public class GuiIxp extends GuiContainer {
 		this.ySize_lo = (float) par2;
 	}
 
-	
 	/**
 	 * Draw the background layer for the GuiContainer (everything behind the
 	 * items)
 	 */
-	
 
-	protected void func_146976_a(float par1, int par2,
-			int par3) {
+	protected void func_146976_a(float par1, int par2, int par3) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
 		int k = (this.field_146294_l - this.field_146999_f) / 2;
 		int l = (this.field_146295_m - this.field_147000_g) / 2;
 		this.drawTexturedModalRect(k, l, 0, 0, field_147000_g, field_146999_f);
 
-		
-			drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200)
-					- this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo,
-					this.field_146297_k.thePlayer);
-
+		drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo,
+				(float) (l + 60 - 30) - this.ySize_lo,
+				this.field_146297_k.thePlayer);
 
 		// this.drawTexturedModalRect(k, l + this.inventoryRows * 18 + 17, 0,
 		// 126, this.xSize, 96);
 	}
 
-
-	
 	/**
 	 * This renders the player model in standard inventory position
 	 */
-	
 
 	public static void drawPlayerModel(int par0, int par1, int par2,
 			float par3, float par4, EntityLivingBase par5EntityLivingBase) {
@@ -148,8 +132,8 @@ public class GuiIxp extends GuiContainer {
 		par5EntityLivingBase.prevRotationYawHead = par5EntityLivingBase.rotationYaw;
 		GL11.glTranslatef(0.0F, par5EntityLivingBase.yOffset, 0.0F);
 		RenderManager.instance.playerViewY = 180.0F;
-		RenderManager.instance.func_147940_a(par5EntityLivingBase,
-				0.0D, 0.0D, 0.0D, 0.0F, 1.0F);
+		RenderManager.instance.func_147940_a(par5EntityLivingBase, 0.0D, 0.0D,
+				0.0D, 0.0F, 1.0F);
 		par5EntityLivingBase.renderYawOffset = f2;
 		par5EntityLivingBase.rotationYaw = f3;
 		par5EntityLivingBase.rotationPitch = f4;
@@ -162,6 +146,5 @@ public class GuiIxp extends GuiContainer {
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
 	}
-
 
 }

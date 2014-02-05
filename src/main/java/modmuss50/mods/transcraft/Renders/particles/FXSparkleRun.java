@@ -14,12 +14,10 @@ import net.minecraft.world.World;
 
 public class FXSparkleRun {
 
-	
 	public static void randomDisplayTick(World par1World, int par2, int par3,
 			int par4, Random par5Random) {
 
-		if (par1World.getBlockMetadata(par2, par3, par4) == 0) 
-		{
+		if (par1World.getBlockMetadata(par2, par3, par4) == 0) {
 			FXSparkle sparkle2 = new FXSparkle(par1World, par2 + 0.5
 					+ par5Random.nextFloat(), par3 + 0.5
 					+ par5Random.nextFloat() * 0.5, par4 + 0.3
@@ -45,6 +43,6 @@ public class FXSparkleRun {
 			Minecraft.getMinecraft().effectRenderer.addEffect(sparkle5);
 
 		}
-	
+
 	}
 }

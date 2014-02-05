@@ -9,7 +9,6 @@ import net.minecraft.world.World;
 
 public class Transpeadia extends Item {
 
-
 	public Transpeadia() {
 		super();
 		maxStackSize = 1;
@@ -18,7 +17,8 @@ public class Transpeadia extends Item {
 	}
 
 	public ItemStack onItemRightClick(ItemStack i, World w, EntityPlayer p) {
-		p.openGui(Transcraft.instance, 3, w, (int) p.posX, (int) p.posY,(int) p.posZ);
+		p.openGui(Transcraft.instance, 3, w, (int) p.posX, (int) p.posY,
+				(int) p.posZ);
 		p.playSound("transcraft:paper", 10F, 0.7F);
 		return i;
 	}
@@ -27,6 +27,5 @@ public class Transpeadia extends Item {
 	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:Transpeadia");
 	}
-	
-	
+
 }

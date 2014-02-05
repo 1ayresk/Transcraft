@@ -42,15 +42,9 @@ public class RenderTC extends TileEntitySpecialRenderer {
 		this.model.Top_bit_2.render(0.0625F);
 		this.model.Top_bit_3.render(0.0625F);
 		this.model.Top_bit_4.render(0.0625F);
-		
-		
-		
-		
+
 		GL11.glPopMatrix();
 
 	}
 
-	
-	
-	
 }

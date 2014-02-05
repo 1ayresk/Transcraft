@@ -1,9 +1,6 @@
 package modmuss50.mods.transcraft.TileEntitys.Transcrafter;
 
-import javax.swing.Icon;
-
 import modmuss50.mods.transcraft.Transcraft;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -42,8 +39,8 @@ public class Transcrafter extends BlockContainer {
 	}
 
 	@Override
-	public boolean func_149727_a(World w, int x, int y, int z,
-			EntityPlayer p, int par6, float par7, float par8, float par9) {
+	public boolean func_149727_a(World w, int x, int y, int z, EntityPlayer p,
+			int par6, float par7, float par8, float par9) {
 		int xs = 0;
 		int ys = 0;
 		int zs = 0;
@@ -62,14 +59,11 @@ public class Transcrafter extends BlockContainer {
 
 	}
 
-
 	@Override
-    public TileEntity func_149915_a (World world, int metadata)
-    {
-        return new TileTC();
-    }
-	
-	
+	public TileEntity func_149915_a(World world, int metadata) {
+		return new TileTC();
+	}
+
 	@Override
 	public int func_149645_b() {
 		return -1;

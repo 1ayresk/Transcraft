@@ -12,5 +12,4 @@ public class QuadTransmuter extends IItemTransmutter {
 		setUnlocalizedName("QuadTransmuter");
 	}
 
-
 }

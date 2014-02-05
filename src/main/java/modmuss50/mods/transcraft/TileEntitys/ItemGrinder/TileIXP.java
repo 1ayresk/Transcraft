@@ -1,10 +1,7 @@
 package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
 
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.api.IItemTransmutter;
 import modmuss50.mods.transcraft.helpers.Config;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -12,16 +9,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
-	
-	
+
 	public int field_145987_o;
-	 
-	
+
 	private ItemStack[] chestContents = new ItemStack[36];
 	private static final int[] slots_top = new int[] { 0 };
 	private static final int[] slots_bottom = new int[] { 2, 1 };
@@ -194,14 +188,10 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		this.field_94045_s = par1Str;
 	}
 
-	
-	 
-	 
 	@Override
 	/**
 	 * Reads a tile entity from NBT.
 	 */
-
 	public void func_145839_a(NBTTagCompound par1NBTTagCompound) {
 		super.func_145839_a(par1NBTTagCompound);
 		NBTTagList nbttaglist = par1NBTTagCompound.func_150295_c("Items", 10);
@@ -214,7 +204,8 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		}
 
 		for (int i = 0; i < nbttaglist.tagCount(); ++i) {
-			NBTTagCompound nbttagcompound1 = (NBTTagCompound) nbttaglist.func_150305_b(i);
+			NBTTagCompound nbttagcompound1 = (NBTTagCompound) nbttaglist
+					.func_150305_b(i);
 			int j = nbttagcompound1.getByte("Slot") & 255;
 
 			if (j >= 0 && j < this.chestContents.length) {
@@ -222,16 +213,15 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 						.loadItemStackFromNBT(nbttagcompound1);
 			}
 		}
-		
-			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
-			System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
-		
+
+		this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
 		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
-		
+
+		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
+
 	}
 
-	public double getIXPValue() 
-	{
+	public double getIXPValue() {
 		return this.CurrentIXPValue;
 	}
 
@@ -239,22 +229,19 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		return this.CurrnetMaxValue;
 	}
 
-	
 	@Override
 	/**
 	 * Writes a tile entity to NBT.
 	 */
-
 	public void func_145841_b(NBTTagCompound par1NBTTagCompound) {
 		super.func_145841_b(par1NBTTagCompound);
 		NBTTagList nbttaglist = new NBTTagList();
 
 		System.out.println("SAVING TILE");
 
-		
 		par1NBTTagCompound.setDouble("ItemEssence", this.CurrentIXPValue);
 		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
-		
+
 		for (int i = 0; i < this.chestContents.length; ++i) {
 			if (this.chestContents[i] != null) {
 				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
@@ -270,7 +257,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 			par1NBTTagCompound.setString("CustomName", this.field_94045_s);
 		}
 	}
- 
+
 	/**
 	 * Returns the maximum stack size for a inventory slot. Seems to always be
 	 * 64, possibly will be extended. *Isn't this more of a set than a get?*
@@ -284,13 +271,15 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	 * with Container
 	 */
 
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
-    {
-        return this.field_145850_b.func_147438_o(this.field_145851_c, this.field_145848_d, this.field_145849_e) != this ? false : par1EntityPlayer.getDistanceSq((double)this.field_145851_c + 0.5D, (double)this.field_145848_d + 0.5D, (double)this.field_145849_e + 0.5D) <= 64.0D;
-    }
-	
+	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
+		return this.field_145850_b.func_147438_o(this.field_145851_c,
+				this.field_145848_d, this.field_145849_e) != this ? false
+				: par1EntityPlayer.getDistanceSq(
+						(double) this.field_145851_c + 0.5D,
+						(double) this.field_145848_d + 0.5D,
+						(double) this.field_145849_e + 0.5D) <= 64.0D;
+	}
 
-	
 	/**
 	 * Causes the TileEntity to reset all it's cached values for it's container
 	 * block, blockID, metaData and in the case of chests, the adjcacent chest
@@ -300,7 +289,6 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	public void func_145836_u() {
 		super.func_145836_u();
 	}
-
 
 	private void handleEnergy() {
 		int slot = 1;
@@ -321,8 +309,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		int BASIC = Config.BasicItemEssence;
 		int QUAD = Config.QuadItemEssence;
 		int NANO = Config.NanoItemEssence;
-		
-		
+
 		if (BASIC == 0) {
 			BASIC = BASIC + 1;
 		}
@@ -378,9 +365,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 			CurrnetMaxValue = 0;
 		}
 	}
- 
-	
-	
+
 	/**
 	 * Allows the entity to update its state. Overridden in most subclasses,
 	 * e.g. the mob spawner uses this to count ticks and creates a new spawn
@@ -390,21 +375,11 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	public void func_145845_h() {
 		super.func_145845_h();
 
-		if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER)
-		{
-			System.out.println("SERVER "+ this.CurrentIXPValue);
-		}
-		else
-		{
-			System.out.println("CLIENT "+ this.CurrentIXPValue);
-		}
 		handleEnergy();
-		
+
 		makeItems();
 		++this.ticksSinceSync;
 
-
-		
 	}
 
 	/**
@@ -420,32 +395,39 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		}
 	}
 
-	public void openChest() {		
-		if (this.numUsingPlayers < 0)
-        {
-            this.numUsingPlayers = 0;
-        }
+	public void openChest() {
+		if (this.numUsingPlayers < 0) {
+			this.numUsingPlayers = 0;
+		}
 
-        ++this.numUsingPlayers;
-        this.field_145850_b.func_147452_c(this.field_145851_c, this.field_145848_d, this.field_145849_e, this.func_145838_q(), 1, this.field_145987_o);
-        this.field_145850_b.func_147459_d(this.field_145851_c, this.field_145848_d, this.field_145849_e, this.func_145838_q());
-        this.field_145850_b.func_147459_d(this.field_145851_c, this.field_145848_d - 1, this.field_145849_e, this.func_145838_q());
-		
+		++this.numUsingPlayers;
+		this.field_145850_b.func_147452_c(this.field_145851_c,
+				this.field_145848_d, this.field_145849_e, this.func_145838_q(),
+				1, this.field_145987_o);
+		this.field_145850_b.func_147459_d(this.field_145851_c,
+				this.field_145848_d, this.field_145849_e, this.func_145838_q());
+		this.field_145850_b.func_147459_d(this.field_145851_c,
+				this.field_145848_d - 1, this.field_145849_e,
+				this.func_145838_q());
 
 	}
 
-	public void closeChest() {		
-		if (this.func_145838_q() instanceof IXPGrinderMk2)
-        {
-            --this.numUsingPlayers;
-            this.field_145850_b.func_147452_c(this.field_145851_c, this.field_145848_d, this.field_145849_e, this.func_145838_q(), 1, this.field_145987_o);
-            this.field_145850_b.func_147459_d(this.field_145851_c, this.field_145848_d, this.field_145849_e, this.func_145838_q());
-            this.field_145850_b.func_147459_d(this.field_145851_c, this.field_145848_d - 1, this.field_145849_e, this.func_145838_q());
-        }
-		
+	public void closeChest() {
+		if (this.func_145838_q() instanceof IXPGrinderMk2) {
+			--this.numUsingPlayers;
+			this.field_145850_b.func_147452_c(this.field_145851_c,
+					this.field_145848_d, this.field_145849_e,
+					this.func_145838_q(), 1, this.field_145987_o);
+			this.field_145850_b.func_147459_d(this.field_145851_c,
+					this.field_145848_d, this.field_145849_e,
+					this.func_145838_q());
+			this.field_145850_b.func_147459_d(this.field_145851_c,
+					this.field_145848_d - 1, this.field_145849_e,
+					this.func_145838_q());
+		}
+
 	}
 
-	
 	/**
 	 * Returns true if automation is allowed to insert the given stack (ignoring
 	 * stack size) into the given slot.
@@ -459,36 +441,35 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 		return var1 == 0 ? slots_bottom : (var1 == 1 ? slots_top : slots_sides);
 	}
 
-@Override
-public boolean canInsertItem(int var1, ItemStack var2, int var3) {
-	if (var1 == 0) {
-        return false;
-	} else {
-        return true;
+	@Override
+	public boolean canInsertItem(int var1, ItemStack var2, int var3) {
+		if (var1 == 0) {
+			return false;
+		} else {
+			return true;
+		}
 	}
-}
 
-@Override
-public boolean canExtractItem(int var1, ItemStack var2, int var3) {
-	if (var1 == 0) {
-        return true;
-	} else {
-        return false;
+	@Override
+	public boolean canExtractItem(int var1, ItemStack var2, int var3) {
+		if (var1 == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-}
 
 	@Override
 	public String func_145825_b() {
-	// TODO Auto-generated method stub
-	return null;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public boolean func_145818_k_() {
-	// TODO Auto-generated method stub
-	return false;
+		// TODO Auto-generated method stub
+		return false;
 	}
-
 
 	/**
 	 * invalidates a tile entity
@@ -499,6 +480,4 @@ public boolean canExtractItem(int var1, ItemStack var2, int var3) {
 		this.func_145836_u();
 	}
 
-
-	
 }

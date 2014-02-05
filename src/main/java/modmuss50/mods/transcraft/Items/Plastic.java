@@ -12,5 +12,4 @@ public class Plastic extends Item {
 		setUnlocalizedName("Plastic");
 	}
 
-
 }

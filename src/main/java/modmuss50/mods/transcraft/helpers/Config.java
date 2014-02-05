@@ -48,7 +48,6 @@ public class Config {
 		Configuration config = new Configuration(cfgFile);
 		config.load();
 
-		
 		enderswordpearl = config.get("Settings",
 				"Endersword ender pearl right click", true).getBoolean(true);
 		EnderArmorBuffs = config.get("Settings", "Ender Armor Buffs", true)
