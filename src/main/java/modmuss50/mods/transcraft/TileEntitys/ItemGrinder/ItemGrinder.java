@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class IXPGrinderMk2 extends BlockContainer {
+public class ItemGrinder extends BlockContainer {
 
 	private final Random field_149955_b = new Random();
 
@@ -31,7 +31,7 @@ public class IXPGrinderMk2 extends BlockContainer {
 
 	public final int isTrapped;
 
-	public IXPGrinderMk2(int par2) {
+	public ItemGrinder(int par2) {
 		super(Material.field_151575_d);
 		this.isTrapped = par2;
 		this.func_149647_a(Transcraft.Transtab);
@@ -117,7 +117,7 @@ public class IXPGrinderMk2 extends BlockContainer {
 
 	public void func_149749_a(World p_149749_1_, int p_149749_2_,
 			int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_) {
-		TileIXP tileentitychest = (TileIXP) p_149749_1_.func_147438_o(
+		ItemGrinderTile tileentitychest = (ItemGrinderTile) p_149749_1_.func_147438_o(
 				p_149749_2_, p_149749_3_, p_149749_4_);
 
 		if (tileentitychest != null) {
@@ -174,7 +174,7 @@ public class IXPGrinderMk2 extends BlockContainer {
 			EntityPlayer par5EntityPlayer, int par6, float par7, float par8,
 			float par9) {
 
-		TileIXP tile = (TileIXP) par1World.func_147438_o(par2, par3, par4);
+		ItemGrinderTile tile = (ItemGrinderTile) par1World.func_147438_o(par2, par3, par4);
 
 		par1World.func_147476_b(par2, par3, par4, tile);
 
@@ -206,7 +206,7 @@ public class IXPGrinderMk2 extends BlockContainer {
 
 	public IInventory func_149951_m(World p_149951_1_, int p_149951_2_,
 			int p_149951_3_, int p_149951_4_) {
-		Object object = (TileIXP) p_149951_1_.func_147438_o(p_149951_2_,
+		Object object = (ItemGrinderTile) p_149951_1_.func_147438_o(p_149951_2_,
 				p_149951_3_, p_149951_4_);
 
 		return (IInventory) object;
@@ -217,7 +217,7 @@ public class IXPGrinderMk2 extends BlockContainer {
 	 * the block.
 	 */
 	public TileEntity createNewTileEntity(World par1World) {
-		return new TileIXP();
+		return new ItemGrinderTile();
 	}
 
 	/**
@@ -232,7 +232,7 @@ public class IXPGrinderMk2 extends BlockContainer {
 	@Override
 	public TileEntity func_149915_a(World var1, int var2) {
 		// TODO Auto-generated method stub
-		return new TileIXP();
+		return new ItemGrinderTile();
 	}
 
 	/**

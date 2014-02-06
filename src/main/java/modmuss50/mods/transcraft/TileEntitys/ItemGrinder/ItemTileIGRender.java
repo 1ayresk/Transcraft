@@ -4,11 +4,11 @@ import net.minecraft.client.model.ModelChest;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 
-public class ItemTileIxpRender implements IItemRenderer {
+public class ItemTileIGRender implements IItemRenderer {
 
 	private ModelChest chest;
 
-	public ItemTileIxpRender() {
+	public ItemTileIGRender() {
 		chest = new ModelChest();
 	}
 

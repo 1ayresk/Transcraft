@@ -12,7 +12,7 @@ import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
+public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInventory {
 
 	public int field_145987_o;
 
@@ -40,12 +40,12 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	private int field_94046_i;
 	private String field_94045_s;
 
-	public TileIXP() {
+	public ItemGrinderTile() {
 		this.field_94046_i = -1;
 	}
 
 	@SideOnly(Side.CLIENT)
-	public TileIXP(int par1) {
+	public ItemGrinderTile(int par1) {
 		this.field_94046_i = par1;
 	}
 
@@ -413,7 +413,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory {
 	}
 
 	public void closeChest() {
-		if (this.func_145838_q() instanceof IXPGrinderMk2) {
+		if (this.func_145838_q() instanceof ItemGrinder) {
 			--this.numUsingPlayers;
 			this.field_145850_b.func_147452_c(this.field_145851_c,
 					this.field_145848_d, this.field_145849_e,

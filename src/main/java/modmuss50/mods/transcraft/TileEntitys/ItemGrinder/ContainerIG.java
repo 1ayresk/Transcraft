@@ -7,22 +7,21 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class ContainerIXP extends Container {
+public class ContainerIG extends Container {
 	private IInventory lowerChestInventory;
 	private int numRows = 3;
 
-	private TileIXP tileEntity;
+	private ItemGrinderTile tileEntity;
 
-	public ContainerIXP(InventoryPlayer player, TileIXP tile) {
+	public ContainerIG(InventoryPlayer player, ItemGrinderTile tile) {
 		this.tileEntity = tile;
 		lowerChestInventory = this.tileEntity;
 
-		this.addSlotToContainer(new Slot(this.tileEntity, 0, 8, 24));
+		this.addSlotToContainer(new Slot(this.tileEntity, 0, 8, -11));
 
 		for (int y = 0; y < 3; y++) {
 			for (int x = 0; x < 9; x++) {
-				this.addSlotToContainer(new Slot(this.tileEntity, x + (y * 9)
-						+ 1, 8 + x * 18, 52 + y * 18));
+				this.addSlotToContainer(new Slot(this.tileEntity, x + (y * 9)+ 1, 8 + x * 18, 10 + y * 18));
 			}
 		}
 
@@ -32,13 +31,12 @@ public class ContainerIXP extends Container {
 	protected void bindPlayerInventory(InventoryPlayer player) {
 		for (int y = 0; y < 3; y++) {
 			for (int x = 0; x < 9; x++) {
-				addSlotToContainer(new Slot(player, x + y * 9 + 9, 8 + x * 18,
-						138 + y * 18));
+				addSlotToContainer(new Slot(player, x + y * 9 + 9, 8 + x * 18,95 + y * 18));
 			}
 		}
 
 		for (int x = 0; x < 9; x++) {
-			addSlotToContainer(new Slot(player, x, 8 + x * 18, 196));
+			addSlotToContainer(new Slot(player, x, 8 + x * 18, 153));
 		}
 	}
 

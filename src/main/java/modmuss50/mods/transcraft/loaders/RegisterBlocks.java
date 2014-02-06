@@ -9,7 +9,7 @@ import modmuss50.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
 import modmuss50.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBlock;
 import modmuss50.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBrick;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
+import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemGrinderTile;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
@@ -152,8 +152,8 @@ public class RegisterBlocks {
 		registerItem(TranscraftItems.EnderBoots);
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
-		GameRegistry.registerTileEntity(TileIXP.class, "TileItemGrinder");
-		TileEntity.func_145826_a(TileIXP.class, "TileItemGrinder2");
+		GameRegistry.registerTileEntity(ItemGrinderTile.class, "TileItemGrinder");
+		TileEntity.func_145826_a(ItemGrinderTile.class, "TileItemGrinder2");
 
 	}
 

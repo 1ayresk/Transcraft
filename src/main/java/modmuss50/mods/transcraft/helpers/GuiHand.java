@@ -1,9 +1,9 @@
 package modmuss50.mods.transcraft.helpers;
 
 import modmuss50.mods.transcraft.Items.gui.TranspediaGui;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ContainerIXP;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.GuiIxp;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.TileIXP;
+import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ContainerIG;
+import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.GuiIG;
+import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemGrinderTile;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.ContainerTC;
 import modmuss50.mods.transcraft.TileEntitys.Transcrafter.GuiTC;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,7 +20,7 @@ public class GuiHand implements IGuiHandler {
 		TileEntity te = world.func_147438_o(x, y, z);
 
 		if (ID == 2) {
-			return new ContainerIXP(player.inventory, (TileIXP) te);
+			return new ContainerIG(player.inventory, (ItemGrinderTile) te);
 		} else if (ID == 1) {
 			return new ContainerTC(player.inventory, world, x, y, z);
 		} else {
@@ -42,7 +42,7 @@ public class GuiHand implements IGuiHandler {
 		}
 
 		if (ID == 2) {
-			return new GuiIxp(player.inventory, (TileIXP) te);
+			return new GuiIG(player.inventory, (ItemGrinderTile) te);
 		} else if (ID == 1) {
 			return new GuiTC(player.inventory, world, x, y, z);
 		} else {

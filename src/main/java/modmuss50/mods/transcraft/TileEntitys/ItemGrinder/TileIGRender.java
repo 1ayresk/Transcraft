@@ -13,14 +13,14 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class TileECRender extends TileEntitySpecialRenderer {
+public class TileIGRender extends TileEntitySpecialRenderer {
 	private static final ResourceLocation field_110631_g = new ResourceLocation(
 			"transcraft", "textures/models/ixp.png");
 
 	/** The normal small chest model. */
 	private ModelChest chestModel = new ModelChest();
 
-	public TileECRender() {
+	public TileIGRender() {
 
 	}
 
@@ -39,7 +39,7 @@ public class TileECRender extends TileEntitySpecialRenderer {
 			Block block = par1TileEC.func_145838_q();
 			i = par1TileEC.func_145832_p();
 
-			if (block instanceof IXPGrinderMk2 && i == 0) {
+			if (block instanceof ItemGrinder && i == 0) {
 				i = par1TileEC.func_145832_p();
 			}
 
@@ -87,7 +87,7 @@ public class TileECRender extends TileEntitySpecialRenderer {
 
 	public void renderTileEntityAt(TileEntity par1TileEntity, double par2,
 			double par4, double par6, float par8) {
-		this.func_147500_a((TileIXP) par1TileEntity, par2, par4, par6, par8);
+		this.func_147500_a((ItemGrinderTile) par1TileEntity, par2, par4, par6, par8);
 	}
 
 }

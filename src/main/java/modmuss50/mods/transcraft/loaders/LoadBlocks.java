@@ -8,7 +8,7 @@ import modmuss50.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.IXPGrinderMk2;
+import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemGrinder;
 
 public class LoadBlocks {
 
@@ -152,7 +152,7 @@ public class LoadBlocks {
 				.func_149711_c(1.0F)
 				.func_149647_a(Transcraft.TranstabDecBlocks);
 
-		TranscraftBlocks.ixpGrinder = new IXPGrinderMk2(0)
+		TranscraftBlocks.ixpGrinder = new ItemGrinder(0)
 				.func_149663_c("Transcraft:ixpGrinder").func_149711_c(1.0F)
 				.func_149658_d("Transcraft:ixpGrinder")
 				.func_149647_a(Transcraft.Transtab);

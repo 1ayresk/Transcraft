@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class GuiIxp extends GuiContainer {
+public class GuiIG extends GuiContainer {
 
 	private static final ResourceLocation field_110421_t = new ResourceLocation(
 			"transcraft", "textures/gui/IxpGrinder.png");
@@ -34,12 +34,10 @@ public class GuiIxp extends GuiContainer {
 	 */
 
 	private int inventoryRows;
-	private TileIXP te;
+	private ItemGrinderTile te;
 
-	public GuiIxp(InventoryPlayer player, TileIXP tileEntity) {
-		super(new ContainerIXP(player, tileEntity));
-		int xSize = 256;
-		int ySize = 219;
+	public GuiIG(InventoryPlayer player, ItemGrinderTile tileEntity) {
+		super(new ContainerIG(player, tileEntity));
 		this.te = tileEntity;
 		this.lowerChestInventory = player;
 		this.upperChestInventory = te;
@@ -50,13 +48,13 @@ public class GuiIxp extends GuiContainer {
 	 * Draw the foreground layer for the GuiContainer (everything in front of
 	 * the items)
 	 */
-
+	@Override
 	protected void func_146979_b(int par1, int par2) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.field_146289_q.drawString("Item Grinder", 8, 8, 4210752);
-		this.field_146289_q.drawString("Inventory", 9,this.field_146999_f - 60, 4210752);
+		this.field_146289_q.drawString("Item Grinder", 8, -35, 4210752);
+		this.field_146289_q.drawString("Inventory", 9,this.field_146999_f - 90, 4210752);
 		this.field_146289_q.drawString("Current Essence: " + te.getIXPValue(),
-				77, 10, 4210752);
+				77, -35, 4210752);
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
 
 		if (te.getIXPValue() != 0) {
@@ -64,8 +62,8 @@ public class GuiIxp extends GuiContainer {
 				te.CurrentintIXPValue = (int) te.getIXPValue();
 				int perint1 = (te.CurrentintIXPValue * 100);
 				int perint2 = (perint1 / te.CurrnetintMaxValue);
-				this.drawTexturedModalRect(field_147000_g - 226,
-						field_146999_f - 194, 0, 220, perint2, 14);
+				this.drawTexturedModalRect(field_147000_g - 135,
+						field_146999_f - 193, 0, 220, perint2, 14);
 			}
 		}
 
@@ -74,10 +72,15 @@ public class GuiIxp extends GuiContainer {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void initGui() {
+		int xSize = 256;
+		int ySize = 219;
+		this.xSize_lo = 10;
+		this.ySize_lo = 10;
 		super.initGui();
 
 	}
-
+	
+	@Override
 	public void drawScreen(int par1, int par2, float par3) {
 		super.drawScreen(par1, par2, par3);
 		this.xSize_lo = (float) par1;
@@ -88,13 +91,13 @@ public class GuiIxp extends GuiContainer {
 	 * Draw the background layer for the GuiContainer (everything behind the
 	 * items)
 	 */
-
+	@Override
 	protected void func_146976_a(float par1, int par2, int par3) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
 		int k = (this.field_146294_l - this.field_146999_f) / 2;
-        int l = (this.field_146295_m - this.field_147000_g) / 2;
-        this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f + 50, this.field_147018_x * 18 + 165);
+        int l = (this.field_146295_m - this.field_147000_g) / 3;
+        this.drawTexturedModalRect(k, l, 0, 0, 256, this.field_147018_x * 18 + 165);
    //     this.drawTexturedModalRect(k, l + this.inventoryRows * 18 + 127, 0,126, this.field_146999_f, 96);
    	 
 		drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo,
