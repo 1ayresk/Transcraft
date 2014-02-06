@@ -38,14 +38,9 @@ public class TranspediaGui extends GuiContainer {
 	 * the items)
 	 */
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		/*
-		 * 
-		 * 
-		 * 
-		 * if(pageNumber != 0) { this.fontRenderer.drawString("Transpedia Page "
-		 * + pageNumber, ((width / 2) / 6), (height/2) + (height/5) - 4,
-		 * 4210752); }
-		 */
+	//	  if(pageNumber != 0) { this.fontRenderer.drawString("Transpedia Page "
+	//	  + pageNumber, ((width / 2) / 6), (height/2) + (height/5) - 4,
+	//	  4210752); }
 
 	}
 
@@ -54,17 +49,17 @@ public class TranspediaGui extends GuiContainer {
 	public void initGui() {
 		super.initGui();
 
-		// this.field_146292_n.add(new GuiButton(1, 123,field_147009_r / 2 +
-		// 100, 20, 20, "<"));
-		// this.field_146292_n.add(new GuiButton(0, 48,field_147009_r / 2 + 100,
-		// 20, 20, ">"));
+		 this.field_146292_n.add(new GuiButton(1, 123,field_147009_r / 2 +
+		 100, 20, 20, "<"));
+		 this.field_146292_n.add(new GuiButton(0, 48,field_147009_r / 2 + 100,
+		 20, 20, ">"));
 
 	}
 
 	public void drawScreen(int par1, int par2, float par3) {
 		super.drawScreen(par1, par2, par3);
-		// this.xSize_lo = (float) par1;
-		// this.ySize_lo = (float) par2;
+		 this.xSize_lo = (float) par1;
+		 this.ySize_lo = (float) par2;
 
 	}
 
@@ -73,23 +68,20 @@ public class TranspediaGui extends GuiContainer {
 	 * items)
 	 */
 	protected void func_146976_a(float par1, int par2, int par3) {
-		// GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		// field_110421_t = new
-		// ResourceLocation("transcraft","textures/gui/Transpedia/Transpedia_" +
-		// pageNumber + ".png");
-		// this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
-		// int k = this.field_147003_i;
-		// int l = this.field_147009_r;
-		// int k = 0;
-		// int l = 0;
-		// this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f,
-		// this.field_147000_g);
-		//
-		// if (pageNumber != 0) {
-		// drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)-
-		// this.xSize_lo, (float) (l + 60 - 30) -
-		// this.ySize_lo,this.field_146297_k.thePlayer);
-		// }
+		 GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+		 field_110421_t = new
+		 ResourceLocation("transcraft","textures/gui/Transpedia/Transpedia_" +
+		 pageNumber + ".png");
+		 this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
+		 int k = (this.field_146294_l - this.field_146999_f) / 2;
+		 int l = (this.field_146295_m - this.field_147000_g) / 2;
+		 this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f,this.field_147000_g);
+		
+		 if (pageNumber != 0) {
+		 drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162)-
+		 this.xSize_lo, (float) (l + 60 - 30) -
+		 this.ySize_lo,this.field_146297_k.thePlayer);
+		 }
 	}
 
 	/**

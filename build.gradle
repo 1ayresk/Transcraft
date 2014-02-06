@@ -51,4 +51,33 @@ task incrementBuildNumber() {
             config.toProperties().store(it, "")
         }
     }
+	
+
+}
+
+jar {
+	appendix = 'dev'
+}
+
+task deleteOldArtifacts(type: Delete) {
+	delete 'build/libs'
+}
+
+classes.dependsOn deleteOldArtifacts
+
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+    appendix = 'src'
+}
+
+
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    appendix = 'deobf'
+}
+
+artifacts {
+    archives sourceJar
+    archives deobfJar
 }
