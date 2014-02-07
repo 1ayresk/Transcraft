@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.TileEntitys.Transcrafter;
+package modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter;
 
 import java.util.ArrayList;
 import java.util.HashMap;

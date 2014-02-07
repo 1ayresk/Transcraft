@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.models;
+package modmuss50.mods.transcraft.Client.models;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

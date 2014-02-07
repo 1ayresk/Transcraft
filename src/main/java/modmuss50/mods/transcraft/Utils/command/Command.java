@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.command;
+package modmuss50.mods.transcraft.Utils.command;
 
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;

@@ -3,7 +3,7 @@ package modmuss50.mods.transcraft.Blocks;
 import java.util.List;
 import java.util.Random;
 
-import modmuss50.mods.transcraft.Renders.particles.FXSparkleRun;
+import modmuss50.mods.transcraft.Client.Renders.particles.FXSparkleRun;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;

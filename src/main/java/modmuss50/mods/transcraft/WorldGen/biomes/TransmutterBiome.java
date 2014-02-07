@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.biomes;
+package modmuss50.mods.transcraft.WorldGen.biomes;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;

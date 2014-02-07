@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.biomes;
+package modmuss50.mods.transcraft.WorldGen.biomes;
 
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.SAND;
 import static net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable.EventType.COAL;

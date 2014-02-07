@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.TileEntitys.Transcrafter;
+package modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter;
 
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import net.minecraft.entity.player.EntityPlayer;

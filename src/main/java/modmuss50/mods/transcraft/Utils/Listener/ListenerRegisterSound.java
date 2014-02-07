@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.Listener;
+package modmuss50.mods.transcraft.Utils.Listener;
 
 public class ListenerRegisterSound {
 

@@ -2,23 +2,32 @@ package modmuss50.mods.transcraft.loaders;
 
 import modmuss50.mods.transcraft.Transcraft;
 import modmuss50.mods.transcraft.Items.BasicTransmuter;
+import modmuss50.mods.transcraft.Items.ItemUtil;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.Items.Transpeadia;
-import modmuss50.mods.transcraft.armor.ArmorEnderBoots;
-import modmuss50.mods.transcraft.armor.ArmorEnderChest;
-import modmuss50.mods.transcraft.armor.ArmorEnderHelmet;
-import modmuss50.mods.transcraft.armor.ArmorEnderLegs;
-import modmuss50.mods.transcraft.armor.ArmorPlasticBoots;
-import modmuss50.mods.transcraft.armor.ArmorPlasticChestplate;
-import modmuss50.mods.transcraft.armor.ArmorPlasticHelmet;
-import modmuss50.mods.transcraft.armor.ArmorPlasticLegs;
-import modmuss50.mods.transcraft.helpers.TranscraftUtil;
+import modmuss50.mods.transcraft.Items.armor.ArmorEnderBoots;
+import modmuss50.mods.transcraft.Items.armor.ArmorEnderChest;
+import modmuss50.mods.transcraft.Items.armor.ArmorEnderHelmet;
+import modmuss50.mods.transcraft.Items.armor.ArmorEnderLegs;
+import modmuss50.mods.transcraft.Items.armor.ArmorPlasticBoots;
+import modmuss50.mods.transcraft.Items.armor.ArmorPlasticChestplate;
+import modmuss50.mods.transcraft.Items.armor.ArmorPlasticHelmet;
+import modmuss50.mods.transcraft.Items.armor.ArmorPlasticLegs;
+import modmuss50.mods.transcraft.Utils.TranscraftUtil;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class LoadItems {
 
+	public static Item TestItem;
+	
+	
 	public static void LoadItems() {
+		
+		
+		ItemUtil.addSimpleItem(TestItem, "TestItem", Transcraft.Transtab);
+		
 		TranscraftItems.BasicTransmuter = new BasicTransmuter()
 				.setUnlocalizedName("transcraft:BasicTransmuter")
 				.setCreativeTab(Transcraft.Transtab)
@@ -72,32 +81,32 @@ public class LoadItems {
 				.setUnlocalizedName("Transcraft:HotDog").setCreativeTab(
 						Transcraft.Transtab);
 
-		TranscraftItems.PlasticAxe = new modmuss50.mods.transcraft.Tools.PlasticAxe(
+		TranscraftItems.PlasticAxe = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool).setUnlocalizedName(
 				"Transcraft:PlasticAxe").setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.PlasticHoe = new modmuss50.mods.transcraft.Tools.PlasticHoe(
+		TranscraftItems.PlasticHoe = new modmuss50.mods.transcraft.Items.Tools.PlasticHoe(
 				TranscraftUtil.PlasticTool).setUnlocalizedName(
 				"Transcraft:PlasticHoe").setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.PlasticPickaxe = new modmuss50.mods.transcraft.Tools.PlasticPickaxe(
+		TranscraftItems.PlasticPickaxe = new modmuss50.mods.transcraft.Items.Tools.PlasticPickaxe(
 				TranscraftUtil.PlasticTool).setUnlocalizedName(
 				"Transcraft:PlasticPickaxe")
 				.setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.PlasticShovel = new modmuss50.mods.transcraft.Tools.PlasticShovel(
+		TranscraftItems.PlasticShovel = new modmuss50.mods.transcraft.Items.Tools.PlasticShovel(
 				TranscraftUtil.PlasticTool).setUnlocalizedName(
 				"Transcraft:PlasticShovel").setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.PlasticSword = new modmuss50.mods.transcraft.Tools.PlasticSword(
+		TranscraftItems.PlasticSword = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool).setUnlocalizedName(
 				"Transcraft:PlasticSword").setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.BunkerPick = new modmuss50.mods.transcraft.Tools.BunkerPick(
+		TranscraftItems.BunkerPick = new modmuss50.mods.transcraft.Items.Tools.BunkerPick(
 				TranscraftUtil.BunkerToolEnum).setUnlocalizedName(
 				"Transcraft:EnderPick").setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.EnderSword = new modmuss50.mods.transcraft.Tools.EnderSword(
+		TranscraftItems.EnderSword = new modmuss50.mods.transcraft.Items.Tools.EnderSword(
 				TranscraftUtil.EnderToolEnum)
 				.setUnlocalizedName("Transcraft:EnderSword")
 				.setCreativeTab(Transcraft.Transtab).setFull3D();

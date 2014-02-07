@@ -1,16 +1,17 @@
-package modmuss50.mods.transcraft;
+package modmuss50.mods.transcraft.Client;
 
 import java.util.Random;
 
+import modmuss50.mods.transcraft.TranscraftCommonProxy;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.RenderTC;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.TileTC;
+import modmuss50.mods.transcraft.Client.Renders.RenderEnderSword;
+import modmuss50.mods.transcraft.Client.Renders.particles.FXSparkle;
 import modmuss50.mods.transcraft.Entitys.mob.EnderBatRender;
 import modmuss50.mods.transcraft.Entitys.mob.Enderbat;
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeper;
 import modmuss50.mods.transcraft.Entitys.mob.NukeCreeperRender;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.Renders.RenderEnderSword;
-import modmuss50.mods.transcraft.Renders.particles.FXSparkle;
-import modmuss50.mods.transcraft.TileEntitys.Transcrafter.RenderTC;
-import modmuss50.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.world.World;

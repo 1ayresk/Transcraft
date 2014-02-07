@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.helpers;
+package modmuss50.mods.transcraft.Utils;
 
 public class GuiIds {
 	public static final int Transcrafter = 1;

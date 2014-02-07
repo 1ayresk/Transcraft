@@ -1,11 +1,11 @@
-package modmuss50.mods.transcraft.helpers;
+package modmuss50.mods.transcraft.Utils;
 
+import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.ContainerIG;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.GuiIG;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.ItemGrinderTile;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.ContainerTC;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.GuiTC;
 import modmuss50.mods.transcraft.Items.gui.TranspediaGui;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ContainerIG;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.GuiIG;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemGrinderTile;
-import modmuss50.mods.transcraft.TileEntitys.Transcrafter.ContainerTC;
-import modmuss50.mods.transcraft.TileEntitys.Transcrafter.GuiTC;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

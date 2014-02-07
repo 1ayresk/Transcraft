@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.helpers;
+package modmuss50.mods.transcraft.Utils;
 
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.entity.EntityLivingBase;

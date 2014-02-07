@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.helpers;
+package modmuss50.mods.transcraft.Utils;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.IMob;

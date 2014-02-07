@@ -5,7 +5,7 @@
  * 
  */
 
-package modmuss50.mods.transcraft.helpers;
+package modmuss50.mods.transcraft.Utils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +19,7 @@ public class TranscraftUtil {
 	public static final String VERSION = "1.7.2_V2.0.0_";
 	public static final String STATE = "Prerelease_1";
 	public static boolean DEVSTATUS = false;
-	public static final BiomeGenBase TransmutterBiome = (new modmuss50.mods.transcraft.biomes.TransmutterBiome(
+	public static final BiomeGenBase TransmutterBiome = (new modmuss50.mods.transcraft.WorldGen.biomes.TransmutterBiome(
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
 			0.4F);
 

@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
+package modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder;
 
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.item.ItemStack;

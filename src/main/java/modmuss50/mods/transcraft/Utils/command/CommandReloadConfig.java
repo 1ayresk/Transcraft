@@ -1,6 +1,6 @@
-package modmuss50.mods.transcraft.command;
+package modmuss50.mods.transcraft.Utils.command;
 
-import modmuss50.mods.transcraft.helpers.Config;
+import modmuss50.mods.transcraft.Utils.Config;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentTranslation;
 

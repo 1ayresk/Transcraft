@@ -5,7 +5,7 @@
  * 
  */
 
-package modmuss50.mods.transcraft.Renders.particles;
+package modmuss50.mods.transcraft.Client.Renders.particles;
 
 import java.util.Random;
 

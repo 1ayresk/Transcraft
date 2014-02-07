@@ -1,6 +1,6 @@
-package modmuss50.mods.transcraft.Renders;
+package modmuss50.mods.transcraft.Client.Renders;
 
-import modmuss50.mods.transcraft.models.EnderSwordModel_new;
+import modmuss50.mods.transcraft.Client.models.EnderSwordModel_new;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;

@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.Tools;
+package modmuss50.mods.transcraft.Items.Tools;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemSpade;

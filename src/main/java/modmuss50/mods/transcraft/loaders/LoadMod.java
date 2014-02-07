@@ -8,17 +8,17 @@
 package modmuss50.mods.transcraft.loaders;
 
 import modmuss50.mods.transcraft.Transcraft;
-import modmuss50.mods.transcraft.Listener.ListenerRegisterSound;
+import modmuss50.mods.transcraft.Utils.Config;
+import modmuss50.mods.transcraft.Utils.EventMobDeath;
+import modmuss50.mods.transcraft.Utils.FuelHandler;
+import modmuss50.mods.transcraft.Utils.GuiHand;
+import modmuss50.mods.transcraft.Utils.TickHelper;
+import modmuss50.mods.transcraft.Utils.TranscraftUtil;
+import modmuss50.mods.transcraft.Utils.Listener.ListenerRegisterSound;
+import modmuss50.mods.transcraft.Utils.command.CommandReloadConfig;
+import modmuss50.mods.transcraft.Utils.command.CommandTranscraftVersion;
 import modmuss50.mods.transcraft.WorldGen.TranscraftGenerator;
 import modmuss50.mods.transcraft.addons.Addons;
-import modmuss50.mods.transcraft.command.CommandReloadConfig;
-import modmuss50.mods.transcraft.command.CommandTranscraftVersion;
-import modmuss50.mods.transcraft.helpers.Config;
-import modmuss50.mods.transcraft.helpers.EventMobDeath;
-import modmuss50.mods.transcraft.helpers.FuelHandler;
-import modmuss50.mods.transcraft.helpers.GuiHand;
-import modmuss50.mods.transcraft.helpers.TickHelper;
-import modmuss50.mods.transcraft.helpers.TranscraftUtil;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;

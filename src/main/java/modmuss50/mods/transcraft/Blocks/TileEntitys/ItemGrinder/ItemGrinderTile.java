@@ -1,7 +1,7 @@
-package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
+package modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder;
 
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.helpers.Config;
+import modmuss50.mods.transcraft.Utils.Config;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;

@@ -1,7 +1,8 @@
 package modmuss50.mods.transcraft;
 
+import modmuss50.mods.transcraft.Client.TranscraftClientProxy;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.helpers.TranscraftUtil;
+import modmuss50.mods.transcraft.Utils.TranscraftUtil;
 import modmuss50.mods.transcraft.loaders.LoadMod;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -21,7 +22,7 @@ public class Transcraft {
 	@Instance("transcraft")
 	public static Transcraft instance;
 
-	@SidedProxy(clientSide = "modmuss50.mods.transcraft.TranscraftClientProxy", serverSide = "modmuss50.mods.transcraft.TranscraftCommonProxy")
+	@SidedProxy(clientSide = "modmuss50.mods.transcraft.Client.TranscraftClientProxy", serverSide = "modmuss50.mods.transcraft.TranscraftCommonProxy")
 	public static TranscraftCommonProxy Coproxy;
 	public static TranscraftClientProxy Clproxy;
 

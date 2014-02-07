@@ -1,8 +1,8 @@
-package modmuss50.mods.transcraft.Tools;
+package modmuss50.mods.transcraft.Items.Tools;
 
 import java.util.List;
 
-import modmuss50.mods.transcraft.helpers.Config;
+import modmuss50.mods.transcraft.Utils.Config;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;

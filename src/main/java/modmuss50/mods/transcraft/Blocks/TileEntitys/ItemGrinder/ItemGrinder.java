@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.TileEntitys.ItemGrinder;
+package modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder;
 
 import java.util.Iterator;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.fluids;
+package modmuss50.mods.transcraft.Blocks.fluids;
 
 import net.minecraftforge.fluids.Fluid;
 

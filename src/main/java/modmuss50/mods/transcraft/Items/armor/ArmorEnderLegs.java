@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.armor;
+package modmuss50.mods.transcraft.Items.armor;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;

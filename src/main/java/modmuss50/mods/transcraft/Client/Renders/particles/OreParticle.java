@@ -1,4 +1,4 @@
-package modmuss50.mods.transcraft.Renders.particles;
+package modmuss50.mods.transcraft.Client.Renders.particles;
 
 import net.minecraft.client.particle.EntityPortalFX;
 import net.minecraft.client.renderer.Tessellator;

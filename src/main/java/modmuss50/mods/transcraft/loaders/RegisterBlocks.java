@@ -8,9 +8,9 @@ import modmuss50.mods.transcraft.Blocks.Quartz.ItemCutEnderQuartzBlock;
 import modmuss50.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
 import modmuss50.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBlock;
 import modmuss50.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBrick;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.ItemGrinderTile;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.TileTC;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.TileEntitys.ItemGrinder.ItemGrinderTile;
-import modmuss50.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 
