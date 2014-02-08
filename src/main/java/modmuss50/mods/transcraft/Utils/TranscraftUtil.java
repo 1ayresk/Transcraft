@@ -31,5 +31,5 @@ public class TranscraftUtil {
 			"EnderToolEnum", 400, 10000, 80.0F, 46, 100);
 
 	public static List<String> authorList = Arrays.asList("mark123mark",
-			"tattyseal", "shifu_", "klmDF14J");
+			"tattyseal", "shifu_", "klmDF14J", "Ayresy");
 }

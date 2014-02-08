@@ -4,6 +4,7 @@ import modmuss50.mods.transcraft.Transcraft;
 import modmuss50.mods.transcraft.Blocks.ThinCrystalGlass;
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOre;
+import modmuss50.mods.transcraft.Blocks.TransmutterPlant;
 import modmuss50.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import modmuss50.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
@@ -157,5 +158,10 @@ public class LoadBlocks {
 				.func_149658_d("Transcraft:ixpGrinder")
 				.func_149647_a(Transcraft.Transtab);
 
+		TranscraftBlocks.TransmutterPlant = new TransmutterPlant()
+		.func_149663_c("Transcraft:TransmutterPlant").func_149711_c(1.0F)
+		.func_149658_d("Transcraft:TransmutterPlant")
+		.func_149647_a(Transcraft.Transtab);
+		
 	}
 }

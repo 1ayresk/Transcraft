@@ -123,6 +123,8 @@ public class RegisterBlocks {
 				"Transcrafter");
 
 		GameRegistry.registerBlock(TranscraftBlocks.ixpGrinder, "ItemGrinder");
+		
+		GameRegistry.registerBlock(TranscraftBlocks.TransmutterPlant, "TransmutterPlant");
 
 		registerItem(TranscraftItems.BasicTransmuter);
 		registerItem(TranscraftItems.QuadTransmuter);
