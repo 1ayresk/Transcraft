@@ -1,8 +1,9 @@
 package modmuss50.mods.transcraft.loaders;
 
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import modmuss50.mods.transcraft.Transcraft;
 import modmuss50.mods.transcraft.Items.BasicTransmuter;
-import modmuss50.mods.transcraft.Items.ItemUtil;
+import modmuss50.mods.transcraft.Items.TranscraftColorItems;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.Items.Transpeadia;
 import modmuss50.mods.transcraft.Items.armor.ArmorEnderBoots;
@@ -15,6 +16,7 @@ import modmuss50.mods.transcraft.Items.armor.ArmorPlasticHelmet;
 import modmuss50.mods.transcraft.Items.armor.ArmorPlasticLegs;
 import modmuss50.mods.transcraft.Utils.TranscraftUtil;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -26,7 +28,7 @@ public class LoadItems {
 	public static void LoadItems() {
 		
 		
-		ItemUtil.addSimpleItem(TestItem, "TestItem", Transcraft.Transtab);
+		
 		
 		TranscraftItems.BasicTransmuter = new BasicTransmuter()
 				.setUnlocalizedName("transcraft:BasicTransmuter")
@@ -81,26 +83,7 @@ public class LoadItems {
 				.setUnlocalizedName("Transcraft:HotDog").setCreativeTab(
 						Transcraft.Transtab);
 
-		TranscraftItems.PlasticAxe = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
-				TranscraftUtil.PlasticTool).setUnlocalizedName(
-				"Transcraft:PlasticAxe").setCreativeTab(Transcraft.Transtab);
 
-		TranscraftItems.PlasticHoe = new modmuss50.mods.transcraft.Items.Tools.PlasticHoe(
-				TranscraftUtil.PlasticTool).setUnlocalizedName(
-				"Transcraft:PlasticHoe").setCreativeTab(Transcraft.Transtab);
-
-		TranscraftItems.PlasticPickaxe = new modmuss50.mods.transcraft.Items.Tools.PlasticPickaxe(
-				TranscraftUtil.PlasticTool).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe")
-				.setCreativeTab(Transcraft.Transtab);
-
-		TranscraftItems.PlasticShovel = new modmuss50.mods.transcraft.Items.Tools.PlasticShovel(
-				TranscraftUtil.PlasticTool).setUnlocalizedName(
-				"Transcraft:PlasticShovel").setCreativeTab(Transcraft.Transtab);
-
-		TranscraftItems.PlasticSword = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
-				TranscraftUtil.PlasticTool).setUnlocalizedName(
-				"Transcraft:PlasticSword").setCreativeTab(Transcraft.Transtab);
 
 		TranscraftItems.BunkerPick = new modmuss50.mods.transcraft.Items.Tools.BunkerPick(
 				TranscraftUtil.BunkerToolEnum).setUnlocalizedName(
@@ -153,6 +136,9 @@ public class LoadItems {
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:Transpedia");
 
+		
+		TranscraftColorItems.loadItems();
+		
 	}
 
 }

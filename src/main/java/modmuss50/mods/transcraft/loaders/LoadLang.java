@@ -2,6 +2,7 @@ package modmuss50.mods.transcraft.loaders;
 
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOre;
+import modmuss50.mods.transcraft.Items.TranscraftColorItems;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.api.ColouredNamesUtil;
 import net.minecraft.item.ItemBlock;
@@ -11,6 +12,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class LoadLang {
 
 	public static void loadlang() {
+		
+		/*
+		 * 
+		 
+		
 		LanguageRegistry.instance().addStringLocalization("itemGroup.Transtab",
 				"en_US", "Transcraft");
 		LanguageRegistry.instance().addStringLocalization(
@@ -38,8 +44,7 @@ public class LoadLang {
 
 		LanguageRegistry.addName(TranscraftItems.PlasticAxe, "Plastic Axe");
 		LanguageRegistry.addName(TranscraftItems.PlasticHoe, "Plastic Hoe");
-		LanguageRegistry.addName(TranscraftItems.PlasticPickaxe,
-				"Plastic Pickaxe");
+		LanguageRegistry.addName(TranscraftColorItems.PlasticPickaxe0,"Plastic Pickaxe");
 		LanguageRegistry.addName(TranscraftItems.PlasticShovel,
 				"Plastic Shovel");
 		LanguageRegistry.addName(TranscraftItems.PlasticSword, "Plastic Sword");
@@ -101,6 +106,8 @@ public class LoadLang {
 		// LanguageRegistry.addName(TranscraftBlocks.ixpGrinder,
 		// "Item Grinder");
 
+
+*/
 	}
 
 }

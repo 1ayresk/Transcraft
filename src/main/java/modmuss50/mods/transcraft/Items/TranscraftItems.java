@@ -17,11 +17,9 @@ public class TranscraftItems {
 	public static Item DarkEndershard;
 	public static Item Transpedia;
 
-	public static Item PlasticAxe;
-	public static Item PlasticHoe;
-	public static Item PlasticPickaxe;
-	public static Item PlasticShovel;
-	public static Item PlasticSword;
+	
+	
+	
 	public static Item BunkerPick;
 	public static Item EnderSword;
 

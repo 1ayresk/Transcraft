@@ -1,6 +1,7 @@
 package modmuss50.mods.transcraft.loaders;
 
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
+import modmuss50.mods.transcraft.Items.TranscraftColorItems;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -120,25 +121,25 @@ public class RecipeLoader {
 				"o", "i", 'i', TranscraftItems.IronStick, 'o',
 				TranscraftItems.Oil);
 
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticSword),
+		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticSword0),
 				" p ", " p ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticPickaxe),
+		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticPickaxe0),
 				"ppp", " i ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticAxe),
+		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticAxe0),
 				" pp", " ip", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticAxe),
+		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticAxe0),
 				"pp ", "pi ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticHoe),
+		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticHoe0),
 				"pp ", " i ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticHoe),
+		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticHoe0),
 				" pp", " i ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticShovel),
+		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticShovel0),
 				" p ", " i ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
 
