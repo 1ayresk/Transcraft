@@ -16,26 +16,18 @@ public class CrystalGlass extends org.zaet.api.IColoredBlock {
 	/**
 	 * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
 	 */
-	public int func_149701_w() {
+	public int getRenderBlockPass() {
 		return 0;
 	}
 
-	/**
-	 * Is this block (a) opaque and (b) a full 1m cube? This determines whether
-	 * or not to render the shared face of two adjacent blocks and also whether
-	 * the player can attach torches, redstone wire, etc to this block.
-	 */
-	@Override
-	public boolean func_149662_c() {
-		return false;
-	}
+
 
 	/**
 	 * If this block doesn't render as an ordinary block it will return False
 	 * (examples: signs, buttons, stairs, etc)
 	 */
 	@Override
-	public boolean func_149686_d() {
+	public boolean isOpaqueCube() {
 		return false;
 	}
 

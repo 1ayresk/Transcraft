@@ -33,9 +33,9 @@ public class ICloulouredGlassPane extends BlockPane {
 	 */
 	public ICloulouredGlassPane() {
 		super("transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.field_151581_o, true);
-		func_149711_c(3.0F);
-		func_149752_b(4.0F);
+				Material.glass, true);
+		setHardness(3.0F);
+		setResistance(4.0F);
 	}
 
 	/***
@@ -48,13 +48,13 @@ public class ICloulouredGlassPane extends BlockPane {
 	 */
 	public ICloulouredGlassPane(int id, Material m) {
 		super("transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.field_151581_o, true);
-		func_149711_c(3.0F);
-		func_149752_b(4.0F);
+				Material.glass, true);
+		setHardness(3.0F);
+		setResistance(4.0F);
 	}
 
 	@Override
-	public boolean func_149646_a(IBlockAccess access, int par0, int par1,
+	public boolean shouldSideBeRendered(IBlockAccess access, int par0, int par1,
 			int par2, int par3) {
 		return true;
 
@@ -148,18 +148,13 @@ public class ICloulouredGlassPane extends BlockPane {
 		}
 	}
 
-	/***
-	 * Get's block dropped from metadata.
-	 */
-	public int damageDropped(int metadata) {
-		return metadata;
-	}
+
 
 	@Override
 	/***
 	 * Get's block dropped from metadata.
 	 */
-	public int func_149692_a(int metadata) {
+	public int damageDropped(int metadata) {
 		return metadata;
 	}
 
@@ -174,12 +169,12 @@ public class ICloulouredGlassPane extends BlockPane {
 	}
 
 	@Override
-	public boolean func_149727_a(World w, int x, int y, int z, EntityPlayer p,
+	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p,
 			int i, float f, float f1, float f2) {
 		if (p.getHeldItem() != null && p.getHeldItem().getItem() == Items.dye) {
 			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem()
 					.getItemDamage(), 3);
-			w.func_147471_g(x, y, z);
+			w.markBlockForUpdate(x, y, z);
 			// w.func_147588_b(x, y, z);
 			return true;
 		} else {

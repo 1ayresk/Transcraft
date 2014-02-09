@@ -13,14 +13,14 @@ public class CommandTranscraftVersion extends Command {
 	@Override
 	public void processCommand(ICommandSender par1ICommandSender,
 			String[] par2ArrayOfStr) {
-		par1ICommandSender.func_145747_a(new ChatComponentTranslation(
+		par1ICommandSender.addChatMessage(new ChatComponentTranslation(
 				"----------Transcraft!----------"));
-		par1ICommandSender.func_145747_a(new ChatComponentTranslation(
+		par1ICommandSender.addChatMessage(new ChatComponentTranslation(
 				"Transcraft Version " + TranscraftUtil.VERSION
 						+ TranscraftUtil.STATE));
-		par1ICommandSender.func_145747_a(new ChatComponentTranslation(
+		par1ICommandSender.addChatMessage(new ChatComponentTranslation(
 				"Made by " + TranscraftUtil.authorList));
-		par1ICommandSender.func_145747_a(new ChatComponentTranslation(
+		par1ICommandSender.addChatMessage(new ChatComponentTranslation(
 				"----------Transcraft!----------"));
 
 	}

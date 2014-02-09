@@ -158,7 +158,7 @@ public class RegisterBlocks {
 		
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
 		GameRegistry.registerTileEntity(ItemGrinderTile.class, "TileItemGrinder");
-		TileEntity.func_145826_a(ItemGrinderTile.class, "TileItemGrinder2");
+		TileEntity.addMapping(ItemGrinderTile.class, "TileItemGrinder2");
 
 	}
 

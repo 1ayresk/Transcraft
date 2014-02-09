@@ -28,8 +28,13 @@ public class TileIGRender extends TileEntitySpecialRenderer {
 	 * Renders the TileEntity for the chest at a position.
 	 */
 
+
+	/*
+	 * (non-Javadoc)
+	 * @see net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer#renderTileEntityAt(net.minecraft.tileentity.TileEntity, double, double, double, float)
+
 	@Override
-	public void func_147500_a(TileEntity par1TileEC, double par2, double par4,
+	public void renderTileEntityAt(TileEntity par1TileEC, double par2, double par4,
 			double par6, float par8) {
 		int i;
 
@@ -85,9 +90,11 @@ public class TileIGRender extends TileEntitySpecialRenderer {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 	}
 
+
+	 */
 	public void renderTileEntityAt(TileEntity par1TileEntity, double par2,
 			double par4, double par6, float par8) {
-		this.func_147500_a((ItemGrinderTile) par1TileEntity, par2, par4, par6, par8);
+//		this.func_147500_a((ItemGrinderTile) par1TileEntity, par2, par4, par6, par8);
 	}
 
 }

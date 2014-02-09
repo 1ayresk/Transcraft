@@ -10,7 +10,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class IronTorch extends BlockTorch {
 	public IronTorch() {
 		super();
-		this.func_149675_a(true);
+		this.setTickRandomly(true);
 	}
 
 	@Override
@@ -18,7 +18,7 @@ public class IronTorch extends BlockTorch {
 	/**
 	 * A randomly called display update to be able to add particles or other items for display
 	 */
-	public void func_149734_b(World par1World, int par2, int par3, int par4,
+	public void randomDisplayTick(World par1World, int par2, int par3, int par4,
 			Random par5Random) {
 		int l = par1World.getBlockMetadata(par2, par3, par4);
 		double d0 = par2 + 0.5F;

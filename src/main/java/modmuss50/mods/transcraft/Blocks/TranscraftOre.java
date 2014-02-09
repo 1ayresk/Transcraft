@@ -23,19 +23,19 @@ public class TranscraftOre extends Block {
 	private static IIcon[] icons = new IIcon[types.length];
 
 	public TranscraftOre() {
-		super(Material.field_151574_g);
+		super(Material.ground);
 	}
 
 	private int nextNum;
 
 	@Override
-	public String func_149739_a() {
+	public String getUnlocalizedName() {
 		return "ore_" + nextNum;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon func_149691_a(int side, int meta) {
+	public IIcon getIcon(int side, int meta) {
 
 		for (int i = types.length; i >= 0; i--) {
 			return icons[meta];
@@ -46,7 +46,7 @@ public class TranscraftOre extends Block {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void func_149651_a(IIconRegister icon) {
+	public void registerBlockIcons(IIconRegister icon) {
 		for (int i = 0; i < types.length; i++) {
 			String type = types[i].toLowerCase();
 			icons[i] = icon.registerIcon("transcraft:ores/ore_" + type);
@@ -55,7 +55,7 @@ public class TranscraftOre extends Block {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void func_149666_a(Item p_149666_1_, CreativeTabs p_149666_2_,
+	public void getSubBlocks(Item p_149666_1_, CreativeTabs p_149666_2_,
 			List p_149666_3_) {
 		for (int i = 0; i < 5; ++i) {
 			p_149666_3_.add(new ItemStack(p_149666_1_, 1, i));
@@ -63,13 +63,13 @@ public class TranscraftOre extends Block {
 	}
 
 	@Override
-	public int func_149692_a(int metadata) {
+	public int damageDropped(int metadata) {
 		return metadata;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void func_149734_b(World par1World, int par2, int par3, int par4,
+	public void randomDisplayTick(World par1World, int par2, int par3, int par4,
 			Random par5Random) {
 		FXSparkleRun.randomDisplayTick(par1World, par2, par3, par4, par5Random);
 	}

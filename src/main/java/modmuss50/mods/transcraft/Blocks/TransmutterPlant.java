@@ -10,11 +10,11 @@ public class TransmutterPlant extends BlockCrops
 		public TransmutterPlant() {
 			super();
 			float f = 0.5F;
-			this.func_149676_a(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
-	        this.func_149647_a((CreativeTabs)null);
-	        this.func_149711_c(0.0F);
-	        this.func_149672_a(field_149779_h);
-	        this.func_149649_H();
+			this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
+	        this.setCreativeTab((CreativeTabs)null);
+	        this.setHardness(0.0F);
+	        this.setStepSound(soundTypeGrass);
+	        this.disableStats();
 		}
 		
 		

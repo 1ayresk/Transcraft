@@ -14,13 +14,13 @@ public class Transcrafter extends BlockContainer {
 	public int multiblock;
 
 	public Transcrafter() {
-		super(Material.field_151574_g);
-		this.func_149711_c(2F);
+		super(Material.anvil);
+		this.setHardness(2F);
 
 	}
 
 	@Override
-	public IIcon func_149691_a(int side, int meta) {
+	public IIcon getIcon(int side, int meta) {
 		if (side == 1 || side == 0) {
 			return icons[0];
 		} else {
@@ -33,13 +33,13 @@ public class Transcrafter extends BlockContainer {
 	}
 
 	@Override
-	public void func_149651_a(IIconRegister i) {
+	public void registerBlockIcons(IIconRegister i) {
 		icons[0] = i.registerIcon("transcraft:TC_top");
 		icons[1] = i.registerIcon("transcraft:TC_side");
 	}
 
 	@Override
-	public boolean func_149727_a(World w, int x, int y, int z, EntityPlayer p,
+	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p,
 			int par6, float par7, float par8, float par9) {
 		int xs = 0;
 		int ys = 0;
@@ -60,17 +60,17 @@ public class Transcrafter extends BlockContainer {
 	}
 
 	@Override
-	public TileEntity func_149915_a(World world, int metadata) {
+	public TileEntity createNewTileEntity(World world, int metadata) {
 		return new TileTC();
 	}
 
 	@Override
-	public int func_149645_b() {
+	public int getRenderType() {
 		return -1;
 	}
 
 	@Override
-	public boolean func_149662_c() {
+	public boolean isOpaqueCube() {
 		return false;
 	}
 

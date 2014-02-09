@@ -17,7 +17,7 @@ public class GuiHand implements IGuiHandler {
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
 
-		TileEntity te = world.func_147438_o(x, y, z);
+		TileEntity te = world.getTileEntity(x, y, z);
 
 		if (ID == 2) {
 			return new ContainerIG(player.inventory, (ItemGrinderTile) te);
@@ -32,7 +32,7 @@ public class GuiHand implements IGuiHandler {
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {
 
-		TileEntity te = world.func_147438_o(x, y, z);
+		TileEntity te = world.getTileEntity(x, y, z);
 
 		switch (ID) {
 

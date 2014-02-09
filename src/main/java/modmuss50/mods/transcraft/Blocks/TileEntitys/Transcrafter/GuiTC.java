@@ -22,11 +22,11 @@ public class GuiTC extends GuiContainer {
 	 * the items)
 	 */
 	protected void func_146979_b(int p_146979_1_, int p_146979_2_) {
-		this.field_146289_q.drawString(I18n.getStringParams("Transcrafter"),
-				28, 6, 1210752);
-		this.field_146289_q.drawString(
-				I18n.getStringParams("container.inventory"), 8,
-				this.field_147000_g - 96 + 2, 1210752);
+//		this.field_146289_q.drawString(I18n.getStringParams("Transcrafter"),
+//				28, 6, 1210752);
+//		this.field_146289_q.drawString(
+//				I18n.getStringParams("container.inventory"), 8,
+//				this.field_147000_g - 96 + 2, 1210752);
 	}
 
 	/**
@@ -35,14 +35,14 @@ public class GuiTC extends GuiContainer {
 	 */
 
 	@Override
-	protected void func_146976_a(float p_146976_1_, int p_146976_2_,
+	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_,
 			int p_146976_3_) {
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.field_146297_k.getTextureManager().bindTexture(field_110422_t);
-		int k = (this.field_146294_l - this.field_146999_f) / 2;
-		int l = (this.field_146295_m - this.field_147000_g) / 2;
-		this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f,
-				this.field_147000_g);
+//		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+//		this.field_146297_k.getTextureManager().bindTexture(field_110422_t);
+//		int k = (this.field_146294_l - this.field_146999_f) / 2;
+//		int l = (this.field_146295_m - this.field_147000_g) / 2;
+//		this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f,
+//				this.field_147000_g);
 	}
 
 }

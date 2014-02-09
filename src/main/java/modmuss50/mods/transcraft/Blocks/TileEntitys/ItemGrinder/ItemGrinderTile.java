@@ -94,7 +94,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 			if (this.chestContents[par1].stackSize <= par2) {
 				itemstack = this.chestContents[par1];
 				this.chestContents[par1] = null;
-				this.onInventoryChanged();
+//				this.onInventoryChanged();
 				return itemstack;
 			} else {
 				itemstack = this.chestContents[par1].splitStack(par2);
@@ -103,7 +103,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 					this.chestContents[par1] = null;
 				}
 
-				this.onInventoryChanged();
+//				this.onInventoryChanged();
 				return itemstack;
 			}
 		} else {
@@ -159,7 +159,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 				par2ItemStack.stackSize = this.getInventoryStackLimit();
 			}
 
-			this.onInventoryChanged();
+//			this.onInventoryChanged();
 		}
 	}
 
@@ -192,9 +192,9 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	/**
 	 * Reads a tile entity from NBT.
 	 */
-	public void func_145839_a(NBTTagCompound par1NBTTagCompound) {
-		super.func_145839_a(par1NBTTagCompound);
-		NBTTagList nbttaglist = par1NBTTagCompound.func_150295_c("Items", 10);
+	public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
+		super.readFromNBT(par1NBTTagCompound);
+		NBTTagList nbttaglist = par1NBTTagCompound.getTagList("Items", 10);
 		this.chestContents = new ItemStack[this.getSizeInventory()];
 
 		System.out.println("READING TILE");
@@ -205,7 +205,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 
 		for (int i = 0; i < nbttaglist.tagCount(); ++i) {
 			NBTTagCompound nbttagcompound1 = (NBTTagCompound) nbttaglist
-					.func_150305_b(i);
+					.getCompoundTagAt(i);
 			int j = nbttagcompound1.getByte("Slot") & 255;
 
 			if (j >= 0 && j < this.chestContents.length) {
@@ -233,8 +233,8 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	/**
 	 * Writes a tile entity to NBT.
 	 */
-	public void func_145841_b(NBTTagCompound par1NBTTagCompound) {
-		super.func_145841_b(par1NBTTagCompound);
+	public void writeToNBT(NBTTagCompound par1NBTTagCompound) {
+		super.writeToNBT(par1NBTTagCompound);
 		NBTTagList nbttaglist = new NBTTagList();
 
 		System.out.println("SAVING TILE");
@@ -272,12 +272,13 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	 */
 
 	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
-		return this.field_145850_b.func_147438_o(this.field_145851_c,
-				this.field_145848_d, this.field_145849_e) != this ? false
-				: par1EntityPlayer.getDistanceSq(
-						(double) this.field_145851_c + 0.5D,
-						(double) this.field_145848_d + 0.5D,
-						(double) this.field_145849_e + 0.5D) <= 64.0D;
+		return false;
+//		return this.field_145850_b.func_147438_o(this.field_145851_c,
+//				this.field_145848_d, this.field_145849_e) != this ? false
+//				: par1EntityPlayer.getDistanceSq(
+//						(double) this.field_145851_c + 0.5D,
+//						(double) this.field_145848_d + 0.5D,
+//						(double) this.field_145849_e + 0.5D) <= 64.0D;
 	}
 
 	/**
@@ -287,7 +288,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	 */
 
 	public void func_145836_u() {
-		super.func_145836_u();
+//		super.func_145836_u();
 	}
 
 	private void handleEnergy() {
@@ -373,7 +374,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	 */
 
 	public void func_145845_h() {
-		super.func_145845_h();
+//		super.func_145845_h();
 
 		handleEnergy();
 
@@ -391,8 +392,9 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 			this.numUsingPlayers = par2;
 			return true;
 		} else {
-			return super.func_145842_c(par1, par2);
+//			return super.func_145842_c(par1, par2);
 		}
+		return false;
 	}
 
 	public void openChest() {
@@ -401,30 +403,30 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 		}
 
 		++this.numUsingPlayers;
-		this.field_145850_b.func_147452_c(this.field_145851_c,
-				this.field_145848_d, this.field_145849_e, this.func_145838_q(),
-				1, this.field_145987_o);
-		this.field_145850_b.func_147459_d(this.field_145851_c,
-				this.field_145848_d, this.field_145849_e, this.func_145838_q());
-		this.field_145850_b.func_147459_d(this.field_145851_c,
-				this.field_145848_d - 1, this.field_145849_e,
-				this.func_145838_q());
+//		this.field_145850_b.func_147452_c(this.field_145851_c,
+//				this.field_145848_d, this.field_145849_e, this.func_145838_q(),
+//				1, this.field_145987_o);
+//		this.field_145850_b.func_147459_d(this.field_145851_c,
+//				this.field_145848_d, this.field_145849_e, this.func_145838_q());
+//		this.field_145850_b.func_147459_d(this.field_145851_c,
+//				this.field_145848_d - 1, this.field_145849_e,
+//				this.func_145838_q());
 
 	}
 
 	public void closeChest() {
-		if (this.func_145838_q() instanceof ItemGrinder) {
-			--this.numUsingPlayers;
-			this.field_145850_b.func_147452_c(this.field_145851_c,
-					this.field_145848_d, this.field_145849_e,
-					this.func_145838_q(), 1, this.field_145987_o);
-			this.field_145850_b.func_147459_d(this.field_145851_c,
-					this.field_145848_d, this.field_145849_e,
-					this.func_145838_q());
-			this.field_145850_b.func_147459_d(this.field_145851_c,
-					this.field_145848_d - 1, this.field_145849_e,
-					this.func_145838_q());
-		}
+//		if (this.func_145838_q() instanceof ItemGrinder) {
+//			--this.numUsingPlayers;
+//			this.field_145850_b.func_147452_c(this.field_145851_c,
+//					this.field_145848_d, this.field_145849_e,
+//					this.func_145838_q(), 1, this.field_145987_o);
+//			this.field_145850_b.func_147459_d(this.field_145851_c,
+//					this.field_145848_d, this.field_145849_e,
+//					this.func_145838_q());
+//			this.field_145850_b.func_147459_d(this.field_145851_c,
+//					this.field_145848_d - 1, this.field_145849_e,
+//					this.func_145838_q());
+//		}
 
 	}
 
@@ -460,15 +462,27 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	}
 
 	@Override
-	public String func_145825_b() {
+	public String getInventoryName() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean func_145818_k_() {
+	public boolean hasCustomInventoryName() {
 		// TODO Auto-generated method stub
 		return true;
+	}
+
+	@Override
+	public void openInventory() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeInventory() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

@@ -5,7 +5,7 @@ import net.minecraft.block.material.Material;
 
 public class ComGoldOre extends Block {
 	public ComGoldOre() {
-		super(Material.field_151576_e);
+		super(Material.ground);
 	}
 
 }

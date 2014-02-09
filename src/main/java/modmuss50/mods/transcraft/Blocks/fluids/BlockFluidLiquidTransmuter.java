@@ -12,7 +12,7 @@ public class BlockFluidLiquidTransmuter extends BlockFluidClassic {
 	public static Icon springWaterFlowingIcon;
 
 	public BlockFluidLiquidTransmuter(int id, Fluid fluid, Material material) {
-		super(id, fluid, material);
+		super(fluid, material);
 		for (int i = 8; i < 11; i++) {
 			// displacementIds.put(i, false);
 		}

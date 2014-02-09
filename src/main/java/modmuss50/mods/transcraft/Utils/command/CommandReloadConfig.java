@@ -14,7 +14,7 @@ public class CommandReloadConfig extends Command {
 	public void processCommand(ICommandSender par1ICommandSender,
 			String[] par2ArrayOfStr) {
 		Config.initConfig();
-		par1ICommandSender.func_145747_a(new ChatComponentTranslation(
+		par1ICommandSender.addChatMessage(new ChatComponentTranslation(
 				"Config Reloaded"));
 
 	}

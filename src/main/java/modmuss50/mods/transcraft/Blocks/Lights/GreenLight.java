@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 public class GreenLight extends Block {
 
 	public GreenLight() {
-		super(Material.field_151581_o);
+		super(Material.cloth);
 	}
 
 }

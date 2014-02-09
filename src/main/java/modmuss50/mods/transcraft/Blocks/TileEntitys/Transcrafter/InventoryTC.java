@@ -58,7 +58,7 @@ public class InventoryTC implements IInventory {
 	 * Returns the name of the inventory.
 	 */
 	@Override
-	public String func_145825_b() {
+	public String getInventoryName() {
 		return "Transcrafer";
 	}
 
@@ -68,7 +68,7 @@ public class InventoryTC implements IInventory {
 	 * used directly.
 	 */
 	@Override
-	public boolean func_145818_k_() {
+	public boolean hasCustomInventoryName() {
 		return false;
 	}
 
@@ -139,7 +139,6 @@ public class InventoryTC implements IInventory {
 	/**
 	 * Called when an the contents of an Inventory change, usually
 	 */
-	@Override
 	public void onInventoryChanged() {
 	}
 
@@ -152,11 +151,10 @@ public class InventoryTC implements IInventory {
 		return true;
 	}
 
-	@Override
 	public void openChest() {
 	}
 
-	@Override
+	
 	public void closeChest() {
 	}
 
@@ -167,6 +165,24 @@ public class InventoryTC implements IInventory {
 	@Override
 	public boolean isItemValidForSlot(int par1, ItemStack par2ItemStack) {
 		return true;
+	}
+
+	@Override
+	public void markDirty() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void openInventory() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeInventory() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

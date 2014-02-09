@@ -89,7 +89,7 @@ public class NukeCreeper extends EntityCreeper {
 		}
 
 		for (int l = 0; l < k; ++l) {
-			this.func_145779_a(Item.func_150899_d(k), 1);
+			this.dropItem(Item.getItemById(k), 1);
 		}
 	}
 
@@ -104,8 +104,7 @@ public class NukeCreeper extends EntityCreeper {
 	/**
 	 * Returns the item ID for the item the mob drops on death.
 	 */
-	@Override
-	protected Item func_146068_u() {
+	protected Item dropItem() {
 		return TranscraftItems.DarkEndershard;
 	}
 

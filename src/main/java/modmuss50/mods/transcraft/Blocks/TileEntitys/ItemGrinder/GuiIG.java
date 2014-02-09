@@ -49,21 +49,21 @@ public class GuiIG extends GuiContainer {
 	 * the items)
 	 */
 	@Override
-	protected void func_146979_b(int par1, int par2) {
+	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.field_146289_q.drawString("Item Grinder", 8, -35, 4210752);
-		this.field_146289_q.drawString("Inventory", 9,this.field_146999_f - 90, 4210752);
-		this.field_146289_q.drawString("Current Essence: " + te.getIXPValue(),
-				77, -35, 4210752);
-		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
+//		this.field_146289_q.drawString("Item Grinder", 8, -35, 4210752);
+//		this.field_146289_q.drawString("Inventory", 9,this.field_146999_f - 90, 4210752);
+//		this.field_146289_q.drawString("Current Essence: " + te.getIXPValue(),
+//				77, -35, 4210752);
+//		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
 
 		if (te.getIXPValue() != 0) {
 			if (te.CurrnetintMaxValue != 0) {
 				te.CurrentintIXPValue = (int) te.getIXPValue();
 				int perint1 = (te.CurrentintIXPValue * 100);
 				int perint2 = (perint1 / te.CurrnetintMaxValue);
-				this.drawTexturedModalRect(field_147000_g - 135,
-						field_146999_f - 193, 0, 220, perint2, 14);
+//				this.drawTexturedModalRect(field_147000_g - 135,
+//						field_146999_f - 193, 0, 220, perint2, 14);
 			}
 		}
 
@@ -92,7 +92,13 @@ public class GuiIG extends GuiContainer {
 	 * items)
 	 */
 	@Override
-	protected void func_146976_a(float par1, int par2, int par3) {
+	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+	
+		
+		/*
+		 * 
+		 
+		
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
 		int k = (this.field_146294_l - this.field_146999_f) / 2;
@@ -103,7 +109,7 @@ public class GuiIG extends GuiContainer {
 		drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo,
 				(float) (l + 60 - 30) - this.ySize_lo,
 				this.field_146297_k.thePlayer);
-
+*/
 	
 	}
 
@@ -138,7 +144,7 @@ public class GuiIG extends GuiContainer {
 		par5EntityLivingBase.prevRotationYawHead = par5EntityLivingBase.rotationYaw;
 		GL11.glTranslatef(0.0F, par5EntityLivingBase.yOffset, 0.0F);
 		RenderManager.instance.playerViewY = 180.0F;
-		RenderManager.instance.func_147940_a(par5EntityLivingBase, 0.0D, 0.0D,
+		RenderManager.instance.renderEntityWithPosYaw(par5EntityLivingBase, 0.0D, 0.0D,
 				0.0D, 0.0F, 1.0F);
 		par5EntityLivingBase.renderYawOffset = f2;
 		par5EntityLivingBase.rotationYaw = f3;

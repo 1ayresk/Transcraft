@@ -81,7 +81,7 @@ public class ContainerIG extends Container {
 	 */
 	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
 		super.onContainerClosed(par1EntityPlayer);
-		this.lowerChestInventory.closeChest();
+		this.lowerChestInventory.closeInventory();;
 	}
 
 	/**

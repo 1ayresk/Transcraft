@@ -23,9 +23,9 @@ public class IColoredBlockContainer extends BlockContainer {
 	 * 
 	 */
 	public IColoredBlockContainer(int id) {
-		super(Material.field_151576_e);
-		func_149711_c(3.0F);
-		func_149752_b(4.0F);
+		super(Material.cloth);
+		setHardness(3.0F);
+		setResistance(4.0F);
 	}
 
 	/***
@@ -38,12 +38,12 @@ public class IColoredBlockContainer extends BlockContainer {
 	 */
 	public IColoredBlockContainer(int id, Material m) {
 		super(m);
-		func_149711_c(3.0F);
-		func_149752_b(4.0F);
+		setHardness(3.0F);
+		setResistance(4.0F);
 	}
 
 	@Override
-	public boolean func_149646_a(IBlockAccess access, int par0, int par1,
+	public boolean shouldSideBeRendered(IBlockAccess access, int par0, int par1,
 			int par2, int par3) {
 		return true;
 
@@ -59,7 +59,7 @@ public class IColoredBlockContainer extends BlockContainer {
 	/***
 	 * Get's the color from the metadata.
 	 */
-	public int func_149720_d(IBlockAccess i, int x, int y, int z) {
+	public int colorMultiplier(IBlockAccess i, int x, int y, int z) {
 		switch (i.getBlockMetadata(x, y, z)) {
 		case 15:
 			return 0xFFFFFF;
@@ -102,7 +102,7 @@ public class IColoredBlockContainer extends BlockContainer {
 	/***
 	 * Get's the color from the metadata.
 	 */
-	public int func_149741_i(int i) {
+	public int getRenderColor(int i) {
 		switch (i) {
 		case 15:
 			return 0xFFFFFF;
@@ -145,7 +145,7 @@ public class IColoredBlockContainer extends BlockContainer {
 	/***
 	 * Get's block dropped from metadata.
 	 */
-	public int func_149692_a(int metadata) {
+	public int damageDropped(int metadata) {
 		return metadata;
 	}
 
@@ -154,19 +154,19 @@ public class IColoredBlockContainer extends BlockContainer {
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void func_149666_a(Item unknown, CreativeTabs tab, List subItems) {
+	public void getSubBlocks(Item unknown, CreativeTabs tab, List subItems) {
 		for (int ix = 0; ix < 16; ix++) {
 			subItems.add(new ItemStack(this, 1, ix));
 		}
 	}
 
 	@Override
-	public boolean func_149727_a(World w, int x, int y, int z, EntityPlayer p,
+	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p,
 			int i, float f, float f1, float f2) {
 		if (p.getHeldItem() != null && p.getHeldItem().getItem() == Items.dye) {
 			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem()
 					.getItemDamage(), 3);
-			w.func_147471_g(x, y, z);
+			w.markBlockForUpdate(x, y, z);
 			// w.func_147588_b(x, y, z);
 			return true;
 		} else {
@@ -175,7 +175,7 @@ public class IColoredBlockContainer extends BlockContainer {
 	}
 
 	@Override
-	public TileEntity func_149915_a(World p_149915_1_, int p_149915_2_) {
+	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
 		return null;
 	}
 }

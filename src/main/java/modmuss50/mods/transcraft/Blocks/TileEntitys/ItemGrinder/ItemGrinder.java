@@ -32,25 +32,25 @@ public class ItemGrinder extends BlockContainer {
 	public final int isTrapped;
 
 	public ItemGrinder(int par2) {
-		super(Material.field_151575_d);
+		super(Material.anvil);
 		this.isTrapped = par2;
-		this.func_149647_a(Transcraft.Transtab);
+		this.setCreativeTab(Transcraft.Transtab);
 	}
 
 	/**
 	 * Called when the block is placed in the world.
 	 */
 
-	public void func_149689_a(World p_149689_1_, int p_149689_2_,
+	public void onBlockPlacedBy(World p_149689_1_, int p_149689_2_,
 			int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_,
 			ItemStack p_149689_6_) {
-		Block block = p_149689_1_.func_147439_a(p_149689_2_, p_149689_3_,
+		Block block = p_149689_1_.getBlock(p_149689_2_, p_149689_3_,
 				p_149689_4_ - 1);
-		Block block1 = p_149689_1_.func_147439_a(p_149689_2_, p_149689_3_,
+		Block block1 = p_149689_1_.getBlock(p_149689_2_, p_149689_3_,
 				p_149689_4_ + 1);
-		Block block2 = p_149689_1_.func_147439_a(p_149689_2_ - 1, p_149689_3_,
+		Block block2 = p_149689_1_.getBlock(p_149689_2_ - 1, p_149689_3_,
 				p_149689_4_);
-		Block block3 = p_149689_1_.func_147439_a(p_149689_2_ + 1, p_149689_3_,
+		Block block3 = p_149689_1_.getBlock(p_149689_2_ + 1, p_149689_3_,
 				p_149689_4_);
 		byte b0 = 0;
 		int l = MathHelper
@@ -104,7 +104,7 @@ public class ItemGrinder extends BlockContainer {
 		}
 
 		if (p_149689_6_.hasDisplayName()) {
-			((TileEntityChest) p_149689_1_.func_147438_o(p_149689_2_,
+			((TileEntityChest) p_149689_1_.getTileEntity(p_149689_2_,
 					p_149689_3_, p_149689_4_)).func_145976_a(p_149689_6_
 					.getDisplayName());
 		}
@@ -117,7 +117,7 @@ public class ItemGrinder extends BlockContainer {
 
 	public void func_149749_a(World p_149749_1_, int p_149749_2_,
 			int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_) {
-		ItemGrinderTile tileentitychest = (ItemGrinderTile) p_149749_1_.func_147438_o(
+		ItemGrinderTile tileentitychest = (ItemGrinderTile) p_149749_1_.getTileEntity(
 				p_149749_2_, p_149749_3_, p_149749_4_);
 
 		if (tileentitychest != null) {
@@ -170,13 +170,13 @@ public class ItemGrinder extends BlockContainer {
 	 * Called upon block activation (right click on the block.)
 	 */
 	@Override
-	public boolean func_149727_a(World par1World, int par2, int par3, int par4,
+	public boolean onBlockActivated(World par1World, int par2, int par3, int par4,
 			EntityPlayer par5EntityPlayer, int par6, float par7, float par8,
 			float par9) {
 
-		ItemGrinderTile tile = (ItemGrinderTile) par1World.func_147438_o(par2, par3, par4);
+		ItemGrinderTile tile = (ItemGrinderTile) par1World.getTileEntity(par2, par3, par4);
 
-		par1World.func_147476_b(par2, par3, par4, tile);
+		par1World.markTileEntityChunkModified(par2, par3, par4, tile);
 
 		if (par1World.isRemote) {
 			return true;
@@ -206,7 +206,7 @@ public class ItemGrinder extends BlockContainer {
 
 	public IInventory func_149951_m(World p_149951_1_, int p_149951_2_,
 			int p_149951_3_, int p_149951_4_) {
-		Object object = (ItemGrinderTile) p_149951_1_.func_147438_o(p_149951_2_,
+		Object object = (ItemGrinderTile) p_149951_1_.getTileEntity(p_149951_2_,
 				p_149951_3_, p_149951_4_);
 
 		return (IInventory) object;
@@ -230,7 +230,7 @@ public class ItemGrinder extends BlockContainer {
 	}
 
 	@Override
-	public TileEntity func_149915_a(World var1, int var2) {
+	public TileEntity createNewTileEntity(World var1, int var2) {
 		// TODO Auto-generated method stub
 		return new ItemGrinderTile();
 	}
@@ -240,10 +240,12 @@ public class ItemGrinder extends BlockContainer {
 	 * needs with the given IconRegister. This is the only chance you get to
 	 * register icons.
 	 */
+	
 	@SideOnly(Side.CLIENT)
-	public void func_149651_a(IIconRegister p_149651_1_) {
-		this.field_149761_L = p_149651_1_.registerIcon("trancraft:ItemGrinder");
-	}
+    public void registerBlockIcons(IIconRegister p_149651_1_)
+    {
+        this.blockIcon = p_149651_1_.registerIcon("trancraft:ItemGrinder");
+    }
 
 	private static boolean func_149953_o(World p_149953_0_, int p_149953_1_,
 			int p_149953_2_, int p_149953_3_) {
