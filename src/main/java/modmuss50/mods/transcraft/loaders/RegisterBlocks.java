@@ -1,6 +1,5 @@
 package modmuss50.mods.transcraft.loaders;
 
-import modmuss50.mods.transcraft.Transcraft;
 import modmuss50.mods.transcraft.Blocks.ItemThinCrystalGlass;
 import modmuss50.mods.transcraft.Blocks.TranscraftBlocks;
 import modmuss50.mods.transcraft.Blocks.TranscraftOreItem;
@@ -13,7 +12,6 @@ import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.ItemGrinderTile;
 import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.TileTC;
 import modmuss50.mods.transcraft.Items.TranscraftColorItems;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
-import modmuss50.mods.transcraft.Utils.TranscraftUtil;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 
@@ -123,8 +121,9 @@ public class RegisterBlocks {
 				"Transcrafter");
 
 		GameRegistry.registerBlock(TranscraftBlocks.ixpGrinder, "ItemGrinder");
-		
-		GameRegistry.registerBlock(TranscraftBlocks.TransmutterPlant, "TransmutterPlant");
+
+		GameRegistry.registerBlock(TranscraftBlocks.TransmutterPlant,
+				"TransmutterPlant");
 
 		registerItem(TranscraftItems.BasicTransmuter);
 		registerItem(TranscraftItems.QuadTransmuter);
@@ -139,8 +138,6 @@ public class RegisterBlocks {
 		registerItem(TranscraftItems.DarkEndershard);
 		registerItem(TranscraftItems.Transpedia);
 
-
-
 		registerItem(TranscraftItems.BunkerPick);
 		registerItem(TranscraftItems.EnderSword);
 
@@ -153,11 +150,11 @@ public class RegisterBlocks {
 		registerItem(TranscraftItems.EnderLegs);
 		registerItem(TranscraftItems.EnderBoots);
 
-		
 		TranscraftColorItems.RegisterItems();
-		
+
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
-		GameRegistry.registerTileEntity(ItemGrinderTile.class, "TileItemGrinder");
+		GameRegistry.registerTileEntity(ItemGrinderTile.class,
+				"TileItemGrinder");
 		TileEntity.addMapping(ItemGrinderTile.class, "TileItemGrinder2");
 
 	}

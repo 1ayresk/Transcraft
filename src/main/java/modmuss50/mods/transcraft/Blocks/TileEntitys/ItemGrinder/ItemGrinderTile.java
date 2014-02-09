@@ -12,7 +12,8 @@ import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInventory {
+public class ItemGrinderTile extends TileEntity implements IInventory,
+		ISidedInventory {
 
 	public int field_145987_o;
 
@@ -94,7 +95,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 			if (this.chestContents[par1].stackSize <= par2) {
 				itemstack = this.chestContents[par1];
 				this.chestContents[par1] = null;
-//				this.onInventoryChanged();
+				// this.onInventoryChanged();
 				return itemstack;
 			} else {
 				itemstack = this.chestContents[par1].splitStack(par2);
@@ -103,7 +104,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 					this.chestContents[par1] = null;
 				}
 
-//				this.onInventoryChanged();
+				// this.onInventoryChanged();
 				return itemstack;
 			}
 		} else {
@@ -159,7 +160,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 				par2ItemStack.stackSize = this.getInventoryStackLimit();
 			}
 
-//			this.onInventoryChanged();
+			// this.onInventoryChanged();
 		}
 	}
 
@@ -273,12 +274,12 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 
 	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
 		return false;
-//		return this.field_145850_b.func_147438_o(this.field_145851_c,
-//				this.field_145848_d, this.field_145849_e) != this ? false
-//				: par1EntityPlayer.getDistanceSq(
-//						(double) this.field_145851_c + 0.5D,
-//						(double) this.field_145848_d + 0.5D,
-//						(double) this.field_145849_e + 0.5D) <= 64.0D;
+		// return this.field_145850_b.func_147438_o(this.field_145851_c,
+		// this.field_145848_d, this.field_145849_e) != this ? false
+		// : par1EntityPlayer.getDistanceSq(
+		// (double) this.field_145851_c + 0.5D,
+		// (double) this.field_145848_d + 0.5D,
+		// (double) this.field_145849_e + 0.5D) <= 64.0D;
 	}
 
 	/**
@@ -288,7 +289,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	 */
 
 	public void func_145836_u() {
-//		super.func_145836_u();
+		// super.func_145836_u();
 	}
 
 	private void handleEnergy() {
@@ -374,7 +375,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	 */
 
 	public void func_145845_h() {
-//		super.func_145845_h();
+		// super.func_145845_h();
 
 		handleEnergy();
 
@@ -392,7 +393,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 			this.numUsingPlayers = par2;
 			return true;
 		} else {
-//			return super.func_145842_c(par1, par2);
+			// return super.func_145842_c(par1, par2);
 		}
 		return false;
 	}
@@ -403,30 +404,30 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 		}
 
 		++this.numUsingPlayers;
-//		this.field_145850_b.func_147452_c(this.field_145851_c,
-//				this.field_145848_d, this.field_145849_e, this.func_145838_q(),
-//				1, this.field_145987_o);
-//		this.field_145850_b.func_147459_d(this.field_145851_c,
-//				this.field_145848_d, this.field_145849_e, this.func_145838_q());
-//		this.field_145850_b.func_147459_d(this.field_145851_c,
-//				this.field_145848_d - 1, this.field_145849_e,
-//				this.func_145838_q());
+		// this.field_145850_b.func_147452_c(this.field_145851_c,
+		// this.field_145848_d, this.field_145849_e, this.func_145838_q(),
+		// 1, this.field_145987_o);
+		// this.field_145850_b.func_147459_d(this.field_145851_c,
+		// this.field_145848_d, this.field_145849_e, this.func_145838_q());
+		// this.field_145850_b.func_147459_d(this.field_145851_c,
+		// this.field_145848_d - 1, this.field_145849_e,
+		// this.func_145838_q());
 
 	}
 
 	public void closeChest() {
-//		if (this.func_145838_q() instanceof ItemGrinder) {
-//			--this.numUsingPlayers;
-//			this.field_145850_b.func_147452_c(this.field_145851_c,
-//					this.field_145848_d, this.field_145849_e,
-//					this.func_145838_q(), 1, this.field_145987_o);
-//			this.field_145850_b.func_147459_d(this.field_145851_c,
-//					this.field_145848_d, this.field_145849_e,
-//					this.func_145838_q());
-//			this.field_145850_b.func_147459_d(this.field_145851_c,
-//					this.field_145848_d - 1, this.field_145849_e,
-//					this.func_145838_q());
-//		}
+		// if (this.func_145838_q() instanceof ItemGrinder) {
+		// --this.numUsingPlayers;
+		// this.field_145850_b.func_147452_c(this.field_145851_c,
+		// this.field_145848_d, this.field_145849_e,
+		// this.func_145838_q(), 1, this.field_145987_o);
+		// this.field_145850_b.func_147459_d(this.field_145851_c,
+		// this.field_145848_d, this.field_145849_e,
+		// this.func_145838_q());
+		// this.field_145850_b.func_147459_d(this.field_145851_c,
+		// this.field_145848_d - 1, this.field_145849_e,
+		// this.func_145838_q());
+		// }
 
 	}
 
@@ -476,15 +477,13 @@ public class ItemGrinderTile extends TileEntity implements IInventory, ISidedInv
 	@Override
 	public void openInventory() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void closeInventory() {
 		// TODO Auto-generated method stub
-		
-	}
 
-	
+	}
 
 }

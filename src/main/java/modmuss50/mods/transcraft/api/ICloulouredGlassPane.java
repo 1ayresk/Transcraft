@@ -32,8 +32,8 @@ public class ICloulouredGlassPane extends BlockPane {
 	 * 
 	 */
 	public ICloulouredGlassPane() {
-		super("transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.glass, true);
+		super("transcraft:ClearGlass", "transcraft:ClearGlass", Material.glass,
+				true);
 		setHardness(3.0F);
 		setResistance(4.0F);
 	}
@@ -47,15 +47,15 @@ public class ICloulouredGlassPane extends BlockPane {
 	 * 
 	 */
 	public ICloulouredGlassPane(int id, Material m) {
-		super("transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.glass, true);
+		super("transcraft:ClearGlass", "transcraft:ClearGlass", Material.glass,
+				true);
 		setHardness(3.0F);
 		setResistance(4.0F);
 	}
 
 	@Override
-	public boolean shouldSideBeRendered(IBlockAccess access, int par0, int par1,
-			int par2, int par3) {
+	public boolean shouldSideBeRendered(IBlockAccess access, int par0,
+			int par1, int par2, int par3) {
 		return true;
 
 	}
@@ -148,8 +148,6 @@ public class ICloulouredGlassPane extends BlockPane {
 		}
 	}
 
-
-
 	@Override
 	/***
 	 * Get's block dropped from metadata.
@@ -169,8 +167,8 @@ public class ICloulouredGlassPane extends BlockPane {
 	}
 
 	@Override
-	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p,
-			int i, float f, float f1, float f2) {
+	public boolean onBlockActivated(World w, int x, int y, int z,
+			EntityPlayer p, int i, float f, float f1, float f2) {
 		if (p.getHeldItem() != null && p.getHeldItem().getItem() == Items.dye) {
 			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem()
 					.getItemDamage(), 3);

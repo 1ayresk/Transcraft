@@ -20,8 +20,6 @@ public class CrystalGlass extends org.zaet.api.IColoredBlock {
 		return 0;
 	}
 
-
-
 	/**
 	 * If this block doesn't render as an ordinary block it will return False
 	 * (examples: signs, buttons, stairs, etc)

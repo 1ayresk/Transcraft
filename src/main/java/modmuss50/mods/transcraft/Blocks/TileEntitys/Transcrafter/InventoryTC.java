@@ -154,7 +154,6 @@ public class InventoryTC implements IInventory {
 	public void openChest() {
 	}
 
-	
 	public void closeChest() {
 	}
 
@@ -170,19 +169,19 @@ public class InventoryTC implements IInventory {
 	@Override
 	public void markDirty() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void openInventory() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void closeInventory() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

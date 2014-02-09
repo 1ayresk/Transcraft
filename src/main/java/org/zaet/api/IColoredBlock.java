@@ -42,8 +42,8 @@ public class IColoredBlock extends Block {
 	}
 
 	@Override
-	public boolean shouldSideBeRendered(IBlockAccess access, int par0, int par1,
-			int par2, int par3) {
+	public boolean shouldSideBeRendered(IBlockAccess access, int par0,
+			int par1, int par2, int par3) {
 		return true;
 
 	}
@@ -160,8 +160,8 @@ public class IColoredBlock extends Block {
 	}
 
 	@Override
-	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p,
-			int i, float f, float f1, float f2) {
+	public boolean onBlockActivated(World w, int x, int y, int z,
+			EntityPlayer p, int i, float f, float f1, float f2) {
 		if (p.getHeldItem() != null && p.getHeldItem().getItem() == Items.dye) {
 			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem()
 					.getItemDamage(), 3);

@@ -63,8 +63,8 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	}
 
 	@Override
-	public IIcon getIcon(IBlockAccess par1IBlockAccess, int par2,
-			int par3, int par4, int par5) {
+	public IIcon getIcon(IBlockAccess par1IBlockAccess, int par2, int par3,
+			int par4, int par5) {
 		return par1IBlockAccess.getBlockMetadata(par2, par3, par4) == 15 ? icons[0]
 				: getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4,
 						par5, icons);
@@ -423,13 +423,13 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 		return icons[0];
 	}
 
-//	@Override
-//	public boolean func_149646_a(IBlockAccess par1IBlockAccess, int par2,
-//			int par3, int par4, int par5) {
-//		Block b = par1IBlockAccess.getBlock(par2, par3, par4);
-//		return b == (Block) this ? false : super.func_149646_a(
-//				par1IBlockAccess, par2, par3, par4, par5);
-//	}
+	// @Override
+	// public boolean func_149646_a(IBlockAccess par1IBlockAccess, int par2,
+	// int par3, int par4, int par5) {
+	// Block b = par1IBlockAccess.getBlock(par2, par3, par4);
+	// return b == (Block) this ? false : super.func_149646_a(
+	// par1IBlockAccess, par2, par3, par4, par5);
+	// }
 
 	@Override
 	public IIcon getIcon(int par1, int par2) {
@@ -437,10 +437,11 @@ public class FancyCrystalGlass extends org.zaet.api.IColoredBlock {
 	}
 
 	@Override
-	public AxisAlignedBB getSelectedBoundingBoxFromPool(World par1World, int par2, int par3,
-			int par4) {
+	public AxisAlignedBB getSelectedBoundingBoxFromPool(World par1World,
+			int par2, int par3, int par4) {
 		if (shouldRenderSelectionBox) {
-			return super.getSelectedBoundingBoxFromPool(par1World, par2, par3, par4);
+			return super.getSelectedBoundingBoxFromPool(par1World, par2, par3,
+					par4);
 		} else {
 			return AxisAlignedBB.getAABBPool().getAABB(0D, 0D, 0D, 0D, 0D, 0D);
 		}

@@ -39,8 +39,8 @@ public class Transcrafter extends BlockContainer {
 	}
 
 	@Override
-	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p,
-			int par6, float par7, float par8, float par9) {
+	public boolean onBlockActivated(World w, int x, int y, int z,
+			EntityPlayer p, int par6, float par7, float par8, float par9) {
 		int xs = 0;
 		int ys = 0;
 		int zs = 0;

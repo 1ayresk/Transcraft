@@ -18,8 +18,8 @@ public class IronTorch extends BlockTorch {
 	/**
 	 * A randomly called display update to be able to add particles or other items for display
 	 */
-	public void randomDisplayTick(World par1World, int par2, int par3, int par4,
-			Random par5Random) {
+	public void randomDisplayTick(World par1World, int par2, int par3,
+			int par4, Random par5Random) {
 		int l = par1World.getBlockMetadata(par2, par3, par4);
 		double d0 = par2 + 0.5F;
 		double d1 = par3 + 0.7F;

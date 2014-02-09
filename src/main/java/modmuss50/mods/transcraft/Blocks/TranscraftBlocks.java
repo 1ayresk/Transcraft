@@ -32,8 +32,8 @@ public class TranscraftBlocks {
 	public static Block ComTransmutterOre;
 	public static Block ComOilOre;
 	public static Block DriedTransmutter;
-	public static Block TransmutterPlant;	
-	
+	public static Block TransmutterPlant;
+
 	public static Block Transcrafter;
 
 	public static Block enderQuartzBlock;

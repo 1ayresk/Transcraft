@@ -190,12 +190,18 @@ public class FXSparkle extends EntityFX {
 		double var14 = par5 - var9;
 
 		if (!worldObj.isAirBlock(var7, var8, var9)) {
-			boolean var16 = !worldObj.isBlockNormalCubeDefault(var7 - 1, var8, var9, true);
-			boolean var17 = !worldObj.isBlockNormalCubeDefault(var7 + 1, var8, var9, true);
-			boolean var18 = !worldObj.isBlockNormalCubeDefault(var7, var8 - 1, var9, true);
-			boolean var19 = !worldObj.isBlockNormalCubeDefault(var7, var8 + 1, var9, true);
-			boolean var20 = !worldObj.isBlockNormalCubeDefault(var7, var8, var9 - 1, true);
-			boolean var21 = !worldObj.isBlockNormalCubeDefault(var7, var8, var9 + 1, true);
+			boolean var16 = !worldObj.isBlockNormalCubeDefault(var7 - 1, var8,
+					var9, true);
+			boolean var17 = !worldObj.isBlockNormalCubeDefault(var7 + 1, var8,
+					var9, true);
+			boolean var18 = !worldObj.isBlockNormalCubeDefault(var7, var8 - 1,
+					var9, true);
+			boolean var19 = !worldObj.isBlockNormalCubeDefault(var7, var8 + 1,
+					var9, true);
+			boolean var20 = !worldObj.isBlockNormalCubeDefault(var7, var8,
+					var9 - 1, true);
+			boolean var21 = !worldObj.isBlockNormalCubeDefault(var7, var8,
+					var9 + 1, true);
 			byte var22 = -1;
 			double var23 = 9999.0D;
 

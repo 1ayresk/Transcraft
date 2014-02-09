@@ -117,8 +117,8 @@ public class ItemGrinder extends BlockContainer {
 
 	public void func_149749_a(World p_149749_1_, int p_149749_2_,
 			int p_149749_3_, int p_149749_4_, Block p_149749_5_, int p_149749_6_) {
-		ItemGrinderTile tileentitychest = (ItemGrinderTile) p_149749_1_.getTileEntity(
-				p_149749_2_, p_149749_3_, p_149749_4_);
+		ItemGrinderTile tileentitychest = (ItemGrinderTile) p_149749_1_
+				.getTileEntity(p_149749_2_, p_149749_3_, p_149749_4_);
 
 		if (tileentitychest != null) {
 			for (int i1 = 0; i1 < tileentitychest.getSizeInventory(); ++i1) {
@@ -170,11 +170,12 @@ public class ItemGrinder extends BlockContainer {
 	 * Called upon block activation (right click on the block.)
 	 */
 	@Override
-	public boolean onBlockActivated(World par1World, int par2, int par3, int par4,
-			EntityPlayer par5EntityPlayer, int par6, float par7, float par8,
-			float par9) {
+	public boolean onBlockActivated(World par1World, int par2, int par3,
+			int par4, EntityPlayer par5EntityPlayer, int par6, float par7,
+			float par8, float par9) {
 
-		ItemGrinderTile tile = (ItemGrinderTile) par1World.getTileEntity(par2, par3, par4);
+		ItemGrinderTile tile = (ItemGrinderTile) par1World.getTileEntity(par2,
+				par3, par4);
 
 		par1World.markTileEntityChunkModified(par2, par3, par4, tile);
 
@@ -206,8 +207,8 @@ public class ItemGrinder extends BlockContainer {
 
 	public IInventory func_149951_m(World p_149951_1_, int p_149951_2_,
 			int p_149951_3_, int p_149951_4_) {
-		Object object = (ItemGrinderTile) p_149951_1_.getTileEntity(p_149951_2_,
-				p_149951_3_, p_149951_4_);
+		Object object = (ItemGrinderTile) p_149951_1_.getTileEntity(
+				p_149951_2_, p_149951_3_, p_149951_4_);
 
 		return (IInventory) object;
 	}
@@ -240,12 +241,11 @@ public class ItemGrinder extends BlockContainer {
 	 * needs with the given IconRegister. This is the only chance you get to
 	 * register icons.
 	 */
-	
+
 	@SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister p_149651_1_)
-    {
-        this.blockIcon = p_149651_1_.registerIcon("trancraft:ItemGrinder");
-    }
+	public void registerBlockIcons(IIconRegister p_149651_1_) {
+		this.blockIcon = p_149651_1_.registerIcon("trancraft:ItemGrinder");
+	}
 
 	private static boolean func_149953_o(World p_149953_0_, int p_149953_1_,
 			int p_149953_2_, int p_149953_3_) {

@@ -69,8 +69,8 @@ public class TranscraftOre extends Block {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void randomDisplayTick(World par1World, int par2, int par3, int par4,
-			Random par5Random) {
+	public void randomDisplayTick(World par1World, int par2, int par3,
+			int par4, Random par5Random) {
 		FXSparkleRun.randomDisplayTick(par1World, par2, par3, par4, par5Random);
 	}
 

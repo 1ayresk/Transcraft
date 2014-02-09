@@ -121,12 +121,13 @@ public class RecipeLoader {
 				"o", "i", 'i', TranscraftItems.IronStick, 'o',
 				TranscraftItems.Oil);
 
-		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticSword0),
-				" p ", " p ", " i ", 'i', TranscraftItems.IronStick, 'p',
+		GameRegistry.addRecipe(
+				new ItemStack(TranscraftColorItems.PlasticSword0), " p ",
+				" p ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticPickaxe0),
-				"ppp", " i ", " i ", 'i', TranscraftItems.IronStick, 'p',
-				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(
+				TranscraftColorItems.PlasticPickaxe0), "ppp", " i ", " i ",
+				'i', TranscraftItems.IronStick, 'p', TranscraftItems.Plastic);
 		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticAxe0),
 				" pp", " ip", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
@@ -139,9 +140,9 @@ public class RecipeLoader {
 		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticHoe0),
 				" pp", " i ", " i ", 'i', TranscraftItems.IronStick, 'p',
 				TranscraftItems.Plastic);
-		GameRegistry.addRecipe(new ItemStack(TranscraftColorItems.PlasticShovel0),
-				" p ", " i ", " i ", 'i', TranscraftItems.IronStick, 'p',
-				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(
+				TranscraftColorItems.PlasticShovel0), " p ", " i ", " i ", 'i',
+				TranscraftItems.IronStick, 'p', TranscraftItems.Plastic);
 
 		GameRegistry.addRecipe(new ItemStack(TranscraftItems.BunkerPick),
 				"bbb", "dod", "qoq", 'b', TranscraftBlocks.BunkerBlock, 'd',
