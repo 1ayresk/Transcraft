@@ -56,7 +56,7 @@ task incrementBuildNumber() {
 }
 
 jar {
-	appendix = 'dev'
+	appendix = 'config.build_type'
 }
 
 task deleteOldArtifacts(type: Delete) {
@@ -74,7 +74,7 @@ task sourceJar(type: Jar) {
 
 task deobfJar(type: Jar) {
     from sourceSets.main.output
-    appendix = 'deobf'
+    appendix = 'dev'
 }
 
 artifacts {
