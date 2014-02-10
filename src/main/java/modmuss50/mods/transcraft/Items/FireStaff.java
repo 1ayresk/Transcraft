@@ -14,6 +14,7 @@ public class FireStaff extends Item{
 		super();
 		maxStackSize = 1;
 		setUnlocalizedName("FireStaff");
+		this.setMaxDamage(32);
 	}
 
 	@Override
@@ -27,15 +28,13 @@ public class FireStaff extends Item{
 			{
 					
 				Vec3 look = entityplayer.getLookVec();
-				EntityLargeFireball fireball2 = new EntityLargeFireball(world, entityplayer, 1, 1, 1);
-				fireball2.setPosition(
-						entityplayer.posX + look.xCoord * 5,
-						entityplayer.posY + look.yCoord * 5,
-						entityplayer.posZ + look.zCoord * 5);
-				fireball2.accelerationX = look.xCoord * 0.1;
-				fireball2.accelerationY = look.yCoord * 0.1;
-				fireball2.accelerationZ = look.zCoord * 0.1;
-				world.spawnEntityInWorld(fireball2);
+				EntityLargeFireball fireball = new EntityLargeFireball(world, entityplayer, 1, 1, 1);
+				fireball.setPosition(entityplayer.posX + look.xCoord * 5,entityplayer.posY + look.yCoord * 5,entityplayer.posZ + look.zCoord * 5);
+				fireball.accelerationX = look.xCoord * 0.1;
+				fireball.accelerationY = look.yCoord * 0.1;
+				fireball.accelerationZ = look.zCoord * 0.1;
+				world.spawnEntityInWorld(fireball);
+				itemstack.damageItem(1, entityplayer);
 				}
 			
 			return itemstack;
