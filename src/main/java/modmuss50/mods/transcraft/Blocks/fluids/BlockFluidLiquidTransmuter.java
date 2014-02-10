@@ -36,8 +36,8 @@ public class BlockFluidLiquidTransmuter extends BlockFluidClassic {
 	@Override
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
-		StillIcon = iconRegister.registerIcon("biomesoplenty:spring_water_still");
-		FlowingIcon = iconRegister.registerIcon("biomesoplenty:spring_water_flowing");
+		StillIcon = iconRegister.registerIcon("transcraft:transmutter_liquid_still");
+		FlowingIcon = iconRegister.registerIcon("transcraft:transmutter_liquid_flowing");
 	}
 
 	
