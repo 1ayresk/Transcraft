@@ -192,193 +192,193 @@ public class TranscraftColorItems {
 
 		TranscraftColorItems.PlasticAxe0 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe1 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe2 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe3 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe4 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe5 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe6 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe7 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe8 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe9 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe10 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe11 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe12 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe13 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe14 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticAxe15 = new modmuss50.mods.transcraft.Items.Tools.PlasticAxe(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticAxe" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i = 0;
 
 		TranscraftColorItems.PlasticSword0 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword1 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword2 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword3 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword4 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword5 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword6 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword7 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword8 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword9 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword10 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword11 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword12 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword13 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword14 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i += 1;
 
 		TranscraftColorItems.PlasticSword15 = new modmuss50.mods.transcraft.Items.Tools.PlasticSword(
 				TranscraftUtil.PlasticTool, i).setUnlocalizedName(
-				"Transcraft:PlasticPickaxe" + i).setCreativeTab(
+				"Transcraft:PlasticSword" + i).setCreativeTab(
 				Transcraft.Transtab);
 		i = 0;
 

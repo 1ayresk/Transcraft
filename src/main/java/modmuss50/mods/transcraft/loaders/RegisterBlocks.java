@@ -150,6 +150,7 @@ public class RegisterBlocks {
 		registerItem(TranscraftItems.EnderLegs);
 		registerItem(TranscraftItems.EnderBoots);
 		registerItem(TranscraftItems.FireStaff);
+
 		
 		TranscraftColorItems.RegisterItems();
 

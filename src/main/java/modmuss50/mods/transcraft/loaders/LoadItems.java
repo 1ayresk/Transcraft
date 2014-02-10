@@ -129,6 +129,8 @@ public class LoadItems {
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:Transpedia");
 
+		
+		
 		TranscraftItems.FireStaff = new FireStaff()
 		.setUnlocalizedName("Transcraft:FireStaff")
 		.setCreativeTab(Transcraft.Transtab)
