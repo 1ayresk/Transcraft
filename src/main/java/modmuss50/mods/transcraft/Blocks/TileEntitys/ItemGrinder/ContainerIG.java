@@ -17,12 +17,12 @@ public class ContainerIG extends Container {
 		this.tileEntity = tile;
 		lowerChestInventory = this.tileEntity;
 
-		this.addSlotToContainer(new Slot(this.tileEntity, 0, 8, -11));
+		this.addSlotToContainer(new Slot(this.tileEntity, 0, 8, 24));
 
 		for (int y = 0; y < 3; y++) {
 			for (int x = 0; x < 9; x++) {
 				this.addSlotToContainer(new Slot(this.tileEntity, x + (y * 9)
-						+ 1, 8 + x * 18, 10 + y * 18));
+						+ 1, 8 + x * 18, 52 + y * 18));
 			}
 		}
 
@@ -33,12 +33,12 @@ public class ContainerIG extends Container {
 		for (int y = 0; y < 3; y++) {
 			for (int x = 0; x < 9; x++) {
 				addSlotToContainer(new Slot(player, x + y * 9 + 9, 8 + x * 18,
-						95 + y * 18));
+						138 + y * 18));
 			}
 		}
 
 		for (int x = 0; x < 9; x++) {
-			addSlotToContainer(new Slot(player, x, 8 + x * 18, 153));
+			addSlotToContainer(new Slot(player, x, 8 + x * 18, 196));
 		}
 	}
 
@@ -84,7 +84,6 @@ public class ContainerIG extends Container {
 	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
 		super.onContainerClosed(par1EntityPlayer);
 		this.lowerChestInventory.closeInventory();
-		;
 	}
 
 	/**

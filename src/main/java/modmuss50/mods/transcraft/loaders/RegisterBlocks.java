@@ -149,7 +149,8 @@ public class RegisterBlocks {
 		registerItem(TranscraftItems.EnderChest);
 		registerItem(TranscraftItems.EnderLegs);
 		registerItem(TranscraftItems.EnderBoots);
-
+		registerItem(TranscraftItems.FireStaff);
+		
 		TranscraftColorItems.RegisterItems();
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");

@@ -20,6 +20,9 @@ import modmuss50.mods.transcraft.Utils.command.CommandReloadConfig;
 import modmuss50.mods.transcraft.Utils.command.CommandTranscraftVersion;
 import modmuss50.mods.transcraft.WorldGen.TranscraftGenerator;
 import modmuss50.mods.transcraft.addons.Addons;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
@@ -70,15 +73,16 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
 
-		/*
-		 * 
-		 * FMLLog.info("[TRANSCRAFT]	Loading Biomes");
-		 * BiomeDictionary.registerBiomeType(TranscraftUtil.TransmutterBiome,
-		 * Type.PLAINS, Type.WATER);
-		 * GameRegistry.addBiome(TranscraftUtil.TransmutterBiome);
-		 * BiomeManager.addSpawnBiome(TranscraftUtil.TransmutterBiome);
-		 * BiomeManager.addStrongholdBiome(TranscraftUtil.TransmutterBiome);
-		 */
+		
+		  
+		  FMLLog.info("[TRANSCRAFT]	Loading Biomes");
+		  BiomeDictionary.registerBiomeType(TranscraftUtil.TransmutterBiome,
+		  Type.PLAINS, Type.WATER);
+//		  GameRegistry.addBiome(TranscraftUtil.TransmutterBiome);
+		  BiomeManager.addSpawnBiome(TranscraftUtil.TransmutterBiome);
+		  BiomeManager.addStrongholdBiome(TranscraftUtil.TransmutterBiome);
+//		  BiomeDictionary.isBiomeRegistered(biomeID)
+		 
 
 		if (event.getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new ListenerRegisterSound());

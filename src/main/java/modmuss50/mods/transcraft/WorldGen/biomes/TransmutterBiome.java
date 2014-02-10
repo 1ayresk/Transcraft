@@ -2,6 +2,8 @@ package modmuss50.mods.transcraft.WorldGen.biomes;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class TransmutterBiome extends BiomeGenBase {
 	private TranscraftBiomeDec customBiomeDecorator;
@@ -18,25 +20,6 @@ public class TransmutterBiome extends BiomeGenBase {
 		fillerBlock = Blocks.stone;
 	}
 
-	// @SideOnly(Side.CLIENT)
-	// @Override
-	// public int getBiomeGrassColor()
-	// {
-	// return 0x07D7FF;
-	// }
 
-	// @Override
-	// @SideOnly(Side.CLIENT)
-	// public int getBiomeFoliageColor()
-	// {
-	// return 0x07D7FF;
-	// }
-
-	// @Override
-	// @SideOnly(Side.CLIENT)
-	// public int getSkyColorByTemp(float par1)
-	// {
-	// return 0x07D7FF;
-	// }
 
 }

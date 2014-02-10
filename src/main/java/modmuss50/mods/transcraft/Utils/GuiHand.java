@@ -1,5 +1,6 @@
 package modmuss50.mods.transcraft.Utils;
 
+import modmuss50.mods.transcraft.Transcraft;
 import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.ContainerIG;
 import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.GuiIG;
 import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.ItemGrinderTile;
@@ -10,9 +11,15 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 public class GuiHand implements IGuiHandler {
 
+	
+	public GuiHand() {
+		NetworkRegistry.INSTANCE.registerGuiHandler(Transcraft.instance, this);
+	}
+	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world,
 			int x, int y, int z) {

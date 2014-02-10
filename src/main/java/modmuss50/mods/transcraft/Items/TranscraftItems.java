@@ -16,6 +16,7 @@ public class TranscraftItems {
 	public static Item EnderQuartz;
 	public static Item DarkEndershard;
 	public static Item Transpedia;
+	public static Item FireStaff;
 
 	public static Item BunkerPick;
 	public static Item EnderSword;

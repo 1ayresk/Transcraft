@@ -1,22 +1,21 @@
 package modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder;
 
+import modmuss50.mods.transcraft.Blocks.TileEntitys.TileBase;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.Utils.Config;
+import modmuss50.mods.transcraft.api.IItemTransmutter;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemGrinderTile extends TileEntity implements IInventory,
-		ISidedInventory {
-
-	public int field_145987_o;
-
+public class ItemGrinderTile extends TileBase implements IInventory, ISidedInventory {
 	private ItemStack[] chestContents = new ItemStack[36];
 	private static final int[] slots_top = new int[] { 0 };
 	private static final int[] slots_bottom = new int[] { 2, 1 };
@@ -95,7 +94,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 			if (this.chestContents[par1].stackSize <= par2) {
 				itemstack = this.chestContents[par1];
 				this.chestContents[par1] = null;
-				// this.onInventoryChanged();
+				this.markDirty();
 				return itemstack;
 			} else {
 				itemstack = this.chestContents[par1].splitStack(par2);
@@ -104,7 +103,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 					this.chestContents[par1] = null;
 				}
 
-				// this.onInventoryChanged();
+				this.markDirty();
 				return itemstack;
 			}
 		} else {
@@ -160,7 +159,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 				par2ItemStack.stackSize = this.getInventoryStackLimit();
 			}
 
-			// this.onInventoryChanged();
+			this.markDirty();
 		}
 	}
 
@@ -198,15 +197,13 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 		NBTTagList nbttaglist = par1NBTTagCompound.getTagList("Items", 10);
 		this.chestContents = new ItemStack[this.getSizeInventory()];
 
-		System.out.println("READING TILE");
 
 		if (par1NBTTagCompound.hasKey("CustomName")) {
 			this.field_94045_s = par1NBTTagCompound.getString("CustomName");
 		}
 
 		for (int i = 0; i < nbttaglist.tagCount(); ++i) {
-			NBTTagCompound nbttagcompound1 = (NBTTagCompound) nbttaglist
-					.getCompoundTagAt(i);
+			NBTTagCompound nbttagcompound1 = (NBTTagCompound) nbttaglist.getCompoundTagAt(i);
 			int j = nbttagcompound1.getByte("Slot") & 255;
 
 			if (j >= 0 && j < this.chestContents.length) {
@@ -215,14 +212,12 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 			}
 		}
 
-		this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
-		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
-
-		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
+			this.CurrentIXPValue = par1NBTTagCompound.getDouble("ItemEssence");
 
 	}
 
-	public double getIXPValue() {
+	public double getIXPValue() 
+	{
 		return this.CurrentIXPValue;
 	}
 
@@ -238,10 +233,10 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 		super.writeToNBT(par1NBTTagCompound);
 		NBTTagList nbttaglist = new NBTTagList();
 
-		System.out.println("SAVING TILE");
+
 
 		par1NBTTagCompound.setDouble("ItemEssence", this.CurrentIXPValue);
-		System.out.println(par1NBTTagCompound.getDouble("ItemEssence"));
+
 
 		for (int i = 0; i < this.chestContents.length; ++i) {
 			if (this.chestContents[i] != null) {
@@ -257,6 +252,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 		if (this.isInvNameLocalized()) {
 			par1NBTTagCompound.setString("CustomName", this.field_94045_s);
 		}
+
 	}
 
 	/**
@@ -271,15 +267,11 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 	 * Do not make give this method the name canInteractWith because it clashes
 	 * with Container
 	 */
-
 	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
-		return false;
-		// return this.field_145850_b.func_147438_o(this.field_145851_c,
-		// this.field_145848_d, this.field_145849_e) != this ? false
-		// : par1EntityPlayer.getDistanceSq(
-		// (double) this.field_145851_c + 0.5D,
-		// (double) this.field_145848_d + 0.5D,
-		// (double) this.field_145849_e + 0.5D) <= 64.0D;
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord,
+				this.zCoord) != this ? false : par1EntityPlayer.getDistanceSq(
+				(double) this.xCoord + 0.5D, (double) this.yCoord + 0.5D,
+				(double) this.zCoord + 0.5D) <= 64.0D;
 	}
 
 	/**
@@ -287,20 +279,36 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 	 * block, blockID, metaData and in the case of chests, the adjcacent chest
 	 * check
 	 */
-
-	public void func_145836_u() {
-		// super.func_145836_u();
+	public void updateContainingBlockInfo() {
+		super.updateContainingBlockInfo();
 	}
+
+
 
 	private void handleEnergy() {
 		int slot = 1;
 
-		for (int j = 0; slot < 28; slot++) {
-			if (getStackInSlot(slot) != null) {
-				int IXP = 1;
-				CurrentIXPValue = CurrentIXPValue + IXP;
-				decrStackSize(slot, 1);
+		for (int j = 0; slot < 28; slot++) 
+		{
+			if(slot == 1)
+			{
+				if (getStackInSlot(slot) != null) {
+					int IXP = 1;
+					CurrentIXPValue = CurrentIXPValue + IXP;
+					decrStackSize(slot, 1);
+				}
+			}else{
+					if(getStackInSlot(slot-1) == null)
+					{
+						if (getStackInSlot(slot) != null) {
+							int IXP = 1;
+							CurrentIXPValue = CurrentIXPValue + IXP;
+							decrStackSize(slot, 1);
+
+						}
+					}
 			}
+
 		}
 	}
 
@@ -310,7 +318,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 
 		int BASIC = Config.BasicItemEssence;
 		int QUAD = Config.QuadItemEssence;
-		int NANO = Config.NanoItemEssence;
+		int NANO = Config.NanoItemEssence;		
 
 		if (BASIC == 0) {
 			BASIC = BASIC + 1;
@@ -353,7 +361,7 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 
 			if (getStackInSlot(0).getItem() == TranscraftItems.NanoTransmuter) {
 				CurrnetMaxValue = NANO;
-				CurrnetintMaxValue = QUAD;
+				CurrnetintMaxValue = NANO;
 
 				if (NANO != 0 && getStackInSlot(0).stackSize <= 64) {
 					if (CurrentIXPValue >= NANO) {
@@ -373,14 +381,18 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 	 * e.g. the mob spawner uses this to count ticks and creates a new spawn
 	 * inside its implementation.
 	 */
+	public void updateEntity() {
+		super.updateEntity();
 
-	public void func_145845_h() {
-		// super.func_145845_h();
 
 		handleEnergy();
 
 		makeItems();
 		++this.ticksSinceSync;
+
+
+//		PacketDispatcher.sendPacketToAllInDimension(getDescriptionPacket(), worldObj.provider.dimensionId);
+
 
 	}
 
@@ -393,9 +405,8 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 			this.numUsingPlayers = par2;
 			return true;
 		} else {
-			// return super.func_145842_c(par1, par2);
+			return super.receiveClientEvent(par1, par2);
 		}
-		return false;
 	}
 
 	public void openChest() {
@@ -404,31 +415,30 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 		}
 
 		++this.numUsingPlayers;
-		// this.field_145850_b.func_147452_c(this.field_145851_c,
-		// this.field_145848_d, this.field_145849_e, this.func_145838_q(),
-		// 1, this.field_145987_o);
-		// this.field_145850_b.func_147459_d(this.field_145851_c,
-		// this.field_145848_d, this.field_145849_e, this.func_145838_q());
-		// this.field_145850_b.func_147459_d(this.field_145851_c,
-		// this.field_145848_d - 1, this.field_145849_e,
-		// this.func_145838_q());
+		this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord,
+				this.getBlockType(), 1, this.numUsingPlayers);
+		this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord,
+				this.zCoord, this.getBlockType());
+		this.worldObj.notifyBlocksOfNeighborChange(this.xCoord,
+				this.yCoord - 1, this.zCoord, this.getBlockType());
 
 	}
 
 	public void closeChest() {
-		// if (this.func_145838_q() instanceof ItemGrinder) {
-		// --this.numUsingPlayers;
-		// this.field_145850_b.func_147452_c(this.field_145851_c,
-		// this.field_145848_d, this.field_145849_e,
-		// this.func_145838_q(), 1, this.field_145987_o);
-		// this.field_145850_b.func_147459_d(this.field_145851_c,
-		// this.field_145848_d, this.field_145849_e,
-		// this.func_145838_q());
-		// this.field_145850_b.func_147459_d(this.field_145851_c,
-		// this.field_145848_d - 1, this.field_145849_e,
-		// this.func_145838_q());
-		// }
+		if (this.getBlockType() != null
+				&& this.getBlockType() instanceof ItemGrinder) {
+			--this.numUsingPlayers;
+			this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord,
+					this.getBlockType(), 1, this.numUsingPlayers);
+			this.worldObj.notifyBlocksOfNeighborChange(this.xCoord,
+					this.yCoord, this.zCoord, this.getBlockType());
+			this.worldObj.notifyBlocksOfNeighborChange(this.xCoord,
+					this.yCoord - 1, this.zCoord, this.getBlockType());
+		}
+	}
 
+	public int[] getAccessibleSlotsFromSide(int par1) {
+		return par1 == 0 ? slots_bottom : (par1 == 1 ? slots_top : slots_sides);
 	}
 
 	/**
@@ -439,51 +449,100 @@ public class ItemGrinderTile extends TileEntity implements IInventory,
 		return true;
 	}
 
-	@Override
-	public int[] getAccessibleSlotsFromSide(int var1) {
-		return var1 == 0 ? slots_bottom : (var1 == 1 ? slots_top : slots_sides);
+	/**
+	 * invalidates a tile entity
+	 */
+	public void invalidate() {
+		super.invalidate();
+		this.updateContainingBlockInfo();
+	}
+
+	public int func_98041_l() {
+		if (this.field_94046_i == -1) {
+			if (this.worldObj == null
+					|| !(this.getBlockType() instanceof ItemGrinder)) {
+				return 0;
+			}
+
+			this.field_94046_i = ((ItemGrinder) this.getBlockType()).isTrapped;
+		}
+
+		return this.field_94046_i;
 	}
 
 	@Override
-	public boolean canInsertItem(int var1, ItemStack var2, int var3) {
-		if (var1 == 0) {
+	public boolean canExtractItem(int slot, ItemStack itemstack, int side) {
+		if (slot == 0) {
+			return itemstack.getItem() instanceof IItemTransmutter;
+		} else {
+			return false;
+		}
+		// }
+
+	}
+
+	@Override
+	public boolean canInsertItem(int slotID, ItemStack itemstack, int side) {
+		if (slotID == 0) {
 			return false;
 		} else {
 			return true;
 		}
+
 	}
 
-	@Override
-	public boolean canExtractItem(int var1, ItemStack var2, int var3) {
-		if (var1 == 0) {
-			return true;
-		} else {
-			return false;
-		}
+
+
+	public void writeCustomNBT(NBTTagCompound cmp) {
+		super.writeCustomNBT(cmp);
+
+		cmp.setDouble("IEV", CurrentIXPValue);
+	}
+
+
+	public void readCustomNBT(NBTTagCompound cmp) {
+		super.readCustomNBT(cmp);
+
+		CurrentIXPValue = cmp.getDouble("IEV");
+
+
 	}
 
 	@Override
 	public String getInventoryName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "ItemGrinder";
 	}
 
 	@Override
 	public boolean hasCustomInventoryName() {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
 
 	@Override
 	public void openInventory() {
-		// TODO Auto-generated method stub
+		 if (this.numUsingPlayers < 0)
+	        {
+	            this.numUsingPlayers = 0;
+	        }
 
+	        ++this.numUsingPlayers;
+	        this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord, this.getBlockType(), 1, this.numUsingPlayers);
+	        this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, this.getBlockType());
+	        this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord - 1, this.zCoord, this.getBlockType());
+		
 	}
 
 	@Override
 	public void closeInventory() {
-		// TODO Auto-generated method stub
-
+		if (this.getBlockType() instanceof ItemGrinder)
+        {
+            --this.numUsingPlayers;
+            this.worldObj.addBlockEvent(this.xCoord, this.yCoord, this.zCoord, this.getBlockType(), 1, this.numUsingPlayers);
+            this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, this.getBlockType());
+            this.worldObj.notifyBlocksOfNeighborChange(this.xCoord, this.yCoord - 1, this.zCoord, this.getBlockType());
+        }
+		
 	}
-
 }

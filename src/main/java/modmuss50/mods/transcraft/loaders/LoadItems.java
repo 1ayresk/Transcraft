@@ -2,6 +2,7 @@ package modmuss50.mods.transcraft.loaders;
 
 import modmuss50.mods.transcraft.Transcraft;
 import modmuss50.mods.transcraft.Items.BasicTransmuter;
+import modmuss50.mods.transcraft.Items.FireStaff;
 import modmuss50.mods.transcraft.Items.TranscraftColorItems;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.Items.Transpeadia;
@@ -128,6 +129,11 @@ public class LoadItems {
 				.setCreativeTab(Transcraft.Transtab)
 				.setTextureName("transcraft:Transpedia");
 
+		TranscraftItems.FireStaff = new FireStaff()
+		.setUnlocalizedName("Transcraft:FireStaff")
+		.setCreativeTab(Transcraft.Transtab)
+		.setTextureName("transcraft:FireStaff");
+		
 		TranscraftColorItems.loadItems();
 
 	}

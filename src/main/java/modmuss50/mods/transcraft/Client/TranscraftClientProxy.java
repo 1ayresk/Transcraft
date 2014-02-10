@@ -3,6 +3,8 @@ package modmuss50.mods.transcraft.Client;
 import java.util.Random;
 
 import modmuss50.mods.transcraft.TranscraftCommonProxy;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.ItemGrinderTile;
+import modmuss50.mods.transcraft.Blocks.TileEntitys.ItemGrinder.TileIGRender;
 import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.RenderTC;
 import modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter.TileTC;
 import modmuss50.mods.transcraft.Client.Renders.RenderEnderSword;
@@ -45,8 +47,8 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	}
 
 	public void renderThings() {
-		// ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class,new
-		// TileECRender());
+		 ClientRegistry.bindTileEntitySpecialRenderer(ItemGrinderTile.class,new
+				 TileIGRender());
 
 		// MinecraftForgeClient.registerItemRenderer(TranscraftBlocks.ixpGrinder,new
 		// ItemTileIxpRender());

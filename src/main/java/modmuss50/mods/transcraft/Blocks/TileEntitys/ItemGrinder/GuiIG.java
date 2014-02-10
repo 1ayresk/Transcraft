@@ -17,7 +17,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class GuiIG extends GuiContainer {
-
 	private static final ResourceLocation field_110421_t = new ResourceLocation(
 			"transcraft", "textures/gui/IxpGrinder.png");
 	private IInventory upperChestInventory;
@@ -26,45 +25,40 @@ public class GuiIG extends GuiContainer {
 	private float xSize_lo;
 	private float ySize_lo;
 
-	private int field_147018_x;
-
 	/**
 	 * window height is calculated with this values, the more rows, the heigher
 	 */
-
 	private int inventoryRows;
 	private ItemGrinderTile te;
 
 	public GuiIG(InventoryPlayer player, ItemGrinderTile tileEntity) {
 		super(new ContainerIG(player, tileEntity));
+		this.xSize = 256;
+		this.ySize = 219;
 		this.te = tileEntity;
+		this.requestSync();
 		this.lowerChestInventory = player;
 		this.upperChestInventory = te;
-		this.field_147018_x = 3;
 	}
 
 	/**
 	 * Draw the foreground layer for the GuiContainer (everything in front of
 	 * the items)
 	 */
-	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		// this.field_146289_q.drawString("Item Grinder", 8, -35, 4210752);
-		// this.field_146289_q.drawString("Inventory", 9,this.field_146999_f -
-		// 90, 4210752);
-		// this.field_146289_q.drawString("Current Essence: " +
-		// te.getIXPValue(),
-		// 77, -35, 4210752);
-		// this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
+		this.fontRendererObj.drawString("Item Grinder", 8, 8, 4210752);
+		this.fontRendererObj.drawString("Inventory", 9, this.ySize - 100, 4210752);
+		this.fontRendererObj.drawString("Current Essence: " + te.getIXPValue(),77, 10, 4210752);
+		this.mc.getTextureManager().bindTexture(field_110421_t);
 
 		if (te.getIXPValue() != 0) {
 			if (te.CurrnetintMaxValue != 0) {
 				te.CurrentintIXPValue = (int) te.getIXPValue();
 				int perint1 = (te.CurrentintIXPValue * 100);
 				int perint2 = (perint1 / te.CurrnetintMaxValue);
-				// this.drawTexturedModalRect(field_147000_g - 135,
-				// field_146999_f - 193, 0, 220, perint2, 14);
+				this.drawTexturedModalRect(xSize - 226, ySize - 194, 0, 220,
+						perint2, 14);
 			}
 		}
 
@@ -73,15 +67,10 @@ public class GuiIG extends GuiContainer {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void initGui() {
-		int xSize = 256;
-		int ySize = 219;
-		this.xSize_lo = 10;
-		this.ySize_lo = 10;
 		super.initGui();
 
 	}
 
-	@Override
 	public void drawScreen(int par1, int par2, float par3) {
 		super.drawScreen(par1, par2, par3);
 		this.xSize_lo = (float) par1;
@@ -92,33 +81,26 @@ public class GuiIG extends GuiContainer {
 	 * Draw the background layer for the GuiContainer (everything behind the
 	 * items)
 	 */
-	@Override
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2,
 			int par3) {
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+		this.mc.renderEngine.bindTexture(field_110421_t);
+		int k = (this.width - this.xSize) / 2;
+		int l = (this.height - this.ySize) / 2;
+		this.drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
 
-		/*
-		 * 
-		 * 
-		 * 
-		 * GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		 * this.field_146297_k.getTextureManager().bindTexture(field_110421_t);
-		 * int k = (this.field_146294_l - this.field_146999_f) / 2; int l =
-		 * (this.field_146295_m - this.field_147000_g) / 3;
-		 * this.drawTexturedModalRect(k, l, 0, 0, 256, this.field_147018_x * 18
-		 * + 165); // this.drawTexturedModalRect(k, l + this.inventoryRows * 18
-		 * + 127, 0,126, this.field_146999_f, 96);
-		 * 
-		 * drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) -
-		 * this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo,
-		 * this.field_146297_k.thePlayer);
-		 */
+	
+			drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200)
+					- this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo,
+					this.mc.thePlayer);
 
+		// this.drawTexturedModalRect(k, l + this.inventoryRows * 18 + 17, 0,
+		// 126, this.xSize, 96);
 	}
 
 	/**
 	 * This renders the player model in standard inventory position
 	 */
-
 	public static void drawPlayerModel(int par0, int par1, int par2,
 			float par3, float par4, EntityLivingBase par5EntityLivingBase) {
 		GL11.glEnable(GL11.GL_COLOR_MATERIAL);
@@ -161,4 +143,30 @@ public class GuiIG extends GuiContainer {
 		OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
 	}
 
+	
+
+	private void requestSync() {
+	
+	/*
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		DataOutputStream outputStream = new DataOutputStream(bos);
+
+		try {
+			outputStream.writeDouble(this.te.CurrentIXPValue);
+			outputStream.writeInt(this.te.xCoord);
+			outputStream.writeInt(this.te.yCoord);
+			outputStream.writeInt(this.te.zCoord);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		Packet250CustomPayload packet = new Packet250CustomPayload();
+		packet.channel = "transcraft";
+		packet.data = bos.toByteArray();
+		packet.length = bos.size();
+		PacketDispatcher.sendPacketToServer(packet);
+		*/
+	}
+	
+	
 }
