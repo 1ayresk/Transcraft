@@ -8,6 +8,7 @@
 package modmuss50.mods.transcraft.loaders;
 
 import modmuss50.mods.transcraft.Transcraft;
+import modmuss50.mods.transcraft.Blocks.fluids.TranscraftFluids;
 import modmuss50.mods.transcraft.Utils.Config;
 import modmuss50.mods.transcraft.Utils.EventMobDeath;
 import modmuss50.mods.transcraft.Utils.FuelHandler;
@@ -51,8 +52,8 @@ public class LoadMod {
 		FMLLog.info("[TRANSCRAFT]	Loading Items");
 		LoadItems.LoadItems();
 
-		// FMLLog.info("[TRANSCRAFT]	Loading Fluids");
-		// TranscraftFluids.init();
+		 FMLLog.info("[TRANSCRAFT]	Loading Fluids");
+		TranscraftFluids.init();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
