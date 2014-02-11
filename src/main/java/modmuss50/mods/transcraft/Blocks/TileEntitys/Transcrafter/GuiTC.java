@@ -1,12 +1,12 @@
 package modmuss50.mods.transcraft.Blocks.TileEntitys.Transcrafter;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+
+import org.lwjgl.opengl.GL11;
 
 public class GuiTC extends GuiContainer {
 	private static final ResourceLocation texture = new ResourceLocation(

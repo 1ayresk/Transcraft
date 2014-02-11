@@ -4,8 +4,6 @@ import modmuss50.mods.transcraft.Blocks.TileEntitys.TileBase;
 import modmuss50.mods.transcraft.Items.TranscraftItems;
 import modmuss50.mods.transcraft.Utils.Config;
 import modmuss50.mods.transcraft.api.IItemTransmutter;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;

@@ -2,8 +2,6 @@ package modmuss50.mods.transcraft.WorldGen.biomes;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class TransmutterBiome extends BiomeGenBase {
 	private TranscraftBiomeDec customBiomeDecorator;

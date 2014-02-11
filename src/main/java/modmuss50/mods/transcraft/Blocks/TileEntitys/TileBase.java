@@ -1,7 +1,6 @@
 package modmuss50.mods.transcraft.Blocks.TileEntitys;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.Packet;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileBase extends TileEntity {
